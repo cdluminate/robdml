@@ -7,6 +7,7 @@ robdml:
 	$(BIBTEX) robdml
 	$(LATEX) $(TEX)
 	$(LATEX) $(TEX)
+	-evince robdml.pdf
 
 clean:
 	-$(RM) *.aux *.bbl *.blg *.brf *.log *.out *.pdf
