@@ -18,6 +18,7 @@
 \usepackage{microtype}
 \usepackage{xcolor}
 \newcommand{\oo}[1]{\textcolor{orange}{#1}}
+\include{math_commands.tex}
 
 % It is strongly recommended to use hyperref, especially for the review version.
 % hyperref with option pagebackref eases the reviewers' job.
@@ -50,7 +51,7 @@
 %%%%%%%%% TITLE - PLEASE UPDATE
 \title{Enhancing Adversarial Robustness for Deep Metric Learning}
 
-\author{Mo Zhou ~~~~~~~ Vishal M. Patel\\
+\author{Mo Zhou ~~~~~~~ Vishal Patel\\
 Johns Hopkins University\\
 {\tt\small mzhou32@jhu.edu ~~ vpatel36@jhu.edu}
 % For a paper whose authors are all at the same institution,
@@ -89,13 +90,28 @@ Johns Hopkins University\\
 
 % what is deep metric learning
 
-A distance metric (definition).
-deep metric learning (definition) ... deep neural networks.
+Given a set of data points, a metric gives a distance value between each pair
+of them, while Deep Metric Learning (DML) aims to learn such a metric
+leveraging the representational power of deep neural networks.
+%
+DML has been extensively studied~[], and has a wide range of applications
+such as image retrieval~[] and face recognition~[].
 
-% why defense in deep metric learning & what is defense
+% why defense in deep metric learning 
 
-dnn .. vulnerability.
-impact the safety and security ..
+Despite the improvements of this field thanks to the advancement of deep neural
+networks, recent research works suggest that DML models are vulnerable to
+adversarial attacks, where an imperceptible perturbation could incur unexpected
+or covertly manipulated results~[].
+%
+Such vulnerability poses safety, security, and fairness concerns in the
+applications of DML.
+%
+For example, impersonation or recognition evation are possible for DML-based
+face-identification system~[].
+%
+Thus, defending a DML model against adversarial attacks and improving its
+adversarial robustness could be an important problem.
 
 % existing methods & problem
 existing methods and problem.
