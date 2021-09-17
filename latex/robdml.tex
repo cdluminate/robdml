@@ -110,23 +110,54 @@ applications of DML.
 For example, impersonation or recognition evation are possible for DML-based
 face-identification system~[].
 %
-Thus, defending a DML model against adversarial attacks and improving its
-adversarial robustness could be an important problem.
+To counter the attacks (or reducing the vulnerability), it is important to
+design defense methods to improve the adversarial robustness of DML models.
 
 % existing methods & problem
-existing methods and problem.
+A series of defense methods for DML are proposed~[], inspired by the Madry's
+adversarial training method~[], as it is kown as one of the most effective
+defense methods for deep neural network classifiers.
+%
+However, it has been noted that
+%
+(1) the direct adoptation of Madry's defense will easily lead to model collapse
+due to producing very hard sample triplets;
+%
+(2) \oo{the sota defense lacks ()};
+%
+and (3) the adversarial training procedure is very time-consuming compared
+to the training process of a regular DML model.
 
 % for problem 1
+Triplet hardness still matters in adversarial training for deep metric
+learning.
+%
+propose hardness manipulation for.
 solution to problem 1
 
 % for problem 2
+ACT and amdsemi have distinct characteristics.
 solution to problem 2
+
+% for problem 3
+update of advtrain acceleration.
+solution to problem 3
 
 % evaluation and conclusion
 experimetal evaluations
 
 % contributions
 In brief, our contribusions include:
+%
+\begin{enumerate}
+	%
+	\item Hardness manipulation and the finding. better robustness.
+		%
+	\item Combine and even better.
+		%
+	\item Accelerate and reduce the cost for reproducing and applying.
+		%
+\end{enumerate}
 
 \section{Related Works}
 \label{sec:2}
