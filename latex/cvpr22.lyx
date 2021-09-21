@@ -6758,7 +6758,7 @@ amdsemi (bugfix zerograd) -m10
 \begin_inset Text
 
 \begin_layout Plain Layout
-amdsemi (bugfix zerograd) -m120
+amdsemi (bugfix zerograd) -m120 (all53)
 \end_layout
 
 \end_inset
@@ -6803,7 +6803,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
++22.5
 \end_layout
 
 \end_inset
@@ -6812,7 +6812,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-43.8
 \end_layout
 
 \end_inset
@@ -6821,7 +6821,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
++25.0
 \end_layout
 
 \end_inset
@@ -6830,7 +6830,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
++30.4
 \end_layout
 
 \end_inset
@@ -6839,7 +6839,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-0.490
 \end_layout
 
 \end_inset
@@ -6848,7 +6848,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
++0.813
 \end_layout
 
 \end_inset
@@ -6857,7 +6857,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
++12.0
 \end_layout
 
 \end_inset
@@ -6866,7 +6866,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
++10.0
 \end_layout
 
 \end_inset
@@ -6875,7 +6875,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
++15.1
 \end_layout
 
 \end_inset
@@ -6884,7 +6884,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
++2.2
 \end_layout
 
 \end_inset
@@ -6893,7 +6893,7 @@ amdsemi (bugfix zerograd) -m120
 \begin_inset Text
 
 \begin_layout Plain Layout
-
++37.0
 \end_layout
 
 \end_inset
