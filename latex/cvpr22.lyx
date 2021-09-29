@@ -13031,7 +13031,7 @@ faster training (algorithm tweak) FAT/other | postpone
 \end_layout
 
 \begin_layout Enumerate
-what if we use stopat for RAMD? | to be investigated
+what if we use stopat for RAMD? | similar effect.
 \end_layout
 
 \begin_layout Enumerate
@@ -13056,7 +13056,13 @@ APGD as the optimization algorithm? | postpone
 \end_layout
 
 \begin_layout Enumerate
-implement FAT for faster exp iteration | postpone
+\begin_inset Formula $\checkmark$
+\end_inset
+
+ implement FAT for faster exp iteration | works on toy dataset.
+ too prone to collapse.
+ if we try to avoid model collapse, the adversarial robustness will decrease
+ significantly.
 \end_layout
 
 \begin_layout Enumerate
@@ -13073,6 +13079,51 @@ implement FAT for faster exp iteration | postpone
 
  (codecheck) does amd really honour the pgditer parameter? | direct adoptation
  of madry defense is really prone to model collapse.
+\end_layout
+
+\begin_layout Enumerate
+7-setup PGD and better aligned comparison: compare when these methods reach
+ similar retrieval performance.
+\end_layout
+
+\begin_layout Enumerate
+Adversarial training (does not allow any distance moving) may encourage
+ collapse (a trivial solution to the requirement).
+ What if we loosen the requirement and convert it into a new constraint?
+ For instance,
+\begin_inset Formula 
+\[
+L_{loosen}(a,p,n)=L_{base}(a,p,n)+\lambda_{1}L(a,\tilde{a},p)+\lambda_{2}L_{triplet}(a,\tilde{a},n)
+\]
+
+\end_inset
+
+where the 
+\begin_inset Formula $L_{base}$
+\end_inset
+
+ can be either 
+\begin_inset Formula $L_{triplet}$
+\end_inset
+
+, 
+\begin_inset Formula $L_{rest}$
+\end_inset
+
+, or 
+\begin_inset Formula $L_{act}$
+\end_inset
+
+.
+ Question: should we do this for every sample? i.e.,
+\begin_inset Formula 
+\[
+L_{loosen}(a,p,n)=L_{base}(a,p,n)+\sum_{x\in\{a,p,n\}}L(x,\tilde{x},n_{x})
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
