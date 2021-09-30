@@ -6,16 +6,16 @@
 
 \begin{itemize}
 
-	\item [*]
-		Sampling also matters in adversarial training for deep metric learning.
+	\item [*] Sampling also matters in adversarial training for deep metric learning.
 
 		[source hardness and destination hardness] different source sampling
 		strategy and different destination sampling strategy. attack
 		destination. DML loss not that sensitive to sampling? or generic
 		advtrain method for DML? | still investigating
 
-	\item [*] 7-step PGD and better aligned comparison: compare when
-		these methods reach similar retrieval performance.
+	\item [*] 7-step PGD (as well as 16-step PGD) and better aligned comparison:
+		compare when these methods reach similar retrieval performance.
+		Meanwhile we can do experiments much faster.
 
 	\item Adversarial training (does not allow any distance moving) may
 		encourage collapse (a trivial solution to the requirement). What if we
@@ -46,6 +46,9 @@
 		at different aspects.
 
 	\item verify model collapse
+
+	\item [?] Combine and even better. | Mixing ACT and AMDsemi does result
+		in clearly better results. It's on par with AMDsemi.
 
 	\item [\cmark] what if we use stopat for RAMD? | similar effect to amdsemi.
 		misguiding gradient does not significantly affect AMD defense. So it
