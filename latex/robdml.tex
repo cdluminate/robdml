@@ -67,15 +67,27 @@ Johns Hopkins University\\
 
 %%%%%%%%% ABSTRACT
 \begin{abstract}
-	Deep metric learning models, being vulnerable to adversarial
-	attacks, have safety and security implications in applications.
-	%
-	Improving the adversarial robustness of a model against the attacks becomes
-	an important problem.
-	%
-	The existing defense methods are based on adversarial training.
-	%
-	However, they \oo{(1) robustness (2) speed/cost. (3) sampling matters.}
+	% background
+	Deep metric learning, being vulnerable to adversarial
+	attacks, has safety and security implications in its applications.
+	% importance
+	To counter these attacks, it is important to design adversarial
+	defense methods to improve adversarial robustness of deep metric learning.
+	% insight
+	However, as deep metric model with triplet loss is prone to collapse with
+	excessively hard samples, the previous methods refrain from using the
+	classical min-max adversarial training paradigm, but also suffer from
+	inefficiency.
+	% our proposal
+	In this paper, we argue that the sampling strategy has a significant
+	impact on the adversarial training for triplet-based deep metric learning.
+	% solution 1
+	\oo{
+	Based on this, we propose Hardness Manipulation 
+	TODO
+	However, they the influence of triplet sampling strategy during
+	adversarial training, 
+	(1) robustness (2) speed/cost. (3) sampling matters.}
 	%
 	In this paper, we \oo{TBD}.
 	%
