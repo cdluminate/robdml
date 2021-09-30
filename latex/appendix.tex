@@ -14,6 +14,10 @@
 		destination. DML loss not that sensitive to sampling? or generic
 		advtrain method for DML? | still investigating
 
+	\item [\cmark] \checkmark dynamically changing schedule for amdsemi? |
+		looks good | the sqrt scheme works the best. (gradually increasing the
+		hardness makes sense)
+
 	\item [*] 7-step PGD (as well as 16-step PGD) and better aligned comparison:
 		compare when these methods reach similar retrieval performance.
 		Meanwhile we can do experiments much faster.
@@ -36,8 +40,6 @@
 		some attacks, while performs better one some other attacks. | needs to
 		be interpreted.
 
-	\item faster training (algorithm tweak) FAT/other | postpone
-
 	\item ? can we learn a good destination distribution? | too
 		complicated? not necessary currently.
 
@@ -52,28 +54,38 @@
 		in clearly better results. It's on par with AMDsemi. Are they really
 		that different?
 
-	\item [\cmark] what if we use stopat for RAMD? | similar effect to amdsemi.
-		misguiding gradient does not significantly affect AMD defense. So it
-		is not quite necessary.
-	
-	\item [\cmark] \checkmark dynamically changing schedule for amdsemi? |
-		looks good | the sqrt scheme works the best. (gradually increasing the
-		hardness makes sense)
-
-	\item [\cmark] implement FAT for faster exp iteration | works on toy
-		dataset. too prone to collapse. if we try to avoid model collapse, the
-		adversarial robustness will decrease significantly.
-
 	\item [\cmark] (codecheck) does amd really honour the pgditer parameter? |
 		direct adoptation of madry defense is really prone to model collapse.
 
 \end{itemize}
 
 
-\subsection{Discarded or Rejected}
+\subsection{Done, Discarded or Rejected}
 
 \begin{enumerate}
 
 	\item [\xmark] MSE attack? | TMA is already close enough to it.
 
+	\item [\xmark] Faster training (algorithm tweak) based FAT/other | this is
+		a dead end. ACT has a different loss function to the outer minimization
+		problem, and hence result in different gradient and we cannot reuse
+		these gradients for algorithms like free adversarial training.
+		Re-calculating the gradients we need would simple double the
+		computational cost of the algorithm and diminish the gain from Free
+		Adversarial Training. We are no longer using the core benefit of FAT in
+		this way. In contrast, the AMD / AMDhm formulation can benefit from
+		this setup. | Further experiments suggest very weak robustness and the
+		models are very prone to collapse due to the non-zero initial delta
+		(results in too hard adversarial example).  | gradient approximation
+		does not look convincing. triplet gradient and ACT gradient does not
+		look convertible.
+
+	\item [\cmark] implement FAT for faster exp iteration | works on toy
+		dataset. too prone to collapse. if we try to avoid model collapse, the
+		adversarial robustness will decrease significantly.
+
+	\item [\cmark] what if we use stopat for RAMD? | similar effect to amdsemi.
+		misguiding gradient does not significantly affect AMD defense. So it
+		is not quite necessary.
+	
 \end{enumerate}
