@@ -101,7 +101,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="45" columns="19">
+<lyxtabular version="3" rows="47" columns="19">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -6185,6 +6185,181 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
+ACT (PGD-16)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
 ACT (PGD-7 for faster pace)
 \end_layout
 
@@ -6194,6 +6369,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 33.3
 \end_layout
 
@@ -6203,6 +6380,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 44.3
 \end_layout
 
@@ -6212,6 +6391,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 18.7
 \end_layout
 
@@ -6221,6 +6402,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 47.1
 \end_layout
 
@@ -6230,6 +6413,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 11.6
 \end_layout
 
@@ -6239,6 +6424,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 54.1
 \end_layout
 
@@ -6248,6 +6435,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 9.2
 \end_layout
 
@@ -6257,6 +6446,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 48.4
 \end_layout
 
@@ -6266,6 +6457,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 0.553
 \end_layout
 
@@ -6275,6 +6468,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 1.017
 \end_layout
 
@@ -6284,6 +6479,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 9.4
 \end_layout
 
@@ -6293,6 +6490,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 8.1
 \end_layout
 
@@ -6302,6 +6501,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 22.2
 \end_layout
 
@@ -6311,6 +6512,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 0.9
 \end_layout
 
@@ -6320,6 +6523,8 @@ ACT (PGD-7 for faster pace)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 27.3
 \end_layout
 
@@ -6575,7 +6780,7 @@ amdsemi
 \begin_inset Text
 
 \begin_layout Plain Layout
-amdsemi (PGD-7)
+amdsemi (PGD-16)
 \end_layout
 
 \end_inset
@@ -6711,6 +6916,203 @@ amdsemi (PGD-7)
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+amdsemi (PGD-7)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+28.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+37.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+13.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+42.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+17.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+50.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+19.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+34.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+0.520
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+0.915
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\bar under
+10.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+33.5
 \end_layout
 
 \end_inset
