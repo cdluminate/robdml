@@ -1,0 +1,75 @@
+\appendix
+
+\section{Notes}
+
+\subsection{To be investigated}
+
+\begin{enumerate}
+
+	\item [WIP]
+		Sampling also matters in adversarial training for deep metric learning.
+
+		[source hardness and destination hardness] different source sampling
+		strategy and different destination sampling strategy. attack
+		destination. DML loss not that sensitive to sampling? or generic
+		advtrain method for DML? | still investigating
+
+	\item [WIP] 7-step PGD and better aligned comparison: compare when
+		these methods reach similar retrieval performance.
+
+	\item Adversarial training (does not allow any distance moving) may
+		encourage collapse (a trivial solution to the requirement). What if we
+		loosen the requirement and convert it into a new constraint? For
+		instance, \[
+			L_{loosen}(a,p,n)=L_{base}(a,p,n)+\lambda_{1}L(a,\tilde{a},p)+\lambda_{2}L_{triplet}(a,\tilde{a},n)
+		\] where the $L_{base}$ can be either $L_{triplet}$, $L_{rest}$, or
+		$L_{act}$. Question: should we do this for every sample? i.e., \[
+			L_{loosen}(a,p,n)=L_{base}(a,p,n)+\sum_{x\in\{a,p,n\}}L(x,\tilde{x},n_{x})
+		\]
+
+	\item ?  what about other types of metric learining loss functions? |
+		investigating (we first make the most classical method work)
+
+	\item ?  effectiveness of AMD Semi is to be verified. | as effective
+		as ACT, reaches slightly higher ERS. But performs worse than ACT on
+		some attacks, while performs better one some other attacks. | needs to
+		be interpreted.
+
+	\item faster training (algorithm tweak) FAT/other | postpone
+
+	\item ? can we learn a good destination distribution? | too
+		complicated? not necessary currently.
+
+	\item 1. APGD as the optimization algorithm? | postpone
+
+	\item 1. ? mixing amdsemi and act for adversarial training. They are good
+		at different aspects.
+
+	\item verify model collapse
+
+	\item [\cmark] what if we use stopat for RAMD? | similar effect to amdsemi.
+		misguiding gradient does not significantly affect AMD defense. So it
+		is not quite necessary.
+	
+	\item [\cmark] \checkmark dynamically changing schedule for amdsemi? |
+		looks good | the sqrt scheme works the best. (gradually increasing the
+		hardness makes sense)
+
+	\item [\cmark] implement FAT for faster exp iteration | works on toy
+		dataset. too prone to collapse. if we try to avoid model collapse, the
+		adversarial robustness will decrease significantly.
+
+	\item [\cmark] (codecheck) does amd really honour the pgditer parameter? |
+		direct adoptation of madry defense is really prone to model collapse.
+
+\end{enumerate}
+
+
+\subsection{Discarded or Rejected}
+
+\begin{enumerate}
+
+	\item \xmark
+		MSE attack? | TMA is already close enough to it.
+
+\end{enumerate}
