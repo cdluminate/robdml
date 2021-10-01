@@ -224,11 +224,11 @@ which is impractical for real-world attacks.
 Subsequently, black-box attack methods are developed into two types:
 transferrability-based attacks and query-based attacks.
 %
-Transferrability-based attacks relies on the observation that image-agnostic
+Transferrability-based attacks~\cite{di-fgsm,universal} relies on the observation that image-agnostic
 (will take effect when applied to any image) and model-agnostic (will take
 effect when applied to any model) adversarial perturbation are possible.
 %
-Query-based attacks only need the logit score output or the label output from a
+Query-based attacks~\cite{nes-atk,spsa-atk} only need the logit score output or the label output from a
 classifier, based on which the gradient could be estimated from the response to
 repetitive queries in order to figure out the adversarial perturbation.
 
@@ -238,18 +238,18 @@ To battle against the attacks, some early defense
 methods create a gradient masking effect, namely making it hard for the attacker
 to find a good gradient, but it gives a false sense of security~\cite{obfuscated}.
 %
-Defensive distillation~[] can be compromised by C\&W~\cite{cw}.
+Defensive distillation~\cite{distill2} can be compromised by C\&W~\cite{cw}.
 %
-Ensemble of weak defenses is insufficient~[].
+Ensemble of weak defenses is insufficient~\cite{ensembleweak}.
 %
-Defense can also be implemented as preprocessing~[] or reconstructing~[] the input
-image, or a randomized process inside the network~[].
+Defense can also be implemented as preprocessing~\cite{deflecting} the input
+image, or a randomized process inside the network~\cite{self-ensemble}.
 %
 However, it is noted that various defense methods are still susceptible to
 adaptive attack~\cite{adaptive}.
 %
 Among the proposed defense methods, adversarial training has been empirically
-found effective~[][], and it consistently retains adversarial robustness
+found effective~\cite{bilateral,advtrain-triplet,benchmarking}, and it consistently retains adversarial robustness
 for the model.
 
 \textbf{Deep Metric Learning.}
