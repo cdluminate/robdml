@@ -71,32 +71,32 @@ Johns Hopkins University\\
 	Deep metric learning, being vulnerable to adversarial
 	attacks, has safety and security implications in its applications.
 	% importance
-	To counter these attacks, it is important to design adversarial
-	defense methods to improve adversarial robustness of deep metric learning.
+	It is crucial to improve adversarial robustness of deep
+	metric learning.
 	% insight
 	However, as deep metric model with triplet loss is prone to collapse with
 	excessively hard samples, the previous methods refrain from using the
 	classical min-max adversarial training paradigm, but also suffer from
 	inefficiency.
-	% our proposal
-	In this paper, we argue that the sampling strategy has a significant
-	impact on the adversarial training for triplet-based deep metric learning.
+	% our finding
+	In this paper, we reveal a significant impact of triplet sampling strategy
+	on the adversarial training.
 	% solution 1
-	\oo{
-	Based on this, we propose Hardness Manipulation 
-	TODO
-	However, they the influence of triplet sampling strategy during
-	adversarial training, 
-	(1) robustness (2) speed/cost. (3) sampling matters.}
-	%
-	In this paper, we \oo{TBD}.
-	%
+	Based on this, Hardness Manipulation is proposed to adversarially perturb
+	a given triplet into a specified hardness level in min-max adversarial
+	training, instead of creating hardest triplets rendering model collapse.
+	% solution 2
+	To further improve the model performance, we propose a Gradual
+	Adversary to dynamicly change the hardness level to balance metric
+	learning and adversarial learning.
+	% Experiment
 	The proposed method is validated on three commonly
 	used deep metric learning datasets, namely CUB-200-2011, Cars-196,
 	and Stanford Online Product.
-	%
+	% Conclusion
 	Comprehensive experimental results show our method outperforms
-	the existing defense methods.
+	the existing defense methods, while achieving clearly higher
+	efficiency at a lower training cost.
 \end{abstract}
 
 %%%%%%%%% BODY TEXT
@@ -111,39 +111,43 @@ of them.
 Deep Metric Learning (DML) aims to learn such a metric between two inputs (\eg,
 images) leveraging the representational power of deep neural networks.
 %
-DML has been extensively studied~[], and has a wide range of applications such
-as image retrieval~[] and face recognition~[].
+DML has been extensively studied~\cite{revisiting}, and has a
+wide range of applications such
+as image retrieval~\cite{imagesim2} and face recognition~\cite{facenet}.
 
 % why defense in deep metric learning 
 
 Despite the improvements of this field thanks to the advancement of deep neural
 networks, recent research works suggest that DML models are vulnerable to
 adversarial attacks, where an imperceptible perturbation could incur unexpected
-or covertly manipulated results~\cite{advrank}.
+or covertly manipulated results~\cite{advrank,advorder}.
 %
 Such vulnerability poses safety, security, and fairness concerns in the
 applications of DML.
 %
 For example, impersonation or recognition evation are possible for DML-based
-face-identification system~[].
+face-identification system.
 %
 To counter the attacks (or reducing the vulnerability), it is important to
 design defense methods to improve the adversarial robustness of DML models.
 
 % existing methods & problem
-A series of defense methods for DML are proposed~[], inspired by the Madry's
-adversarial training method~[], as it is kown as one of the most effective
-defense methods for deep neural network classifiers.
+Several defense methods for DML are proposed in the
+literature~\cite{advrank,robrank}, inspired by the Madry's adversarial training
+method~\cite{madry}, as it is kown as one of the most effective defense methods
+for deep neural network classifiers.
 %
 However, it has been noted that
 %
-(1) the direct adoptation of Madry's defense will easily lead to model collapse
-due to producing very hard sample triplets;
+(1) the robustness level achieved by the existing methods is still insufficient
+to counter the attacks;
 %
-(2) \oo{the sota defense lacks ()};
+(2) the direct adoptation of Madry's min-max adversarial training~\cite{madry} will easily
+lead to model collapse due to producing very hard sample triplets;
 %
-and (3) the adversarial training procedure is very time-consuming compared
-to the training process of a regular DML model.
+(3) the adversarial training procedure is very time-consuming compared to
+the training process of a regular DML model, but existing defense methods
+are incompatible to acceleration methods like Free Adversarial Training~\cite{freeat}.
 
 % for problem 1
 Triplet hardness still matters in adversarial training for deep metric
