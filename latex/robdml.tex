@@ -205,11 +205,78 @@ In this MLSP project, we plan to make the following contributions:
 \label{sec:2}
 
 \textbf{Adversarial Attack.}
+%
+Szegedy \etal~\cite{l-bfgs} find misclassification of DNN can be triggered by
+an imperceptible adversarial perturbation to the input image.
+%
+Ian \etal~\cite{fgsm} speculate the reason is that DNN being locally linear
+with respect to the adversarial perturbation.
+%
+A series of following works attempt to more efficiently compromise the DNNs,
+such as BIM~\cite{i-fgsm}, C\&W~\cite{cw}, PGD~\cite{madry}, and
+APGD~\cite{apgd}.
+%
+These attacks are based on the first-order gradient of the classification loss
+with respect to the input image, and hence rely on the white-box assumption
+that the model architecture and parameters are accessible to the attacker,
+which is impractical for real-world attacks.
+%
+Subsequently, black-box attack methods are developed into two types:
+transferrability-based attacks and query-based attacks.
+%
+Transferrability-based attacks relies on the observation that image-agnostic
+(will take effect when applied to any image) and model-agnostic (will take
+effect when applied to any model) adversarial perturbation are possible.
+%
+Query-based attacks only need the logit score output or the label output from a
+classifier, based on which the gradient could be estimated from the response to
+repetitive queries in order to figure out the adversarial perturbation.
 
 \textbf{Adversarial Defense.}
+%
+To battle against the attacks, some early defense
+methods create a gradient masking effect, namely making it hard for the attacker
+to find a good gradient, but it gives a false sense of security~\cite{obfuscated}.
+%
+Defensive distillation~[] can be compromised by C\&W~\cite{cw}.
+%
+Ensemble of weak defenses is insufficient~[].
+%
+Defense can also be implemented as preprocessing~[] or reconstructing~[] the input
+image, or a randomized process inside the network~[].
+%
+However, it is noted that various defense methods are still susceptible to
+adaptive attack~\cite{adaptive}.
+%
+Among the proposed defense methods, adversarial training has been empirically
+found effective~[][], and it consistently retains adversarial robustness
+for the model.
 
 \textbf{Deep Metric Learning.}
-\cite{advrank,advorder,robrank}
+%
+A wide range of application problem such as image retrieval~\cite{imagesim2},
+cross-modal retrieval~\cite{ladderloss}, and face recognition~\cite{facenet}
+can be formularized as a deep metric learning problem.
+%
+Deep metric learning has been found vulnerable to adversarial attacks as
+well~\cite{advrank,advorder}, which will result in undesired
+implications on safety, security, or fairness of a deep metric learning
+application.
+%
+In contrast, the defense methods for enhancing the adversarial robustness of deep
+metric learning are less explored.
+%
+Mo \etal~\cite{advrank} present an adversarial training method with adversarial
+examples maximizing the embedding move distance off its original location.
+%
+Anti-Collapse Triplet defense~\cite{robrank} forces the model
+to separate collapsed positive and negative samples in order to learn
+robust features.
+%
+However, the existing defense methods refrain from adopting Madry's min-max
+adversarial training paradigm due to the model being too easy to collapse
+with excessively hard adversarial samples.
+
 
 \section{Our Approach}
 \label{sec:3}
