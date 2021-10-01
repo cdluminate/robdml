@@ -22,6 +22,7 @@
 \usepackage{pifont}
 \newcommand{\cmark}{\ding{51}}
 \newcommand{\xmark}{\ding{55}}
+\usepackage{enumitem}
 
 % It is strongly recommended to use hyperref, especially for the review version.
 % hyperref with option pagebackref eases the reviewers' job.
@@ -149,40 +150,55 @@ lead to model collapse due to producing very hard sample triplets;
 the training process of a regular DML model, but existing defense methods
 are incompatible to acceleration methods like Free Adversarial Training~\cite{freeat}.
 
-% for problem 1
-Triplet hardness still matters in adversarial training for deep metric
-learning.
+%% for problem 1
+%Triplet hardness still matters in adversarial training for deep metric
+%learning.
+%%
+%propose hardness manipulation for.
+%solution to problem 1
 %
-propose hardness manipulation for.
-solution to problem 1
-
-% for problem 2
-ACT and amdsemi have distinct characteristics.
-solution to problem 2
-
-% for problem 3
-update of advtrain acceleration.
-solution to problem 3
-
-% evaluation and conclusion
-experimetal evaluations
+%% for problem 2
+%ACT and amdsemi have distinct characteristics.
+%solution to problem 2
+%
+%% for problem 3
+%update of advtrain acceleration.
+%solution to problem 3
+%
+%% evaluation and conclusion
+%experimetal evaluations
 
 % contributions
-In brief, our contribusions include:
+%In brief, our contribusions include:
+In this MLSP project, we plan to make the following contributions:
 %
-\begin{enumerate}
+\begin{enumerate}[noitemsep]
 	%
-	\item Hardness manipulation is proposed for the adversarial training
-		of triplet-based deep metric learning models, which avoids model
-		collapse in the typical min-max adversarial training setting.
-		\oo{We discover that blah}.
-		Our proposed method achieves higher adversarial robustness compared
-		to the state-of-the-art.
+	\item {\textit{Hardness Manipulation}} is proposed for the adversarial
+		training of triplet-based deep metric learning models, which avoids
+		model collapse in the typical min-max adversarial training setting.
+		The proposed method achieves higher adversarial robustness compared to
+		the state-of-the-art, and is more computationally efficient.
 		%
-	\item Gradual Adversary.
+	\item \textit{Gradual Adversary} is proposed to dynamically adjust the
+		destination hardness less for Hardness Manipulation during the
+		adversarial training process in order to balance the metric learning
+		and adversarial learning.
 		%
-	\item Benchmark existing metric learning loss functions with adversarial
-		training for future reference.
+	\item Revise and incorporate the state-of-the-art adversarial training
+		acceleration method (\ie, Free Adversarial Training~\cite{freeat},
+		which is designed for classification) into adversarial training of 
+		deep metric learning models. It will greatly improve the efficiency
+		of adversarial training.
+		%
+	\item Benchmark of existing metric learning loss functions under
+		adversarial training scenario, and analyze their different
+		characteristics for future reference.
+		%
+	\item Explore the possibility of proposing a new metric learning loss
+		function oriented for adversarial training, starting from scratch or
+		from an existing metric learning loss.
+		%
 \end{enumerate}
 
 \section{Related Works}
@@ -205,16 +221,16 @@ In brief, our contribusions include:
 \section{Experiments}
 \label{sec:4}
 
-1. hardness manipulation, comparison with state-of-the-art.
-
-\subsection{Evaluation Protocol}
-
 \textbf{Dataset.}
+
+\textbf{Experiment Settings.}
 
 \section{Discussions}
 \label{sec:5}
 
-1. adversarial training speed.
+%1. adversarial training speed.
+
+% PGD-7 PGD-16
 
 \section{Conclusion}
 \label{sec:6}
