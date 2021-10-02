@@ -101,7 +101,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="42" columns="19">
+<lyxtabular version="3" rows="45" columns="19">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -682,6 +682,179 @@ N/A
 
 \bar under
 4.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sanity: hml2rr
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+87.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+92.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+83.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+77.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+94.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+94.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.990
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.530
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.6
 \end_layout
 
 \end_inset
@@ -4375,6 +4548,179 @@ amdsemi+0.75act
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+hml2rm (PGD8)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+87.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+72.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+44.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.191
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.403
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+46.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+67.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+64.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+67.4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -5969,6 +6315,8 @@ amdsemi (PGD-7)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 amdsemi (PGD-8) + permissive (a,
 \backslash
 tilde(a),p,margin0)
@@ -5980,6 +6328,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 26.2
 \end_layout
 
@@ -5989,6 +6339,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 35.0
 \end_layout
 
@@ -5998,6 +6350,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 13.1
 \end_layout
 
@@ -6007,6 +6361,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 42.0
 \end_layout
 
@@ -6016,6 +6372,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 21.2
 \end_layout
 
@@ -6025,6 +6383,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 37.6
 \end_layout
 
@@ -6034,6 +6394,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 23.8
 \end_layout
 
@@ -6043,6 +6405,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 24.4
 \end_layout
 
@@ -6052,6 +6416,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 0.483
 \end_layout
 
@@ -6061,6 +6427,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 0.685
 \end_layout
 
@@ -6070,6 +6438,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 15.5
 \end_layout
 
@@ -6079,6 +6449,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 13.4
 \end_layout
 
@@ -6088,6 +6460,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 21.2
 \end_layout
 
@@ -6097,6 +6471,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 4.3
 \end_layout
 
@@ -6106,6 +6482,8 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 40.0
 \end_layout
 
@@ -6144,7 +6522,7 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
-amdsemi (bugfix zerograd) -m16
+hmklrm (pgd-8)
 \end_layout
 
 \end_inset
@@ -6153,7 +6531,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-25.6
+
 \end_layout
 
 \end_inset
@@ -6162,7 +6540,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.1
+
 \end_layout
 
 \end_inset
@@ -6171,7 +6549,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-12.4
+
 \end_layout
 
 \end_inset
@@ -6180,7 +6558,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-41.5
+
 \end_layout
 
 \end_inset
@@ -6189,7 +6567,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-17.8
+
 \end_layout
 
 \end_inset
@@ -6198,7 +6576,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-48.5
+
 \end_layout
 
 \end_inset
@@ -6207,7 +6585,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-22.8
+
 \end_layout
 
 \end_inset
@@ -6216,7 +6594,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-30.0
+
 \end_layout
 
 \end_inset
@@ -6225,7 +6603,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.518
+
 \end_layout
 
 \end_inset
@@ -6234,7 +6612,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.860
+
 \end_layout
 
 \end_inset
@@ -6243,7 +6621,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-8.9
+
 \end_layout
 
 \end_inset
@@ -6252,7 +6630,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-7.8
+
 \end_layout
 
 \end_inset
@@ -6261,7 +6639,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-16.6
+
 \end_layout
 
 \end_inset
@@ -6270,7 +6648,7 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.0
+
 \end_layout
 
 \end_inset
@@ -6279,7 +6657,180 @@ amdsemi (bugfix zerograd) -m16
 \begin_inset Text
 
 \begin_layout Plain Layout
-34.3
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+hml2rm (pgd-8)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -6326,7 +6877,7 @@ amdsemi (bugfix zerograd) -m10
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+25.6
 \end_layout
 
 \end_inset
@@ -6335,7 +6886,7 @@ amdsemi (bugfix zerograd) -m10
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+35.1
 \end_layout
 
 \end_inset
@@ -6344,7 +6895,7 @@ amdsemi (bugfix zerograd) -m10
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.4
 \end_layout
 
 \end_inset
@@ -6353,7 +6904,7 @@ amdsemi (bugfix zerograd) -m10
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+41.5
 \end_layout
 
 \end_inset
