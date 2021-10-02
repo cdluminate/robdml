@@ -7,16 +7,22 @@
 
 \begin{itemize}
 
+	\item [!] revise HM. align dap dan directly instead of the loss.
+
+	\item [!] re-design Gradual Adversary for HM based on that for the amdsemi.
+	
+	\item [!] difference between EST, ACT, AMD/ AMDsemi.
+		Other methods (than HM) cannot effectively learn from the strongest
+		adversary as the inner maximization is indirectly (and not guaranteed).
+		HM follows the min-max paradigm (can be incorporated into FAT etc).
+		Both ACT and HM stops at a specific point.
+	
 	\item [*] Sampling also matters in adversarial training for deep metric learning.
 
 		[source hardness and destination hardness] different source sampling
 		strategy and different destination sampling strategy. attack
 		destination. DML loss not that sensitive to sampling? or generic
 		advtrain method for DML? | still investigating
-
-	\item [\cmark] \checkmark dynamically changing schedule for amdsemi? |
-		looks good | the sqrt scheme works the best. (gradually increasing the
-		hardness makes sense)
 
 	\item [*] 7-step PGD (as well as 16-step PGD) and better aligned comparison:
 		compare when these methods reach similar retrieval performance.
@@ -31,6 +37,10 @@
 		$L_{act}$. Question: should we do this for every sample? i.e., \[
 			L_{loosen}(a,p,n)=L_{base}(a,p,n)+\sum_{x\in\{a,p,n\}}L(x,\tilde{x},n_{x})
 		\]
+
+	\item [?] adversarial training that does not allow embedding move may
+		encourage model collapse. Maybe we just apply some loosened restrction
+		such as aap? i.e. $(a,\tilde{a},p;\gamma=0)$.
 
 	\item ?  what about other types of metric learining loss functions? |
 		investigating (we first make the most classical method work)
@@ -54,15 +64,19 @@
 		in clearly better results. It's on par with AMDsemi. Are they really
 		that different?
 
-	\item [\cmark] (codecheck) does amd really honour the pgditer parameter? |
-		direct adoptation of madry defense is really prone to model collapse.
-
 \end{itemize}
 
 
 \subsection{Done, Discarded or Rejected}
 
 \begin{enumerate}
+
+	\item [\cmark] \checkmark dynamically changing schedule for amdsemi? |
+		looks good | the sqrt scheme works the best. (gradually increasing the
+		hardness makes sense)
+
+	\item [\cmark] (codecheck) does amd really honour the pgditer parameter? |
+		direct adoptation of madry defense is really prone to model collapse.
 
 	\item [\xmark] MSE attack? | TMA is already close enough to it.
 
