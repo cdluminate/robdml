@@ -7,7 +7,13 @@
 
 \begin{itemize}
 
-	\item [!] re-design Gradual Adversary for HM based on that for the amdsemi.
+	\item [*] re-design Gradual Adversary for HM based on that for the amdsemi. |
+		\[
+			(1-\frac{\text{prev\_loss}|_0^{2+\beta}}{2+\beta}) \times
+			(\phi - H_\text{dst})\mathbb{I}\{\phi > H_\text{dst}\}
+		\]
+		So that for triplets that are not hard enoguh, when
+		$prevloss \rightarrow 0$, $E[H_\text{dst}]\rightarrow \phi$.
 	
 	\item [!] difference between EST, ACT, AMD/ AMDsemi.
 		Other methods (than HM) cannot effectively learn from the strongest
