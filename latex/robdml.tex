@@ -180,10 +180,23 @@ In this MLSP project, we plan to make the following contributions:
 		The proposed method achieves higher adversarial robustness compared to
 		the state-of-the-art, and is more computationally efficient.
 		%
+		This method makes min-max training feaisble, and hence the incorporation
+		into free adversarial training and boost learning efficiency.
+		%
+		(initial condition)
+		%
 	\item \textit{Gradual Adversary} is proposed to dynamically adjust the
 		destination hardness less for Hardness Manipulation during the
 		adversarial training process in order to balance the metric learning
 		and adversarial learning.
+		%
+		(terminal condition)
+		%
+	\item Inter-ID structure constraint. ((aa~p) + (pp~a))/2
+		(cross-id repelling)
+		existing methods only care inter-class separation, but not
+		intra-class (inter-id) separation, because we may get a 6-element
+		set (a,a~,p,p~,n,n~) from the original triplet.
 		%
 	\item Revise and incorporate the state-of-the-art adversarial training
 		acceleration method (\ie, Free Adversarial Training~\cite{freeat},
