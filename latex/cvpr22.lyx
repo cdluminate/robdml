@@ -481,7 +481,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="57" columns="19">
+<lyxtabular version="3" rows="56" columns="19">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -4485,179 +4485,6 @@ hml2rs (PGD32, legion)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hml2rd (PGD8)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 ghml2rm (PGD32, legion)
 \end_layout
 
@@ -7812,7 +7639,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+hml2dh (8)
 \end_layout
 
 \end_inset
@@ -7821,7 +7648,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+52.1
 \end_layout
 
 \end_inset
@@ -7830,7 +7657,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+64.0
 \end_layout
 
 \end_inset
@@ -7839,7 +7666,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+33.9
 \end_layout
 
 \end_inset
@@ -7848,7 +7675,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+59.5
 \end_layout
 
 \end_inset
@@ -7857,7 +7684,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -7866,7 +7693,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+100.0
 \end_layout
 
 \end_inset
@@ -7875,7 +7702,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.2
 \end_layout
 
 \end_inset
@@ -7884,7 +7711,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+99.9
 \end_layout
 
 \end_inset
@@ -7893,7 +7720,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.843
 \end_layout
 
 \end_inset
@@ -7902,7 +7729,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.734
 \end_layout
 
 \end_inset
@@ -7911,7 +7738,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.1
 \end_layout
 
 \end_inset
@@ -7920,7 +7747,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -7929,7 +7756,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+17.4
 \end_layout
 
 \end_inset
@@ -7938,7 +7765,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -7947,7 +7774,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.7
 \end_layout
 
 \end_inset
@@ -7985,7 +7812,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+ghml2rm (8)
 \end_layout
 
 \end_inset
@@ -7994,7 +7821,7 @@ COL
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+R
 \end_layout
 
 \end_inset
@@ -11411,7 +11238,7 @@ Distance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+52.1
 \end_layout
 
 \end_inset
@@ -11420,7 +11247,7 @@ Distance
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+64.0
 \end_layout
 
 \end_inset
