@@ -22,6 +22,12 @@
 		Both ACT and HM stops at a specific point.
 	
 	\item [?] does the new generic HM work under FAT?
+		Previous FAT leads to collapse because (even if in the amdsemi +fat
+		experiment due to implementation issue) the delta is going to be universal
+		so that for every input $x$ it will increase $H[L(x)]$ as much as possible.
+		This is too prone to lead to collpase. Can we reuse the gradient for 
+		Hardness Manipulation then? We linearly scale down the delta?
+		We want to minimize $E[|H_{src}(x)-H_{dst}(x)|]$ (to a specified hardness).
 
 	\item [?] benchmark other metric learning loss functions for adversarial
 		training. Can HM or GradualAdversary be adopted for other loss functions?
