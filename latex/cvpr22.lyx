@@ -7812,7 +7812,7 @@ hml2dh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-ghml2rm (8)
+ghml2rm (8) clip(0.0,0.2) lin uh0.2
 \end_layout
 
 \end_inset
@@ -7821,7 +7821,7 @@ ghml2rm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-R
+23.1
 \end_layout
 
 \end_inset
@@ -7830,7 +7830,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+31.5
 \end_layout
 
 \end_inset
@@ -7839,7 +7839,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+11.0
 \end_layout
 
 \end_inset
@@ -7848,7 +7848,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+40.2
 \end_layout
 
 \end_inset
@@ -7857,7 +7857,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+21.2
 \end_layout
 
 \end_inset
@@ -7866,7 +7866,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+42.9
 \end_layout
 
 \end_inset
@@ -7875,7 +7875,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+23.1
 \end_layout
 
 \end_inset
@@ -7884,7 +7884,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+28.3
 \end_layout
 
 \end_inset
@@ -7893,7 +7893,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.492
 \end_layout
 
 \end_inset
@@ -7902,7 +7902,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.800
 \end_layout
 
 \end_inset
@@ -7911,7 +7911,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+11.4
 \end_layout
 
 \end_inset
@@ -7920,7 +7920,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+10.4
 \end_layout
 
 \end_inset
@@ -7929,7 +7929,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+19.7
 \end_layout
 
 \end_inset
@@ -7938,7 +7938,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2.9
 \end_layout
 
 \end_inset
@@ -7947,7 +7947,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+37.3
 \end_layout
 
 \end_inset
@@ -7985,7 +7985,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+ghml2rm (8) clip(0.0,0.2) lin uh0.1
 \end_layout
 
 \end_inset
@@ -7994,7 +7994,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+R
 \end_layout
 
 \end_inset
