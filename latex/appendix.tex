@@ -3,18 +3,20 @@
 
 \section{My Memo}
 
+\subsection{Lessons Learned}
+
 \subsection{To be investigated}
 
 \begin{itemize}
 
-	\item [*] re-design Gradual Adversary for HM based on that for the amdsemi. |
+	\item [*] Re-design Gradual Adversary (Linear Addition)
 		\[
-			(1-\frac{\text{prev\_loss}|_0^{2+\beta}}{2+\beta}) \times
-			(\phi - H_\text{dst})\mathbb{I}\{\phi > H_\text{dst}\}
+			(1-\frac{l_{t-1}|_0^{U_L}}{U_L}) \times U_H
 		\]
-		So that for triplets that are not hard enoguh, when
-		$prevloss \rightarrow 0$, $E[H_\text{dst}]\rightarrow \phi$.
-	
+		Increase $E[H]$ to $E[H]+\alpha U_H$. $E[H]$ is expected to decrease
+		with a well-learned model. So without GA, the strength of adversary
+		will decrease.
+
 	\item [!] difference between EST, ACT, AMD/ AMDsemi.
 		Other methods (than HM) cannot effectively learn from the strongest
 		adversary as the inner maximization is indirectly (and not guaranteed).
@@ -86,6 +88,15 @@
 
 \begin{enumerate}
 
+	\item [\xmark] re-design Gradual Adversary for HM based on that for the amdsemi. |
+		\[
+			(1-\frac{\text{prev\_loss}|_0^{2+\beta}}{2+\beta}) \times
+			(\phi - H_\text{dst})\mathbb{I}\{\phi > H_\text{dst}\}
+		\]
+		So that for triplets that are not hard enoguh, when
+		$prevloss \rightarrow 0$, $E[H_\text{dst}]\rightarrow \phi$.
+		| This has a weak effect. Redesign required.
+	
 	\item [\cmark] revise HM. align dap dan directly instead of the loss.
 
 	\item [\cmark] \checkmark dynamically changing schedule for amdsemi? |
