@@ -481,7 +481,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="56" columns="19">
+<lyxtabular version="3" rows="57" columns="19">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -4627,6 +4627,179 @@ ghml2rm (PGD32, legion)
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+hml2rmi (PGD32, legion)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+79.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+87.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+66.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+39.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.270
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.301
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+62.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+65.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+71.7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -8167,7 +8340,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-R
+24.5
 \end_layout
 
 \end_inset
@@ -8176,7 +8349,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+34.1
 \end_layout
 
 \end_inset
@@ -8185,7 +8358,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+11.9
 \end_layout
 
 \end_inset
@@ -8194,7 +8367,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+41.4
 \end_layout
 
 \end_inset
@@ -8203,7 +8376,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+22.0
 \end_layout
 
 \end_inset
@@ -8212,7 +8385,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+35.5
 \end_layout
 
 \end_inset
@@ -8221,7 +8394,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+25.8
 \end_layout
 
 \end_inset
@@ -8230,7 +8403,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+22.4
 \end_layout
 
 \end_inset
@@ -8239,7 +8412,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.490
 \end_layout
 
 \end_inset
@@ -8248,7 +8421,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.664
 \end_layout
 
 \end_inset
@@ -8257,7 +8430,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+14.6
 \end_layout
 
 \end_inset
@@ -8266,7 +8439,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.8
 \end_layout
 
 \end_inset
@@ -8275,7 +8448,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+20.7
 \end_layout
 
 \end_inset
@@ -8284,7 +8457,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.5
 \end_layout
 
 \end_inset
@@ -8293,7 +8466,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+40.9
 \end_layout
 
 \end_inset
@@ -8331,7 +8504,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+hml2rmi (8) aap only
 \end_layout
 
 \end_inset
@@ -8340,7 +8513,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+R
 \end_layout
 
 \end_inset
@@ -14163,7 +14336,7 @@ decay0.5
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+(too weak)
 \end_layout
 
 \end_inset
@@ -14199,7 +14372,7 @@ decay0.25
 \begin_inset Text
 
 \begin_layout Plain Layout
-too weak
+omitted
 \end_layout
 
 \end_inset
@@ -14524,7 +14697,9 @@ decay0.0
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-FAT debugging and sanity.
+(freeze) FAT attempt #1 debugging and sanity.
+ This version seeks for universal perturbation for increasing E_x[Loss]
+ as much as possible.
 \end_layout
 
 \end_inset
