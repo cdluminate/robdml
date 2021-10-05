@@ -318,6 +318,19 @@ Various loss functions for learning the underlying embedding function have been
 proposed~\cite{revisiting,dmlreality}, where the triplet loss~\cite{facenet}
 remain to be a strong and widely used baseline that could reach
 state-of-the-art performance with appropriate triplet sampling strategy.
+%
+Given a triplet of image embeddings (anchor $\va=\phi(X_a)$, positive sample
+$\vp=\phi(X_p)$, negative sample $\vn=\phi(X_n)$), the triplet loss is defined
+as:
+%
+$
+%
+	L_\text{trip}(\va, \vp, \vn; \gamma) = \max(0, d(\va, \vp) - d(\va, \vn) +
+	\gamma),
+%
+$
+%
+where $\gamma$ is a predefined margin parameter.
 
 Similar to what have been found for the classifiers, recent
 works~\cite{robrank,advrank,advorder} also suggest that the embedding function
