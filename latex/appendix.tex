@@ -47,7 +47,7 @@
 		encourage collapse (a trivial solution to the requirement). What if we
 		loosen the requirement and convert it into a new constraint? For
 		instance, \[
-			L_{loosen}(a,p,n)=L_{base}(a,p,n)+\lambda_{1}L(a,\tilde{a},p)+\lambda_{2}L_{triplet}(a,\tilde{a},n)
+			L=L_{base}(a,p,n)+\lambda_{1}L(a,\tilde{a},p)+\lambda_{2}L_{triplet}(a,\tilde{a},n)
 		\] where the $L_{base}$ can be either $L_{triplet}$, $L_{rest}$, or
 		$L_{act}$. Question: should we do this for every sample? i.e., \[
 			L_{loosen}(a,p,n)=L_{base}(a,p,n)+\sum_{x\in\{a,p,n\}}L(x,\tilde{x},n_{x})
@@ -65,19 +65,10 @@
 		some attacks, while performs better one some other attacks. | needs to
 		be interpreted.
 
-	\item ? can we learn a good destination distribution? | too
-		complicated? not necessary currently.
-
 	\item 1. APGD as the optimization algorithm? | postpone
-
-	\item 1. ? mixing amdsemi and act for adversarial training. They are good
-		at different aspects.
 
 	\item verify model collapse
 
-	\item [?] Combine and even better. | Mixing ACT and AMDsemi does result
-		in clearly better results. It's on par with AMDsemi. Are they really
-		that different?
 
 \end{itemize}
 
@@ -92,6 +83,16 @@
 \input{amdsemi.tex}
 
 \begin{enumerate}
+
+	\item [\xmark] mixing amdsemi and act for adversarial training. They are good
+		at different aspects. | not necessary for now. harms novelty.
+
+	\item [\xmark] Combine and even better. | Mixing ACT and AMDsemi does result
+		in clearly better results. It's on par with AMDsemi. Are they really
+		that different?
+
+	\item [\xmark] can we learn a good destination distribution? | too
+		complicated? not necessary currently.
 
 	\item [\xmark] re-design Gradual Adversary for HM based on that for the amdsemi. |
 		\[
