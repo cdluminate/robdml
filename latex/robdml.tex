@@ -106,7 +106,7 @@ Johns Hopkins University\\
 \section{Introduction}
 \label{sec:1}
 
-% what is deep metric learning
+% background and insight.
 
 Given a set of data points, a metric gives a distance value between each pair
 of them.
@@ -116,10 +116,8 @@ images) leveraging the representational power of deep neural networks.
 %
 DML has been extensively studied~\cite{revisiting}, and has a
 wide range of applications such
-as image retrieval~\cite{imagesim2} and face recognition~\cite{facenet}.
-
-% why defense in deep metric learning 
-
+as image retrieval~\cite{imagesim2} and face recognition~\cite{facenet,domainface}.
+%
 Despite the improvements of this field thanks to the advancement of deep neural
 networks, recent research works suggest that DML models are vulnerable to
 adversarial attacks, where an imperceptible perturbation could incur unexpected
@@ -152,23 +150,33 @@ lead to model collapse due to producing very hard sample triplets;
 the training process of a regular DML model, but existing defense methods
 are incompatible to acceleration methods like Free Adversarial Training~\cite{freeat}.
 
-%% for problem 1
-%Triplet hardness still matters in adversarial training for deep metric
-%learning.
-%%
-%propose hardness manipulation for.
-%solution to problem 1
-%
-%% for problem 2
-%ACT and amdsemi have distinct characteristics.
-%solution to problem 2
-%
-%% for problem 3
-%update of advtrain acceleration.
-%solution to problem 3
-%
-%% evaluation and conclusion
-%experimetal evaluations
+% for problem 1
+\oo{[1. Hardness Manipulation]}
+Triplet hardness still matters in adversarial training for deep metric
+learning.
+
+% for problem 2
+\oo{[2. Gradual Adversary]}
+The expectation of hardness will decrease during the training process,
+compared to that from the beginning phase.
+
+\oo{[3. Intra-Class Structure]}
+Given a triplet of samples, we may eventually get up to 6 samples avaiable
+for adversarial training. There could be some kind of hierarchy.
+
+\oo{[4. Free Adversarial Metric Learining]}
+Extension of FAT to adversarial deep metric learning.
+
+% evaluation and conclusion
+\oo{[experimetal evaluations]}
+To validate the effectiveness of the proposed method, we conduct experiments
+on three commonly used dataset, namely CUB-200-2011, Cars-196, and Stanford
+Online Product. \oo{the results suggest that}
+
+\begin{figure}
+	\oo{[diagram]}
+	\caption{\oo{Diagram demonstrating the core idea}}
+\end{figure}
 
 % contributions
 In brief, our contribusions include:
@@ -296,6 +304,22 @@ with excessively hard adversarial samples.
 \label{sec:3}
 
 \oo{[Deep metric learning problem setup]}
+
+In Deep Metric Learning (DML)~\cite{revisiting,dmlreality}, an embedding
+function $\phi:\mathcal{X}\mapsto \Phi \subseteq \mathbb{R}^D$ is learned to
+map data points $X\in\mathcal{X}$ into an embedding space $\Phi$, where the
+output of $\phi(\cdot)$ is usually normalized to the real unit hypersphere for
+regularization purpose.
+%
+With a predefined distance function $d(\cdot,\cdot)$, it allows us to measure
+the distance between $X_i$ and $X_j$ as
+$d_\phi(X_i,X_j)=d(\phi(X_i),\phi(X_j))$.
+%
+Various loss functions for learning the underlying embedding function have been
+proposed~\cite{revisiting,dmlreality}, where the triplet loss~\cite{facenet}
+remain to be a strong and widely used baseline that could reach
+state-of-the-art performance with appropriate triplet sampling strategy.
+
 
 \oo{[Quick review of existing defense methods]}
 
