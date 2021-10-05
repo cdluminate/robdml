@@ -246,19 +246,21 @@ which is impractical for real-world attacks.
 Subsequently, black-box attack methods are developed into two types:
 transferrability-based attacks and query-based attacks.
 %
-Transferrability-based attacks~\cite{di-fgsm,universal} relies on the observation that image-agnostic
-(will take effect when applied to any image) and model-agnostic (will take
-effect when applied to any model) adversarial perturbation are possible.
+Transferrability-based attacks~\cite{di-fgsm,universal} relies on the
+observation that image-agnostic (will take effect when applied to any image)
+and model-agnostic (will take effect when applied to any model) adversarial
+perturbation are possible.
 %
-Query-based attacks~\cite{nes-atk,spsa-atk} only need the logit score output or the label output from a
-classifier, based on which the gradient could be estimated from the response to
-repetitive queries in order to figure out the adversarial perturbation.
+Query-based attacks~\cite{nes-atk,spsa-atk} only need the logit score output or
+the label output from a classifier, based on which the gradient could be
+estimated from the response to repetitive queries in order to figure out the
+adversarial perturbation.
 
 \textbf{Adversarial Defense.}
 %
-To battle against the attacks, some early defense
-methods create a gradient masking effect, namely making it hard for the attacker
-to find a good gradient, but it gives a false sense of security~\cite{obfuscated}.
+To battle against the attacks, some early defense methods create a gradient
+masking effect, namely making it hard for the attacker to find a good gradient,
+but it gives a false sense of security~\cite{obfuscated}.
 %
 Defensive distillation~\cite{distill2} can be compromised by C\&W~\cite{cw}.
 %
@@ -271,8 +273,8 @@ However, it is noted that various defense methods are still susceptible to
 adaptive attack~\cite{adaptive}.
 %
 Among the proposed defense methods, adversarial training has been empirically
-found effective~\cite{bilateral,advtrain-triplet,benchmarking}, and it consistently retains adversarial robustness
-for the model.
+found effective~\cite{bilateral,advtrain-triplet,benchmarking}, and it
+consistently retains adversarial robustness for the model.
 
 \textbf{Deep Metric Learning.}
 %
@@ -281,29 +283,26 @@ cross-modal retrieval~\cite{ladderloss}, and face recognition~\cite{facenet}
 can be formularized as a deep metric learning problem.
 %
 Deep metric learning has been found vulnerable to adversarial attacks as
-well~\cite{advrank,advorder}, which will result in undesired
-implications on safety, security, or fairness of a deep metric learning
-application.
+well~\cite{advrank,advorder}, which will result in undesired implications on
+safety, security, or fairness of a deep metric learning application.
 %
-In contrast, the defense methods for enhancing the adversarial robustness of deep
-metric learning are less explored.
+In contrast, the defense methods for enhancing the adversarial robustness of
+deep metric learning are less explored.
 %
-Zhou \etal~\cite{advrank} present an adversarial training method with adversarial
-examples maximizing the embedding move distance off its original location.
+Zhou \etal~\cite{advrank} present an adversarial training method with
+adversarial examples maximizing the embedding move distance off its original
+location.
 %
-Anti-Collapse Triplet~\cite{robrank} forces the model
-to separate collapsed positive and negative samples in order to learn
-robust features.
+Anti-Collapse Triplet~\cite{robrank} forces the model to separate collapsed
+positive and negative samples in order to learn robust features.
 %
 However, the existing defense methods refrain from adopting Madry's min-max
-adversarial training paradigm due to the model being too easy to collapse
-with excessively hard adversarial samples.
+adversarial training paradigm due to the model being too easy to collapse with
+excessively hard adversarial samples.
 
 
 \section{Our Approach}
 \label{sec:3}
-
-\oo{[Deep metric learning problem setup]}
 
 In Deep Metric Learning (DML)~\cite{revisiting,dmlreality}, an embedding
 function $\phi:\mathcal{X}\mapsto \Phi \subseteq \mathbb{R}^D$ is learned to
@@ -320,14 +319,34 @@ proposed~\cite{revisiting,dmlreality}, where the triplet loss~\cite{facenet}
 remain to be a strong and widely used baseline that could reach
 state-of-the-art performance with appropriate triplet sampling strategy.
 
+Similar to what have been found for the classifiers, recent
+works~\cite{robrank,advrank,advorder} also suggest that the embedding function
+$\phi(\cdot)$ in DML is vulnerable to adversarial attacks.
+%
+Specifically, an imperceptible adversarial perturbation $r$ is added to the
+input image $X$ ($\|r\|_p \leq \varepsilon$, $X+r\in \mathcal{X}$), so that its
+embedding vector $\tilde{\vx}=\phi(X+r)$ will be moved off its original
+location towards other positions to fulfill the attacker's goal.
+
+Although attacks against DML has been widely studied~\cite{advrank,advorder},
+the defense methods for improving adversarial robustness is much less explored.
+%
+As adversarial training~\cite{madry} remains to be one of the most effective
+defense for classification, existing defense methods for DML are also adversarial
+training-based.
 
 \oo{[Quick review of existing defense methods]}
+EST~\cite{advrank} and ACT~\cite{robrank}. Their issues.
 
 \subsection{Hardness Manipulation}
 
 \subsection{Gradual Adversary}
 
 \subsection{Intra-Class Structure}
+
+\subsection{\oo{Free Adversarial DML?}}
+
+\subsection{\oo{Benchmark other DML loss?}}
 
 \section{Experiments}
 \label{sec:4}
