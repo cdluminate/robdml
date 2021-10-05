@@ -392,6 +392,14 @@ such paradigm because the model will quickly collapse with excessively hard
 triplets~\cite{facenet}, and adopt relatively weak adversaries instead
 (inefficient in gaining robustness).
 
+In this paper, we argue that the hardness of triplet matters in adversarial
+training for DML.
+%
+The model does not collapse with EST or ACT because the expectation of hardness,
+\ie, $E[H]$ will be close to zero.
+%
+While the variance $\text{Var}[H]$ for EST is higher, and that for ACT is lower.
+
 \subsection{Gradual Adversary}
 
 \subsection{Intra-Class Structure}
