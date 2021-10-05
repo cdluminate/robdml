@@ -5430,6 +5430,8 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 hml2rmi (8) aap only
 \end_layout
 
@@ -5439,7 +5441,9 @@ hml2rmi (8) aap only
 \begin_inset Text
 
 \begin_layout Plain Layout
-R
+
+\series bold
+25.2
 \end_layout
 
 \end_inset
@@ -5449,6 +5453,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+34.4
 \end_layout
 
 \end_inset
@@ -5458,6 +5464,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+12.3
 \end_layout
 
 \end_inset
@@ -5467,6 +5475,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+41.8
 \end_layout
 
 \end_inset
@@ -5476,6 +5486,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+22.2
 \end_layout
 
 \end_inset
@@ -5485,6 +5497,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+37.1
 \end_layout
 
 \end_inset
@@ -5494,6 +5508,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+23.1
 \end_layout
 
 \end_inset
@@ -5503,6 +5519,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+23.4
 \end_layout
 
 \end_inset
@@ -5512,6 +5530,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+0.476
 \end_layout
 
 \end_inset
@@ -5521,6 +5541,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+0.728
 \end_layout
 
 \end_inset
@@ -5530,6 +5552,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+14.6
 \end_layout
 
 \end_inset
@@ -5539,6 +5563,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+11.9
 \end_layout
 
 \end_inset
@@ -5548,6 +5574,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+21.2
 \end_layout
 
 \end_inset
@@ -5557,6 +5585,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+4.0
 \end_layout
 
 \end_inset
@@ -5566,6 +5596,8 @@ R
 
 \begin_layout Plain Layout
 
+\series bold
+39.8
 \end_layout
 
 \end_inset
