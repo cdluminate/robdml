@@ -70,13 +70,13 @@ for (name, (r1, cost, ers)) in data.items():
         color = 'b'
     if name == 'ACT':
         color = 'r'
-    plt.plot(ers, r1, f'-{color}o')
+    plt.plot(r1, ers, f'-{color}o')
     if isinstance(ers, float):
-        plt.annotate(name, xy=(ers, r1))
+        plt.annotate(name, xy=(r1, ers))
     elif isinstance(ers, tuple):
-        plt.annotate(name, xy=(ers[0], r1[0]))
-plt.xlabel('Robustness (ERS)')
-plt.ylabel('Recall@1 (R@1)')
+        plt.annotate(name, xy=(r1[0], ers[0]))
+plt.ylabel('Robustness (ERS)')
+plt.xlabel('Recall@1 (R@1)')
 #plt.axis('equal')
 
 
