@@ -2,7 +2,7 @@ LATEX:=pdflatex
 BIBTEX:=bibtex
 TEX:=robdml.tex
 
-robdml:
+robdml: introdiag.pdf
 	$(LATEX) $(TEX)
 	$(BIBTEX) robdml
 	$(LATEX) $(TEX)
@@ -11,3 +11,6 @@ robdml:
 
 clean:
 	-$(RM) *.aux *.bbl *.blg *.brf *.log *.out *.pdf
+
+introdiag.pdf:
+	inkscape -o introdiag.pdf introdiag.svg
