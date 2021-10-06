@@ -26,6 +26,9 @@
 \usepackage{multirow}
 \newcommand{\uline}[1]{\underline{#1}}
 
+%\DeclareMathOperator*{\argmax}{arg\,max}
+%\DeclareMathOperator*{\argmin}{arg\,min}
+
 % It is strongly recommended to use hyperref, especially for the review version.
 % hyperref with option pagebackref eases the reviewers' job.
 % Please disable hyperref *only* if you encounter grave issues, e.g. with the
@@ -377,11 +380,13 @@ Given an anchor image $X_a$, we sample a positive image $X_p^S$ (in the same
 class as the anchor) and a negative image $X_n^S$ (in different class as the
 anchor) with a certain sampling strategy (\eg, semi-hard~\cite{facenet}).
 %
-For convenience we call this triplet as ``source triplet''.
+% For convenience we call this triplet as ``source triplet''.
 %
 Then its \emph{hardness} is defined as
 $H(X_a,X_p^S,X_n^S)=d_\phi(X_a,X_p^S)-d_\phi(X_a,X_n^S)$, which is an internal
 part of the triplet loss.
+%
+For convenience we call this as ``source hardness'', denoted as $H_S$.
 
 In the traditional min-max adversarial training setting~\cite{madry}, the inner
 ``max'' problem should maximize $H(X_a,X_p^S,X_n^S)$ and hence maximize the triplet
@@ -399,6 +404,30 @@ The model does not collapse with EST or ACT because the expectation of hardness,
 \ie, $E[H]$ will be close to zero.
 %
 While the variance $\text{Var}[H]$ for EST is higher, and that for ACT is lower.
+
+Instead of directly maximizing the source hardness, we propose to stop the
+maximization process when the adversarial examples reach a certain level of
+hardness in order to avoid model collapse.
+%
+Based on the same anchor image $X_a$, we sample another positive image $X_p^D$
+and negative image $X_n^D$ with a different triplet sampling strategy, and
+we call its hardness as ``destination hardness'', denoted as $H_D$.
+
+Then, we want change (increase)
+the hardness level from $H_S$ into $H_D$, by finding adversarial examples for
+$(X_a, X_p^S, X_n^S)$.
+%
+We denote the the hardness of adversarial examples as
+$\tilde{H}_S=H(X_a{+}r_a, X_p^S{+}r_p, X_n^S{+}r_n)$.
+%
+This is named as \emph{Hardness Manipulation} (HM), which is implemented as 
+follows:
+%
+\begin{equation}
+	%
+	\argmin_{r_a,r_p,r_n} \|\min(0, \tilde{H}_S-H_D)\|^2.
+	%
+\end{equation}
 
 \subsection{Gradual Adversary}
 
