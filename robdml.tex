@@ -427,21 +427,24 @@ follows:
 %
 \begin{equation}
 	%
-	\bar{r}_a, \bar{r}_p, \bar{r}_n =
-	\argmin_{r_a,r_p,r_n} \|\min(0, \tilde{H}_S-H_D)\|^2.
+	\bar{r}_a, \bar{r}_p, \bar{r}_n = \argmin_{r_a,r_p,r_n} \|\min(0,
+	\tilde{H}_S-H_D)\|^2.
 	%
 	\label{eq:hm}
 	%
 \end{equation}
 %
 The $\min(0,\cdot)$ part in \cref{eq:hm} truncates the gradient when $H_S>H_D$,
-preventing $H_S$ from being reduced.
+automatically stopping the optimization.
+%
+This is because $H_S$ will be reduced once greater than $H_D$ in standard Mean
+Square Error.
 %
 The optimization problem can be solved by projected gradient
 descent~\cite{madry}.
 %
-And the resulting adversarial examples are used for adversarially training
-the DML model:
+And the resulting adversarial examples are used for adversarially training the
+DML model:
 %
 $L_\text{trip}(\phi(X_a+\bar{r}_a), \phi(X_p^S+\bar{r}_p),
 \phi(X_n^S+\bar{r}_n))$.
