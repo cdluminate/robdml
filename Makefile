@@ -2,7 +2,7 @@ LATEX:=pdflatex
 BIBTEX:=bibtex
 TEX:=robdml.tex
 
-robdml: introdiag.pdf
+robdml: introplot.pdf
 	$(LATEX) $(TEX)
 	$(BIBTEX) robdml
 	$(LATEX) $(TEX)
@@ -12,5 +12,8 @@ robdml: introdiag.pdf
 clean:
 	-$(RM) *.aux *.bbl *.blg *.brf *.log *.out *.pdf
 
-introdiag.pdf:
-	inkscape -o introdiag.pdf introdiag.svg
+introplot.pdf:
+	python3 introplot.py
+	inkscape -o introplot.pdf introplot.svg
+	pdfcrop introplot.pdf
+	mv introplot-crop.pdf introplot.pdf

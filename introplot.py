@@ -21,9 +21,9 @@ data = {
         'hml2rmi': (25.2, 9.0, 39.8),
         }
 
-plt.figure()
+plt.figure(figsize=[10.8, 4.8])
 
-plt.subplot(1,2,1)
+ax = plt.subplot(1,2,1)
 for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
@@ -39,8 +39,14 @@ for (name, (r1, cost, ers)) in data.items():
         plt.annotate(name, xy=(cost[0], ers[0]))
 plt.xlabel('Training Cost')
 plt.ylabel('Robustness (ERS)')
-plt.xscale('log', base=2)
+plt.xscale('log', base=2, basex=2)
 #plt.axis('equal')
+#plt.axis('square')
+
+ax.annotate('↖ Better', xy=(0.05, 0.95), xycoords='axes fraction',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2))
+ax.annotate('↘ Worse', xy=(0.80, 0.05), xycoords='axes fraction',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2))
 
 #plt.subplot(2,2,2)
 #for (name, (r1, cost, ers)) in data.items():
@@ -61,7 +67,7 @@ plt.xscale('log', base=2)
 #plt.xscale('log', base=2)
 
 
-plt.subplot(1,2,2)
+ax = plt.subplot(1,2,2)
 for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
@@ -79,7 +85,13 @@ plt.ylabel('Robustness (ERS)')
 plt.xlabel('Recall@1 (R@1)')
 plt.gca().invert_xaxis()
 #plt.axis('equal')
+#plt.axis('square')
 
+ax.annotate('↖ Better', xy=(0.05, 0.95), xycoords='axes fraction',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2))
+ax.annotate('↘ Worse', xy=(0.80, 0.05), xycoords='axes fraction',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2))
 
 #plt.tight_layout()
-plt.show()
+#plt.show()
+plt.savefig('introplot.svg')
