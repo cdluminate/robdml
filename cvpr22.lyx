@@ -101,7 +101,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="34" columns="19">
+<lyxtabular version="3" rows="35" columns="19">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2696,6 +2696,179 @@ ACT (PGD-7 for faster pace)
 
 \series bold
 27.3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ACT (4)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -5612,7 +5785,7 @@ ghml2rm (8) uh0.0 + pad
 \begin_inset Text
 
 \begin_layout Plain Layout
-R
+25.0
 \end_layout
 
 \end_inset
@@ -5621,7 +5794,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+34.0
 \end_layout
 
 \end_inset
@@ -5630,7 +5803,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.0
 \end_layout
 
 \end_inset
@@ -5639,7 +5812,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+41.2
 \end_layout
 
 \end_inset
@@ -5648,7 +5821,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+22.3
 \end_layout
 
 \end_inset
@@ -5657,7 +5830,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+37.1
 \end_layout
 
 \end_inset
@@ -5666,7 +5839,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+24.3
 \end_layout
 
 \end_inset
@@ -5675,7 +5848,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+23.6
 \end_layout
 
 \end_inset
@@ -5684,7 +5857,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.471
 \end_layout
 
 \end_inset
@@ -5693,7 +5866,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.719
 \end_layout
 
 \end_inset
@@ -5702,7 +5875,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+10.7
 \end_layout
 
 \end_inset
@@ -5711,7 +5884,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.0
 \end_layout
 
 \end_inset
@@ -5720,7 +5893,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+19.2
 \end_layout
 
 \end_inset
@@ -5729,7 +5902,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5.0
 \end_layout
 
 \end_inset
@@ -5738,7 +5911,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+39.6
 \end_layout
 
 \end_inset
