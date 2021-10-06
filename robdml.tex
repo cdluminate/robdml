@@ -452,6 +452,12 @@ During the training process, the strength of adversary will gradually decrease,
 because the expectation of the destination hardness $E[H_D]$ is expected to
 decrease with a model being trained.
 
+
+\[
+	\big(1-\frac{\text{Clip}_0^{U_L}[l_{t-1}]}{U_L} \big)\times
+	(U_H + (H_D - H_S).relu())
+\]
+
 \subsection{Intra-Class Structure}
 
 \subsection{\oo{Free Adversarial DML?}}
