@@ -7,9 +7,9 @@ data = {
         #'N/A': (53.9, 1.0, 3.8),
         #'EST': (8.5, 33.0, 5.3),
         'ACT': (
-            (27.5, 28.6, 33.3),
-            (33.0, 17.0, 8.0),
-            (33.9, 34.7, 27.3),
+            (27.5, 28.6, 33.3, 38.4),
+            (33.0, 17.0, 8.0, 5.0),
+            (33.9, 34.7, 27.3, 13.9),
             ),
         'amdsemi': (
             (25.6, 25.1, 28.0),
@@ -77,6 +77,7 @@ for (name, (r1, cost, ers)) in data.items():
         plt.annotate(name, xy=(r1[0], ers[0]))
 plt.ylabel('Robustness (ERS)')
 plt.xlabel('Recall@1 (R@1)')
+plt.gca().invert_xaxis()
 #plt.axis('equal')
 
 
