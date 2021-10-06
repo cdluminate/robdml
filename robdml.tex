@@ -413,29 +413,38 @@ Based on the same anchor image $X_a$, we sample another positive image $X_p^D$
 and negative image $X_n^D$ with a different triplet sampling strategy, and
 we call its hardness as ``destination hardness'', denoted as $H_D$.
 
-Then, we want change (increase)
-the hardness level from $H_S$ into $H_D$, by finding adversarial examples for
-$(X_a, X_p^S, X_n^S)$.
+Then, we want change (increase) the hardness level from $H_S$ into $H_D$, by
+finding adversarial examples for $(X_a, X_p^S, X_n^S)$.
 %
 Note, it is not expected to lower the hardness during the attack, namely
 $E[H_D]$ should be greater or equal to $E[H_S]$.
 %
-We denote the the hardness of adversarial examples as
-$\tilde{H}_S=H(X_a{+}r_a, X_p^S{+}r_p, X_n^S{+}r_n)$.
+We denote the the hardness of adversarial examples as $\tilde{H}_S=H(X_a{+}r_a,
+X_p^S{+}r_p, X_n^S{+}r_n)$.
 %
-This is named as \emph{Hardness Manipulation} (HM), which is implemented as 
+This is named as \emph{Hardness Manipulation} (HM), which is implemented as
 follows:
 %
 \begin{equation}
 	%
+	\bar{r}_a, \bar{r}_p, \bar{r}_n =
 	\argmin_{r_a,r_p,r_n} \|\min(0, \tilde{H}_S-H_D)\|^2.
 	%
 	\label{eq:hm}
 	%
 \end{equation}
 %
-The $\min(0,\cdot)$ part in \cref{eq:hm} truncates the gradient when
-$H_S>H_D$, preventing $H_S$ from being reduced.
+The $\min(0,\cdot)$ part in \cref{eq:hm} truncates the gradient when $H_S>H_D$,
+preventing $H_S$ from being reduced.
+%
+The optimization problem can be solved by projected gradient
+descent~\cite{madry}.
+%
+And the resulting adversarial examples are used for adversarially training
+the DML model:
+%
+$L_\text{trip}(\phi(X_a+\bar{r}_a), \phi(X_p^S+\bar{r}_p),
+\phi(X_n^S+\bar{r}_n))$.
 
 \subsection{Gradual Adversary}
 
