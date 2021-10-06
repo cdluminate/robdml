@@ -80,5 +80,5 @@ plt.ylabel('Recall@1 (R@1)')
 #plt.axis('equal')
 
 
-plt.tight_layout()
+#plt.tight_layout()
 plt.show()
