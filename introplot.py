@@ -11,19 +11,23 @@ data = {
             (33.0, 17.0, 8.0, 5.0, 3.0),
             (33.9, 34.7, 27.3, 13.9, 5.8),
             ),
-        'amdsemi': (
-            (25.6, 25.1, 28.0),
-            (33.0, 17.0, 8.0),
-            (38.0, 36.6, 33.5),
+        #'amdsemi': (
+        #    (25.6, 25.1, 28.0),
+        #    (33.0, 17.0, 8.0),
+        #    (38.0, 36.6, 33.5),
+        #    ),
+        #'amdsemi+aap0': (26.2, 9.0, 40.0),
+        #'hml2rm': (
+        #    (27.4, 29.0),
+        #    (9.0, 5.0),
+        #    (32.9, 30.8),
+        #    ),
+        #'hml2rmi': (25.2, 9.0, 39.8),
+        'hmetrm': (
+            (28.3, 34.9),
+            (9.0, 5.0,),
+            (37.2, 25.6),
             ),
-        'amdsemi+aap0': (26.2, 9.0, 40.0),
-        'hml2rm': (
-            (27.4, 29.0),
-            (9.0, 5.0),
-            (32.9, 30.8),
-            ),
-        'hml2rmi': (25.2, 9.0, 39.8),
-        'hmetrm': (34.9, 5.0, 25.6),
         }
 
 plt.figure(figsize=[10.8, 4.8])
@@ -33,10 +37,8 @@ for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
     color = 'k'
-    if name == 'EST':
-        color = 'b'
     if name == 'ACT':
-        color = 'r'
+        color = 'm'
     plt.plot(cost, ers, f'-{color}o')
     if isinstance(cost, float):
         plt.annotate(name, xy=(cost, ers))
@@ -77,10 +79,8 @@ for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
     color = 'k'
-    if name == 'EST':
-        color = 'b'
     if name == 'ACT':
-        color = 'r'
+        color = 'm'
     plt.plot(r1, ers, f'-{color}o')
     if isinstance(ers, float):
         plt.annotate(name, xy=(r1, ers))
