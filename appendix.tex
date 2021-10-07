@@ -7,7 +7,7 @@
 
 \begin{itemize}
 
-	\item [*] Re-design Gradual Adversary (Linear Addition)
+	\item [GA] Re-design Gradual Adversary (Linear Addition)
 		\[
 			\big(1-\frac{\text{Clip}_0^{U_L}[l_{t-1}]}{U_L} \big)\times U_H
 		\]
@@ -15,35 +15,20 @@
 		with a well-learned model. So without GA, the strength of adversary
 		will decrease.
 	
-	\item [!] difference between EST, ACT, AMD/ AMDsemi.
+	\item [M] difference between EST, ACT, AMD/ AMDsemi.
 		Other methods (than HM) cannot effectively learn from the strongest
 		adversary as the inner maximization is indirectly (and not guaranteed).
 		HM follows the min-max paradigm (can be incorporated into FAT etc).
 		Both ACT and HM stops at a specific point.
 	
-	\item [?] does the new generic HM work under FAT?
-		Previous FAT leads to collapse because (even if in the amdsemi +fat
-		experiment due to implementation issue) the delta is going to be universal
-		so that for every input $x$ it will increase $H[L(x)]$ as much as possible.
-		This is too prone to lead to collpase. Can we reuse the gradient for 
-		Hardness Manipulation then? We linearly scale down the delta?
-		We want to minimize $E[|H_{src}(x)-H_{dst}(x)|]$ (to a specified hardness).
-
-	\item [?] benchmark other metric learning loss functions for adversarial
-		training. Can HM or GradualAdversary be adopted for other loss functions?
-
-	\item [*] Sampling also matters in adversarial training for deep metric learning.
+	\item [M] Sampling also matters in adversarial training for deep metric learning.
 
 		[source hardness and destination hardness] different source sampling
 		strategy and different destination sampling strategy. attack
 		destination. DML loss not that sensitive to sampling? or generic
 		advtrain method for DML? | still investigating
 
-	\item [*] 7-step PGD (as well as 16-step PGD) and better aligned comparison:
-		compare when these methods reach similar retrieval performance.
-		Meanwhile we can do experiments much faster.
-
-	\item Adversarial training (does not allow any distance moving) may
+	\item [ICS] Adversarial training (does not allow any distance moving) may
 		encourage collapse (a trivial solution to the requirement). What if we
 		loosen the requirement and convert it into a new constraint? For
 		instance, \[
@@ -53,22 +38,27 @@
 			L_{loosen}(a,p,n)=L_{base}(a,p,n)+\sum_{x\in\{a,p,n\}}L(x,\tilde{x},n_{x})
 		\]
 
-	\item [?] adversarial training that does not allow embedding move may
+	\item [ICS] adversarial training that does not allow embedding move may
 		encourage model collapse. Maybe we just apply some loosened restrction
 		such as aap? i.e. $(a,\tilde{a},p;\gamma=0)$.
 
-	\item ?  what about other types of metric learining loss functions? |
+	\item [?] verify model collapse. are the parameters really going towards zero?
+
+	\item [T] does the new generic HM work under FAT?
+		Previous FAT leads to collapse because (even if in the amdsemi +fat
+		experiment due to implementation issue) the delta is going to be universal
+		so that for every input $x$ it will increase $H[L(x)]$ as much as possible.
+		This is too prone to lead to collpase. Can we reuse the gradient for 
+		Hardness Manipulation then? We linearly scale down the delta?
+		We want to minimize $E[|H_{src}(x)-H_{dst}(x)|]$ (to a specified hardness).
+
+	\item [T] APGD as the optimization algorithm? | postpone
+
+	\item [T] benchmark other metric learning loss functions for adversarial
+		training. Can HM or GradualAdversary be adopted for other loss functions?
+
+	\item [T]  what about other types of metric learining loss functions? |
 		investigating (we first make the most classical method work)
-
-	\item ?  effectiveness of AMD Semi is to be verified. | as effective
-		as ACT, reaches slightly higher ERS. But performs worse than ACT on
-		some attacks, while performs better one some other attacks. | needs to
-		be interpreted.
-
-	\item 1. APGD as the optimization algorithm? | postpone
-
-	\item verify model collapse
-
 
 \end{itemize}
 
@@ -83,6 +73,15 @@
 \input{amdsemi.tex}
 
 \begin{enumerate}
+
+	\item [-] effectiveness of AMD Semi is to be verified. | as effective
+		as ACT, reaches slightly higher ERS. But performs worse than ACT on
+		some attacks, while performs better one some other attacks. | needs to
+		be interpreted.
+
+	\item [\cmark] 7-step PGD (as well as 16-step PGD) and better aligned comparison:
+		compare when these methods reach similar retrieval performance.
+		Meanwhile we can do experiments much faster.
 
 	\item [\cmark] HM method: KL, L2, L2+threshold. L2 is $\|H_s-H_d\|^2$.
 		In L2 the adversarial sample may vibrate around the boundary due to
