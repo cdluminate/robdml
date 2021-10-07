@@ -2,32 +2,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 import rich
 c = rich.get_console()
-
 plt.rcParams['font.family'] = 'serif'
-#plt.rcParams['font.serif'] = 'Times New Roman; Noto Sans'
 plt.rcParams['font.serif'] = 'FreeSerif'
-#plt.rcParams['font.serif'] = 'Linux Libertine O'
 plt.rcParams['font.size'] = 14
 
 data = {
-        #'N/A': (53.9, 1.0, 3.8),
-        #'EST': (8.5, 33.0, 5.3),
         'ACT': (
             (27.5, 28.6, 33.3, 38.4, 46.5),
             (33.0, 17.0, 8.0, 5.0, 3.0),
             (33.9, 34.7, 27.3, 13.9, 5.8),
             ),
-        #'amdsemi': (
-        #    (25.6, 25.1, 28.0),
-        #    (33.0, 17.0, 8.0),
-        #    (38.0, 36.6, 33.5),
-        #    ),
         #'amdsemi+aap0': (26.2, 9.0, 40.0),
-        #'hml2rm': (
-        #    (27.4, 29.0),
-        #    (9.0, 5.0),
-        #    (32.9, 30.8),
-        #    ),
         #'hml2rmi': (25.2, 9.0, 39.8),
         'hmetrm': (
             (27.1, 28.3, 34.9, 39.2),
@@ -43,9 +28,9 @@ for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
     if name == 'ACT':
-        plt.plot(cost, ers, f'-o', 'color', 'tab:blue')
+        plt.plot(cost, ers, f'-o', color='tab:blue')
     else:
-        plt.plot(cost, ers, f'-ok')
+        plt.plot(cost, ers, f'-o', color='k')
     if isinstance(cost, float):
         plt.annotate(name, xy=(cost, ers))
     elif isinstance(cost, tuple):
@@ -87,15 +72,15 @@ for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
     if name == 'ACT':
-        plt.plot(r1, ers, f'-o', 'color', 'tab:blue')
+        plt.plot(r1, ers, f'-o', color='tab:blue')
     else:
-        plt.plot(r1, ers, '-ok')
+        plt.plot(r1, ers, f'-o', color='k')
     if isinstance(ers, float):
         plt.annotate(name, xy=(r1, ers))
     elif isinstance(ers, tuple):
         plt.annotate(name, xy=(r1[0], ers[0]))
-plt.ylabel('Robustness (ERS)')
 plt.xlabel('Recall@1')
+plt.ylabel('Robustness (ERS)')
 plt.gca().invert_xaxis()
 #plt.axis('equal')
 #plt.axis('square')
