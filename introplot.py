@@ -42,10 +42,10 @@ ax = plt.subplot(1,2,1)
 for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
-    color = 'k'
     if name == 'ACT':
-        color = 'b'
-    plt.plot(cost, ers, f'-{color}o')
+        plt.plot(cost, ers, f'-o', 'color', 'tab:blue')
+    else:
+        plt.plot(cost, ers, f'-ok')
     if isinstance(cost, float):
         plt.annotate(name, xy=(cost, ers))
     elif isinstance(cost, tuple):
@@ -86,10 +86,10 @@ ax = plt.subplot(1,2,2)
 for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
-    color = 'k'
     if name == 'ACT':
-        color = 'b'
-    plt.plot(r1, ers, f'-{color}o')
+        plt.plot(r1, ers, f'-o', 'color', 'tab:blue')
+    else:
+        plt.plot(r1, ers, '-ok')
     if isinstance(ers, float):
         plt.annotate(name, xy=(r1, ers))
     elif isinstance(ers, tuple):
