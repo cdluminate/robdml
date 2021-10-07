@@ -3,6 +3,12 @@ import matplotlib.pyplot as plt
 import rich
 c = rich.get_console()
 
+plt.rcParams['font.family'] = 'serif'
+#plt.rcParams['font.serif'] = 'Times New Roman; Noto Sans'
+plt.rcParams['font.serif'] = 'FreeSerif'
+#plt.rcParams['font.serif'] = 'Linux Libertine O'
+plt.rcParams['font.size'] = 12
+
 data = {
         #'N/A': (53.9, 1.0, 3.8),
         #'EST': (8.5, 33.0, 5.3),
@@ -46,14 +52,16 @@ for (name, (r1, cost, ers)) in data.items():
         plt.annotate(name, xy=(cost[0], ers[0]))
 plt.xlabel('Training Cost')
 plt.ylabel('Robustness (ERS)')
-plt.xscale('log', base=2, basex=2)
+plt.xscale('log', base=2)
 #plt.axis('equal')
 #plt.axis('square')
 
-ax.annotate('↖ Better', xy=(0.05, 0.95), xycoords='axes fraction',
-        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2))
-ax.annotate('↘ Worse', xy=(0.80, 0.05), xycoords='axes fraction',
-        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2))
+ax.annotate('↖ Better', xy=(0.04, 0.92), xycoords='axes fraction',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
+        size=14)
+ax.annotate('↘ Worse', xy=(0.77, 0.06), xycoords='axes fraction',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
+        size=14)
 
 #plt.subplot(2,2,2)
 #for (name, (r1, cost, ers)) in data.items():
@@ -87,15 +95,17 @@ for (name, (r1, cost, ers)) in data.items():
     elif isinstance(ers, tuple):
         plt.annotate(name, xy=(r1[0], ers[0]))
 plt.ylabel('Robustness (ERS)')
-plt.xlabel('Recall@1 (R@1)')
+plt.xlabel('Recall@1')
 plt.gca().invert_xaxis()
 #plt.axis('equal')
 #plt.axis('square')
 
-ax.annotate('↖ Better', xy=(0.05, 0.95), xycoords='axes fraction',
-        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2))
-ax.annotate('↘ Worse', xy=(0.80, 0.05), xycoords='axes fraction',
-        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2))
+ax.annotate('↖ Better', xy=(0.04, 0.92), xycoords='axes fraction',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
+        size=14)
+ax.annotate('↘ Worse', xy=(0.77, 0.06), xycoords='axes fraction',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
+        size=14)
 
 #plt.tight_layout()
 #plt.show()
