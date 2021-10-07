@@ -44,7 +44,7 @@ for (name, (r1, cost, ers)) in data.items():
 
     color = 'k'
     if name == 'ACT':
-        color = 'm'
+        color = 'b'
     plt.plot(cost, ers, f'-{color}o')
     if isinstance(cost, float):
         plt.annotate(name, xy=(cost, ers))
@@ -88,7 +88,7 @@ for (name, (r1, cost, ers)) in data.items():
 
     color = 'k'
     if name == 'ACT':
-        color = 'm'
+        color = 'b'
     plt.plot(r1, ers, f'-{color}o')
     if isinstance(ers, float):
         plt.annotate(name, xy=(r1, ers))
