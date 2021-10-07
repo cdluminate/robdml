@@ -7,7 +7,7 @@ plt.rcParams['font.family'] = 'serif'
 #plt.rcParams['font.serif'] = 'Times New Roman; Noto Sans'
 plt.rcParams['font.serif'] = 'FreeSerif'
 #plt.rcParams['font.serif'] = 'Linux Libertine O'
-plt.rcParams['font.size'] = 12
+plt.rcParams['font.size'] = 14
 
 data = {
         #'N/A': (53.9, 1.0, 3.8),
