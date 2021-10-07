@@ -1,0 +1,32 @@
+\begin{table}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{c|cc|cc|cc|cc|cc}
+
+	\toprule
+
+\multirow{2}{*}{\backslashbox{$H_S$}{$H_D$}} & \multicolumn{2}{c|}{Random} & \multicolumn{2}{c|}{Semihard} & \multicolumn{2}{c|}{Softhard} & \multicolumn{2}{c|}{Distance} & \multicolumn{2}{c|}{Hardest}\tabularnewline
+\cline{2-11} \cline{3-11} \cline{4-11} \cline{5-11} \cline{6-11} \cline{7-11} \cline{8-11} \cline{9-11} \cline{10-11} \cline{11-11} 
+ & R@1 & ERS & R@1 & ERS & R@1 & ERS & R@1 & ERS & R@1 & ERS\tabularnewline
+
+	\midrule
+
+Random & \uline{53.9} & \uline{3.8} & 27.4 & 32.9 & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse}\tabularnewline
+\hline 
+Semihard & 46.9 & 4.1 & - & - & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse}\tabularnewline
+\hline 
+Softhard &  &  &  &  & - & - & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse}\tabularnewline
+\hline 
+Distance &  &  &  &  &  &  & - & - & 52.1 & 4.7\tabularnewline
+\hline 
+Hardest &  &  &  &  &  &  &  &  & \uline{48.9} & \uline{5.0}\tabularnewline
+
+	\bottomrule
+\end{tabular}
+}
+
+\caption{Hardness Manipulation: Source hardness v.s. Destination hardness for
+amdsemi on CUB Dataset. (R@1, ERS for each cell). Diagonal = does
+not attack}
+\label{tab:desth}
+
+\end{table}

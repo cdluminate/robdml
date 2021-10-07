@@ -25,6 +25,8 @@
 \usepackage{enumitem}
 \usepackage{multirow}
 \newcommand{\uline}[1]{\underline{#1}}
+\usepackage{slashbox}
+\usepackage{booktabs}
 
 %\DeclareMathOperator*{\argmax}{arg\,max}
 %\DeclareMathOperator*{\argmin}{arg\,min}
@@ -376,6 +378,8 @@ enough.
 
 \subsection{Hardness Manipulation}
 
+\oo{[illust fig]}
+
 Given an anchor image $X_a$, we sample a positive image $X_p^S$ (in the same
 class as the anchor) and a negative image $X_n^S$ (in different class as the
 anchor) with a certain sampling strategy (\eg, semi-hard~\cite{facenet}).
@@ -451,6 +455,8 @@ $L_\text{trip}(\phi(X_a+\bar{r}_a), \phi(X_p^S+\bar{r}_p),
 
 \subsection{Gradual Adversary}
 
+\oo{[illust fig]}
+
 During the training process, the strength of adversary will gradually decrease,
 because the expectation of the destination hardness $E[H_D]$ is expected to
 decrease with a model being trained.
@@ -463,6 +469,8 @@ decrease with a model being trained.
 
 \subsection{Intra-Class Structure}
 
+\oo{[illust fig]}
+
 \subsection{\oo{Free Adversarial DML?}}
 
 \subsection{\oo{Benchmark other DML loss?}}
@@ -473,6 +481,15 @@ decrease with a model being trained.
 \textbf{Dataset.}
 
 \textbf{Experiment Settings.}
+
+\subsection{Selection of Destination Hardness}
+
+\input{tab-desth.tex}
+
+Hardness sorting.
+
+Hardness selection \cref{tab:desth}.
+
 
 \section{Discussions}
 \label{sec:5}
