@@ -173,14 +173,28 @@ semi-hard~\cite{facenet} and distance~\cite{distance} are proposed to provide
 effective negative examples to facilitate metric learning while avoiding model
 collapse.
 %
-In the classical min-max adversarial training, the adversarial example triplet
-created by maximizing the triplet loss value can incur model collapse more
-easily than unperturbed sample triplets.
+In the typical min-max adversarial training~\cite{madry}, the adversarial
+example triplet created by maximizing the triplet loss value can incur model
+collapse more easily than unperturbed sample triplets.
+%
+But what if we do not maximize the triplet loss value to the theoretical upper
+bound, but merely increase it towards a value that could be caused by
+a known, unperturbed and harder sample triplet?
+
+% HM
+In this paper, we propose Hardness Manipulation (HM) to make adversarially
+training a DML model with triplet loss feasible without model collapse,
+so the model could efficiently learn from a strong adversary.
+%
+First, we sample two triplets, namely ``source triplet'' and ``destination
+triplet'' with the same anchor example but in two different pre-defined
+sampling strategy.
+%
+The ``destination triplet'' is expected to result in a higher loss value.
 %
 
 
-
-In this paper, we propose Hardness Manipulation (HM) to create adversarial
+create adversarial
 examples for increasing their hardness towards that of a harder sample triplet.
 %
 %
