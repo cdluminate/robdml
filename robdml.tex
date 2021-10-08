@@ -522,6 +522,23 @@ is expected to be robust in other scenarios as well.
 
 \input{tab-desth.tex}
 
+In literature, a series of triplet sampling strategies exist, such as random,
+semi-hard~\cite{facenet}, soft-hard[], distance[], and hardest sampling.
+%
+Any of these can be selected for source triplet and destination triplet.
+
+As the samples will not become adversarial once $H_S>H_D$ (zero perturbation in
+this case according to \cref{eq:hm}, an effective combination of source and
+destination sampling strategy should make the expectation of source hardness
+less than the source hardness, \ie, $E[H_S]<E[H_D]$.
+%
+Our empirical observation on $E[H]$ from randomly initialized
+model suggests a sorting of ``random'' $<$ ``semi-hard'' $<$ ``soft-hard'' $<$
+``distance'' $<$ ``hardest''.
+%
+Namely, the source sampling strategy should be ahead of the destination
+sampling strategy in this list.
+
 Hardness sorting.
 
 Hardness selection \cref{tab:desth}.
