@@ -75,6 +75,8 @@
 
 	\item [\xmark] What if we truncate $H_D$. Clamp it with $\min=-\gamma$.
 		| clipping leads to negative effect on fashion-mnist. (ghmetrm 8)
+		Not every triplet is useful in this regard. Not all of them have to
+		contribute to the final gradient.
 
 	\item [\xmark] Re-design Gradual Adversary (Linear Addition)
 		\[
