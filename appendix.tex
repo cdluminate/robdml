@@ -9,8 +9,6 @@
 
 	\item [HM] do we fix the anchor like ACT? | marginal. Queued.
 
-	\item [?] What if we truncate $H_D$. Clamp it with $\min=-\gamma$.
-
 	\item [M] difference between EST, ACT, AMD/ AMDsemi.
 		Other methods (than HM) cannot effectively learn from the strongest
 		adversary as the inner maximization is indirectly (and not guaranteed).
@@ -73,6 +71,9 @@
 \input{amdsemi.tex}
 
 \begin{enumerate}
+
+	\item [\xmark] What if we truncate $H_D$. Clamp it with $\min=-\gamma$.
+		| clipping leads to negative effect on fashion-mnist. (ghmetrm 8)
 
 	\item [\xmark] Re-design Gradual Adversary (Linear Addition)
 		\[
