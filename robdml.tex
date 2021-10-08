@@ -183,15 +183,25 @@ a known, unperturbed and harder sample triplet?
 
 % HM
 In this paper, we propose Hardness Manipulation (HM) to make adversarially
-training a DML model with triplet loss feasible without model collapse,
-so the model could efficiently learn from a strong adversary.
+training a DML model with triplet loss feasible without model collapse, so the
+model could efficiently learn from a strong adversary.
 %
-First, we sample two triplets, namely ``source triplet'' and ``destination
-triplet'' with the same anchor example but in two different pre-defined
-sampling strategy.
+Assume there are two data triplets, namely ``source triplet'' and ``destination
+triplet'' with the same anchor example, but sampled using different triplet
+sampling strategies.
 %
-The ``destination triplet'' is expected to result in a higher loss value.
+And the ``destination triplet'' is expected to result in a higher loss value
+than another.
 %
+HM aims at creating adversarial examples of the ``source triplet'', that would
+increase the corresponding loss value until that of the unperturbed
+``destination triplet''.
+%
+This can also be interpreted as maximizing the loss value but ``stops early''
+at a certain point.
+%
+The resulting perturbed ``source triplet'' can be used for adversarial
+training of the model.
 
 
 create adversarial
