@@ -101,7 +101,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="19">
+<lyxtabular version="3" rows="14" columns="19">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2491,6 +2491,179 @@ hmetrmi (8)
 
 \begin_layout Plain Layout
 37.4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rhetrmi (8)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -5621,7 +5794,7 @@ hmetrm (4)
 \begin_inset Text
 
 \begin_layout Plain Layout
-R
+30.7
 \end_layout
 
 \end_inset
@@ -5630,7 +5803,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+40.3
 \end_layout
 
 \end_inset
@@ -5639,7 +5812,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+16.4
 \end_layout
 
 \end_inset
@@ -5648,7 +5821,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+45.3
 \end_layout
 
 \end_inset
@@ -5657,7 +5830,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.9
 \end_layout
 
 \end_inset
@@ -5666,7 +5839,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+60.4
 \end_layout
 
 \end_inset
@@ -5675,7 +5848,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.5
 \end_layout
 
 \end_inset
@@ -5684,7 +5857,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+48.1
 \end_layout
 
 \end_inset
@@ -5693,7 +5866,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.582
 \end_layout
 
 \end_inset
@@ -5702,7 +5875,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.041
 \end_layout
 
 \end_inset
@@ -5711,7 +5884,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6.6
 \end_layout
 
 \end_inset
@@ -5720,7 +5893,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6.6
 \end_layout
 
 \end_inset
@@ -5729,7 +5902,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+20.2
 \end_layout
 
 \end_inset
@@ -5738,7 +5911,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.2
 \end_layout
 
 \end_inset
@@ -5747,7 +5920,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+27.1
 \end_layout
 
 \end_inset
@@ -5785,7 +5958,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-ghmetrmi (4) linear0.1
+grhetrmi (4) linear0.1
 \end_layout
 
 \end_inset
@@ -5794,7 +5967,7 @@ ghmetrmi (4) linear0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-Q
+R
 \end_layout
 
 \end_inset
