@@ -1950,7 +1950,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -2123,7 +2123,7 @@ hmetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -2141,7 +2141,7 @@ hmetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-dbg
+
 \end_layout
 
 \end_inset
@@ -4124,7 +4124,7 @@ tilde(a),p,margin0)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -4297,7 +4297,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -4470,7 +4470,7 @@ hmetrm (16)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -4675,7 +4675,7 @@ hmetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -4848,7 +4848,7 @@ hmetrm (4)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -5021,7 +5021,7 @@ hmetrm (2)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -5367,7 +5367,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -5713,7 +5713,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -5886,7 +5886,7 @@ ghmetrm (4) UH0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
@@ -6059,7 +6059,7 @@ ghmetrm (2) UH0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+bool bug
 \end_layout
 
 \end_inset
