@@ -122,7 +122,7 @@ images) leveraging the representational power of deep neural networks.
 DML has been extensively studied~\cite{revisiting}, and has a
 wide range of applications such
 as image retrieval~\cite{imagesim2} and face recognition~\cite{facenet,domainface}.
-%
+
 Despite the improvements of this field thanks to the advancement of deep neural
 networks, recent research works suggest that DML models are vulnerable to
 adversarial attacks, where an imperceptible perturbation could incur unexpected
@@ -157,15 +157,34 @@ However, it has been noted that
 (1) the robustness level achieved by the existing methods is still insufficient
 to counter the attacks;
 %
-(2) the direct adoptation of Madry's min-max adversarial training~\cite{madry} will easily
+(2) the direct adaptation of Madry's min-max adversarial training~\cite{madry} will easily
 lead to model collapse due to producing very hard sample triplets;
 %
 (3) the adversarial training procedure is very time-consuming compared to
 the training process of a regular DML model, but existing defense methods
 are incompatible to acceleration methods like Free Adversarial Training~\cite{freeat}.
 
-% for problem 1
-\oo{[1. Hardness Manipulation]}
+% inspiration.
+Recall that a DML model is already prone to collapse with very hard but not
+adversarially purturbed sample triplets~\cite{facenet}.
+%
+To overcome this issue, various triplet sampling strategies, such as
+semi-hard~\cite{facenet} and distance~\cite{distance} are proposed to provide
+effective negative examples to facilitate metric learning while avoiding model
+collapse.
+%
+In the classical min-max adversarial training, the adversarial example triplet
+created by maximizing the triplet loss value can incur model collapse more
+easily than unperturbed sample triplets.
+%
+
+
+
+In this paper, we propose Hardness Manipulation (HM) to create adversarial
+examples for increasing their hardness towards that of a harder sample triplet.
+%
+%
+%
 Triplet hardness still matters in adversarial training for deep metric
 learning.
 
@@ -548,14 +567,15 @@ shown in \cref{tab:desth}.
 
 \subsection{Comparison with State-of-the-art}
 
+
+\oo{experiment, 8 step by default}
+Number of PGD Steps $\eta$.
 \cref{fig:introplot}
 
 \section{Discussions}
 \label{sec:5}
 
-%1. adversarial training speed.
 
-% PGD-7 PGD-16
 
 \section{Conclusion}
 \label{sec:6}
