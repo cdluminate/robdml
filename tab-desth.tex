@@ -10,23 +10,28 @@
 
 	\midrule
 
-Random & \uline{53.9} & \uline{3.8} & 27.4 & 32.9 & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse}\tabularnewline
+Random & 53.9 & 3.8 & 27.4 & 32.9 & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c}{Collapse}\tabularnewline
 \hline 
-Semihard & 46.9 & 4.1 & - & - & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse}\tabularnewline
+Semihard & 46.9 & 4.1 & - & - & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c}{Collapse}\tabularnewline
 \hline 
-Softhard &  &  &  &  & - & - & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c|}{Collapse}\tabularnewline
+Softhard &  &  &  &  & - & - & \multicolumn{2}{c|}{Collapse} & \multicolumn{2}{c}{Collapse}\tabularnewline
 \hline 
 Distance &  &  &  &  &  &  & - & - & 52.1 & 4.7\tabularnewline
 \hline 
-Hardest &  &  &  &  &  &  &  &  & \uline{48.9} & \uline{5.0}\tabularnewline
+Hardest &  &  &  &  &  &  &  &  & 48.9 & 5.0\tabularnewline
 
 	\bottomrule
 \end{tabular}
 }
 
-\caption{Hardness Manipulation: Source hardness v.s. Destination hardness for
-amdsemi on CUB Dataset. (R@1, ERS for each cell). Diagonal = does
-not attack}
+\caption{Combinations of Source/Destination Hardness.
+	%
+	Experiments are conducted on CUB Dataset.
+	%
+	Models on the diagonal do not use adversarial examples
+	due to destination being unchanged.
+	%
+}
 \label{tab:desth}
 
 \end{table}
