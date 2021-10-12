@@ -203,15 +203,6 @@ at a certain point.
 The resulting perturbed ``source triplet'' can be used for adversarial
 training of the model.
 
-
-create adversarial
-examples for increasing their hardness towards that of a harder sample triplet.
-%
-%
-%
-Triplet hardness still matters in adversarial training for deep metric
-learning.
-
 % for problem 2
 \oo{[2. Gradual Adversary]}
 The expectation of hardness will decrease during the training process,
@@ -228,7 +219,12 @@ Extension of FAT to adversarial deep metric learning.
 \oo{[experimetal evaluations]}
 To validate the effectiveness of the proposed method, we conduct experiments
 on three commonly used dataset, namely CUB-200-2011, Cars-196, and Stanford
-Online Product. \oo{the results suggest that}
+Online Product. Our conclusions are:
+%
+(1) Triplet sampling strategy is vital for adversarial training of tripet-loss
+based DML models.
+%
+\oo{the results suggest that}
 
 % contributions
 In brief, our contribusions include:
@@ -604,7 +600,8 @@ Number of PGD Steps $\eta$.
 \section{Conclusion}
 \label{sec:6}
 
-\cite{Authors14}
+HM follows the min-max paradigm, (can be incorporated into FAT etc).
+Both ACT and HM stops at a specific point.
 
 %%%%%%%%% REFERENCES
 {\small
