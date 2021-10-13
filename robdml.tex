@@ -582,7 +582,7 @@ Note, these methods are empirically sorted by their expectation of hardness
 $E[H]$, in the ascending order: random, semihard, softhard, distance, and
 hardest.
 
-% 2. hypothesis
+% 2. table: left and right
 
 Recall that triplet-based model is already prone to collapse with very hard
 examples, even if they are unperturbed.
@@ -602,6 +602,16 @@ very close to each other, which means the attack will be rather weak.
 The model does not collapse in this case, but the robustness gain is negligible
 as well.
 
+% 3. table: upper and lower
+
+For cases in the upper triangular of \cref{tab:desth}, $E[H_S] < E[H_D]$,
+which means most triplets will be turned into adversarial example by HM
+to increase the hardness.
+%
+Although most of such cases end up with model collapse, the preliminary 
+result suggests that HM from random to semihard is effective in significantly
+improve the robustness without model collapse, at an expected cost on the R@1
+performance on benign examples.
 
 As the samples will not become adversarial once $H_S>H_D$ (zero perturbation in
 this case according to \cref{eq:hm}, an effective combination of source and
