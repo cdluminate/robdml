@@ -5940,7 +5940,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+*
 \end_layout
 
 \end_inset
@@ -10447,7 +10447,7 @@ hr (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+v0
 \end_layout
 
 \end_inset
@@ -10465,7 +10465,7 @@ hm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Q
+52.2
 \end_layout
 
 \end_inset
@@ -10474,7 +10474,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+64.0
 \end_layout
 
 \end_inset
@@ -10483,7 +10483,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+33.1
 \end_layout
 
 \end_inset
@@ -10492,7 +10492,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+58.4
 \end_layout
 
 \end_inset
@@ -10501,7 +10501,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -10510,7 +10510,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+100.0
 \end_layout
 
 \end_inset
@@ -10519,7 +10519,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.2
 \end_layout
 
 \end_inset
@@ -10528,7 +10528,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+100.0
 \end_layout
 
 \end_inset
@@ -10537,7 +10537,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.841
 \end_layout
 
 \end_inset
@@ -10546,7 +10546,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.750
 \end_layout
 
 \end_inset
@@ -10555,7 +10555,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -10564,7 +10564,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -10573,7 +10573,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+18.9
 \end_layout
 
 \end_inset
@@ -10582,7 +10582,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -10591,7 +10591,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.8
 \end_layout
 
 \end_inset
@@ -10638,7 +10638,7 @@ hs (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Q
+COL
 \end_layout
 
 \end_inset
@@ -13655,7 +13655,7 @@ ERS
 \begin_inset Text
 
 \begin_layout Plain Layout
-R
+Random
 \end_layout
 
 \end_inset
@@ -13678,20 +13678,20 @@ R
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Pending
+27.0
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+35.1
 \end_layout
 
 \end_inset
@@ -13756,7 +13756,7 @@ Collapse
 \begin_inset Text
 
 \begin_layout Plain Layout
-M
+Semihard
 \end_layout
 
 \end_inset
@@ -13837,7 +13837,7 @@ Collapse
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Collapse
 \end_layout
 
 \end_inset
@@ -13857,7 +13857,7 @@ Collapse
 \begin_inset Text
 
 \begin_layout Plain Layout
-S
+Softhard
 \end_layout
 
 \end_inset
@@ -13938,7 +13938,7 @@ Collapse
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Collapse
 \end_layout
 
 \end_inset
@@ -13958,7 +13958,7 @@ Collapse
 \begin_inset Text
 
 \begin_layout Plain Layout
-D
+Distance
 \end_layout
 
 \end_inset
@@ -14059,7 +14059,7 @@ Collapse
 \begin_inset Text
 
 \begin_layout Plain Layout
-H
+Hardest
 \end_layout
 
 \end_inset
@@ -14086,7 +14086,7 @@ H
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+52.2
 \end_layout
 
 \end_inset
@@ -14095,21 +14095,21 @@ H
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.8
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Collapse
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
