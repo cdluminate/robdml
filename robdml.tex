@@ -516,15 +516,15 @@ decrease with a model being trained.
 \label{sec:4}
 
 To validate the effectiveness of our proposed defense, we conduct experiments
-on three commonly used DML datasets: CUB-200-2011~\cite{cub200}, Cars-196~\cite{cars196},
-and Stanford-Online-Products (SOP)~\cite{sop}.
+on three commonly used DML datasets: CUB-200-2011 (CUB)~\cite{cub200}, Cars-196
+(CARS)~\cite{cars196}, and Stanford-Online-Products (SOP)~\cite{sop}.
 %
 We follow the same experiment setup of the state-of-the-art work~\cite{robrank}
 for ease of comparison.
 %
 The setup is also consistent to standard DML~\cite{revisiting}.
 
-Specifically, we train a ResNet-18~\cite{resnet} with the output dimension of
+Specifically, we train a ResNet-18 (RN18)~\cite{resnet} with the output dimension of
 the last layer changed to $N=512$.
 %
 The margin $\gamma$ in triplet loss is set as $0.2$ by default.
@@ -566,14 +566,14 @@ is expected to be robust in other scenarios as well.
 % 1. possible combinations
 
 In literature, various triplet sampling strategies exist, such as random,
-semihard~\cite{facenet}, softhard[], distance~\cite{distance}, and the hardest negative sampling
-(\ie, the negative sample with the largest loss value).
+semihard~\cite{facenet}, softhard~\cite{revisiting}, distance~\cite{distance}, and the hardest
+negative sampling (\ie, the negative sample with the largest loss value).
 %
 Although any of them can be selected for source or destination hardness for HM,
 not all the possible combinations are expected to be effective or efficient.
 %
-In order to figure out an empirically good combination of source and destination
-hardness, we adversarially train models on the CUB-200-2011 dataset with
+In order to figure out an empirically good combination of source and
+destination hardness, we adversarially train RN18 models on the CUB dataset with
 every possible combination, and compare their R@1 and ERS performance in
 \cref{tab:desth}.
 
