@@ -504,8 +504,8 @@ decrease with a model being trained.
 
 
 \[
-	\big(1-\frac{\text{Clip}_0^{U_L}[l_{t-1}]}{U_L} \big)\times
-	(U_H + (H_D - H_S).relu())
+	\big(1-\text{Clip}_0^{U_L}[l_{t-1}]/U_L \big)\times
+	U_H
 \]
 
 \subsection{Intra-Class Structure Constraint}
@@ -586,23 +586,44 @@ shown in \cref{tab:desth}.
 %
 \oo{The table suggests that}
 
-\subsection{Comparison with State-of-the-art}
+\subsection{Effectiveness of HM}
 
+HM + different pgditer
+CUB, 2 4 8 16 32
+
+8; empirically selected as the base for further ablation study.
 
 \oo{experiment, 8 step by default}
+
+\subsection{Effectiveness of GA}
+
+\subsection{Effectiveness of ICS}
+
+\subsection{Comparison with State-of-the-art}
+
+CUB 8 32
+
+CARS 8 32
+
+SOP 8 32
+
 Number of PGD Steps $\eta$.
 \cref{fig:introplot}
 
 \section{Discussions}
 \label{sec:5}
 
-
+(optional) ICS for ACT?
 
 \section{Conclusion}
 \label{sec:6}
 
 HM follows the min-max paradigm, (can be incorporated into FAT etc).
 Both ACT and HM stops at a specific point.
+
+\oo{In potential of future works}
+Deep metric learning on adversarial example is also used for improving
+adversarial robustness for deep classifiers~\cite{mao2019metric}.
 
 %%%%%%%%% REFERENCES
 {\small
