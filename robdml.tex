@@ -516,7 +516,7 @@ decrease with a model being trained.
 \label{sec:4}
 
 To validate the effectiveness of our proposed defense, we conduct experiments
-on three commonly used DML datasets: CUB-200~\cite{cub200}, Cars-196~\cite{cars196},
+on three commonly used DML datasets: CUB-200-2011~\cite{cub200}, Cars-196~\cite{cars196},
 and Stanford-Online-Products (SOP)~\cite{sop}.
 %
 We follow the same experiment setup of the state-of-the-art work~\cite{robrank}
@@ -559,14 +559,25 @@ is expected to be robust in other scenarios as well.
 
 \oo{Concretely, the ensemble of attack for computing ERS includes.}
 
-\subsection{Selection of Source/Destination Hardness}
+\subsection{Selection of Source \& Destination Hardness}
 
 \input{tab-desth.tex}
 
-In literature, a series of triplet sampling strategies exist, such as random,
-semi-hard~\cite{facenet}, soft-hard[], distance[], and hardest sampling.
+% 1. possible combinations
+
+In literature, various triplet sampling strategies exist, such as random,
+semihard~\cite{facenet}, softhard[], distance~\cite{distance}, and the hardest negative sampling
+(\ie, the negative sample with the largest loss value).
 %
-Any of these can be selected for source triplet and destination triplet.
+Although any of them can be selected for source or destination hardness for HM,
+not all the possible combinations are expected to be effective or efficient.
+%
+In order to figure out an empirically good combination of source and destination
+hardness, we adversarially train models on the CUB-200-2011 dataset with
+every possible combination, and compare their R@1 and ERS performance in
+\cref{tab:desth}.
+
+% 2. hypothesis
 
 As the samples will not become adversarial once $H_S>H_D$ (zero perturbation in
 this case according to \cref{eq:hm}, an effective combination of source and
