@@ -101,7 +101,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="15" columns="19">
+<lyxtabular version="3" rows="18" columns="19">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -211,7 +211,7 @@ Benign Example
 \begin_layout Plain Layout
 
 \series bold
-White-Box ATKs
+White-Box Attacks for Robustness Evaluation
 \end_layout
 
 \end_inset
@@ -304,6 +304,10 @@ White-Box ATKs
 
 \series bold
 ERS
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -351,6 +355,10 @@ ERS
 
 \begin_layout Plain Layout
 R@1
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -360,6 +368,10 @@ R@1
 
 \begin_layout Plain Layout
 R@2
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -369,6 +381,10 @@ R@2
 
 \begin_layout Plain Layout
 mAP
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -378,6 +394,10 @@ mAP
 
 \begin_layout Plain Layout
 NMI
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -387,6 +407,10 @@ NMI
 
 \begin_layout Plain Layout
 CA+
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -396,6 +420,10 @@ CA+
 
 \begin_layout Plain Layout
 CA-
+\begin_inset Formula $\downarrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -405,6 +433,10 @@ CA-
 
 \begin_layout Plain Layout
 QA+
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -414,6 +446,10 @@ QA+
 
 \begin_layout Plain Layout
 QA-
+\begin_inset Formula $\downarrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -423,6 +459,10 @@ QA-
 
 \begin_layout Plain Layout
 TMA
+\begin_inset Formula $\downarrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -432,6 +472,10 @@ TMA
 
 \begin_layout Plain Layout
 ES:D
+\begin_inset Formula $\downarrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -441,6 +485,10 @@ ES:D
 
 \begin_layout Plain Layout
 ES:R
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -450,6 +498,10 @@ ES:R
 
 \begin_layout Plain Layout
 LTM
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -459,6 +511,10 @@ LTM
 
 \begin_layout Plain Layout
 GTM
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -468,6 +524,10 @@ GTM
 
 \begin_layout Plain Layout
 GTT
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -487,7 +547,7 @@ GTT
 \begin_inset Text
 
 \begin_layout Plain Layout
-Fashion
+CUB
 \end_layout
 
 \end_inset
@@ -496,7 +556,7 @@ Fashion
 \begin_inset Text
 
 \begin_layout Plain Layout
-C2F2
+RN18
 \end_layout
 
 \end_inset
@@ -514,8 +574,6 @@ Triplet
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
 N/A
 \end_layout
 
@@ -526,8 +584,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-87.6
 \end_layout
 
 \end_inset
@@ -537,8 +593,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-92.7
 \end_layout
 
 \end_inset
@@ -548,8 +602,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-84.9
 \end_layout
 
 \end_inset
@@ -559,8 +611,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-77.8
 \end_layout
 
 \end_inset
@@ -570,8 +620,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-1.0
 \end_layout
 
 \end_inset
@@ -581,8 +629,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-95.0
 \end_layout
 
 \end_inset
@@ -592,8 +638,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-0.5
 \end_layout
 
 \end_inset
@@ -603,8 +647,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-94.2
 \end_layout
 
 \end_inset
@@ -614,8 +656,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-0.993
 \end_layout
 
 \end_inset
@@ -625,8 +665,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-1.531
 \end_layout
 
 \end_inset
@@ -636,8 +674,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-0.1
 \end_layout
 
 \end_inset
@@ -647,8 +683,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-0.8
 \end_layout
 
 \end_inset
@@ -658,8 +692,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-6.7
 \end_layout
 
 \end_inset
@@ -669,8 +701,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-0.0
 \end_layout
 
 \end_inset
@@ -680,8 +710,6 @@ N/A
 
 \begin_layout Plain Layout
 
-\bar under
-4.5
 \end_layout
 
 \end_inset
@@ -719,9 +747,11 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
+ACT (
+\begin_inset Formula $\eta=2$
+\end_inset
 
-\series bold
-ACT (32)
+)
 \end_layout
 
 \end_inset
@@ -731,9 +761,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-79.4
 \end_layout
 
 \end_inset
@@ -743,9 +770,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-87.9
 \end_layout
 
 \end_inset
@@ -755,9 +779,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-71.6
 \end_layout
 
 \end_inset
@@ -767,9 +788,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-69.6
 \end_layout
 
 \end_inset
@@ -779,9 +797,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-34.7
 \end_layout
 
 \end_inset
@@ -791,9 +806,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-11.3
 \end_layout
 
 \end_inset
@@ -803,9 +815,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-39.1
 \end_layout
 
 \end_inset
@@ -815,9 +824,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-9.0
 \end_layout
 
 \end_inset
@@ -827,9 +833,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-0.216
 \end_layout
 
 \end_inset
@@ -839,9 +842,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-0.450
 \end_layout
 
 \end_inset
@@ -851,9 +851,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-58.5
 \end_layout
 
 \end_inset
@@ -863,9 +860,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-66.2
 \end_layout
 
 \end_inset
@@ -875,9 +869,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-68.0
 \end_layout
 
 \end_inset
@@ -887,9 +878,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-0.5
 \end_layout
 
 \end_inset
@@ -899,9 +887,6 @@ ACT (32)
 
 \begin_layout Plain Layout
 
-\series bold
-\bar under
-67.7
 \end_layout
 
 \end_inset
@@ -939,7 +924,11 @@ ACT (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT (8)
+ACT (
+\begin_inset Formula $\eta=4$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -948,7 +937,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-84.0
+
 \end_layout
 
 \end_inset
@@ -957,7 +946,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-90.9
+
 \end_layout
 
 \end_inset
@@ -966,7 +955,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-78.8
+
 \end_layout
 
 \end_inset
@@ -975,7 +964,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-75.9
+
 \end_layout
 
 \end_inset
@@ -984,7 +973,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-11.0
+
 \end_layout
 
 \end_inset
@@ -993,7 +982,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-48.0
+
 \end_layout
 
 \end_inset
@@ -1002,7 +991,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-13.4
+
 \end_layout
 
 \end_inset
@@ -1011,7 +1000,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-54.8
+
 \end_layout
 
 \end_inset
@@ -1020,7 +1009,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.712
+
 \end_layout
 
 \end_inset
@@ -1029,7 +1018,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.183
+
 \end_layout
 
 \end_inset
@@ -1038,7 +1027,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-12.3
+
 \end_layout
 
 \end_inset
@@ -1047,7 +1036,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-42.8
+
 \end_layout
 
 \end_inset
@@ -1056,7 +1045,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-27.0
+
 \end_layout
 
 \end_inset
@@ -1065,7 +1054,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0
+
 \end_layout
 
 \end_inset
@@ -1074,7 +1063,7 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-29.8
+
 \end_layout
 
 \end_inset
@@ -1112,7 +1101,11 @@ ACT (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetrm (32)
+ACT (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1121,7 +1114,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-79.8
+
 \end_layout
 
 \end_inset
@@ -1130,7 +1123,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-87.5
+
 \end_layout
 
 \end_inset
@@ -1139,7 +1132,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-72.2
+
 \end_layout
 
 \end_inset
@@ -1148,7 +1141,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-69.6
+
 \end_layout
 
 \end_inset
@@ -1157,7 +1150,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-39.8
+
 \end_layout
 
 \end_inset
@@ -1166,7 +1159,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-13.2
+
 \end_layout
 
 \end_inset
@@ -1175,7 +1168,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-44.3
+
 \end_layout
 
 \end_inset
@@ -1184,7 +1177,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-11.9
+
 \end_layout
 
 \end_inset
@@ -1193,7 +1186,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.186
+
 \end_layout
 
 \end_inset
@@ -1202,7 +1195,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.333
+
 \end_layout
 
 \end_inset
@@ -1211,7 +1204,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-55.2
+
 \end_layout
 
 \end_inset
@@ -1220,7 +1213,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-65.9
+
 \end_layout
 
 \end_inset
@@ -1229,7 +1222,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-65.5
+
 \end_layout
 
 \end_inset
@@ -1238,7 +1231,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.2
+
 \end_layout
 
 \end_inset
@@ -1247,7 +1240,7 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
-69.4
+
 \end_layout
 
 \end_inset
@@ -1285,9 +1278,11 @@ hmetrm (32)
 \begin_inset Text
 
 \begin_layout Plain Layout
+ACT (
+\begin_inset Formula $\eta=16$
+\end_inset
 
-\series bold
-hmetrm (8)
+)
 \end_layout
 
 \end_inset
@@ -1297,8 +1292,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-84.3
 \end_layout
 
 \end_inset
@@ -1308,8 +1301,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-90.9
 \end_layout
 
 \end_inset
@@ -1319,8 +1310,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-78.7
 \end_layout
 
 \end_inset
@@ -1330,8 +1319,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-75.8
 \end_layout
 
 \end_inset
@@ -1341,8 +1328,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-21.4
 \end_layout
 
 \end_inset
@@ -1352,8 +1337,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-38.1
 \end_layout
 
 \end_inset
@@ -1363,8 +1346,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-28.5
 \end_layout
 
 \end_inset
@@ -1374,8 +1355,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-43.9
 \end_layout
 
 \end_inset
@@ -1385,8 +1364,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-0.528
 \end_layout
 
 \end_inset
@@ -1396,8 +1373,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-1.003
 \end_layout
 
 \end_inset
@@ -1407,8 +1382,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-20.7
 \end_layout
 
 \end_inset
@@ -1418,8 +1391,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-49.5
 \end_layout
 
 \end_inset
@@ -1429,8 +1400,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-36.6
 \end_layout
 
 \end_inset
@@ -1440,8 +1409,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-0.0
 \end_layout
 
 \end_inset
@@ -1451,181 +1418,6 @@ hmetrm (8)
 
 \begin_layout Plain Layout
 
-\series bold
-42.2
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-repro
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-hmetrm (8)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-84.1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-90.6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-78.5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-76.3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-19.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-41.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-28.3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-46.4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.545
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.991
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-24.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-52.3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-27.3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-40.7
 \end_layout
 
 \end_inset
@@ -1663,7 +1455,11 @@ hmetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-ghmetrm (8) uh0.2
+ACT (
+\begin_inset Formula $\eta=32$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1672,7 +1468,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-82.9
+
 \end_layout
 
 \end_inset
@@ -1681,7 +1477,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-90.2
+
 \end_layout
 
 \end_inset
@@ -1690,7 +1486,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-76.2
+
 \end_layout
 
 \end_inset
@@ -1699,7 +1495,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-74.4
+
 \end_layout
 
 \end_inset
@@ -1708,7 +1504,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-18.9
+
 \end_layout
 
 \end_inset
@@ -1717,7 +1513,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-36.3
+
 \end_layout
 
 \end_inset
@@ -1726,7 +1522,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-29.5
+
 \end_layout
 
 \end_inset
@@ -1735,7 +1531,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-47.1
+
 \end_layout
 
 \end_inset
@@ -1744,7 +1540,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.852
+
 \end_layout
 
 \end_inset
@@ -1753,7 +1549,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.567
+
 \end_layout
 
 \end_inset
@@ -1762,7 +1558,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-12.7
+
 \end_layout
 
 \end_inset
@@ -1771,7 +1567,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-26.7
+
 \end_layout
 
 \end_inset
@@ -1780,7 +1576,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-19.3
+
 \end_layout
 
 \end_inset
@@ -1789,7 +1585,7 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0
+
 \end_layout
 
 \end_inset
@@ -1798,7 +1594,188 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.8
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HM:R
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=2$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1836,7 +1813,15 @@ ghmetrm (8) uh0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-ghmetrm (8) uh0.1
+HM:R
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=4$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1845,7 +1830,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-83.9
+
 \end_layout
 
 \end_inset
@@ -1854,7 +1839,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-90.2
+
 \end_layout
 
 \end_inset
@@ -1863,7 +1848,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-77.6
+
 \end_layout
 
 \end_inset
@@ -1872,7 +1857,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-75.5
+
 \end_layout
 
 \end_inset
@@ -1881,7 +1866,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-17.7
+
 \end_layout
 
 \end_inset
@@ -1890,7 +1875,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-40.1
+
 \end_layout
 
 \end_inset
@@ -1899,7 +1884,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-29.8
+
 \end_layout
 
 \end_inset
@@ -1908,7 +1893,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-48.4
+
 \end_layout
 
 \end_inset
@@ -1917,7 +1902,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.754
+
 \end_layout
 
 \end_inset
@@ -1926,7 +1911,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.820
+
 \end_layout
 
 \end_inset
@@ -1935,7 +1920,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-20.4
+
 \end_layout
 
 \end_inset
@@ -1944,7 +1929,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-34.8
+
 \end_layout
 
 \end_inset
@@ -1953,7 +1938,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-18.7
+
 \end_layout
 
 \end_inset
@@ -1962,7 +1947,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0
+
 \end_layout
 
 \end_inset
@@ -1971,7 +1956,7 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-36.4
+
 \end_layout
 
 \end_inset
@@ -2009,7 +1994,15 @@ ghmetrm (8) uh0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
-ghmetrm (8) uh0.02
+HM:R
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2018,7 +2011,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-83.6
+
 \end_layout
 
 \end_inset
@@ -2027,7 +2020,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-90.5
+
 \end_layout
 
 \end_inset
@@ -2036,7 +2029,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-78.1
+
 \end_layout
 
 \end_inset
@@ -2045,7 +2038,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-75.9
+
 \end_layout
 
 \end_inset
@@ -2054,7 +2047,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-18.3
+
 \end_layout
 
 \end_inset
@@ -2063,7 +2056,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-37.9
+
 \end_layout
 
 \end_inset
@@ -2072,7 +2065,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-29.6
+
 \end_layout
 
 \end_inset
@@ -2081,7 +2074,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-45.8
+
 \end_layout
 
 \end_inset
@@ -2090,7 +2083,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.572
+
 \end_layout
 
 \end_inset
@@ -2099,7 +2092,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.994
+
 \end_layout
 
 \end_inset
@@ -2108,7 +2101,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-15.1
+
 \end_layout
 
 \end_inset
@@ -2117,7 +2110,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-49.5
+
 \end_layout
 
 \end_inset
@@ -2126,7 +2119,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-28.9
+
 \end_layout
 
 \end_inset
@@ -2135,7 +2128,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0
+
 \end_layout
 
 \end_inset
@@ -2144,7 +2137,7 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-39.9
+
 \end_layout
 
 \end_inset
@@ -2182,7 +2175,15 @@ ghmetrm (8) uh0.02
 \begin_inset Text
 
 \begin_layout Plain Layout
-ghmetrm (8) clip
+HM:R
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=16$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2191,7 +2192,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-84.4
+
 \end_layout
 
 \end_inset
@@ -2200,7 +2201,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-90.9
+
 \end_layout
 
 \end_inset
@@ -2209,7 +2210,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-78.8
+
 \end_layout
 
 \end_inset
@@ -2218,7 +2219,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-77.5
+
 \end_layout
 
 \end_inset
@@ -2227,7 +2228,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-18.8
+
 \end_layout
 
 \end_inset
@@ -2236,7 +2237,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-39.6
+
 \end_layout
 
 \end_inset
@@ -2245,7 +2246,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-30.3
+
 \end_layout
 
 \end_inset
@@ -2254,7 +2255,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-44.4
+
 \end_layout
 
 \end_inset
@@ -2263,7 +2264,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.564
+
 \end_layout
 
 \end_inset
@@ -2272,7 +2273,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.103
+
 \end_layout
 
 \end_inset
@@ -2281,7 +2282,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-13.9
+
 \end_layout
 
 \end_inset
@@ -2290,7 +2291,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-48.3
+
 \end_layout
 
 \end_inset
@@ -2299,7 +2300,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-42.4
+
 \end_layout
 
 \end_inset
@@ -2308,7 +2309,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0
+
 \end_layout
 
 \end_inset
@@ -2317,7 +2318,7 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-40.7
+
 \end_layout
 
 \end_inset
@@ -2355,7 +2356,15 @@ ghmetrm (8) clip
 \begin_inset Text
 
 \begin_layout Plain Layout
-rhetrm (8)
+HM:R
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=32$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2364,7 +2373,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-85.2
+
 \end_layout
 
 \end_inset
@@ -2373,7 +2382,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-91.3
+
 \end_layout
 
 \end_inset
@@ -2382,7 +2391,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-80.1
+
 \end_layout
 
 \end_inset
@@ -2391,7 +2400,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-77.2
+
 \end_layout
 
 \end_inset
@@ -2400,7 +2409,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-14.7
+
 \end_layout
 
 \end_inset
@@ -2409,7 +2418,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-45.3
+
 \end_layout
 
 \end_inset
@@ -2418,7 +2427,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-22.8
+
 \end_layout
 
 \end_inset
@@ -2427,7 +2436,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-49.6
+
 \end_layout
 
 \end_inset
@@ -2436,7 +2445,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.617
+
 \end_layout
 
 \end_inset
@@ -2445,7 +2454,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.107
+
 \end_layout
 
 \end_inset
@@ -2454,7 +2463,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-17.7
+
 \end_layout
 
 \end_inset
@@ -2463,7 +2472,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-47.2
+
 \end_layout
 
 \end_inset
@@ -2472,7 +2481,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-24.9
+
 \end_layout
 
 \end_inset
@@ -2481,7 +2490,7 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0
+
 \end_layout
 
 \end_inset
@@ -2490,7 +2499,188 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.3
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HM:S
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=2$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -2528,7 +2718,15 @@ rhetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetrmi (8)
+HM:S
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=4$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2537,7 +2735,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-84.8
+
 \end_layout
 
 \end_inset
@@ -2546,7 +2744,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-91.2
+
 \end_layout
 
 \end_inset
@@ -2555,7 +2753,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-78.3
+
 \end_layout
 
 \end_inset
@@ -2564,7 +2762,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-74.0
+
 \end_layout
 
 \end_inset
@@ -2573,7 +2771,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-15.8
+
 \end_layout
 
 \end_inset
@@ -2582,7 +2780,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.7
+
 \end_layout
 
 \end_inset
@@ -2591,7 +2789,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-24.1
+
 \end_layout
 
 \end_inset
@@ -2600,7 +2798,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-47.0
+
 \end_layout
 
 \end_inset
@@ -2609,7 +2807,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.597
+
 \end_layout
 
 \end_inset
@@ -2618,7 +2816,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.023
+
 \end_layout
 
 \end_inset
@@ -2627,7 +2825,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-16.6
+
 \end_layout
 
 \end_inset
@@ -2636,7 +2834,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-39.4
+
 \end_layout
 
 \end_inset
@@ -2645,7 +2843,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-32.2
+
 \end_layout
 
 \end_inset
@@ -2654,7 +2852,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0
+
 \end_layout
 
 \end_inset
@@ -2663,7 +2861,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-37.4
+
 \end_layout
 
 \end_inset
@@ -2701,7 +2899,15 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-rhetrmi (8)
+HM:S
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2710,7 +2916,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-85.2
+
 \end_layout
 
 \end_inset
@@ -2719,7 +2925,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-91.1
+
 \end_layout
 
 \end_inset
@@ -2728,7 +2934,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-79.9
+
 \end_layout
 
 \end_inset
@@ -2737,7 +2943,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-77.2
+
 \end_layout
 
 \end_inset
@@ -2746,7 +2952,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-15.9
+
 \end_layout
 
 \end_inset
@@ -2755,7 +2961,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-42.5
+
 \end_layout
 
 \end_inset
@@ -2764,7 +2970,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-24.8
+
 \end_layout
 
 \end_inset
@@ -2773,7 +2979,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-48.9
+
 \end_layout
 
 \end_inset
@@ -2782,7 +2988,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.635
+
 \end_layout
 
 \end_inset
@@ -2791,7 +2997,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.151
+
 \end_layout
 
 \end_inset
@@ -2800,7 +3006,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-14.5
+
 \end_layout
 
 \end_inset
@@ -2809,7 +3015,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-52.9
+
 \end_layout
 
 \end_inset
@@ -2818,7 +3024,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-29.5
+
 \end_layout
 
 \end_inset
@@ -2827,7 +3033,7 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0
+
 \end_layout
 
 \end_inset
@@ -2836,7 +3042,369 @@ rhetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-36.6
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HM:S
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=16$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HM:S
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+M (
+\begin_inset Formula $\eta=32$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -2853,7 +3421,7 @@ rhetrmi (8)
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Preliminary Defense AMD / RAMD Results .
+Efficiency of Hardness Manipulation for Adversarial Training.
 \end_layout
 
 \end_inset
