@@ -9625,6 +9625,8 @@ mr (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
 sm (8)
 \end_layout
 
@@ -11193,6 +11195,7 @@ ghmetrm (8) linear0.1
 \begin_inset Text
 
 \begin_layout Plain Layout
+
 \series bold
 26.5
 \end_layout
