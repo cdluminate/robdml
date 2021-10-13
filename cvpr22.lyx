@@ -2874,7 +2874,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="60" columns="19">
+<lyxtabular version="3" rows="62" columns="19">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -11378,7 +11378,7 @@ hmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+v1
 \end_layout
 
 \end_inset
@@ -11396,7 +11396,7 @@ ghmetrmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Q
+25.4
 \end_layout
 
 \end_inset
@@ -11405,7 +11405,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+34.2
 \end_layout
 
 \end_inset
@@ -11414,7 +11414,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.2
 \end_layout
 
 \end_inset
@@ -11423,7 +11423,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+41.3
 \end_layout
 
 \end_inset
@@ -11432,7 +11432,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+23.2
 \end_layout
 
 \end_inset
@@ -11441,7 +11441,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+35.4
 \end_layout
 
 \end_inset
@@ -11450,7 +11450,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+25.4
 \end_layout
 
 \end_inset
@@ -11459,7 +11459,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+21.8
 \end_layout
 
 \end_inset
@@ -11468,7 +11468,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.517
 \end_layout
 
 \end_inset
@@ -11477,7 +11477,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.649
 \end_layout
 
 \end_inset
@@ -11486,7 +11486,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+15.7
 \end_layout
 
 \end_inset
@@ -11495,7 +11495,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.5
 \end_layout
 
 \end_inset
@@ -11504,7 +11504,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+20.9
 \end_layout
 
 \end_inset
@@ -11513,7 +11513,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5.0
 \end_layout
 
 \end_inset
@@ -11522,7 +11522,7 @@ Q
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+41.1
 \end_layout
 
 \end_inset
@@ -12913,7 +12913,7 @@ ghmetrm (2) UH0.1
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12922,7 +12922,7 @@ bool bug
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12931,7 +12931,7 @@ bool bug
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12940,7 +12940,7 @@ bool bug
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12949,7 +12949,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12958,7 +12958,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12967,7 +12967,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12976,7 +12976,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12985,7 +12985,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -12994,7 +12994,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13003,7 +13003,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13012,7 +13012,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13021,7 +13021,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13030,7 +13030,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13039,7 +13039,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13048,7 +13048,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13057,7 +13057,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13066,7 +13066,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13075,7 +13075,7 @@ hmetrmi (4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -13090,7 +13090,7 @@ hmetrmi (4)
 \begin_inset Text
 
 \begin_layout Plain Layout
-bool bug
+CARS
 \end_layout
 
 \end_inset
@@ -13117,7 +13117,7 @@ bool bug
 \begin_inset Text
 
 \begin_layout Plain Layout
-hml2rmi (8)
+hmetrm (8)
 \end_layout
 
 \end_inset
@@ -13126,7 +13126,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-24.5
+Q
 \end_layout
 
 \end_inset
@@ -13135,7 +13135,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-34.1
+
 \end_layout
 
 \end_inset
@@ -13144,7 +13144,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-11.9
+
 \end_layout
 
 \end_inset
@@ -13153,7 +13153,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-41.4
+
 \end_layout
 
 \end_inset
@@ -13162,7 +13162,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-22.0
+
 \end_layout
 
 \end_inset
@@ -13171,7 +13171,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.5
+
 \end_layout
 
 \end_inset
@@ -13180,7 +13180,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-25.8
+
 \end_layout
 
 \end_inset
@@ -13189,7 +13189,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-22.4
+
 \end_layout
 
 \end_inset
@@ -13198,7 +13198,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.490
+
 \end_layout
 
 \end_inset
@@ -13207,7 +13207,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.664
+
 \end_layout
 
 \end_inset
@@ -13216,7 +13216,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-14.6
+
 \end_layout
 
 \end_inset
@@ -13225,7 +13225,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-13.8
+
 \end_layout
 
 \end_inset
@@ -13234,7 +13234,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-20.7
+
 \end_layout
 
 \end_inset
@@ -13243,7 +13243,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.5
+
 \end_layout
 
 \end_inset
@@ -13252,7 +13252,7 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-40.9
+
 \end_layout
 
 \end_inset
@@ -13263,15 +13263,6 @@ hml2rmi (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-bool bug
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -13291,8 +13282,15 @@ bool bug
 
 \begin_layout Plain Layout
 
-\series bold
-hml2rmi (8) aap only
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -13302,8 +13300,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-25.2
 \end_layout
 
 \end_inset
@@ -13313,8 +13309,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-34.4
 \end_layout
 
 \end_inset
@@ -13324,8 +13318,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-12.3
 \end_layout
 
 \end_inset
@@ -13335,8 +13327,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-41.8
 \end_layout
 
 \end_inset
@@ -13346,8 +13336,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-22.2
 \end_layout
 
 \end_inset
@@ -13357,8 +13345,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-37.1
 \end_layout
 
 \end_inset
@@ -13368,8 +13354,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-23.1
 \end_layout
 
 \end_inset
@@ -13379,8 +13363,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-23.4
 \end_layout
 
 \end_inset
@@ -13390,8 +13372,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-0.476
 \end_layout
 
 \end_inset
@@ -13401,8 +13381,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-0.728
 \end_layout
 
 \end_inset
@@ -13412,8 +13390,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-14.6
 \end_layout
 
 \end_inset
@@ -13423,8 +13399,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-11.9
 \end_layout
 
 \end_inset
@@ -13434,8 +13408,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-21.2
 \end_layout
 
 \end_inset
@@ -13445,8 +13417,6 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-4.0
 \end_layout
 
 \end_inset
@@ -13456,8 +13426,352 @@ hml2rmi (8) aap only
 
 \begin_layout Plain Layout
 
-\series bold
-39.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SOP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+hmetrm (8)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Q
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
