@@ -584,6 +584,25 @@ hardest.
 
 % 2. hypothesis
 
+Recall that triplet-based model is already prone to collapse with very hard
+examples, even if they are unperturbed.
+%
+Similarly, the model is expected to collapse with excessively hard adversarial
+examples as well.
+%
+As shown in the last three columns of \cref{tab:desth}, almost all combinations
+will result in model collapse as long as the destination hardness is softhard,
+distance, or hardest.
+%
+The only exception is the combination of distance and hardest.
+%
+We speculate the  \oo{TODO}
+The $E[H]$ of distance and hardest sampling are empirically observed very close.
+%
+
+And the model can be easier to collapse with adversarially perturbed hard
+examples
+
 As the samples will not become adversarial once $H_S>H_D$ (zero perturbation in
 this case according to \cref{eq:hm}, an effective combination of source and
 destination sampling strategy should make the expectation of source hardness
@@ -598,7 +617,9 @@ shown in \cref{tab:desth}.
 %
 \oo{The table suggests that}
 
-\subsection{Effectiveness of HM}
+The proposed hardness manipulation is effective.
+
+\subsection{Efficiency of Hardness Manipulation}
 
 HM + different pgditer
 CUB, 2 4 8 16 32
