@@ -566,16 +566,21 @@ is expected to be robust in other scenarios as well.
 % 1. possible combinations
 
 In literature, various triplet sampling strategies exist, such as random,
-semihard~\cite{facenet}, softhard~\cite{revisiting}, distance~\cite{distance}, and the hardest
-negative sampling (\ie, the negative sample with the largest loss value).
+semihard~\cite{facenet}, softhard~\cite{revisiting}, distance~\cite{distance},
+and the hardest negative sampling (\ie, the negative sample with the largest
+loss value).
 %
 Although any of them can be selected for source or destination hardness for HM,
 not all the possible combinations are expected to be effective or efficient.
 %
 In order to figure out an empirically good combination of source and
-destination hardness, we adversarially train RN18 models on the CUB dataset with
-every possible combination, and compare their R@1 and ERS performance in
+destination hardness, we adversarially train RN18 models on the CUB dataset
+with every possible combination, and compare their R@1 and ERS performance in
 \cref{tab:desth}.
+%
+Note, these methods are empirically sorted by their expectation of hardness
+$E[H]$, in the ascending order: random, semihard, softhard, distance, and
+hardest.
 
 % 2. hypothesis
 
@@ -583,10 +588,6 @@ As the samples will not become adversarial once $H_S>H_D$ (zero perturbation in
 this case according to \cref{eq:hm}, an effective combination of source and
 destination sampling strategy should make the expectation of source hardness
 less than the source hardness, \ie, $E[H_S]<E[H_D]$.
-%
-Our empirical observation on $E[H]$ from randomly initialized
-model suggests a sorting of ``random'' $<$ ``semi-hard'' $<$ ``soft-hard'' $<$
-``distance'' $<$ ``hardest''.
 %
 Namely, the source sampling strategy should be ahead of the destination
 sampling strategy in this list.
