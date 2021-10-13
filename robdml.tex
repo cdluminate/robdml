@@ -604,7 +604,7 @@ as well.
 
 % 3. table: upper and lower
 
-For cases in the upper triangular of \cref{tab:desth}, $E[H_S] < E[H_D]$,
+For cases in upper triangular of \cref{tab:desth}, $E[H_S] \leqslant E[H_D]$,
 which means most triplets will be turned into adversarial example by HM
 to increase the hardness.
 %
@@ -613,13 +613,22 @@ result suggests that HM from random to semihard is effective in significantly
 improve the robustness without model collapse, at an expected cost on the R@1
 performance on benign examples.
 
-As the samples will not become adversarial once $H_S>H_D$ (zero perturbation in
-this case according to \cref{eq:hm}, an effective combination of source and
-destination sampling strategy should make the expectation of source hardness
-less than the source hardness, \ie, $E[H_S]<E[H_D]$.
+For cases in lower triangular of \cref{tab:desth}, $E[H_S] \geqslant E[H_D]$,
+which means most tirplet will not be turned into adversarial according to
+\cref{eq:hm}.
 %
-Namely, the source sampling strategy should be ahead of the destination
-sampling strategy in this list.
+In such cases, the model will not be able to effectively learn from a strong
+adversary, and hence will behave as if no defense is equipped.
+%
+As an exception, HM from softhard to semihard can also lead to relatively high
+adversarial robustness.
+%
+Due to the high variance of hardness of softhard sampling strategy, the
+hardness of a notable portion of triplets will be less than that of semihard,
+and hence HM will create some adversarial examples for training.
+%
+In other words, HM in this case can be interpreted as mixing some unperturbed
+softhard triplets and some semihard adversarial triplets.
 
 To figure out an appropriate combination for further experiments, we try
 every possible combination and compare their R@1 and ERS performance, as
@@ -628,6 +637,7 @@ shown in \cref{tab:desth}.
 \oo{The table suggests that}
 
 The proposed hardness manipulation is effective.
+\oo{todo: table of first and second order central moment}
 
 \subsection{Efficiency of Hardness Manipulation}
 
