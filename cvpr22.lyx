@@ -1663,7 +1663,7 @@ ACT (
 
 \begin_layout Plain Layout
 HM
-\begin_inset Formula $|_{R}^{M}$
+\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
 \end_inset
 
  (
@@ -1843,11 +1843,11 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:R
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=4$
 \end_inset
 
@@ -2024,11 +2024,11 @@ M (
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:R
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=8$
 \end_inset
 
@@ -2205,11 +2205,11 @@ M (
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:R
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=16$
 \end_inset
 
@@ -2386,11 +2386,11 @@ M (
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:R
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=32$
 \end_inset
 
@@ -2567,11 +2567,11 @@ M (
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:S
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=2$
 \end_inset
 
@@ -2748,11 +2748,11 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:S
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=4$
 \end_inset
 
@@ -2929,11 +2929,11 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:S
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=8$
 \end_inset
 
@@ -3110,11 +3110,11 @@ M (
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:S
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=16$
 \end_inset
 
@@ -3291,11 +3291,11 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:S
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=32$
 \end_inset
 
