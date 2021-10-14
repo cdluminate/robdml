@@ -11,6 +11,10 @@
 		how they deal with hierarchy. e.g. MS, LSS, GLift, quadrup, etc.
 
 	\item [GA] Also scale the $H_D-H_S$ part?
+		(1) $$ H_\mathsf{GA} \leftarrow (H_\mathsf{D} + U - H_\mathsf{S}) * nL $$
+		(2) $$ H_\mathsf{GA} \leftarrow H_\mathsf{D} + U * nL $$
+		(3) pure GA for ablation $$ H_\mathsf{GA} \leftarrow U * nL $$
+		interpret with lessons learned from HM matrix.
 
 	\item [ICS] Adversarial training (does not allow any distance moving) may
 		encourage collapse (a trivial solution to the requirement). What if we
