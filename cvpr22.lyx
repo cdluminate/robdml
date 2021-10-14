@@ -1662,11 +1662,11 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM:R
-\begin_inset Formula $\rightarrow$
+HM
+\begin_inset Formula $|_{R}^{M}$
 \end_inset
 
-M (
+ (
 \begin_inset Formula $\eta=2$
 \end_inset
 
@@ -1679,7 +1679,7 @@ M (
 \begin_inset Text
 
 \begin_layout Plain Layout
-R:G
+34.3
 \end_layout
 
 \end_inset
@@ -1688,7 +1688,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+44.9
 \end_layout
 
 \end_inset
@@ -1697,7 +1697,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+19.5
 \end_layout
 
 \end_inset
@@ -1706,7 +1706,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+47.4
 \end_layout
 
 \end_inset
@@ -1715,7 +1715,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+7.7
 \end_layout
 
 \end_inset
@@ -1724,7 +1724,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+77.5
 \end_layout
 
 \end_inset
@@ -1733,7 +1733,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6.5
 \end_layout
 
 \end_inset
@@ -1742,7 +1742,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+70.8
 \end_layout
 
 \end_inset
@@ -1751,7 +1751,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.636
 \end_layout
 
 \end_inset
@@ -1760,7 +1760,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.281
 \end_layout
 
 \end_inset
@@ -1769,7 +1769,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.3
 \end_layout
 
 \end_inset
@@ -1778,7 +1778,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2.6
 \end_layout
 
 \end_inset
@@ -1787,7 +1787,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+21.1
 \end_layout
 
 \end_inset
@@ -1796,7 +1796,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.2
 \end_layout
 
 \end_inset
@@ -1805,7 +1805,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+18.1
 \end_layout
 
 \end_inset
