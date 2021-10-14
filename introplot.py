@@ -24,8 +24,11 @@ data = {
             (33.0, 17.0, 9.0, 5.0, 3.0),
             (38.0, 38.0, 35.1, 27.1, 18.1),
             ),
-        'hmetsm': (38.4, 9.0, 29.6),
-
+        'hmetsm': (
+            (38.4, 40.6, 44.5),
+            (9.0, 5.0, 3.0),
+            (29.6, 22.1, 11.6),
+            ),
         }
 
 plt.figure(figsize=[10.8, 4.8])
@@ -35,7 +38,11 @@ for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
     if name == 'ACT':
+        plt.plot(cost, ers, f'-o', color='dimgray')
+    elif name == 'hmetrm':
         plt.plot(cost, ers, f'-o', color='tab:blue')
+    elif name == 'hmetsm':
+        plt.plot(cost, ers, f'-o', color='tab:red')
     else:
         plt.plot(cost, ers, f'-o', color='k')
     if isinstance(cost, float):
@@ -55,31 +62,16 @@ ax.annotate('↘ Worse', xy=(0.77, 0.06), xycoords='axes fraction',
         bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
         size=14)
 
-#plt.subplot(2,2,2)
-#for (name, (r1, cost, ers)) in data.items():
-#    c.print(name, r1, cost, ers)
-#
-#    color = 'k'
-#    if name == 'EST':
-#        color = 'b'
-#    if name == 'ACT':
-#        color = 'r'
-#    plt.plot(cost, r1, f'-{color}o')
-#    if isinstance(cost, float):
-#        plt.annotate(name, xy=(cost, r1))
-#    elif isinstance(cost, tuple):
-#        plt.annotate(name, xy=(cost[0], r1[0]))
-#plt.xlabel('Training Cost')
-#plt.ylabel('Recall@1 (R@1)')
-#plt.xscale('log', base=2)
-
-
 ax = plt.subplot(1,2,2)
 for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
     if name == 'ACT':
+        plt.plot(r1, ers, f'-o', color='dimgray')
+    elif name == 'hmetrm':
         plt.plot(r1, ers, f'-o', color='tab:blue')
+    elif name == 'hmetsm':
+        plt.plot(r1, ers, f'-o', color='tab:red')
     else:
         plt.plot(r1, ers, f'-o', color='k')
     if isinstance(ers, float):
