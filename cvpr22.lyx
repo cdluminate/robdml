@@ -1114,6 +1114,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 30.6
 \end_layout
 
@@ -1123,6 +1125,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 40.1
 \end_layout
 
@@ -1132,6 +1136,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 16.5
 \end_layout
 
@@ -1141,6 +1147,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 45.6
 \end_layout
 
@@ -1150,6 +1158,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 13.7
 \end_layout
 
@@ -1159,6 +1169,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 46.8
 \end_layout
 
@@ -1168,6 +1180,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 12.6
 \end_layout
 
@@ -1177,6 +1191,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 39.3
 \end_layout
 
@@ -1186,6 +1202,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 0.547
 \end_layout
 
@@ -1195,6 +1213,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 0.902
 \end_layout
 
@@ -1204,6 +1224,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 13.6
 \end_layout
 
@@ -1213,6 +1235,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 9.8
 \end_layout
 
@@ -1222,6 +1246,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 21.9
 \end_layout
 
@@ -1231,6 +1257,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 1.3
 \end_layout
 
@@ -1240,6 +1268,8 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 31.3
 \end_layout
 
@@ -4193,7 +4223,7 @@ HMix (
 \begin_inset Text
 
 \begin_layout Plain Layout
-T:V
+
 \end_layout
 
 \end_inset
@@ -4547,7 +4577,7 @@ HMix (
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+R:V
 \end_layout
 
 \end_inset
