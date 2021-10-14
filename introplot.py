@@ -29,6 +29,11 @@ data = {
             (9.0, 5.0, 3.0),
             (29.6, 22.1, 11.6),
             ),
+        'hmix': (
+            (37.8, 42.7),
+            (5.0, 3.0),
+            (21.7, 12.5),
+            ),
         }
 
 plt.figure(figsize=[10.8, 4.8])
@@ -43,6 +48,8 @@ for (name, (r1, cost, ers)) in data.items():
         plt.plot(cost, ers, f'-o', color='tab:blue')
     elif name == 'hmetsm':
         plt.plot(cost, ers, f'-o', color='tab:red')
+    elif name == 'hmix':
+        plt.plot(cost, ers, f'-o', color='deeppink')
     else:
         plt.plot(cost, ers, f'-o', color='k')
     if isinstance(cost, float):
@@ -72,6 +79,8 @@ for (name, (r1, cost, ers)) in data.items():
         plt.plot(r1, ers, f'-o', color='tab:blue')
     elif name == 'hmetsm':
         plt.plot(r1, ers, f'-o', color='tab:red')
+    elif name == 'hmix':
+        plt.plot(r1, ers, f'-o', color='deeppink')
     else:
         plt.plot(r1, ers, f'-o', color='k')
     if isinstance(ers, float):
