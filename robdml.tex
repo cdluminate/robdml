@@ -428,7 +428,14 @@ anchor) with a certain sampling strategy (\eg, semi-hard~\cite{facenet}).
 % For convenience we call this triplet as ``source triplet''.
 %
 Then its \emph{hardness} is defined as
-$H(X_a,X_p^S,X_n^S)=d_\phi(X_a,X_p^S)-d_\phi(X_a,X_n^S)$, which is an internal
+%
+\begin{equation}
+%
+H(X_a^S,X_p^S,X_n^S)=d_\phi(X_a,X_p^S)-d_\phi(X_a,X_n^S),
+%
+\end{equation}
+%
+which is an internal
 part of the triplet loss.
 %
 For convenience we call this as ``source hardness'', denoted as $H_S$.
@@ -582,9 +589,7 @@ with every possible combination, and compare their R@1 and ERS performance in
 %
 Note, these methods are empirically sorted by their expectation of hardness
 $E[H]$, in the ascending order: random, semihard, softhard, distance, and
-hardest.
-%
-\oo{todo: table of first and second order central moment}
+hardest, as shown in \cref{tab:hsort}.
 
 % 2. table: left and right
 
