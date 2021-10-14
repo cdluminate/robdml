@@ -2,7 +2,9 @@ LATEX:=pdflatex
 BIBTEX:=bibtex
 TEX:=robdml.tex
 
-robdml: introplot.pdf
+PDFS:= introplot.pdf hmillust.pdf
+
+robdml: $(PDFS)
 	$(LATEX) $(TEX)
 	$(BIBTEX) robdml
 	$(LATEX) $(TEX)
@@ -17,3 +19,6 @@ introplot.pdf:
 	inkscape -o introplot.pdf introplot.svg
 	pdfcrop introplot.pdf
 	mv introplot-crop.pdf introplot.pdf
+
+hmillust.pdf:
+	inkscape -o hmillust.pdf hmillust.svg
