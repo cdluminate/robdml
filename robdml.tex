@@ -426,6 +426,8 @@ enough.
 	\label{fig:hm}
 \end{figure}
 
+\cref{fig:hm}
+
 Given an anchor image $X_a$, we sample a positive image $X_p^S$ (in the same
 class as the anchor) and a negative image $X_n^S$ (in different class as the
 anchor) with a certain sampling strategy (\eg, semi-hard~\cite{facenet}).
@@ -515,7 +517,13 @@ be adopted in HM.
 \subsection{Gradual Adversary}
 \label{sec:32}
 
-\oo{[illust fig]}
+\begin{figure}
+	\includegraphics[width=\columnwidth]{gaillust.pdf}
+	\caption{Illustration of Gradual Adversary.}
+	\label{fig:ga}
+\end{figure}
+
+\cref{fig:ga}
 
 During the training process, the strength of adversary will gradually decrease,
 because the expectation of the destination hardness $E[H_D]$ is expected to
