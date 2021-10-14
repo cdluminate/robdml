@@ -25,9 +25,9 @@ data = {
             (38.0, 38.0, 35.1, 27.1, 18.1),
             ),
         'hmetsm': (
-            (38.4, 40.6, 44.5),
-            (9.0, 5.0, 3.0),
-            (29.6, 22.1, 11.6),
+            (36.0, 38.4, 40.6, 44.5),
+            (17.0, 9.0, 5.0, 3.0),
+            (36.2, 29.6, 22.1, 11.6),
             ),
         'hmix': (
             (32.3, 32.5, 37.8, 42.7),
@@ -43,13 +43,13 @@ for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
     if name == 'ACT':
-        plt.plot(cost, ers, f'-o', color='dimgray')
+        plt.plot(cost, ers, f'.-', color='dimgray')
     elif name == 'hmetrm':
-        plt.plot(cost, ers, f'-o', color='tab:blue')
+        plt.plot(cost, ers, f'v-', color='tab:blue')
     elif name == 'hmetsm':
-        plt.plot(cost, ers, f'-o', color='tab:red')
+        plt.plot(cost, ers, f'^-', color='tab:red')
     elif name == 'hmix':
-        plt.plot(cost, ers, f'-o', color='deeppink')
+        plt.plot(cost, ers, f'h-', color='deeppink')
     else:
         plt.plot(cost, ers, f'-o', color='k')
     if isinstance(cost, float):
@@ -74,13 +74,13 @@ for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
     if name == 'ACT':
-        plt.plot(r1, ers, f'-o', color='dimgray')
+        plt.plot(r1, ers, f'.-', color='dimgray')
     elif name == 'hmetrm':
-        plt.plot(r1, ers, f'-o', color='tab:blue')
+        plt.plot(r1, ers, f'v-', color='tab:blue')
     elif name == 'hmetsm':
-        plt.plot(r1, ers, f'-o', color='tab:red')
+        plt.plot(r1, ers, f'^-', color='tab:red')
     elif name == 'hmix':
-        plt.plot(r1, ers, f'-o', color='deeppink')
+        plt.plot(r1, ers, f'h-', color='deeppink')
     else:
         plt.plot(r1, ers, f'-o', color='k')
     if isinstance(ers, float):
