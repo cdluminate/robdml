@@ -1,0 +1,26 @@
+\begin{table*}
+\resizebox{\linewidth}{!}{
+
+\begin{tabular}{cc|cccc|ccccc|ccccc|c}
+\hline 
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Dataset}}} & \multirow{2}{*}{\textbf{Defense}} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
+\cline{3-16} \cline{4-16} \cline{5-16} \cline{6-16} \cline{7-16} \cline{8-16} \cline{9-16} \cline{10-16} \cline{11-16} \cline{12-16} \cline{13-16} \cline{14-16} \cline{15-16} \cline{16-16} 
+ &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
+\hline 
+\hline 
+CUB & HM$|_{\text{Random}}^{\text{Semihard}}$ ($\eta=8$) & 27.0 & 36.0 & 13.2 & 42.5 & 19.4 & 48.0 & 22.2 & 32.0 & 0.535 & 0.867 & 11.6 & 10.4 & 19.3 & 2.9 & 35.1\tabularnewline
+ & +GA 0.1 & 24.9 & 33.4 & 12.0 & 41.7 & 21.6 & 45.1 & 24.9 & 29.1 & 0.515 & 0.780 & 12.3 & 12.1 & 19.7 & 3.7 & 37.6\tabularnewline
+ & G0.0 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+v1 learn & \textbf{SGA (G4) 0.2 8} & 34.4 & 34.2 & 12.3 & 41.5 & 20.2 & 47.7 & 23.2 & 31.7 & 0.489 & 0.861 & 13.5 & 12.2 & 22.4 & 3.2 & 36.7\tabularnewline
+ & G-0.2 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline 
+CUB & HM$|_{\text{Softhard}}^{\text{Semihard}}$ ($\eta=8$) & 38.4 & 49.7 & 22.9 & 50.3 & 10.9 & 50.5 & 10.8 & 44.6 & 0.680 & 0.722 & 13.3 & 11.2 & 25.8 & 1.2 & 29.6\tabularnewline
+ & +GA 0.1 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+ & G0.0 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+ & SGA (G4) 0.2 8 & R:G &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+ & G-0.2 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\end{tabular}
+}
+
+\caption{Effectiveness of GA .}
+\end{table*}
