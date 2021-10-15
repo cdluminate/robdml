@@ -515,6 +515,9 @@ strategy.
 %
 In other words, any existing or future triplet sampling strategy can
 be adopted in HM.
+%
+or even a pseudo hardness function $g(\cdot)$ as long as we have a strong
+prior knowledge on what the destination hardness should be.
 
 \subsection{Gradual Adversary}
 \label{sec:32}
@@ -531,11 +534,26 @@ During the training process, the strength of adversary will gradually decrease,
 because the expectation of the destination hardness $E[H_\mathsf{D}]$ is expected to
 decrease with a model being trained.
 
+strong example when the embedding space is not in good shape.
+
 
 \[
 	\big(1-\text{Clip}_0^{U_L}[l_{t-1}]/U_L \big)\times
 	U_H
 \]
+
+\begin{equation}
+	%
+	g_\mathsf{B}(H(\cdots)) = H(\cdots) + \xi \cdot \bar{\ell}_{t-1}
+	%
+\end{equation}
+
+\begin{equation}
+	%
+	g_\mathsf{SGA}() = -\gamma \cdot \bar{\ell}_{t-1}
+	%
+\end{equation}
+
 
 \subsection{Intra-Class Structure Constraint}
 \label{sec:33}
@@ -588,6 +606,13 @@ An adversarially trained DML model that is empirically robust to the ensemble
 is expected to be robust in other scenarios as well.
 
 \oo{Concretely, the ensemble of attack for computing ERS includes.}
+
+This section is organized in logical order where a group of experiments
+or ablation study
+provides clues for the next group of experiment.
+%
+Hence, the comparison to the state-of-the-art works are put at the last
+subsection.
 
 \subsection{Selection of Source \& Destination Hardness}
 
