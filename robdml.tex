@@ -706,6 +706,16 @@ CUB, 2 4 8 16 32
 
 8; empirically selected as the base for further ablation study.
 
+Conditions for a good source and destination hardness:
+%
+(1) the destination hardness is semihard (or something between semihard
+and softhard, we leave new sampling strategy for future work).
+(2) the source hardness should have high variance and a relatively high mean
+value to ensure number of benign example and number of adversarial example ratio.
+
+\oo{Note, naive combination of benign training and adv train does not lead to better
+result, why?} mix 0.5
+
 \oo{experiment, 8 step by default}
 
 \subsection{Effectiveness of GA and ICS}
