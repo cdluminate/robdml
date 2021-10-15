@@ -12,7 +12,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
-\usepackage{calrsfs}
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+% https://tex.stackexchange.com/questions/509235/mathcal-doesnt-have-the-usual-output
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -7192,11 +7193,11 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=4$
 \end_inset
 
@@ -7355,11 +7356,11 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=8$
 \end_inset
 
@@ -7518,11 +7519,11 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=16$
 \end_inset
 
@@ -7681,11 +7682,11 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=32$
 \end_inset
 
@@ -7844,11 +7845,11 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=2$
 \end_inset
 
@@ -8007,11 +8008,11 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=4$
 \end_inset
 
@@ -8170,11 +8171,11 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=8$
 \end_inset
 
@@ -8333,11 +8334,11 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=16$
 \end_inset
 
@@ -8496,11 +8497,11 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=32$
 \end_inset
 
@@ -9104,11 +9105,11 @@ CUB
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Random}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=8$
 \end_inset
 
@@ -9267,7 +9268,15 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-+GA 0.1
+HM[
+\begin_inset Formula $\mathcal{R},g_{\mathsf{B}}(\mathcal{M})$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -9422,7 +9431,178 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-G0.0
+HM[
+\begin_inset Formula $\mathcal{R},0$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HM[
+\begin_inset Formula $\mathcal{R},-\gamma$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -9577,7 +9757,15 @@ v1 learn
 \begin_inset Text
 
 \begin_layout Plain Layout
-SGA (G4) 0.2 8
+HM[
+\begin_inset Formula $\mathcal{R},g_{\mathsf{SGA}}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -9719,161 +9907,6 @@ SGA (G4) 0.2 8
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-G-0.2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
@@ -9887,11 +9920,11 @@ CUB
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM
-\begin_inset Formula $|_{\text{Softhard}}^{\text{Semihard}}$
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
- (
+] (
 \begin_inset Formula $\eta=8$
 \end_inset
 
@@ -10050,7 +10083,15 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-+GA 0.1
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{B}}(\mathcal{M})$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -10205,7 +10246,15 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-G0.0
+HM[
+\begin_inset Formula $\mathcal{S},0$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -10360,9 +10409,178 @@ G0.0
 \begin_inset Text
 
 \begin_layout Plain Layout
+HM[
+\begin_inset Formula $\mathcal{S},-\gamma$
+\end_inset
 
-\series bold
-SGA (G4) 0.2 8
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -10498,161 +10716,6 @@ SGA (G4) 0.2 8
 
 \begin_layout Plain Layout
 35.3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-G-0.2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
