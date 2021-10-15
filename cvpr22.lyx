@@ -1104,6 +1104,30 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resizebox{
+\backslash
+linewidth}{!}{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+tabcolsep}{0.3em}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Tabular
 <lyxtabular version="3" rows="27" columns="17">
 <features tabularvalignment="middle">
@@ -1501,7 +1525,7 @@ GTT
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1514,7 +1538,15 @@ CUB
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetrr (N/A)
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{R}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1656,7 +1688,7 @@ hmetrr (N/A)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1669,7 +1701,15 @@ hmetrr (N/A)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetrm (8)
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{M}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1811,7 +1851,7 @@ hmetrm (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1824,7 +1864,15 @@ hmetrm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-rs
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{S}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1966,7 +2014,7 @@ e
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1979,7 +2027,15 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
-rd
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{D}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2121,7 +2177,7 @@ e
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2134,7 +2190,15 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
-rh
+HM[
+\begin_inset Formula $\mathcal{R},\mathcal{H}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2276,11 +2340,11 @@ e
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+CUB
 \end_layout
 
 \end_inset
@@ -2289,7 +2353,15 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
-mr (8)
+HM[
+\begin_inset Formula $\mathcal{M},\mathcal{R}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2431,7 +2503,7 @@ mr (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2444,7 +2516,15 @@ mr (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-mm (8)
+HM[
+\begin_inset Formula $\mathcal{M},\mathcal{M}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2586,7 +2666,7 @@ mm (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2599,7 +2679,15 @@ mm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetms (8)
+HM[
+\begin_inset Formula $\mathcal{M},\mathcal{S}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2741,7 +2829,7 @@ e
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2754,7 +2842,15 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetmd (8)
+HM[
+\begin_inset Formula $\mathcal{M},\mathcal{D}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -2896,7 +2992,7 @@ e
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2909,7 +3005,15 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetmh (8)
+HM[
+\begin_inset Formula $\mathcal{M},\mathcal{H}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3051,11 +3155,11 @@ e
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+CUB
 \end_layout
 
 \end_inset
@@ -3064,7 +3168,15 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
-sr (8)
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{R}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3206,7 +3318,7 @@ sr (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3219,7 +3331,15 @@ sr (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-sm (8)
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{M}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3361,7 +3481,7 @@ sm (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3374,7 +3494,15 @@ sm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-ss (8)
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{S}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3516,7 +3644,7 @@ ss (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3529,7 +3657,15 @@ ss (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetsd (8)
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{D}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3671,7 +3807,7 @@ e
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3684,7 +3820,15 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetsh (8)
+HM[
+\begin_inset Formula $\mathcal{S},\mathcal{H}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3826,11 +3970,11 @@ e
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+CUB
 \end_layout
 
 \end_inset
@@ -3839,7 +3983,15 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
-dr (8)
+HM[
+\begin_inset Formula $\mathcal{D},\mathcal{R}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -3981,7 +4133,7 @@ dr (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3994,7 +4146,15 @@ dr (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-dm (8)
+HM[
+\begin_inset Formula $\mathcal{D},\mathcal{M}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -4136,7 +4296,7 @@ dm (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4149,7 +4309,15 @@ dm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-ds (8)
+HM[
+\begin_inset Formula $\mathcal{D},\mathcal{S}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -4291,7 +4459,7 @@ e
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4304,7 +4472,15 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
-dd (8)
+HM[
+\begin_inset Formula $\mathcal{D},\mathcal{D}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -4446,7 +4622,7 @@ dd (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4459,7 +4635,15 @@ dd (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hmetdh (8)
+HM[
+\begin_inset Formula $\mathcal{D},\mathcal{H}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -4601,11 +4785,11 @@ hmetdh (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+CUB
 \end_layout
 
 \end_inset
@@ -4614,7 +4798,15 @@ hmetdh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hr (8)
+HM[
+\begin_inset Formula $\mathcal{H},\mathcal{R}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -4756,11 +4948,11 @@ hr (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-v0
+
 \end_layout
 
 \end_inset
@@ -4769,7 +4961,15 @@ v0
 \begin_inset Text
 
 \begin_layout Plain Layout
-hm (8)
+HM[
+\begin_inset Formula $\mathcal{H},\mathcal{M}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -4911,7 +5111,7 @@ hm (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4924,7 +5124,15 @@ hm (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hh (8)
+HM[
+\begin_inset Formula $\mathcal{H},\mathcal{S}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -4933,7 +5141,7 @@ hh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-48.9
+52.2
 \end_layout
 
 \end_inset
@@ -4942,7 +5150,7 @@ hh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-61.2
+64.0
 \end_layout
 
 \end_inset
@@ -4951,7 +5159,7 @@ hh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-30.3
+33.1
 \end_layout
 
 \end_inset
@@ -4960,7 +5168,7 @@ hh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-56.5
+58.4
 \end_layout
 
 \end_inset
@@ -4987,42 +5195,6 @@ hh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-99.9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.830
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.752
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 0.2
 \end_layout
 
@@ -5032,6 +5204,33 @@ hh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
+100.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.841
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.750
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.0
 \end_layout
 
@@ -5041,7 +5240,16 @@ hh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-19.5
+0.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.9
 \end_layout
 
 \end_inset
@@ -5059,14 +5267,14 @@ hh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.0
+4.8
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5079,7 +5287,15 @@ hh (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hd (8)
+HM[
+\begin_inset Formula $\mathcal{H},\mathcal{D}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -5221,7 +5437,7 @@ hd (8)
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5234,7 +5450,15 @@ hd (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-hs (8)
+HM[
+\begin_inset Formula $\mathcal{H},\mathcal{H}$
+\end_inset
+
+] (
+\begin_inset Formula $\eta=8$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -5243,7 +5467,7 @@ hs (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-52.2
+48.9
 \end_layout
 
 \end_inset
@@ -5252,7 +5476,7 @@ hs (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-64.0
+61.2
 \end_layout
 
 \end_inset
@@ -5261,7 +5485,7 @@ hs (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-33.1
+30.3
 \end_layout
 
 \end_inset
@@ -5270,7 +5494,7 @@ hs (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-58.4
+56.5
 \end_layout
 
 \end_inset
@@ -5289,6 +5513,42 @@ hs (8)
 
 \begin_layout Plain Layout
 100.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+99.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.830
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.752
 \end_layout
 
 \end_inset
@@ -5306,33 +5566,6 @@ hs (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-100.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.841
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.750
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 0.0
 \end_layout
 
@@ -5342,16 +5575,7 @@ hs (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-18.9
+19.5
 \end_layout
 
 \end_inset
@@ -5369,13 +5593,24 @@ hs (8)
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.8
+5.0
 \end_layout
 
 \end_inset
 </cell>
 </row>
 </lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
 
 \end_inset
 
