@@ -10753,7 +10753,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="16" columns="17">
+<lyxtabular version="3" rows="17" columns="17">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -11794,7 +11794,7 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-+i
++i aap
 \end_layout
 
 \end_inset
@@ -12112,7 +12112,7 @@ HM
 \begin_inset Text
 
 \begin_layout Plain Layout
-+i
++i aap
 \end_layout
 
 \end_inset
@@ -12269,7 +12269,7 @@ v1 learn
 \begin_layout Plain Layout
 
 \series bold
-SGA (G4) 0.2 8
+R,SGA (G4) 0.2 8
 \end_layout
 
 \end_inset
@@ -12424,7 +12424,7 @@ SGA (G4) 0.2 8
 \begin_inset Text
 
 \begin_layout Plain Layout
-+0.5i
++0.5i aap
 \end_layout
 
 \end_inset
@@ -12579,7 +12579,7 @@ SGA (G4) 0.2 8
 \begin_inset Text
 
 \begin_layout Plain Layout
-+i
++i aap
 \end_layout
 
 \end_inset
@@ -12734,7 +12734,162 @@ SGA (G4) 0.2 8
 \begin_inset Text
 
 \begin_layout Plain Layout
-SGA (G4) 0.2 8
++i aap ppa 0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R:G
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+S,SGA (G4) 0.2 8
 \end_layout
 
 \end_inset
@@ -12889,7 +13044,7 @@ SGA (G4) 0.2 8
 \begin_inset Text
 
 \begin_layout Plain Layout
-+0.5i
++0.5i aap
 \end_layout
 
 \end_inset
@@ -13044,7 +13199,7 @@ SGA (G4) 0.2 8
 \begin_inset Text
 
 \begin_layout Plain Layout
-+i
++i aap
 \end_layout
 
 \end_inset
