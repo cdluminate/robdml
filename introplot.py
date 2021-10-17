@@ -22,7 +22,11 @@ data = {
             (33.0, 17.0, 9.0, 5.0, 3.0),
             (35.7, 34.8, 29.6, 22.1, 11.6),
             ),
-        'G4': (34.4, 9.0, 36.7),
+        'HM(S,SGA)': (
+            (47.5, 42.7, 35.5),
+            (3.0, 5.0, 9.0),
+            (11.7, 20.8, 35.3),
+            ),
         }
 
 plt.figure(figsize=[10.8, 4.8])
@@ -37,7 +41,7 @@ for (name, (r1, cost, ers)) in data.items():
         plt.plot(cost, ers, f'v-', color='tab:blue')
     elif name == 'hmetsm':
         plt.plot(cost, ers, f'^-', color='tab:red')
-    elif name == 'hmix':
+    elif name == 'HM(S,SGA)':
         plt.plot(cost, ers, f'h-', color='deeppink')
     else:
         plt.plot(cost, ers, f'-o', color='k')
@@ -68,7 +72,7 @@ for (name, (r1, cost, ers)) in data.items():
         plt.plot(r1, ers, f'v-', color='tab:blue')
     elif name == 'hmetsm':
         plt.plot(r1, ers, f'^-', color='tab:red')
-    elif name == 'hmix':
+    elif name == 'HM(S,SGA)':
         plt.plot(r1, ers, f'h-', color='deeppink')
     else:
         plt.plot(r1, ers, f'-o', color='k')
