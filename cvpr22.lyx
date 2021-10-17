@@ -1130,8 +1130,9 @@ tabcolsep}{0.3em}
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="27" columns="17">
+<lyxtabular version="3" rows="27" columns="18">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1157,6 +1158,18 @@ tabcolsep}{0.3em}
 
 \series bold
 Dataset
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1316,6 +1329,15 @@ ERS
 </row>
 <row>
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1526,11 +1548,20 @@ GTT
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 CUB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
 \end_layout
 
 \end_inset
@@ -1543,11 +1574,7 @@ HM[
 \begin_inset Formula $\mathcal{R},\mathcal{R}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -1702,15 +1729,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -1865,15 +1897,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{R},\mathcal{S}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -2028,15 +2065,20 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{R},\mathcal{D}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -2187,6 +2229,15 @@ e
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -2195,11 +2246,7 @@ HM[
 \begin_inset Formula $\mathcal{R},\mathcal{H}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -2341,11 +2388,20 @@ e
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 CUB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
 \end_layout
 
 \end_inset
@@ -2358,11 +2414,7 @@ HM[
 \begin_inset Formula $\mathcal{M},\mathcal{R}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -2517,15 +2569,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{M},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -2680,15 +2737,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{M},\mathcal{S}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -2843,15 +2905,20 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{M},\mathcal{D}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -3002,6 +3069,15 @@ e
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -3010,11 +3086,7 @@ HM[
 \begin_inset Formula $\mathcal{M},\mathcal{H}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -3156,11 +3228,20 @@ e
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 CUB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
 \end_layout
 
 \end_inset
@@ -3173,11 +3254,7 @@ HM[
 \begin_inset Formula $\mathcal{S},\mathcal{R}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -3332,15 +3409,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -3495,15 +3577,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{S},\mathcal{S}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -3658,15 +3745,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{S},\mathcal{D}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -3817,6 +3909,15 @@ e
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -3825,11 +3926,7 @@ HM[
 \begin_inset Formula $\mathcal{S},\mathcal{H}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -3971,11 +4068,20 @@ e
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 CUB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
 \end_layout
 
 \end_inset
@@ -3988,11 +4094,7 @@ HM[
 \begin_inset Formula $\mathcal{D},\mathcal{R}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -4147,15 +4249,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{D},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -4310,15 +4417,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{D},\mathcal{S}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -4473,15 +4585,20 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{D},\mathcal{D}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -4632,6 +4749,15 @@ HM[
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -4640,11 +4766,7 @@ HM[
 \begin_inset Formula $\mathcal{D},\mathcal{H}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -4786,11 +4908,20 @@ HM[
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" rightline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 CUB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
 \end_layout
 
 \end_inset
@@ -4803,11 +4934,7 @@ HM[
 \begin_inset Formula $\mathcal{H},\mathcal{R}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -4962,15 +5089,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{H},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -5125,15 +5257,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{H},\mathcal{S}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -5288,15 +5425,20 @@ e
 \begin_inset Text
 
 \begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{H},\mathcal{D}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -5451,15 +5593,20 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 HM[
 \begin_inset Formula $\mathcal{H},\mathcal{H}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
-
-)
+]
 \end_layout
 
 \end_inset
@@ -5667,8 +5814,9 @@ tabcolsep}{0.2em}
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="18" columns="17">
+<lyxtabular version="3" rows="18" columns="18">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -5705,6 +5853,18 @@ Dataset
 
 \series bold
 Defense
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5856,6 +6016,15 @@ ERS
 </cell>
 </row>
 <row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -6085,6 +6254,15 @@ N/A
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -6235,11 +6413,16 @@ CUB
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT (
-\begin_inset Formula $\eta=2$
-\end_inset
+ACT
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
 \end_layout
 
 \end_inset
@@ -6394,11 +6577,16 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT (
-\begin_inset Formula $\eta=4$
-\end_inset
+ACT
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
 \end_layout
 
 \end_inset
@@ -6553,11 +6741,16 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT (
-\begin_inset Formula $\eta=8$
-\end_inset
+ACT
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
 \end_layout
 
 \end_inset
@@ -6712,11 +6905,16 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT (
-\begin_inset Formula $\eta=16$
-\end_inset
+ACT
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
 \end_layout
 
 \end_inset
@@ -6871,11 +7069,16 @@ ACT (
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT (
-\begin_inset Formula $\eta=32$
-\end_inset
+ACT
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
 \end_layout
 
 \end_inset
@@ -7034,11 +7237,16 @@ HM[
 \begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=2$
-\end_inset
+]
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
 \end_layout
 
 \end_inset
@@ -7197,11 +7405,16 @@ HM[
 \begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=4$
-\end_inset
+]
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
 \end_layout
 
 \end_inset
@@ -7360,11 +7573,16 @@ HM[
 \begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
+]
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
 \end_layout
 
 \end_inset
@@ -7523,11 +7741,16 @@ HM[
 \begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=16$
-\end_inset
+] 
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
 \end_layout
 
 \end_inset
@@ -7686,11 +7909,16 @@ HM[
 \begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=32$
-\end_inset
+]
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
 \end_layout
 
 \end_inset
@@ -7849,11 +8077,16 @@ HM[
 \begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=2$
-\end_inset
+]
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
 \end_layout
 
 \end_inset
@@ -8012,11 +8245,16 @@ HM[
 \begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=4$
-\end_inset
+]
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
 \end_layout
 
 \end_inset
@@ -8175,11 +8413,16 @@ HM[
 \begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=8$
-\end_inset
+]
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
 \end_layout
 
 \end_inset
@@ -8338,11 +8581,16 @@ HM[
 \begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=16$
-\end_inset
+]
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16
 \end_layout
 
 \end_inset
@@ -8501,11 +8749,16 @@ HM[
 \begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
-] (
-\begin_inset Formula $\eta=32$
-\end_inset
+]
+\end_layout
 
-)
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+32
 \end_layout
 
 \end_inset
@@ -8692,8 +8945,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="14" columns="17">
+<lyxtabular version="3" rows="14" columns="18">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -8730,6 +8984,18 @@ Dataset
 
 \series bold
 Defense
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -8881,6 +9147,15 @@ ERS
 </cell>
 </row>
 <row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -9118,6 +9393,15 @@ HM[
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -9277,6 +9561,15 @@ HM[
 \end_inset
 
 )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -9444,6 +9737,15 @@ HM[
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -9603,6 +9905,15 @@ HM[
 \end_inset
 
 )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -9770,6 +10081,15 @@ HM[
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -9929,6 +10249,15 @@ HM[
 \end_inset
 
 )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -10096,6 +10425,15 @@ HM[
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -10255,6 +10593,15 @@ HM[
 \end_inset
 
 )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -10422,6 +10769,15 @@ HM[
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -10581,6 +10937,15 @@ HM[
 \end_inset
 
 )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -10748,6 +11113,15 @@ HM[
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -10907,6 +11281,15 @@ HM[
 \end_inset
 
 )
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -12789,7 +13172,7 @@ R,SGA (G4) 0.2 8
 \begin_inset Text
 
 \begin_layout Plain Layout
-T:G
+24.8
 \end_layout
 
 \end_inset
@@ -12798,7 +13181,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+33.9
 \end_layout
 
 \end_inset
@@ -12807,7 +13190,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.2
 \end_layout
 
 \end_inset
@@ -12816,7 +13199,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+41.6
 \end_layout
 
 \end_inset
@@ -12825,7 +13208,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+21.4
 \end_layout
 
 \end_inset
@@ -12834,7 +13217,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+45.0
 \end_layout
 
 \end_inset
@@ -12843,7 +13226,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+21.7
 \end_layout
 
 \end_inset
@@ -12852,7 +13235,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+31.3
 \end_layout
 
 \end_inset
@@ -12861,7 +13244,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.452
 \end_layout
 
 \end_inset
@@ -12870,7 +13253,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.846
 \end_layout
 
 \end_inset
@@ -12879,7 +13262,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.2
 \end_layout
 
 \end_inset
@@ -12888,7 +13271,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.0
 \end_layout
 
 \end_inset
@@ -12897,7 +13280,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+20.9
 \end_layout
 
 \end_inset
@@ -12906,7 +13289,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.6
 \end_layout
 
 \end_inset
@@ -12915,7 +13298,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+37.3
 \end_layout
 
 \end_inset
@@ -14186,7 +14569,7 @@ S,SGA (G4) 0.2 8
 \begin_inset Text
 
 \begin_layout Plain Layout
-T:G
+36.3
 \end_layout
 
 \end_inset
@@ -14195,7 +14578,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+46.9
 \end_layout
 
 \end_inset
@@ -14204,7 +14587,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+21.0
 \end_layout
 
 \end_inset
@@ -14213,7 +14596,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+48.5
 \end_layout
 
 \end_inset
@@ -14222,7 +14605,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+16.1
 \end_layout
 
 \end_inset
@@ -14231,7 +14614,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+39.1
 \end_layout
 
 \end_inset
@@ -14240,7 +14623,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+16.2
 \end_layout
 
 \end_inset
@@ -14249,7 +14632,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+31.6
 \end_layout
 
 \end_inset
@@ -14258,7 +14641,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.848
 \end_layout
 
 \end_inset
@@ -14267,7 +14650,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.401
 \end_layout
 
 \end_inset
@@ -14276,7 +14659,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+19.6
 \end_layout
 
 \end_inset
@@ -14285,7 +14668,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+15.2
 \end_layout
 
 \end_inset
@@ -14294,7 +14677,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+25.6
 \end_layout
 
 \end_inset
@@ -14303,7 +14686,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2.4
 \end_layout
 
 \end_inset
@@ -14312,7 +14695,7 @@ T:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+35.2
 \end_layout
 
 \end_inset
