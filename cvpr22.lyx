@@ -8969,7 +8969,7 @@ tabcolsep}{0.3em}
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="24" columns="18">
+<lyxtabular version="3" rows="25" columns="18">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -12755,6 +12755,174 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+R:V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 ???R:V
 \end_layout
 
@@ -12923,7 +13091,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+R:V
 \end_layout
 
 \end_inset
@@ -12954,7 +13122,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-R:V
+36.5
 \end_layout
 
 \end_inset
@@ -12963,7 +13131,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+46.7
 \end_layout
 
 \end_inset
@@ -12972,7 +13140,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+21.0
 \end_layout
 
 \end_inset
@@ -12981,7 +13149,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+48.6
 \end_layout
 
 \end_inset
@@ -12990,7 +13158,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+14.7
 \end_layout
 
 \end_inset
@@ -12999,7 +13167,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+39.6
 \end_layout
 
 \end_inset
@@ -13008,7 +13176,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+15.6
 \end_layout
 
 \end_inset
@@ -13017,7 +13185,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+34.2
 \end_layout
 
 \end_inset
@@ -13026,7 +13194,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.523
 \end_layout
 
 \end_inset
@@ -13035,7 +13203,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.736
 \end_layout
 
 \end_inset
@@ -13044,7 +13212,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+16.5
 \end_layout
 
 \end_inset
@@ -13053,7 +13221,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+15.0
 \end_layout
 
 \end_inset
@@ -13062,7 +13230,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+26.7
 \end_layout
 
 \end_inset
@@ -13071,7 +13239,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2.9
 \end_layout
 
 \end_inset
@@ -13080,7 +13248,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+35.9
 \end_layout
 
 \end_inset
