@@ -16880,7 +16880,7 @@ CUB
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16889,7 +16889,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16898,7 +16898,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16907,7 +16907,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16916,7 +16916,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16925,7 +16925,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16934,7 +16934,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16943,7 +16943,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16952,7 +16952,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16961,7 +16961,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16970,7 +16970,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16979,7 +16979,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16988,7 +16988,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -16997,7 +16997,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17006,7 +17006,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17015,7 +17015,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17024,7 +17024,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17372,7 +17372,7 @@ ACT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17381,7 +17381,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17390,7 +17390,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17399,7 +17399,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17408,7 +17408,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17417,7 +17417,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17426,7 +17426,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17435,7 +17435,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17444,7 +17444,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17453,7 +17453,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17462,7 +17462,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17471,7 +17471,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17480,7 +17480,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17489,7 +17489,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17498,7 +17498,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17507,7 +17507,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17516,7 +17516,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -17558,7 +17558,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+8.5
 \end_layout
 
 \end_inset
@@ -17567,7 +17567,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.0
 \end_layout
 
 \end_inset
@@ -17576,7 +17576,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2.6
 \end_layout
 
 \end_inset
@@ -17585,7 +17585,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+25.2
 \end_layout
 
 \end_inset
@@ -17594,7 +17594,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2.7
 \end_layout
 
 \end_inset
@@ -17603,7 +17603,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+97.9
 \end_layout
 
 \end_inset
@@ -17612,7 +17612,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.4
 \end_layout
 
 \end_inset
@@ -17621,7 +17621,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+97.3
 \end_layout
 
 \end_inset
@@ -17630,7 +17630,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.848
 \end_layout
 
 \end_inset
@@ -17639,7 +17639,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.576
 \end_layout
 
 \end_inset
@@ -17648,7 +17648,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.4
 \end_layout
 
 \end_inset
@@ -17657,7 +17657,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -17666,7 +17666,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.0
 \end_layout
 
 \end_inset
@@ -17675,7 +17675,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -17684,7 +17684,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5.3
 \end_layout
 
 \end_inset
@@ -18028,7 +18028,7 @@ CARS
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18037,7 +18037,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18046,137 +18046,137 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+62.5
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+74.0
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+23.8
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+57.0
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.2
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+100.0
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.1
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+99.6
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.874
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.816
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.4
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3.6
 \end_layout
 
 \end_inset
@@ -18520,7 +18520,7 @@ ACT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18529,7 +18529,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18538,7 +18538,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18547,7 +18547,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18556,7 +18556,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18565,7 +18565,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18574,7 +18574,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18583,7 +18583,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18592,7 +18592,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18601,7 +18601,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18610,7 +18610,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18619,7 +18619,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18628,7 +18628,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18637,7 +18637,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18646,7 +18646,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18655,7 +18655,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18664,7 +18664,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -18706,7 +18706,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+30.7
 \end_layout
 
 \end_inset
@@ -18715,7 +18715,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+41.0
 \end_layout
 
 \end_inset
@@ -18724,7 +18724,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5.6
 \end_layout
 
 \end_inset
@@ -18733,7 +18733,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+31.8
 \end_layout
 
 \end_inset
@@ -18742,7 +18742,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.2
 \end_layout
 
 \end_inset
@@ -18751,7 +18751,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+98.1
 \end_layout
 
 \end_inset
@@ -18760,7 +18760,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.4
 \end_layout
 
 \end_inset
@@ -18769,7 +18769,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+91.8
 \end_layout
 
 \end_inset
@@ -18778,7 +18778,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.880
 \end_layout
 
 \end_inset
@@ -18787,7 +18787,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.281
 \end_layout
 
 \end_inset
@@ -18796,7 +18796,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2.9
 \end_layout
 
 \end_inset
@@ -18805,7 +18805,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.7
 \end_layout
 
 \end_inset
@@ -18814,7 +18814,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+8.2
 \end_layout
 
 \end_inset
@@ -18823,7 +18823,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
@@ -18832,7 +18832,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+7.3
 \end_layout
 
 \end_inset
@@ -18870,7 +18870,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+43.4
 \end_layout
 
 \end_inset
@@ -18879,7 +18879,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+54.6
 \end_layout
 
 \end_inset
@@ -18888,7 +18888,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+11.8
 \end_layout
 
 \end_inset
@@ -18897,7 +18897,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+42.9
 \end_layout
 
 \end_inset
@@ -18906,7 +18906,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+18.0
 \end_layout
 
 \end_inset
@@ -18915,7 +18915,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+32.3
 \end_layout
 
 \end_inset
@@ -18924,7 +18924,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+17.5
 \end_layout
 
 \end_inset
@@ -18933,7 +18933,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+30.5
 \end_layout
 
 \end_inset
@@ -18942,7 +18942,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.383
 \end_layout
 
 \end_inset
@@ -18951,7 +18951,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.763
 \end_layout
 
 \end_inset
@@ -18960,7 +18960,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+16.3
 \end_layout
 
 \end_inset
@@ -18969,7 +18969,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+15.3
 \end_layout
 
 \end_inset
@@ -18978,7 +18978,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+20.7
 \end_layout
 
 \end_inset
@@ -18987,7 +18987,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.6
 \end_layout
 
 \end_inset
@@ -18996,7 +18996,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+38.6
 \end_layout
 
 \end_inset
@@ -19176,7 +19176,7 @@ SOP
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19185,7 +19185,7 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19194,137 +19194,137 @@ N/A
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+62.9
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+68.5
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+39.2
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+87.4
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.1
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+99.3
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.2
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+99.1
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.845
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.685
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6.3
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.0
 \end_layout
 
 \end_inset
@@ -19668,7 +19668,7 @@ ACT
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19677,7 +19677,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19686,7 +19686,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19695,7 +19695,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19704,7 +19704,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19713,7 +19713,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19722,7 +19722,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19731,7 +19731,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19740,7 +19740,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19749,7 +19749,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19758,7 +19758,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19767,7 +19767,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19776,7 +19776,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19785,7 +19785,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19794,7 +19794,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19803,7 +19803,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19812,7 +19812,7 @@ HM[S,SGA]
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -19854,7 +19854,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+46.0
 \end_layout
 
 \end_inset
@@ -19863,7 +19863,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+51.4
 \end_layout
 
 \end_inset
@@ -19872,7 +19872,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+24.5
 \end_layout
 
 \end_inset
@@ -19881,7 +19881,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+84.7
 \end_layout
 
 \end_inset
@@ -19890,7 +19890,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.5
 \end_layout
 
 \end_inset
@@ -19899,7 +19899,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+43.6
 \end_layout
 
 \end_inset
@@ -19908,7 +19908,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+10.6
 \end_layout
 
 \end_inset
@@ -19917,7 +19917,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+34.8
 \end_layout
 
 \end_inset
@@ -19926,7 +19926,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.468
 \end_layout
 
 \end_inset
@@ -19935,7 +19935,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.830
 \end_layout
 
 \end_inset
@@ -19944,7 +19944,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+9.6
 \end_layout
 
 \end_inset
@@ -19953,7 +19953,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+7.2
 \end_layout
 
 \end_inset
@@ -19962,7 +19962,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+17.3
 \end_layout
 
 \end_inset
@@ -19971,7 +19971,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3.8
 \end_layout
 
 \end_inset
@@ -19980,7 +19980,7 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+31.7
 \end_layout
 
 \end_inset
@@ -20018,7 +20018,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+47.5
 \end_layout
 
 \end_inset
@@ -20027,7 +20027,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+52.6
 \end_layout
 
 \end_inset
@@ -20036,7 +20036,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+25.5
 \end_layout
 
 \end_inset
@@ -20045,7 +20045,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+84.9
 \end_layout
 
 \end_inset
@@ -20054,7 +20054,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+24.1
 \end_layout
 
 \end_inset
@@ -20063,7 +20063,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+10.5
 \end_layout
 
 \end_inset
@@ -20072,7 +20072,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+22.7
 \end_layout
 
 \end_inset
@@ -20081,7 +20081,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+9.4
 \end_layout
 
 \end_inset
@@ -20090,7 +20090,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.253
 \end_layout
 
 \end_inset
@@ -20099,7 +20099,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.532
 \end_layout
 
 \end_inset
@@ -20108,7 +20108,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+21.2
 \end_layout
 
 \end_inset
@@ -20117,7 +20117,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+21.6
 \end_layout
 
 \end_inset
@@ -20126,7 +20126,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+27.8
 \end_layout
 
 \end_inset
@@ -20135,7 +20135,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+15.3
 \end_layout
 
 \end_inset
@@ -20144,7 +20144,7 @@ ACT
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+50.8
 \end_layout
 
 \end_inset
