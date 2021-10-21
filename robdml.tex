@@ -567,7 +567,8 @@ function, \ie,
 %
 \begin{equation}
 	%
-	g_\mathsf{B}(H_\mathsf{D};\xi) = H_\mathsf{D} + \xi \cdot (1-\bar{\ell}_{t-1}).
+	g_\mathsf{B}(H_\mathsf{D};\xi,\bar{\ell}_{t-1}) =
+	H_\mathsf{D} + \xi \cdot (1-\bar{\ell}_{t-1}).
 	%
 \end{equation}
 %
@@ -583,7 +584,9 @@ embedding space in the early phase.
 At this point, we argue that learning from a strong adversary in the early
 training phase (\ie, when the embedding space is not ``in-good-shape'') hampers the
 generalization on benign examples.
-%
+
+% Gradual Adversary
+
 In other words, the desired destination hardness should be (1) relatively weak
 in the early training phase, and (2) relatively strong in the late training
 phase.
@@ -604,15 +607,19 @@ satisfies the two condictions of Gradual Adversary, dubbed
 %
 \begin{equation}
 	%
-	g_\mathsf{SGA}() = -\gamma \cdot \bar{\ell}_{t-1} ~ \in [-\gamma,0].
+	g_\mathsf{SGA}(\bar{\ell}_{t-1}) =
+	-\gamma \cdot \bar{\ell}_{t-1} ~ \in [-\gamma,0].
 	%
 \end{equation}
+%
+And the adversarial examples from $\text{HM}(H_\mathsf{S},g_\mathsf{SGA})$
+can be used for adversarial training.
 %
 The design of this function will be empirically supported in the experiments
 section.
 %
-The exploration of other possible pseudo-hardness functions is omitted to 
-keep simplicity.
+The exploration of other possible pseudo-hardness functions is omitted 
+for simplicity.
 
 \subsection{Intra-Class Structure Constraint}
 \label{sec:33}
