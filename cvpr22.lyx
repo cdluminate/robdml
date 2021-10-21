@@ -13167,6 +13167,15 @@ setlength{
 tabcolsep}{0.3em}
 \end_layout
 
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
+\end_layout
+
 \end_inset
 
 
@@ -16293,6 +16302,15 @@ linewidth}{!}{
 setlength{
 \backslash
 tabcolsep}{0.3em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+arraystretch}{1.1}
 \end_layout
 
 \end_inset

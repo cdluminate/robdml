@@ -1,0 +1,31 @@
+\begin{table*}
+\resizebox{\linewidth}{!}{
+\setlength{\tabcolsep}{0.3em}
+\renewcommand{\arraystretch}{1.1}%
+\begin{tabular}{ccc|cccc|ccccc|ccccc|c}
+\hline 
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Dataset}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Defense}}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17} 
+ &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
+\hline 
+CUB & HM{[}$\mathcal{R},\mathcal{M}${]} & 8 & 27.0 & 36.0 & 13.2 & 42.5 & 19.4 & 48.0 & 22.2 & 32.0 & 0.535 & 0.867 & 11.6 & 10.4 & 19.3 & 2.9 & 35.1\tabularnewline
+ & +i aap & 8 & 25.0 & 34.3 & 12.4 & 41.6 & 21.7 & 37.5 & 23.6 & 24.9 & 0.444 & 0.734 & 15.3 & 12.8 & 23.8 & 4.6 & 40.3\tabularnewline
+CUB & HM{[}$\mathcal{S},\mathcal{M}${]} & 8 & 38.4 & 49.7 & 22.9 & 50.3 & 10.9 & 50.5 & 10.8 & 44.6 & 0.680 & 0.722 & 13.3 & 11.2 & 25.8 & 1.2 & 29.6\tabularnewline
+ & +i aap & 8 & 35.0 & 45.7 & 19.8 & 47.6 & 17.1 & 36.6 & 18.3 & 27.2 & 0.904 & 0.313 & 20.1 & 16.2 & 28.4 & 3.4 & 36.9\tabularnewline
+{*} & HM{[}$\mathcal{R},g_{\mathsf{SGA}}${]} & 8 & 24.8 & 33.9 & 12.2 & 41.6 & 21.4 & 45.0 & 21.7 & 31.3 & 0.452 & 0.846 & 13.2 & 12.0 & 20.9 & 4.6 & 37.3\tabularnewline
+ & +0.5i aap & 8 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+ & +i aap & 8 & 25.1 & 34.1 & 12.6 & 41.1 & 23.2 & 33.6 & 25.1 & 22.8 & 0.442 & 0.699 & 15.4 & 14.6 & 22.3 & 6.3 & 42.0\tabularnewline
+ & +i aap ppa 0.5 & 8 & 24.8 & 33.8 & 12.0 & 41.5 & 21.8 & 39.1 & 24.9 & 24.4 & 0.472 & 0.716 & 12.3 & 13.3 & 21.2 & 5.3 & 39.9\tabularnewline
+ & +i aap aan){*}0.5 & 8 & 25.3 & 34.4 & 12.8 & 41.5 & 21.7 & 35.4 & 25.5 & 23.5 & 0.490 & 0.665 & 15.6 & 13.6 & 23.0 & 4.7 & 41.0\tabularnewline
+{*} & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]} & 8 & 35.5 & 46.3 & 20.3 & 47.5 & 14.6 & 41.1 & 14.3 & 34.5 & 0.530 & 0.739 & 18.1 & 13.1 & 27.9 & 2.1 & 35.3\tabularnewline
+ & +0.5i aap & 8 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+ & +i aap ppa 0.5 & 8 & 35.3 & 46.5 & 20.1 & 47.5 & 16.1 & 36.2 & 18.3 & 26.8 & 0.908 & 0.316 & 16.6 & 15.2 & 27.8 & 3.3 & 36.2\tabularnewline
+ & +i aap & 8 & 34.7 & 45.6 & 19.5 & 46.9 & 16.9 & 34.2 & 18.9 & 26.7 & 0.904 & 0.296 & 20.4 & 16.1 & 26.6 & 4.2 & 37.3\tabularnewline
+ & +i aap aan){*}0.5 & 8 & 36.3 & 46.9 & 21.0 & 48.5 & 16.1 & 39.1 & 16.2 & 31.6 & 0.848 & 0.401 & 19.6 & 15.2 & 25.6 & 2.4 & 35.2\tabularnewline
+ &  & 8 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+ &  & 8 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\end{tabular}}
+
+\caption{Effectiveness of ICS .}
+\end{table*}
+
