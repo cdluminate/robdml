@@ -529,6 +529,8 @@ prior knowledge on what the destination hardness should be.
 	\label{fig:ga}
 \end{figure}
 
+\cref{fig:ga}
+
 % motivation of GA : late phase
 
 When benign triplets are used as reference for destination hardness, the
@@ -572,23 +574,45 @@ function, \ie,
 And the adversarial examples from $\text{HM}(H_\mathsf{S},g_\mathsf{B}(H_\mathsf{D}))$
 can be used for training.
 
+% motivation of GA: early phase
 
+However, while the destination hardness is boosted in the late phase of
+training, the adversarial examples may still hamper the learning of a good
+embedding space in the early phase.
+%
+At this point, we argue that learning from a strong adversary in the early
+training phase (\ie, when the embedding space is not ``in-good-shape'') hampers the
+generalization on benign examples.
+%
+In other words, the desired destination hardness should be (1) relatively weak
+in the early training phase, and (2) relatively strong in the late training
+phase.
+%
+We name the family of pseudo-hardness functions that fulfills the two
+conditions as ``Graduate Adversary''.
+%
+Additionally, if we have a strong prior knowledge on ``how hard the destination
+hardness should be'', the pseudo-hardness function can be independent from
+any benign triplet.
 
-\cref{fig:ga}
+% simple graduate adversary
 
-During the training process, the strength of adversary will gradually decrease,
-because the expectation of the destination hardness $E[H_\mathsf{D}]$ is expected to
-decrease with a model being trained.
-
-strong example when the embedding space is not in good shape.
-
-
+For instance, if we assume that the destination hardness should remain
+in the hardness range of Semihard~\cite{facenet}, the following function
+satisfies the two condictions of Gradual Adversary, dubbed
+``Simple Gradual Adversary'' (SGA):
+%
 \begin{equation}
 	%
-	g_\mathsf{SGA}() = -\gamma \cdot \bar{\ell}_{t-1}
+	g_\mathsf{SGA}() = -\gamma \cdot \bar{\ell}_{t-1} ~ \in [-\gamma,0].
 	%
 \end{equation}
-
+%
+The design of this function will be empirically supported in the experiments
+section.
+%
+The exploration of other possible pseudo-hardness functions is omitted to 
+keep simplicity.
 
 \subsection{Intra-Class Structure Constraint}
 \label{sec:33}
