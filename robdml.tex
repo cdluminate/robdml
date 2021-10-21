@@ -529,6 +529,25 @@ prior knowledge on what the destination hardness should be.
 	\label{fig:ga}
 \end{figure}
 
+% motivation of GA : late phase
+
+When benign triplets are used as reference for destination hardness, the
+adversary (\ie, hardness of adversarial triplets) could gradually become weaker
+than it should be in the late phase of training.
+%
+During the training process of a DML model, the expectation of the triplet loss
+$E[L_\text{T}(\cdots)]$ on benign examples is gradually decreasing
+(with the lower bound being zero).
+%
+The corresponding expectation of hardness $E[H(\cdots)]$ will
+decrease as well (with the lower bound being $-\gamma$).
+%
+As a result, $E[H_\mathsf{D}-H_\mathsf{S}]$ will gradually tend to zero,
+indicating a gradually decreasing strength of attack, and inefficiency in
+learning from a strong adversary.
+
+%
+
 \cref{fig:ga}
 
 During the training process, the strength of adversary will gradually decrease,
