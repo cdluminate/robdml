@@ -77,35 +77,34 @@ Johns Hopkins University\\
 %%%%%%%%% ABSTRACT
 \begin{abstract}
 	% background
-	Deep metric learning, being vulnerable to adversarial
-	attacks, has safety and security implications in its applications.
-	% 
-	Owing to the significance of this issue, a series of defense methods
-	are proposed to improve its adversarial robustness.
+	Owing to the significance of the adversarial vulnerability of deep metric
+	learning models, which poses safety and security implications in its
+	applications, a series of defense methods have been proposed to improve its
+	adversarial robustness.
 	% insight
-	However, as a model with triplet loss is prone to collapse with
-	excessively hard samples, the existing methods refrain from using the
-	classical min-max adversarial training paradigm, and hence suffer from
-	inefficient learning from a strong adversary.
-	% our finding
-	In this paper, we reveal a significant impact of triplet sampling strategy
-	on the adversarial training.
-	% solution 1
-	Based on this, Hardness Manipulation is proposed to adversarially perturb
-	a given triplet into a specified hardness level in min-max adversarial
-	training, instead of creating hardest triplets rendering model collapse.
-	% solution 2
-	To further improve the model performance, we propose a Gradual
-	Adversary to dynamicly change the hardness level to balance metric
-	learning and adversarial learning.
+	In order to avoid model collapse due to excessively hard examples, the
+	existing methods refrain from using the typical min-max adversarial
+	training paradigm, but instead learn from a weak adversary.
+	% our starting point
+	However, we argue that a model can learn from a strong adversary without
+	model collapse, where the key for overall performance is triplet hardness.
+	% HM framework
+	To this end, Hardness Manipulation is proposed to adversarially perturb
+	the training triplet to increase its hardness into a specified level,
+	by referencing other benign triplets, or a pseudo-hardness function.
+	% GA Adversary
+	To further improve the model performance, we propose a Gradual Adversary to
+	dynamicly change the hardness level to balance metric learning and
+	adversarial learning.
 	% Experiment
-	The proposed method is validated on three commonly
-	used deep metric learning datasets, namely CUB-200-2011, Cars-196,
-	and Stanford Online Product.
+	The proposed method is validated on three commonly used deep metric
+	learning datasets, namely CUB-200-2011, Cars-196, and Stanford Online
+	Product.
 	% Conclusion
-	Comprehensive experimental results show our method outperforms
-	the existing defense methods, while achieving clearly higher
-	efficiency at a lower training cost.
+	Comprehensive experimental results show our method outperforms the existing
+	defense methods, while achieving clearly higher efficiency at a lower
+	training cost.  
+%
 \end{abstract}
 
 %%%%%%%%% BODY TEXT
