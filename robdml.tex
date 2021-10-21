@@ -546,7 +546,33 @@ As a result, $E[H_\mathsf{D}-H_\mathsf{S}]$ will gradually tend to zero,
 indicating a gradually decreasing strength of attack, and inefficiency in
 learning from a strong adversary.
 
+% hardness boosting
+
+Such deficiency in the late training process can be alleviated with a
+pseudo-hardness function that boosts the destination hardness when the loss
+value is low.
 %
+Denoting the loss value from the previous training iteration as $\ell_{t-1}$,
+we first normalize it into $[0,1]$ as $\bar{\ell}_{t-1}=\min(u,\ell_{t-1})/u$,
+where $u$ is a manually specified parameter.
+%
+Note, $u$ is much less than the theoretical upperbound of the loss function,
+in order to avoid excessive hardness boost.
+%
+Then the expectation of destination hardness can be linearly shifted (boosted)
+by a scaled constant by a ``hardness boosting'' pseudo-hardness
+function, \ie,
+%
+\begin{equation}
+	%
+	g_\mathsf{B}(H_\mathsf{D};\xi) = H_\mathsf{D} + \xi \cdot (1-\bar{\ell}_{t-1}).
+	%
+\end{equation}
+%
+And the adversarial examples from $\text{HM}(H_\mathsf{S},g_\mathsf{B}(H_\mathsf{D}))$
+can be used for training.
+
+
 
 \cref{fig:ga}
 
@@ -556,17 +582,6 @@ decrease with a model being trained.
 
 strong example when the embedding space is not in good shape.
 
-
-\[
-	\big(1-\text{Clip}_0^{U_L}[l_{t-1}]/U_L \big)\times
-	U_H
-\]
-
-\begin{equation}
-	%
-	g_\mathsf{B}(H(\cdots);\xi) = H(\cdots) + \xi \cdot (1-\bar{\ell}_{t-1})
-	%
-\end{equation}
 
 \begin{equation}
 	%
