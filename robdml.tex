@@ -197,20 +197,6 @@ notable penalty in the model performance on benign (\ie, unperturbed) examples.
 %
 \oo{rev}
 %
-Meanwhile, the level of robustness that the previous methods have achieved
-is still insufficient.
-%
-(1) the robustness level achieved by the existing methods is still insufficient
-to counter the attacks;
-%
-(2) the direct adaptation of Madry's min-max adversarial training~\cite{madry}
-will easily lead to model collapse due to producing very hard sample triplets;
-%
-(3) the adversarial training procedure is very time-consuming compared to the
-training process of a regular DML model, but existing defense methods are
-incompatible to acceleration methods like Free Adversarial
-Training~\cite{freeat}.  \oo{rob, time, r1}.
-
 % inspiration.
 Recall that a DML model is already prone to collapse with very hard but not
 adversarially purturbed sample triplets~\cite{facenet}.
@@ -554,6 +540,11 @@ be adopted in HM.
 %
 or even a pseudo hardness function $g(\cdot)$ as long as we have a strong
 prior knowledge on what the destination hardness should be.
+
+\oo{extend: fat}
+training process of a regular DML model, but existing defense methods are
+incompatible to acceleration methods like Free Adversarial
+Training~\cite{freeat}.
 
 \subsection{Gradual Adversary}
 \label{sec:32}
