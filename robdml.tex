@@ -77,10 +77,9 @@ Johns Hopkins University\\
 %%%%%%%%% ABSTRACT
 \begin{abstract}
 	% background
-	Owing to the significance of the adversarial vulnerability of deep metric
-	learning models, which poses safety and security implications in its
-	applications, a series of defense methods have been proposed to improve its
-	adversarial robustness.
+	Owing to the security implications of adversarial vulnerability, the
+	adversarial robustness of deep metric learning models have to be improved
+	via defense.
 	% insight
 	In order to avoid model collapse due to excessively hard examples, the
 	existing methods refrain from using the typical min-max adversarial
@@ -91,21 +90,21 @@ Johns Hopkins University\\
 	% HM framework
 	To this end, Hardness Manipulation is proposed to adversarially perturb the
 	training triplet to increase its hardness into a specified level, by
-	referencing other benign triplets, or a pseudo-hardness function.
+	referencing another benign triplet or a pseudo-hardness function.
 	% GA Adversary
 	Based on this, Gradual Adversary is proposed as a family of pseudo-hardness
 	functions to overcome problems of referencing other benign triplets, and
 	achieve a better balance in the learning objective.
 	% Intra-Class Structure
 	Besides, a penalty on Intra-Class Structure among benign and adversarial
-	examples, which has been neglected by existing methods, can be used to
-	further improve the model robustness.
+	examples can further improve model robustness, which is neglected by
+	previous methods.
 	% Experiment and Conclusion
 	Comprehensive experimental results on three commonly used deep metric
-	learning datasets suggest that the proposed method, albeit remains
-	simple, overwhelmingly outperforms the state-of-the-art defense
-	methods in terms of robustness, training cost, as well as recall
-	performance on benign examples.
+	learning datasets suggest that the proposed method overwhelmingly
+	outperforms the state-of-the-art defense methods in terms of robustness,
+	training cost, as well as recall performance on benign examples, while
+	remains in a simple form.
 %
 \end{abstract}
 
@@ -551,7 +550,7 @@ we first normalize it into $[0,1]$ as $\bar{\ell}_{t-1}=\min(u,\ell_{t-1})/u$,
 where $u$ is a manually specified parameter.
 %
 Note, $u$ is much less than the theoretical upperbound of the loss function,
-in order to avoid excessive hardness boost.
+in order to avoid excessive hardness boost in the functions introduced below.
 %
 Then the expectation of destination hardness can be linearly shifted (boosted)
 by a scaled constant by a ``hardness boosting'' pseudo-hardness
