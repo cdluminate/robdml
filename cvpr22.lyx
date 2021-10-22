@@ -1173,7 +1173,7 @@ Defense
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5866,7 +5866,7 @@ Defense
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -6258,7 +6258,11 @@ CUB
 \begin_inset Text
 
 \begin_layout Plain Layout
-N/A
+N/A[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -7956,7 +7960,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+39.4
 \end_layout
 
 \end_inset
@@ -7965,7 +7969,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+50.2
 \end_layout
 
 \end_inset
@@ -7974,7 +7978,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+18.6
 \end_layout
 
 \end_inset
@@ -7983,7 +7987,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+51.3
 \end_layout
 
 \end_inset
@@ -7992,7 +7996,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6.8
 \end_layout
 
 \end_inset
@@ -8001,7 +8005,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+61.5
 \end_layout
 
 \end_inset
@@ -8010,7 +8014,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5.2
 \end_layout
 
 \end_inset
@@ -8019,7 +8023,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+60.4
 \end_layout
 
 \end_inset
@@ -8028,7 +8032,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.506
 \end_layout
 
 \end_inset
@@ -8037,7 +8041,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.032
 \end_layout
 
 \end_inset
@@ -8046,7 +8050,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.8
 \end_layout
 
 \end_inset
@@ -8055,7 +8059,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+11.3
 \end_layout
 
 \end_inset
@@ -8064,7 +8068,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+17.7
 \end_layout
 
 \end_inset
@@ -8073,7 +8077,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.3
 \end_layout
 
 \end_inset
@@ -8082,7 +8086,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+24.2
 \end_layout
 
 \end_inset
@@ -17612,7 +17616,11 @@ CUB
 \begin_inset Text
 
 \begin_layout Plain Layout
-N/A
+N/A[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -17776,7 +17784,11 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-EST
+EST[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -17940,7 +17952,11 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT
+ACT[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -18436,7 +18452,11 @@ HM[S,SGA]
 \begin_inset Text
 
 \begin_layout Plain Layout
-EST
+EST[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -18600,7 +18620,11 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT
+ACT[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -19096,7 +19120,11 @@ CARS
 \begin_inset Text
 
 \begin_layout Plain Layout
-N/A
+N/A[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -19260,7 +19288,11 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-EST
+EST[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -19424,7 +19456,11 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT
+ACT[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -19920,7 +19956,11 @@ HM[S,SGA]
 \begin_inset Text
 
 \begin_layout Plain Layout
-EST
+EST[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -20084,7 +20124,11 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT
+ACT[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -20576,7 +20620,11 @@ SOP
 \begin_inset Text
 
 \begin_layout Plain Layout
-N/A
+N/A[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -20740,7 +20788,11 @@ N/A
 \begin_inset Text
 
 \begin_layout Plain Layout
-EST
+EST[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -20904,7 +20956,11 @@ T:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT
+ACT[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -21396,7 +21452,11 @@ T:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-EST
+EST[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -21560,7 +21620,11 @@ EST
 \begin_inset Text
 
 \begin_layout Plain Layout
-ACT
+ACT[
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
