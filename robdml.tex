@@ -197,11 +197,11 @@ the difference between the anchor-positive distance and the anchor-negative
 distance.
 %
 Then, Hardness Manipulation (HM) is proposed to adversarially perturb a given
-sample triplet and increase its hardness into a specified hardness level.
+sample triplet and increase its hardness into a specified destination hardness level.
 %
 HM is implemented as an objective to minimize the L-$2$ norm of the thresholded
 difference between the hardness of the given sample triplet and the specified
-hardness.
+destination hardness.
 %
 Mathematically, when the objective is optimized using Projected Gradient
 Descent~\cite{madry}, the gradient of HM objective with respect to the
@@ -210,58 +210,18 @@ triplet loss.
 %
 Thus, the optimization process of HM objective can be interpreted as a direct
 \emph{maximization} process of the loss (indicating a direct strong adversary)
-which stops halfway at the specified hardness level.
+which stops halfway at the specified destination hardness level.
 %
-But, how hard should such ``specified level'' be?
+But, how hard should such ``destination hardness'' be?
 
-by referencing
-another benign (but harder) sample triplet.
+% how hard? benign destination reference
 
-make adversarially training a DML model
-with triplet loss feasible without model collapse, so the model could
-efficiently learn from a strong adversary.
+Recall that the model is already prone to collapse with excessively hard
+benign triplets, let alone adversarial examples.
 %
-Assume there are two data triplets, namely ``source triplet'' and ``destination
-triplet'' with the same anchor example, but sampled using different triplet
-sampling strategies.
-%
-And the ``destination triplet'' is expected to result in a higher loss value
-than another.
-%
-HM aims at creating adversarial examples of the ``source triplet'', that would
-increase the corresponding loss value until that of the unperturbed
-``destination triplet''.
-%
-This can also be interpreted as maximizing the loss value but ``stops early''
-at a certain point.
-%
-The resulting perturbed ``source triplet'' can be used for adversarial training
-of the model.
-
-We conjecture there is a certain intermediate level of hardness.
-
-notable penalty in the model performance on benign (\ie, unperturbed) examples.
-
-
-%
-\oo{rev}
-%
-% inspiration.
-Recall that a DML model is already prone to collapse with very hard but not
-adversarially purturbed sample triplets~\cite{facenet}.
-%
-To overcome this issue, various triplet sampling strategies, such as
-semi-hard~\cite{facenet} and distance~\cite{distance} are proposed to provide
-effective negative examples to facilitate metric learning while avoiding model
-collapse.
-%
-In the typical min-max adversarial training~\cite{madry}, the adversarial
-example triplet created by maximizing the triplet loss value can incur model
-collapse more easily than unperturbed sample triplets.
-%
-But what if we do not maximize the triplet loss value to the theoretical upper
-bound, but merely increase it towards a value that could be caused by
-a known, unperturbed and harder sample triplet?
+Thus, intuitively, the destination hardness can be that of another benign
+triplet which is harder than the given triplet (\eg, a Semihard~\cite{facenet}
+triplet).
 
 % for problem 2
 \oo{[2. Gradual Adversary]}
@@ -476,6 +436,30 @@ enough.
 \end{figure}
 
 \cref{fig:hm}
+
+by referencing
+another benign (but harder) sample triplet.
+
+make adversarially training a DML model
+with triplet loss feasible without model collapse, so the model could
+efficiently learn from a strong adversary.
+%
+Assume there are two data triplets, namely ``source triplet'' and ``destination
+triplet'' with the same anchor example, but sampled using different triplet
+sampling strategies.
+%
+And the ``destination triplet'' is expected to result in a higher loss value
+than another.
+%
+HM aims at creating adversarial examples of the ``source triplet'', that would
+increase the corresponding loss value until that of the unperturbed
+``destination triplet''.
+%
+This can also be interpreted as maximizing the loss value but ``stops early''
+at a certain point.
+%
+The resulting perturbed ``source triplet'' can be used for adversarial training
+of the model.
 
 Given an anchor image $X_a$, we sample a positive image $X_p^S$ (in the same
 class as the anchor) and a negative image $X_n^S$ (in different class as the
