@@ -4,7 +4,7 @@ import rich
 c = rich.get_console()
 plt.rcParams['font.family'] = 'serif'
 plt.rcParams['font.serif'] = 'FreeSerif'
-plt.rcParams['font.size'] = 14
+plt.rcParams['font.size'] = 15
 
 data = {
         'ACT': ( # [freeze]
@@ -34,7 +34,7 @@ data = {
             ),
         }
 
-plt.figure(figsize=[10.8, 4.8])
+plt.figure(figsize=[10.8, 4.7])
 
 ax = plt.subplot(1,2,1)
 for (name, (r1, cost, ers)) in data.items():
@@ -60,12 +60,12 @@ plt.xscale('log', base=2)
 #plt.axis('equal')
 #plt.axis('square')
 
-ax.annotate('↖ Better', xy=(0.04, 0.92), xycoords='axes fraction',
+ax.annotate('↖ Better', xy=(0.04, 0.91), xycoords='axes fraction',
         bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
-        size=14)
-ax.annotate('↘ Worse', xy=(0.77, 0.06), xycoords='axes fraction',
+        size=17)
+ax.annotate('↘ Worse', xy=(0.75, 0.06), xycoords='axes fraction',
         bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
-        size=14)
+        size=17)
 
 ax = plt.subplot(1,2,2)
 for (name, (r1, cost, ers)) in data.items():
@@ -91,13 +91,13 @@ plt.gca().invert_xaxis()
 #plt.axis('equal')
 #plt.axis('square')
 
-ax.annotate('↖ Better', xy=(0.04, 0.92), xycoords='axes fraction',
+ax.annotate('↖ Better', xy=(0.04, 0.91), xycoords='axes fraction',
         bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
-        size=14)
-ax.annotate('↘ Worse', xy=(0.77, 0.06), xycoords='axes fraction',
+        size=17)
+ax.annotate('↘ Worse', xy=(0.75, 0.06), xycoords='axes fraction',
         bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
-        size=14)
+        size=17)
 
-#plt.tight_layout()
+plt.tight_layout(pad=1.0)
 #plt.show()
 plt.savefig('introplot.svg')

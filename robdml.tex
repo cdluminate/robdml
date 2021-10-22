@@ -82,8 +82,8 @@ Johns Hopkins University\\
 	via defense.
 	% insight
 	In order to avoid model collapse due to excessively hard examples, the
-	existing methods refrain from using the min-max adversarial
-	training, but instead learns from a weak adversary inefficiently.
+	existing methods refrain from using the min-max adversarial training, but
+	instead learns from a weak adversary inefficiently.
 	% our starting point
 	Conversely, we argue that a model can learn from a strong adversary without
 	collapse, where the key is triplet hardness.
@@ -100,11 +100,11 @@ Johns Hopkins University\\
 	examples can further improve model robustness, which is neglected by
 	previous methods.
 	% Experiment and Conclusion
-	Comprehensive experimental results on three commonly used deep metric
-	learning datasets suggest that the proposed method overwhelmingly
-	outperforms the state-of-the-art defense methods in terms of robustness,
-	training cost, as well as recall performance on benign examples, while
-	remains in a simple form.
+	Comprehensive experimental results on commonly used deep metric
+	learning datasets suggest that the proposed method, although simple in
+	form, overwhelmingly outperforms the state-of-the-art defense methods in
+	terms of training time cost, robustness, as well as recall performance on
+	benign examples.
 %
 \end{abstract}
 
@@ -133,7 +133,7 @@ retrieval, or covertly manipulate the results~\cite{advrank,advorder}.
 Such vulnerability raises security, safety, and fairness concerns in the
 DML applications.
 %
-For example, impersonation or recognition evation are possible for a
+For example, impersonation or recognition evasion are possible for a
 vulnerable DML-based face-identification system.
 %
 To counter the attacks (\ie, mitigating the vulnerability), the
@@ -170,11 +170,25 @@ level.
 As a result, the model is not learning from a strong adversary, and suffers
 from low efficiency in gaining robustness within limited time. 
 %
-Furthermore, advertsarial training already suffers from
-significant training time cost (compared to the normal training process).
+Furthermore, adversarial training already suffers from significant training
+time cost (compared to the normal training process).
 %
-Hence, time efficiency in gaining adversarial robustness is an inevitable
-major issue.
+Hence, time efficiency in gaining adversarial robustness
+is an inevitable major issue.
+
+% we argue
+
+As suggested by previous works, an appropriate adversary for the inner
+\emph{maximization} problem should increase the loss to a certain point between
+that of benign examples (\ie, unperturbed examples) and the theoretical upper
+bound.
+%
+What if this point is reached by the strongest adversary, directly and
+efficiently?
+%
+Besides, as the mathematical expectation of loss is also greatly influenced by
+the triplet sampling strategy, we conjecture that the triplet sampling strategy
+and triplet ``hardness'' have a key impact for adversarial training.
 
 We conjecture there is a certain intermediate level of hardness.
 
