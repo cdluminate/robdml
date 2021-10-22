@@ -153,6 +153,7 @@ To counter the attacks (\ie, mitigating the vulnerability), the
 \end{figure}
 
 % existing methods & problem
+
 Existing defense methods for DML~\cite{advrank,robrank} are adversarial
 training-based, inspired by Madry's \emph{min-max} adversarial
 training~\cite{madry} because it is one of the most effective methods for deep
@@ -176,7 +177,7 @@ time cost (compared to the normal training process).
 Hence, time efficiency in gaining adversarial robustness
 is an inevitable major issue.
 
-% we argue
+% we argue / insight
 
 As suggested by previous works, an appropriate adversary for the inner
 \emph{maximization} problem should increase the loss to a certain point between
@@ -214,7 +215,7 @@ which stops halfway at the specified destination hardness level.
 %
 But, how hard should such ``destination hardness'' be?
 
-% how hard? benign destination reference
+% how hard? benign destination
 
 Recall that the model is already prone to collapse with excessively hard
 benign triplets, let alone adversarial examples.
@@ -222,6 +223,7 @@ benign triplets, let alone adversarial examples.
 Thus, intuitively, the destination hardness can be that of another benign
 triplet which is harder than the given triplet (\eg, a Semihard~\cite{facenet}
 triplet).
+%
 
 % for problem 2
 \oo{[2. Gradual Adversary]}
@@ -543,17 +545,17 @@ $L_\text{T}(\phi(X_a+\bar{r}_a), \phi(X_p^S+\bar{r}_p),
 
 \begin{align}
 	&
-	\sign \big\{
+	\sign\big\{
 		-\frac{\partial}{\partial r} \big\| \min(0, 
 		\tilde{H}_\mathsf{S} - H_\mathsf{D}) \big\|_2^2
 	\big\}
 	\\
 	=&
-	\sign \big\{
+	\sign\big\{
 		-2(\tilde{H}_\mathsf{S}-H_\mathsf{D})
 		\frac{\partial }{\partial r} \tilde{H}_\mathsf{S} \big\}
 	=
-	\sign \big\{
+	\sign\big\{
 		\frac{\partial}{\partial r} \tilde{H}_\mathsf{S}
 		\big\}
 \end{align}
