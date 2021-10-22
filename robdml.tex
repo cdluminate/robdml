@@ -82,8 +82,8 @@ Johns Hopkins University\\
 	via defense.
 	% insight
 	In order to avoid model collapse due to excessively hard examples, the
-	existing methods refrain from using the typical min-max adversarial
-	training paradigm, but instead learn from a weak adversary.
+	existing methods refrain from using the min-max adversarial
+	training, but instead learns from a weak adversary inefficiently.
 	% our starting point
 	Conversely, we argue that a model can learn from a strong adversary without
 	collapse, where the key is triplet hardness.
@@ -122,22 +122,22 @@ images) leveraging the representational power of deep neural networks.
 %
 As an extensively studied task~\cite{revisiting}, DML has a wide range of
 applications such as image retrieval~\cite{imagesim2} and face
-recognition~\cite{facenet,domainface}, as well as a wide impact in
+recognition~\cite{facenet,domainface}, as well as a wide influence on
 the core idea of other areas such as self-supervised learning~\cite{dmlreality}.
 
-Despite the improvements of this field thanks to the advancement of deep neural
-networks, recent research works suggest that DML models are vulnerable to
-adversarial attacks, where an imperceptible perturbation could incur unexpected
-or covertly manipulated results~\cite{advrank,advorder}.
+Despite the advancements in this field thanks to deep neural
+networks, recent studies find DML models vulnerable to
+adversarial attacks, where an imperceptible perturbation can incur unexpected
+retrieval, or covertly manipulate the results~\cite{advrank,advorder}.
 %
-Such vulnerability raises safety, security, and fairness concerns in the
-applications of DML.
+Such vulnerability raises security, safety, and fairness concerns in the
+DML applications.
 %
-For example, impersonation or recognition evation are possible for DML-based
-face-identification system.
+For example, impersonation or recognition evation are possible for a
+vulnerable DML-based face-identification system.
 %
-To counter the attacks (\ie, mitigating the vulnerability), it is important to
-design defense methods to improve the adversarial robustness of DML models.
+To counter the attacks (\ie, mitigating the vulnerability), the
+adversarial robustness of DML models has to be improved via defense.
 
 \begin{figure}[t]
 	\includegraphics[width=1.0\columnwidth]{introplot.pdf}
@@ -149,23 +149,28 @@ design defense methods to improve the adversarial robustness of DML models.
 \end{figure}
 
 % existing methods & problem
-Several defense methods for DML are proposed in the
-literature~\cite{advrank,robrank}, inspired by the Madry's adversarial training
-method~\cite{madry}, as it is kown as one of the most effective defense methods
-for deep neural network classifiers.
+Several adversarial training-based defense methods for DML are proposed in the
+literature~\cite{advrank,robrank}, which are inspired by the Madry's min-max
+adversarial training~\cite{madry} because it is one of the most effective
+defense methods for deep neural network classifiers.
 %
-However, it has been noted that
+However, it is widely known that such methods always suffer from greatly increased
+training cost and a notable penalty in the model's retrieval performance on
+benign (\ie, unperturbed) examples.
+%
+Meanwhile, the level of robustness that the previous methods have achieved
+is still insufficient.
 %
 (1) the robustness level achieved by the existing methods is still insufficient
 to counter the attacks;
 %
-(2) the direct adaptation of Madry's min-max adversarial training~\cite{madry} will easily
-lead to model collapse due to producing very hard sample triplets;
+(2) the direct adaptation of Madry's min-max adversarial training~\cite{madry}
+will easily lead to model collapse due to producing very hard sample triplets;
 %
-(3) the adversarial training procedure is very time-consuming compared to
-the training process of a regular DML model, but existing defense methods
-are incompatible to acceleration methods like Free Adversarial Training~\cite{freeat}.
-\oo{rob, time, r1}.
+(3) the adversarial training procedure is very time-consuming compared to the
+training process of a regular DML model, but existing defense methods are
+incompatible to acceleration methods like Free Adversarial
+Training~\cite{freeat}.  \oo{rob, time, r1}.
 
 % inspiration.
 Recall that a DML model is already prone to collapse with very hard but not
