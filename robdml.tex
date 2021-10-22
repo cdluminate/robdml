@@ -114,16 +114,16 @@ Johns Hopkins University\\
 
 % background and insight.
 
-Given a set of data points, a metric gives a distance value between each pair
-of them.
+Given a set of data points, a \emph{metric} gives a distance value between each
+pair of them.
 %
 Deep Metric Learning (DML) aims to learn such a metric between two inputs (\eg,
 images) leveraging the representational power of deep neural networks.
 %
 As an extensively studied task~\cite{revisiting}, DML has a wide range of
 applications such as image retrieval~\cite{imagesim2} and face
-recognition~\cite{facenet,domainface}, as well as a wide influence on
-the core idea of other areas such as self-supervised learning~\cite{dmlreality}.
+recognition~\cite{facenet,domainface}, as well as a wide influence on the core
+idea of other areas such as self-supervised learning~\cite{dmlreality}.
 
 Despite the advancements in this field thanks to deep neural
 networks, recent studies find DML models vulnerable to
@@ -137,7 +137,7 @@ For example, impersonation or recognition evation are possible for a
 vulnerable DML-based face-identification system.
 %
 To counter the attacks (\ie, mitigating the vulnerability), the
-adversarial robustness of DML models has to be improved via defense.
+\emph{adversarial robustness} of DML models has to be improved via defense.
 
 \begin{figure}[t]
 	\includegraphics[width=1.0\columnwidth]{introplot.pdf}
@@ -153,14 +153,35 @@ adversarial robustness of DML models has to be improved via defense.
 \end{figure}
 
 % existing methods & problem
-Several adversarial training-based defense methods for DML are proposed in the
-literature~\cite{advrank,robrank}, which are inspired by the Madry's min-max
-adversarial training~\cite{madry} because it is one of the most effective
-defense methods for deep neural network classifiers.
+Existing defense methods for DML~\cite{advrank,robrank} are adversarial
+training-based, inspired by Madry's \emph{min-max} adversarial
+training~\cite{madry} because it is one of the most effective methods for deep
+neural network classifiers.
 %
-However, it is widely known that such methods always suffer from greatly increased
-training cost and a notable penalty in the model's retrieval performance on
-benign (\ie, unperturbed) examples.
+Specifically, Madry's method involves a inner problem to \emph{maximize} the
+loss by perturbing the inputs into adversarial examples, and an outer problem
+to \emph{minimize} the loss by updating the model parameters.
+%
+However, in order to avoid model collapse, the existing DML defenses refrain
+from directly adopting such paradigm, but instead use some indirect and
+relatively weak objectives to merely increase the loss value to a certain
+level.
+%
+As a result, the model is not learning from a strong adversary, and suffers
+from low efficiency in gaining robustness within limited time. 
+%
+Furthermore, advertsarial training already suffers from
+significant training time cost (compared to the normal training process).
+%
+Hence, time efficiency in gaining adversarial robustness is an inevitable
+major issue.
+
+We conjecture there is a certain intermediate level of hardness.
+
+notable penalty in the model performance on benign (\ie, unperturbed) examples.
+
+%
+\oo{rev}
 %
 Meanwhile, the level of robustness that the previous methods have achieved
 is still insufficient.
