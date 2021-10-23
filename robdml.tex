@@ -244,63 +244,65 @@ objectives in the early and late phases of training.
 
 % Gradual Adversary
 
-% for problem 2
-\oo{[2. Gradual Adversary]}
-The expectation of hardness will decrease during the training process,
-compared to that from the beginning phase.
+To this end, we propose Graduate Adversary, a family of pseudo-hardness
+functions which can be used as the \emph{destination} hardness in HM.
+%
+Any function that leads to a relatively weak adversary in the early training
+phase, and a relatively strong adversary in the late training phase belongs to
+this family.
+%
+As an example, we design a ``Simple Graduate Adversary'' (SGA) pseudo-hardness
+function as the linearly scaled negative triplet margin, incorporating a strong
+assumption that the \emph{destination} hardness should remain Semihard.
+%
+Empirical observation will show the advantage of such pseudo-hardness
+functions.
 
 \oo{[3. Intra-Class Structure]}
 Given a triplet of samples, we may eventually get up to 6 samples avaiable
 for adversarial training. There could be some kind of hierarchy.
 
-\oo{[4. Free Adversarial Metric Learining]}
-Extension of FAT to adversarial deep metric learning.
-
 % evaluation and conclusion
-\oo{[experimetal evaluations]}
-To validate the effectiveness of the proposed method, we conduct experiments
-on three commonly used dataset, namely CUB-200-2011, Cars-196, and Stanford
-Online Product. Our conclusions are:
+We conduct experiments
+on three commonly used DML dataset, namely CUB-200-2011~\cite{cub200}, Cars-196~\cite{cars196}, and Stanford
+Online Product~\cite{sop}.
+%
+The proposed method overwhelmingly outperforms the state-of-the-art defense
+in terms of robustness, training cost, as well as the penalty on benign
+example retrieval.
+%
+Our conclusions are:
 %
 (1) Triplet sampling strategy is vital for adversarial training of tripet-loss
 based DML models.
 %
-\oo{the results suggest that}
+\oo{...}
+
 
 % contributions
 In brief, our contribusions include:
 %
-\begin{enumerate}[noitemsep]
+\begin{enumerate}[nosep, noitemsep, leftmargin=*]
 	%
-	\item {\textit{Hardness Manipulation}} is proposed for the adversarial
-		training of triplet-based deep metric learning models, which avoids
-		model collapse in the typical min-max adversarial training setting.
-		The proposed method achieves higher adversarial robustness compared to
-		the state-of-the-art, and is more computationally efficient.
+	\item {\textit{Hardness Manipulation}} (HM) is proposed as a flexible tool
+		to create adversarial triplets with increased hardness for
+		subsequent adversarial training.
 		%
-		This method makes min-max training feaisble, and hence the incorporation
-		into free adversarial training and boost learning efficiency.
+		It is more efficient than previous adversarial training methods of DML.
 		%
-		(initial condition)
+	\item \textit{Gradual Adversary} is proposed as a family of pseudo-hardness
+		functions for \emph{Hardness Manipulation}, which can balance the
+		training objectives during the training process.
 		%
-	\item \textit{Gradual Adversary} is proposed to dynamically adjust the
-		destination hardness less for Hardness Manipulation during the
-		adversarial training process in order to balance the metric learning
-		and adversarial learning.
+		A linear function named Simple Graduate Adversary (SGA) is designed as
+		an example.
 		%
-		(terminal condition)
-		%
-	\item Inter-ID structure constraint. ((aa~p) + (pp~a))/2
-		(cross-id repelling)
-		existing methods only care inter-class separation, but not
-		intra-class (inter-id) separation, because we may get a 6-element
-		set (a,a~,p,p~,n,n~) from the original triplet.
+	\item \oo{TODO} Inter-ID structure constraint. ((aa~p) + (pp~a))/2
+		(cross-id repelling) existing methods only care inter-class separation,
+		but not intra-class (inter-id) separation, because we may get a
+		6-element set (a,a~,p,p~,n,n~) from the original triplet.
 		%
 \end{enumerate}
-
-The proposed method overwhelmingly outperforms the state-of-the-art defense
-in terms of robustness, training cost, as well as the penalty on benign
-example retrieval.
 
 \section{Related Works}
 \label{sec:2}
@@ -594,6 +596,9 @@ prior knowledge on what the destination hardness should be.
 training process of a regular DML model, but existing defense methods are
 incompatible to acceleration methods like Free Adversarial
 Training~\cite{freeat}.
+
+\oo{[4. Free Adversarial Metric Learining]}
+Extension of FAT to adversarial deep metric learning.
 
 \subsection{Gradual Adversary}
 \label{sec:32}
