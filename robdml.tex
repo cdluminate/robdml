@@ -89,8 +89,8 @@ Johns Hopkins University\\
 	collapse, where the key is triplet hardness.
 	% HM framework
 	To this end, Hardness Manipulation is proposed to adversarially perturb the
-	training triplet to increase its hardness into a specified level, by
-	referencing another benign triplet or a pseudo-hardness function.
+	training triplet to increase its hardness into a specified level, according
+	to another benign triplet or a pseudo-hardness function.
 	% GA Adversary
 	Based on this, Gradual Adversary is proposed as a family of pseudo-hardness
 	functions to overcome problems of referencing other benign triplets, and
@@ -198,11 +198,12 @@ the difference between the anchor-positive distance and the anchor-negative
 distance.
 %
 Then, Hardness Manipulation (HM) is proposed to adversarially perturb a given
-sample triplet and increase its hardness into a specified destination hardness level.
+sample triplet and increase its hardness into a specified \emph{destination}
+hardness level.
 %
 HM is implemented as an objective to minimize the L-$2$ norm of the thresholded
 difference between the hardness of the given sample triplet and the specified
-destination hardness.
+\emph{destination} hardness.
 %
 Mathematically, when the objective is optimized using Projected Gradient
 Descent~\cite{madry}, the gradient of HM objective with respect to the
@@ -211,19 +212,37 @@ triplet loss.
 %
 Thus, the optimization process of HM objective can be interpreted as a direct
 \emph{maximization} process of the loss (indicating a direct strong adversary)
-which stops halfway at the specified destination hardness level.
+which stops halfway at the specified \emph{destination} hardness level.
 %
-But, how hard should such ``destination hardness'' be?
+But, how hard should such ``\emph{destination} hardness'' be?
 
 % how hard? benign destination
 
-Recall that the model is already prone to collapse with excessively hard
-benign triplets, let alone adversarial examples.
+Recall that the model is already prone to collapse with excessively hard benign
+triplets, let alone adversarial examples.
 %
-Thus, intuitively, the destination hardness can be that of another benign
-triplet which is harder than the given triplet (\eg, a Semihard~\cite{facenet}
-triplet).
+Thus, intuitively, the \emph{destination} hardness can be that of another
+benign triplet which is harder than the given triplet (\eg, a
+Semihard~\cite{facenet} triplet).
 %
+However, in the late phase of training, the expectation of the loss, as well as
+the corresponding \emph{hardness} of a given triplet will be small, which means
+the \emph{destination} hardness will be close to that of the sample triplet for
+training.
+%
+This leads to weak attacks, and inefficient learning from a weak adversary.
+%
+Besides, we speculate a strong adversary in the early phase of DML training may
+hinder the model from learning good embeddings, and hence influence the
+eventual performance on benign examples.
+%
+Based on these, a \emph{destination} hardness calculated from benign examples
+may not be the best choice.
+%
+A better \emph{destination} hardness should be able to balance the training
+objectives in the early and late phases of training.
+
+% Gradual Adversary
 
 % for problem 2
 \oo{[2. Gradual Adversary]}
