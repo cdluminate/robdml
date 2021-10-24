@@ -7624,7 +7624,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-R:G
+42.8
 \end_layout
 
 \end_inset
@@ -7633,7 +7633,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+54.7
 \end_layout
 
 \end_inset
@@ -7642,7 +7642,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+26.6
 \end_layout
 
 \end_inset
@@ -7651,7 +7651,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+53.3
 \end_layout
 
 \end_inset
@@ -7660,7 +7660,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.8
 \end_layout
 
 \end_inset
@@ -7669,7 +7669,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+72.8
 \end_layout
 
 \end_inset
@@ -7678,7 +7678,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2.7
 \end_layout
 
 \end_inset
@@ -7687,7 +7687,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+73.3
 \end_layout
 
 \end_inset
@@ -7696,7 +7696,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.619
 \end_layout
 
 \end_inset
@@ -7705,7 +7705,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.148
 \end_layout
 
 \end_inset
@@ -7714,7 +7714,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+8.3
 \end_layout
 
 \end_inset
@@ -7723,7 +7723,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4.9
 \end_layout
 
 \end_inset
@@ -7732,7 +7732,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+23.5
 \end_layout
 
 \end_inset
@@ -7741,7 +7741,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.3
 \end_layout
 
 \end_inset
@@ -7750,7 +7750,7 @@ R:G
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+18.7
 \end_layout
 
 \end_inset
@@ -7792,7 +7792,7 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+R:G
 \end_layout
 
 \end_inset
@@ -22628,7 +22628,11 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM[S,SGA]
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -23296,7 +23300,11 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM[S,SGA]
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -24132,7 +24140,11 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM[S,SGA]
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -24800,7 +24812,11 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM[S,SGA]
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -25632,7 +25648,11 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM[S,SGA]
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
@@ -26296,7 +26316,11 @@ ACT[
 \begin_inset Text
 
 \begin_layout Plain Layout
-HM[S,SGA]
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
+\end_inset
+
+]
 \end_layout
 
 \end_inset
