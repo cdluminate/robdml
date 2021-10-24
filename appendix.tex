@@ -7,9 +7,23 @@ In this section, we provide more details on the reasons of our design,
 additional details of our implementation, as well as more discussions
 on questions that are unsuitable for the main part of manuscript.
 
-\begin{enumerate}[noitemsep]
-	\item Only aap in ICS?
+\begin{enumerate}[noitemsep, label={Q.{\arabic*}}]
+		%
+	\item {\it There is only $L_\text{T}(\va, \tilde{\va}, \vp)$ in the ICS
+		term.  Is it possible to introduce any other triplet combinations among
+		the six samples (\ie, three benign and three adversarial)?}\\
+		%
+		A: We have tried some other combinations, and they are either not
+		effective, or causing negative effects.
+		%
+		In particular, adding $L_\text{T}(\va, \vp, \vn)$ on top of the
+		adversarial training loss
+		$L_\text{T}(\tilde{\va},\tilde{\vp},\tilde{\vn})$ can improve
+		performance on benign examples, but will drastically reduce model
+		robustness.
+
 	\item Why not aa~p~ in ICS?
+		less adversarial, further.
 	\item Have you tried FAT?
 	\item What if we mix HM(RM) and HM(SM)?
 	\item Another example for the GA pseudo-hardness function family?
