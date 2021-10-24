@@ -315,27 +315,14 @@ an imperceptible adversarial perturbation to the input image.
 Ian \etal~\cite{fgsm} speculate the reason is that DNN being locally linear
 with respect to the adversarial perturbation.
 %
-A series of following works attempt to more efficiently compromise the DNNs,
-such as BIM~\cite{i-fgsm}, C\&W~\cite{cw}, PGD~\cite{madry}, and
-APGD~\cite{apgd}.
+Subsequent studies can compromise the DNNs more effectively, such as
+BIM~\cite{i-fgsm}, PGD~\cite{madry}, and APGD~\cite{apgd}, which are
+unanimously based on the first-order gradient of the loss, and rely on the
+white-box assumption of fully accessible model details.
 %
-These attacks are based on the first-order gradient of the classification loss
-with respect to the input image, and hence rely on the white-box assumption
-that the model architecture and parameters are accessible to the attacker,
-which is impractical for real-world attacks.
-%
-Subsequently, black-box attack methods are developed into two types:
-transferrability-based attacks and query-based attacks.
-%
-Transferrability-based attacks~\cite{di-fgsm,universal} relies on the
-observation that image-agnostic (will take effect when applied to any image)
-and model-agnostic (will take effect when applied to any model) adversarial
-perturbation are possible.
-%
-Query-based attacks~\cite{nes-atk,spsa-atk} only need the logit score output or
-the label output from a classifier, based on which the gradient could be
-estimated from the response to repetitive queries in order to figure out the
-adversarial perturbation.
+In contrast, query-based black-box attacks~\cite{nes-atk,spsa-atk} are more
+practical for real-world scenarios, as they requires the least amount of
+information from the model for estimating the gradients.
 
 \textbf{Adversarial Defense.}
 %
@@ -709,6 +696,11 @@ for simplicity.
 \label{sec:33}
 
 \oo{[illust fig]}
+
+\begin{equation}
+	L_\text{ICS} = \lambda \cdot L_\text{T}(
+	\va, \tilde{\va}, \vp; 0)
+\end{equation}
 
 \section{Experiments}
 \label{sec:4}
