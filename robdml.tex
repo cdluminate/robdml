@@ -326,23 +326,25 @@ information from the model for estimating the gradients.
 
 \textbf{Adversarial Defense.}
 %
-To battle against the attacks, some early defense methods create a gradient
-masking effect, namely making it hard for the attacker to find a good gradient,
-but it gives a false sense of security~\cite{obfuscated}.
+To battle against the attacks, some early defenses incur gradient masking
+effect, but it gives a false sense of security~\cite{obfuscated}.
 %
-Defensive distillation~\cite{distill2} can be compromised by C\&W~\cite{cw}.
+Defensive distillation~\cite{distill2} can be compromised~\cite{cw}.
 %
-Ensemble of weak defenses is insufficient~\cite{ensembleweak}.
+Ensemble of weak defenses is not robust~\cite{ensembleweak}.
 %
-Defense can also be implemented as preprocessing~\cite{deflecting} the input
-image, or a randomized process inside the network~\cite{self-ensemble}.
+Other forms of defenses are also proposed, such as input
+preprocessing~\cite{deflecting}, or a randomization inside the
+network~\cite{self-ensemble}.
 %
-However, it is noted that various defense methods are still susceptible to
-adaptive attack~\cite{adaptive}.
+But various defense methods are still susceptible to adaptive
+attack~\cite{adaptive}.
 %
-Among the proposed defense methods, adversarial training has been empirically
-found effective~\cite{bilateral,advtrain-triplet,benchmarking}, and it
-consistently retains adversarial robustness for the model.
+Of all defenses, adversarial training remains to be one of the most
+effective method~\cite{bilateral,advtrain-triplet,benchmarking}, and it
+consistently show promising empirical robustness,
+although suffering from significant training time cost and a lower performance
+on benign examples.
 
 \textbf{Deep Metric Learning DML.}
 %
