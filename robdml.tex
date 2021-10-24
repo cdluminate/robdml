@@ -734,22 +734,25 @@ adversarial training.
 \section{Experiments}
 \label{sec:4}
 
-To validate the effectiveness of our proposed defense, we conduct experiments
+% evaluation: dataset
+
+To validate the proposed defense, we conduct experiments
 on three commonly used DML datasets: CUB-200-2011 (CUB)~\cite{cub200}, Cars-196
 (CARS)~\cite{cars196}, and Stanford-Online-Products (SOP)~\cite{sop}.
 %
-We follow the same experiment setup of the state-of-the-art work~\cite{robrank}
+We follow the same experiment setup as the state-of-the-art work~\cite{robrank}
 for ease of comparison.
-%
-The setup is also consistent to standard DML~\cite{revisiting}.
 
-Specifically, we train a ResNet-18 (RN18)~\cite{resnet} with the output dimension of
-the last layer changed to $N=512$.
+% evaluation: configuration
+
+Specifically, we (adversarially) train imagenet-initialized ResNet-18
+(RN18)~\cite{resnet} with the output dimension of the last layer changed to
+$N=512$.
 %
-The margin $\gamma$ in triplet loss is set as $0.2$ by default.
+The margin $\gamma$ in triplet loss is $0.2$ by default.
 %
-The model is trained with Adam optimizer with learning rate $1.0\times 10^{-3}$
-for $150$ epochs, with mini-batch size set as $112$.
+Adam~\cite{adam} optimizer is used for parameter updates, with a learning rate
+as $1.0\times 10^{-3}$ for $150$ epochs, and a mini-batch size of $112$.
 
 For adversarial training, we adopt the perturbation budget of
 $\varepsilon=8/255$ in infinity norm ($p=\infty$).
@@ -759,6 +762,8 @@ examples, with a maximum step number set as $\eta=8$ by default.\footnote{
 Instead of $\eta=32$ as in \cite{robrank} in order to control time consumption.}
 %
 Step size for PGD is set as $\alpha=1/255$.
+%
+The setup is also consistent to standard DML~\cite{revisiting}.
 
 The model performance on benign (\ie, unperturbed) examples is measured in
 Recall@1 (R@1), Recall@2 (R@2), mAP and NMI
