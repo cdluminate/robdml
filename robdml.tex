@@ -726,9 +726,10 @@ are separated from the positve sample $\vp$ by reusing the triplet loss,
 \end{equation}
 %
 where $\lambda$ is a constant hyper-parameter for controlling the importance
-of this term.
+of this term, and the margin here is set as zero to avoid negative effect.
 %
-$L_\text{ICS}$ can be added to the original loss function for adversarial training.
+The $L_\text{ICS}$ penalty term can be appended to the loss function for
+adversarial training.
 
 
 \section{Experiments}
