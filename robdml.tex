@@ -694,15 +694,42 @@ section.
 The exploration of other possible pseudo-hardness functions is omitted 
 for simplicity.
 
-\subsection{Intra-Class Structure Constraint}
+\subsection{Intra-Class Structure}
 \label{sec:33}
 
-\oo{[illust fig]}
+% motivation
 
+During adversarial training, the adversarial counterpart of each given sample
+triplet is fed to the model, and the triplet loss will enforce a good
+\emph{inter-class} structure.
+%
+Since the anchor, positive sample, and their adversarial counterpart belongs to
+the same class, it should be noted that the \emph{intra-class} structure can be
+enforced as well, and This has been neglected by the existing DML defenses.
+%
+\emph{Intra-class} structure is also important for robustness besides the
+\emph{inter-class} structure, because the attack may attempt to change the
+rankings of samples in the same class~\cite{advrank}.
+
+% Solution
+
+We propose an additional loss function term to enforce such \emph{intra-class}
+structure, as shown in \oo{Fig.~[].}
+%
+Specifically, the anchor $\va$ and its adversarial counterpart $\tilde{\va}$
+are separated from the positve sample $\vp$ by reusing the triplet loss,
+\ie,
+%
 \begin{equation}
 	L_\text{ICS} = \lambda \cdot L_\text{T}(
-	\va, \tilde{\va}, \vp; 0)
+	\va, \tilde{\va}, \vp; 0),
 \end{equation}
+%
+where $\lambda$ is a constant hyper-parameter for controlling the importance
+of this term.
+%
+$L_\text{ICS}$ can be added to the original loss function for adversarial training.
+
 
 \section{Experiments}
 \label{sec:4}
