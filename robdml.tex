@@ -799,10 +799,12 @@ The comparison with the state-of-the-art DML defense methods will be presented i
 Although any of the existing triplet sampling strategies, such as Random,
 Semihard~\cite{facenet}, Softhard~\cite{revisiting},
 Distance-weighted~\cite{distance}, and the within-batch Hardest negative
-sampling method, can be selected for source and destination hardness,
-not all combinations are effective and efficient.
+sampling method, can be selected for source hardness $H_\mathsf{S}$ and
+destination hardness $H_\mathsf{D}$, not all combinations are effective and
+efficient.
 %
-In this subsection, we find a proper combination empirically.
+In this subsection, we find a proper combination empirically as a baseline for
+further experiments.
 
 % 2. sort sampling strategies
 
@@ -810,15 +812,9 @@ As HM is expected to increase the hardness of the source triplet, we first sort
 the triplet sampling methods according to their approximated mean hardness of
 $1000$ mini-batches from CUB dataset with an imagenet-initialized RN18 model,
 as shown in~\cref{tab:hsort}.
-
-In order to figure out an empirically good combination of source and
-destination hardness, we adversarially train RN18 models on the CUB dataset
-with every possible combination, and compare their R@1 and ERS performance in
-\cref{tab:desth}.
 %
-Note, these methods are empirically sorted by their expectation of hardness
-$E[H]$, in the ascending order: random, semihard, softhard, distance, and
-hardest, as shown in \cref{tab:hsort}.
+Then we adversarially train models on the CUB dataset with all possible
+combinations, and summarize their R@1 and ERS performance in \cref{tab:desth}.
 
 % 2. table: left and right
 
