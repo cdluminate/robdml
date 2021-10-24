@@ -725,12 +725,11 @@ are separated from the positve sample $\vp$ by reusing the triplet loss,
 	\va, \tilde{\va}, \vp; 0),
 \end{equation}
 %
-where $\lambda$ is a constant hyper-parameter for controlling the importance
-of this term, and the margin here is set as zero to avoid negative effect.
+where $\lambda$ is a constant weight for this loss term,
+and the margin is set as zero to avoid negative effect.
 %
-The $L_\text{ICS}$ penalty term can be appended to the loss function for
+The $L_\text{ICS}$ term can be added to the loss function for
 adversarial training.
-
 
 \section{Experiments}
 \label{sec:4}
