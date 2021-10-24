@@ -747,41 +747,38 @@ for ease of comparison.
 
 Specifically, we (adversarially) train imagenet-initialized ResNet-18
 (RN18)~\cite{resnet} with the output dimension of the last layer changed to
-$N=512$.
+$N{=}512$.
 %
 The margin $\gamma$ in triplet loss is $0.2$ by default.
 %
-Adam~\cite{adam} optimizer is used for parameter updates, with a learning rate
-as $1.0\times 10^{-3}$ for $150$ epochs, and a mini-batch size of $112$.
-
-For adversarial training, we adopt the perturbation budget of
-$\varepsilon=8/255$ in infinity norm ($p=\infty$).
-%
-Projected Gradient Descent (PGD)~\cite{madry} is used for creating adversarial
-examples, with a maximum step number set as $\eta=8$ by default.\footnote{
-Instead of $\eta=32$ as in \cite{robrank} in order to control time consumption.}
-%
-Step size for PGD is set as $\alpha=1/255$.
-%
 The setup is also consistent to standard DML~\cite{revisiting}.
+%
+Adam~\cite{adam} optimizer is used for parameter updates, with a learning rate
+as $1.0{\times}10^{-3}$ for $150$ epochs, and a mini-batch size of $112$.
+%
+Adversarial examples are created under the perturbation budget
+$\varepsilon{=}8/255$ in infinity norm, using the
+Projected Gradient Descent (PGD)~\cite{madry} method with step size $\alpha{=}1/255$ 
+and a default maximum step number $\eta{=}8$.
+%
 
 The model performance on benign (\ie, unperturbed) examples is measured in
 Recall@1 (R@1), Recall@2 (R@2), mAP and NMI
 following~\cite{revisiting,robrank}.
 %
 The adversarial robustness of a model is measured in Empirical Robustness Score
-(ERS)~\cite{robrank}, which is a normalized score (the higher the better) from
-an ensemble of existing white-box attacks against DML or their simplified
-white-box counterparts.
+(ERS)~\cite{robrank}, a normalized score (the higher the better) from
+an ensemble of existing attacks against DML or their simplified white-box
+alternatives.
 %
-As adversarial training will not cause gradient masking~\cite{obfuscated},
-the performance of white-box attack can be regarded as the upper bound of the
-corresponding black-box attack.
-%
-An adversarially trained DML model that is empirically robust to the ensemble
-is expected to be robust in other scenarios as well.
+Since adversarial training is not gradient masking~\cite{obfuscated}, the
+performance of white-box attack can be regarded as the upper bound of the
+black-box attacks, and thus a model that is empirically robust to the ensemble
+of white-box attacks is expected to be robust in general.
 
 \oo{Concretely, the ensemble of attack for computing ERS includes.}
+%
+Further details can be found in the supplementary.
 
 This section is organized in logical order where a group of experiments
 or ablation study
