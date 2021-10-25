@@ -16133,7 +16133,7 @@ HM[
 \begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
 \end_inset
 
-]&ICS(0.5)
+]&ICS(0.25)
 \end_layout
 
 \end_inset
@@ -16142,7 +16142,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+8
 \end_layout
 
 \end_inset
@@ -16655,7 +16655,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+R:G
 \end_layout
 
 \end_inset
