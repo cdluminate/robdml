@@ -79,11 +79,11 @@ Johns Hopkins University\\
 \begin{abstract}
 	% background
 	Owing to the security implications of adversarial vulnerability, the
-	adversarial robustness of deep metric learning models have to be improved
+	adversarial robustness of deep metric learning models has to be improved
 	via defense.
 	% insight
 	In order to avoid model collapse due to excessively hard examples, the
-	existing methods refrain from using the min-max adversarial training, but
+	existing defenses refrain from using the min-max adversarial training, but
 	instead learns from a weak adversary inefficiently.
 	% our starting point
 	Conversely, we argue that a model can learn from a strong adversary without
@@ -103,7 +103,7 @@ Johns Hopkins University\\
 	% Experiment and Conclusion
 	Comprehensive experimental results on commonly used deep metric
 	learning datasets suggest that the proposed method, although simple in
-	form, overwhelmingly outperforms the state-of-the-art defense methods in
+	its form, overwhelmingly outperforms the state-of-the-art defense methods in
 	terms of training time cost, robustness, as well as recall performance on
 	benign examples.
 %
@@ -166,17 +166,16 @@ to \emph{minimize} the loss by updating the model parameters.
 %
 However, in order to avoid model collapse, the existing DML defenses refrain
 from directly adopting such paradigm, but instead use some indirect and
-relatively weak objectives to merely increase the loss value to a certain
-level.
+relatively weak objectives to increase the loss value to a certain level.
 %
 As a result, the model is not learning from a strong adversary, and suffers
 from low efficiency in gaining robustness within limited time. 
 %
 Furthermore, adversarial training already suffers from significant training
-time cost (compared to the normal training process).
+cost (compared to the normal training process).
 %
-Hence, time efficiency in gaining adversarial robustness
-is an inevitable major issue.
+Hence, efficiency in gaining adversarial robustness is an inevitable major
+issue for DML defense methods.
 
 % we argue / insight
 
@@ -214,11 +213,12 @@ triplet loss.
 Thus, the optimization process of HM objective can be interpreted as a direct
 \emph{maximization} process of the loss (indicating a direct strong adversary)
 which stops halfway at the specified \emph{destination} hardness level.
-%
-But, how hard should such ``\emph{destination} hardness'' be?
+
 
 % how hard? benign destination
 
+Then, how hard should such ``\emph{destination} hardness'' be?
+%
 Recall that the model is already prone to collapse with excessively hard benign
 triplets, let alone adversarial examples.
 %
@@ -226,10 +226,9 @@ Thus, intuitively, the \emph{destination} hardness can be that of another
 benign triplet which is harder than the given triplet (\eg, a
 Semihard~\cite{facenet} triplet).
 %
-However, in the late phase of training, the expectation of the loss, as well as
-the corresponding \emph{hardness} of a given triplet will be small, which means
-the \emph{destination} hardness will be close to that of the sample triplet for
-training.
+However, in the late phase of training, the
+expectation of \emph{destination} hardness of another benign triplet
+will be small, and close to the \emph{hardness} expectation of the given triplet.
 %
 This leads to weak attacks, and inefficient learning from a weak adversary.
 %
@@ -256,8 +255,20 @@ As an example, we design a ``Simple Graduate Adversary'' (SGA) pseudo-hardness
 function as the linearly scaled negative triplet margin, incorporating a strong
 assumption that the \emph{destination} hardness should remain Semihard.
 %
-Empirical observation will show the advantage of such pseudo-hardness
-functions.
+%Empirical observation will show the advantage of such pseudo-hardness
+%functions.
+
+% Intra-Class Structure
+
+Besides, a sample triplet will be augmented into a sextuplet (benign and
+adversarial examples) during adversarial training, where a \emph{intra-class}
+structure can be enforced.
+%
+Such structure has been neglected by existing methods, but some existing
+attacks aims to change the sample rankings in the same class~\cite{advrank}.
+%
+Hence, we propose a simple \emph{intra-class} structure penalty term for
+adversarial training, which is expected to improve robustness.
 
 \oo{[3. Intra-Class Structure]}
 Given a triplet of samples, we may eventually get up to 6 samples avaiable
@@ -344,7 +355,7 @@ attack~\cite{adaptive}.
 Of all defenses, adversarial training remains to be one of the most
 effective method~\cite{bilateral,advtrain-triplet,benchmarking}, and it
 consistently show promising empirical robustness,
-although suffering from significant training time cost and a lower performance
+although suffering from significant training cost and a lower performance
 on benign examples.
 
 \textbf{Deep Metric Learning DML.}
@@ -769,15 +780,15 @@ following~\cite{revisiting,robrank}.
 %
 The adversarial robustness of a model is measured in Empirical Robustness Score
 (ERS)~\cite{robrank}, a normalized score (the higher the better) from
-an ensemble of existing attacks against DML or their simplified white-box
+an collection of existing attacks against DML or their simplified white-box
 alternatives.
 %
 Since adversarial training is not gradient masking~\cite{obfuscated}, the
 performance of white-box attack can be regarded as the upper bound of the
-black-box attacks, and thus a model that is empirically robust to the ensemble
+black-box attacks, and thus a model that is empirically robust to the collection
 of white-box attacks is expected to be robust in general.
 
-\oo{Concretely, the ensemble of attack for computing ERS includes.}
+\oo{Concretely, the collection of attack for computing ERS includes.}
 %
 Further details can be found in the supplementary.
 
