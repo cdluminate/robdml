@@ -383,6 +383,32 @@ relatively weak adversary is used in order to avoid model collapse.
 \section{Our Approach}
 \label{sec:3}
 
+In Deep Metric Learning (DML)~\cite{revisiting,dmlreality}, an embedding
+function $\phi:\mathcal{X}\mapsto \Phi \subseteq \mathbb{R}^D$ is learned to
+map data points $X\in\mathcal{X}$ into an embedding space $\Phi$, which is usually
+normalized to the real unit hypersphere for regularization.
+%
+With a predefined distance function $d(\cdot,\cdot)$, which is usually the
+Euclidean distance, we can measure the distance between $X_i$ and $X_j$ as
+$d_\phi(X_i,X_j)=d(\phi(X_i),\phi(X_j))$.
+%
+In a typical setting, the triplet loss~\cite{facenet} can be used to learn the
+embedding function, and it could reach the state-of-the-art performance with an
+appropriate triplet sampling strategy~\cite{revisiting}.
+
+Given a triplet of image embeddings (anchor $\va=\phi(X_a)$, positive sample
+$\vp=\phi(X_p)$, negative sample $\vn=\phi(X_n)$), the triplet loss is defined
+as:
+%
+$
+%
+	L_\text{T}(\va, \vp, \vn; \gamma) = \max(0, d(\va, \vp) - d(\va, \vn) +
+	\gamma),
+%
+$
+%
+where $\gamma$ is a predefined margin parameter.
+
 Specifically, an imperceptible adversarial perturbation $r$ is added to the
 input image $X$ ($\|r\|_p \leq \varepsilon$, $X+r\in \mathcal{X}$), so that its
 embedding vector $\tilde{\vx}=\phi(X+r)$ will be moved off its original
@@ -409,34 +435,6 @@ enough.
 %
 \oo{Furthermore, min-max form -- free adversarial training}.
 
-
-In Deep Metric Learning (DML)~\cite{revisiting,dmlreality}, an embedding
-function $\phi:\mathcal{X}\mapsto \Phi \subseteq \mathbb{R}^D$ is learned to
-map data points $X\in\mathcal{X}$ into an embedding space $\Phi$, where the
-output of $\phi(\cdot)$ is usually normalized to the real unit hypersphere for
-regularization purpose.
-%
-With a predefined distance function $d(\cdot,\cdot)$, it allows us to measure
-the distance between $X_i$ and $X_j$ as
-$d_\phi(X_i,X_j)=d(\phi(X_i),\phi(X_j))$.
-%
-Various loss functions for learning the underlying embedding function have been
-proposed~\cite{revisiting,dmlreality}, where the triplet loss~\cite{facenet}
-remain to be a strong and widely used baseline that could reach
-state-of-the-art performance with appropriate triplet sampling strategy.
-%
-Given a triplet of image embeddings (anchor $\va=\phi(X_a)$, positive sample
-$\vp=\phi(X_p)$, negative sample $\vn=\phi(X_n)$), the triplet loss is defined
-as:
-%
-$
-%
-	L_\text{T}(\va, \vp, \vn; \gamma) = \max(0, d(\va, \vp) - d(\va, \vn) +
-	\gamma),
-%
-$
-%
-where $\gamma$ is a predefined margin parameter.
 
 \subsection{Hardness Manipulation}
 \label{sec:31}
