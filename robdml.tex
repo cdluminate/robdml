@@ -484,8 +484,8 @@ The \cref{eq:hm} is written in the L-$2$ norm form instead of the standard Mean 
 Error because HM can be directly extended into vector form for a
 mini-batch.
 %
-The optimization problem can be solved by projected gradient
-descent~\cite{madry}.
+The optimization problem can be solved by Projected Gradient
+Descent (PGD)~\cite{madry}.
 %
 And the resulting adversarial examples are used for adversarially training the
 DML model:
@@ -494,31 +494,49 @@ $L_\text{T}(\phi(\mA+\hat{\vr}_a), \phi(\mP+\hat{\vr}_p),
 \phi(\mN+\hat{\vr}_n))$.
 %
 We abbreviate the adversarial training with adversarial examples created through
-this way as $\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ in the following discussion.
+this way as $\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ in the following text.
 
-\cref{fig:hm}
-%
-Note, it is not expected to lower the hardness during the attack, namely
-$E[H_\mathsf{D}]$ should be greater or equal to $E[H_\mathsf{S}]$.
-%
-%
+% strong adversary
 
+Note, in the PGD case, the sign of negative gradient of the HM objective with
+respect to an adversarial perturbation $\vr$ is equivalent to the sign of
+gradient for directly maximizing the hardness $\tilde{H}_\mathsf{S}$ (hence
+maximizing $L_\text{T}$), \ie,
+%
 \begin{align}
-	&
+	\Delta \vr
+	=&
 	\sign\big\{
-		-\frac{\partial}{\partial r} \big\| \min(0, 
-		\tilde{H}_\mathsf{S} - H_\mathsf{D}) \big\|_2^2
+		-\frac{\partial}{\partial \vr} \big\| \max(0, 
+		H_\mathsf{D} - \tilde{H}_\mathsf{S} ) \big\|_2^2
 	\big\}
 	\\
 	=&
 	\sign\big\{
-		-2(\tilde{H}_\mathsf{S}-H_\mathsf{D})
-		\frac{\partial }{\partial r} \tilde{H}_\mathsf{S} \big\}
+		2(H_\mathsf{D} - \tilde{H}_\mathsf{S})
+		\frac{\partial }{\partial \vr} \tilde{H}_\mathsf{S} \big\}
 	=
 	\sign\big\{
-		\frac{\partial}{\partial r} \tilde{H}_\mathsf{S}
-		\big\}
+		\frac{\partial}{\partial \vr} \tilde{H}_\mathsf{S}
+		\big\},
 \end{align}
+%
+assuming that $H_\mathsf{D}>\tilde{H}_\mathsf{S}$.
+%
+And the perturbation $\vr$ is updated as $\vr \leftarrow \vr + \alpha \Delta \vr$
+by PGD, where $\alpha$ is a step size parameter.
+%
+Thus, the optimization of HM objective can be interpreted as directly
+maximizing $\tilde{H}_\mathsf{S}$, but stops very early once it reaches
+$H_\mathsf{D}$.
+%
+This means the model learns from an efficient adversary during adversarial
+training with HM.
+
+
+Instead of directly maximizing the source hardness, we propose to stop the
+maximization process when the adversarial examples reach a certain level of
+hardness in order to avoid model collapse.
 
 \oo{uses gradient for maximization. Maxim is $HM(H_\mathsf{S}, 2)$.}
 
@@ -534,9 +552,13 @@ The model does not collapse with EST or ACT because the expectation of hardness,
 %
 While the variance $\text{Var}[H]$ for EST is higher, and that for ACT is lower.
 
-Instead of directly maximizing the source hardness, we propose to stop the
-maximization process when the adversarial examples reach a certain level of
-hardness in order to avoid model collapse.
+\cref{fig:hm}
+%
+Note, it is not expected to lower the hardness during the attack, namely
+$E[H_\mathsf{D}]$ should be greater or equal to $E[H_\mathsf{S}]$.
+%
+%
+
 %
 Based on the same anchor image $X_a$, we sample another positive image $X_p^D$
 and negative image $X_n^D$ with a different triplet sampling strategy, and
