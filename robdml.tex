@@ -221,7 +221,7 @@ which stops halfway at the specified \emph{destination} hardness level.
 Then, how hard should such ``\emph{destination} hardness'' be?
 %
 Recall that the model is already prone to collapse with excessively hard benign
-triplets, let alone adversarial examples.
+triplets~\cite{facenet}, let alone adversarial examples.
 %
 Thus, intuitively, the \emph{destination} hardness can be that of another
 benign triplet which is harder than the given triplet (\eg, a
@@ -437,6 +437,8 @@ robustness, and performance on benign examples.
 	\label{fig:hm}
 \end{figure}
 
+% define hardness
+
 Given an image triplet ($\mA$, $\mP$, $\mN$) sampled with a certain sampling
 strategy (\eg, semi-hard~\cite{facenet}) within a mini-batch, we define its
 \emph{hardness} as a scalar:
@@ -453,51 +455,31 @@ For convenience we call this triplet as ``\emph{source} triplet'', and the
 corresponding $H(\cdots)$ value as ``\emph{source} hardness'', denoted as
 $H_\mathsf{S}$.
 
-In the traditional min-max adversarial training setting~\cite{madry}, the inner
-``max'' problem should maximize $H(X_a,X_p^S,X_n^S)$ and hence maximize the triplet
-loss.
-%
-However, existing defense methods~\cite{advorder,robrank} refrain from adopting
-such paradigm because the model will quickly collapse with excessively hard
-triplets~\cite{facenet}, and adopt relatively weak adversaries instead
-(inefficient in gaining robustness).
+% define hardness manipulation
 
-In this paper, we argue that the hardness of triplet matters in adversarial
-training for DML.
+Then, \emph{Hardness Manipulation} (HM) aims to increase the \emph{source} hardness
+$H_\mathsf{S}$ into a specified ``\emph{destination} hardness'' $H_\mathsf{D}$,
+by finding adversarial examples of the source triplet $(\mA, \mP, \mN)$, \ie,
+$(\mA + \hat{\vr}_a, \mP + \hat{\vr}_p, \mN + \hat{\vr}_n)$,
+where $(\hat{\vr}_a, \hat{\vr}_p, \hat{\vr}_n)$ are the adversarial perturbations.
 %
-The model does not collapse with EST or ACT because the expectation of hardness,
-\ie, $E[H]$ will be close to zero.
-%
-While the variance $\text{Var}[H]$ for EST is higher, and that for ACT is lower.
-
-Instead of directly maximizing the source hardness, we propose to stop the
-maximization process when the adversarial examples reach a certain level of
-hardness in order to avoid model collapse.
-%
-Based on the same anchor image $X_a$, we sample another positive image $X_p^D$
-and negative image $X_n^D$ with a different triplet sampling strategy, and
-we call its hardness as ``destination hardness'', denoted as $H_\mathsf{D}$.
-
-Then, we want change (increase) the hardness level from $H_\mathsf{S}$ into $H_\mathsf{D}$, by
-finding adversarial examples for $(X_a, X_p^S, X_n^S)$.
-%
-Note, it is not expected to lower the hardness during the attack, namely
-$E[H_\mathsf{D}]$ should be greater or equal to $E[H_\mathsf{S}]$.
-%
-We denote the the hardness of adversarial examples as $\tilde{H}_S=H(X_a{+}r_a,
-X_p^S{+}r_p, X_n^S{+}r_n)$.
-%
-This is named as \emph{Hardness Manipulation} (HM), which is implemented as
-follows:
+If we denote the hardness of the adversarially perturbed \emph{source} triplet
+as $\tilde{H}_\mathsf{S}$, the HM can be implemented as follows:
 %
 \begin{equation}
 	%
-	\bar{r}_a, \bar{r}_p, \bar{r}_n = \argmin_{r_a,r_p,r_n} \big\|\min(0,
-	\tilde{H}_\mathsf{S} - H_\mathsf{D}) \big\|_2^2.
+	\hat{\vr}_a, \hat{\vr}_p, \hat{\vr}_n = \argmin_{r_a,r_p,r_n} \big\|\max(0,
+	H_\mathsf{D} - \tilde{H}_\mathsf{S} ) \big\|_2^2.
 	%
 	\label{eq:hm}
 	%
 \end{equation}
+
+%
+Note, it is not expected to lower the hardness during the attack, namely
+$E[H_\mathsf{D}]$ should be greater or equal to $E[H_\mathsf{S}]$.
+%
+%
 
 \cref{fig:hm}
 %
@@ -534,6 +516,26 @@ $L_\text{T}(\phi(X_a+\bar{r}_a), \phi(X_p^S+\bar{r}_p),
 \end{align}
 
 \oo{uses gradient for maximization. Maxim is $HM(H_\mathsf{S}, 2)$.}
+
+In the traditional min-max adversarial training setting~\cite{madry}, the inner
+``max'' problem should maximize $H(X_a,X_p^S,X_n^S)$ and hence maximize the triplet
+loss.
+
+In this paper, we argue that the hardness of triplet matters in adversarial
+training for DML.
+%
+The model does not collapse with EST or ACT because the expectation of hardness,
+\ie, $E[H]$ will be close to zero.
+%
+While the variance $\text{Var}[H]$ for EST is higher, and that for ACT is lower.
+
+Instead of directly maximizing the source hardness, we propose to stop the
+maximization process when the adversarial examples reach a certain level of
+hardness in order to avoid model collapse.
+%
+Based on the same anchor image $X_a$, we sample another positive image $X_p^D$
+and negative image $X_n^D$ with a different triplet sampling strategy, and
+we call its hardness as ``destination hardness'', denoted as $H_\mathsf{D}$.
 
 Note, the design of HM is flexible, and not coupled with specific sampling
 strategy.
