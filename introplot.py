@@ -7,10 +7,15 @@ plt.rcParams['font.serif'] = 'FreeSerif'
 plt.rcParams['font.size'] = 15
 
 data = {
-        'ACT': ( # [freeze]
+        'ACT[R]': ( # [freeze]
             (27.5, 28.6, 30.6, 38.4, 46.5),
             (33.0, 17.0, 9.0, 5.0, 3.0),
             (33.9, 34.7, 31.3, 13.9, 5.8),
+            ),
+        'ACT[S]': ( # [freeze]
+            (53.0, 49.3, 42.8, 40.5, 39.4),
+            (3.0, 5.0, 9.0, 17.0, 33.0),
+            (5.1, 7.1, 18.7, 23.7, 24.2),
             ),
         'hmetrm': ( # [freeze]
             (23.1, 23.8, 27.0, 30.7, 34.3),
@@ -40,16 +45,18 @@ ax = plt.subplot(1,2,1)
 for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
-    if name == 'ACT':
-        plt.plot(cost, ers, f'.-', color='dimgray')
+    if name == 'ACT[R]':
+        plt.plot(cost, ers, marker='v', linestyle=':', color='dimgray')
+    elif name == 'ACT[S]':
+        plt.plot(cost, ers, marker='^', linestyle=':', color='dimgray')
     elif name == 'hmetrm':
-        plt.plot(cost, ers, f'v-', color='tab:blue')
+        plt.plot(cost, ers, marker='v', linestyle='-.', color='tab:blue')
     elif name == 'hmetsm':
-        plt.plot(cost, ers, f'^-', color='tab:red')
+        plt.plot(cost, ers, marker='^', linestyle='-.', color='tab:red')
     elif name == 'HM(S,SGA)':
-        plt.plot(cost, ers, f'h-', color='deeppink')
+        plt.plot(cost, ers, marker='h', linestyle='-', color='deeppink')
     else:
-        plt.plot(cost, ers, f'-o', color='k')
+        plt.plot(cost, ers, marker='+', linestyle='-.', color='k')
     if isinstance(cost, float):
         plt.annotate(name, xy=(cost, ers))
     elif isinstance(cost, tuple):
@@ -71,8 +78,10 @@ ax = plt.subplot(1,2,2)
 for (name, (r1, cost, ers)) in data.items():
     c.print(name, r1, cost, ers)
 
-    if name == 'ACT':
+    if name == 'ACT[R]':
         plt.plot(r1, ers, f'.-', color='dimgray')
+    elif name == 'ACT[S]':
+        plt.plot(r1, ers, f'.-.', color='dimgray')
     elif name == 'hmetrm':
         plt.plot(r1, ers, f'v-', color='tab:blue')
     elif name == 'hmetsm':
