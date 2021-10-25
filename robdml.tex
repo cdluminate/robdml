@@ -401,8 +401,8 @@ appropriate triplet sampling strategy~\cite{revisiting}.
 % Background Triplet loss
 
 Given a sample triplet of anchor, positive, negative images, \ie, $\mA, \mP,
-\mN \in \mathcal{X}$, we first calculate their embeddings with $\phi(\cdot)$
-as $\va, \vp, \vn$, respectively.
+\mN \in \mathcal{X}$, we first calculate their embeddings with $\phi(\cdot)$ as
+$\va, \vp, \vn$, respectively.
 %
 Then the triplet loss~\cite{facenet} is defined as:
 %
@@ -414,11 +414,12 @@ $
 $
 %
 where $\gamma$ is a predefined margin parameter.
-
-Specifically, an imperceptible adversarial perturbation $r$ is added to the
-input image $X$ ($\|r\|_p \leq \varepsilon$, $X+r\in \mathcal{X}$), so that its
-embedding vector $\tilde{\vx}=\phi(X+r)$ will be moved off its original
-location towards other positions to fulfill the attacker's goal.
+%
+To attack the DML model, an imperceptible adversarial perturbation $\vr$ is
+added to the input image $\mX$, which is subject to $\|\vr\|_p \leq
+\varepsilon$ and $\mX+\vr\in \mathcal{X}$, so that its embedding vector
+$\tilde{\vx}=\phi(\mX+\vr)$ will be moved off its original location to 
+other positions to fulfill the attacker's goal~[][][][][].
 
 %
 Embedding-Shifted Triplet (EST)~\cite{advrank} adopts adversarial counterpars
