@@ -15983,7 +15983,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.5
+38.0
 \end_layout
 
 \end_inset
@@ -15992,7 +15992,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-46.3
+48.3
 \end_layout
 
 \end_inset
@@ -16001,7 +16001,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-20.3
+21.8
 \end_layout
 
 \end_inset
@@ -16010,7 +16010,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-47.5
+49.3
 \end_layout
 
 \end_inset
@@ -16019,7 +16019,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-14.6
+12.7
 \end_layout
 
 \end_inset
@@ -16028,7 +16028,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-41.1
+46.4
 \end_layout
 
 \end_inset
@@ -16037,7 +16037,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-14.3
+11.6
 \end_layout
 
 \end_inset
@@ -16046,7 +16046,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-34.5
+39.9
 \end_layout
 
 \end_inset
@@ -16055,7 +16055,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.530
+0.567
 \end_layout
 
 \end_inset
@@ -16064,7 +16064,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.739
+0.783
 \end_layout
 
 \end_inset
@@ -16073,7 +16073,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-18.1
+16.8
 \end_layout
 
 \end_inset
@@ -16082,7 +16082,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-13.1
+11.9
 \end_layout
 
 \end_inset
@@ -16100,7 +16100,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.1
+1.4
 \end_layout
 
 \end_inset
@@ -16109,7 +16109,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.3
+32.4
 \end_layout
 
 \end_inset
@@ -16301,7 +16301,7 @@ HM[
 \begin_inset Formula $\mathcal{S},g_{\mathsf{SGA}}$
 \end_inset
 
-]&ICS
+]&ICS(1.0)
 \end_layout
 
 \end_inset
