@@ -345,49 +345,49 @@ consistently show promising empirical robustness,
 although suffering from significant training cost and a lower performance
 on benign examples.
 
-\textbf{Deep Metric Learning DML.}
+\textbf{Deep Metric Learning.}
 %
-A wide range of application problem such as image retrieval~\cite{imagesim2},
+A wide range of applications such as image retrieval~\cite{imagesim2},
 cross-modal retrieval~\cite{ladderloss}, and face recognition~\cite{facenet}
-can be formularized as a deep metric learning problem.
+can be formulated as Deep Metric Learning.
 %
-Deep metric learning has been found vulnerable to adversarial attacks as
-well~\cite{advrank,advorder}, which will result in undesired implications on
-safety, security, or fairness of a deep metric learning application.
-%
-In contrast, the defense methods for enhancing the adversarial robustness of
-deep metric learning are less explored.
-%
-Zhou \etal~\cite{advrank} present an adversarial training method with
-adversarial examples maximizing the embedding move distance off its original
-location.
-%
-Anti-Collapse Triplet~\cite{robrank} forces the model to separate collapsed
-positive and negative samples in order to learn robust features.
-%
-However, the existing defense methods refrain from adopting Madry's min-max
-adversarial training paradigm due to the model being too easy to collapse with
-excessively hard adversarial samples.
+A well-designed loss function is crucial for DML performance~\cite{dmlreality}.
+As suggested by recent study, the classical triplet loss could reach
+state-of-the-art performance with an appropriate triplet sampling
+strategy~\cite{revisiting}.
 
 \textbf{Attacks in DML.}
 %
-Similar to what have been found for the classifiers, recent
-works~\cite{robrank,advrank,advorder} also suggest that the embedding function
-$\phi(\cdot)$ in DML is vulnerable to adversarial attacks.
+DML has been found vulnerable to adversarial attacks as
+well~\cite{advrank,advorder,robrank}, which raises concerns on
+safety, security, or fairness for a DML application.
 %
+The existing attacks aims to completely subvert the image retrieval results~[][][],
+or covertly alter the top-ranking results without being abnormal~[][][][].
+
+%
+\textbf{Defenses in DML.} Compared to attacks, defense methods for DML are less
+explored.
+%
+Zhou \etal~\cite{advrank} present Embedding Shifted Triplet (EST), an
+adversarial training method using adversarial examples with maximized embedding
+move distance off their original locations.
+%
+Anti-Collapse Triplet (ACT)~\cite{robrank} forces the model to separate
+collapsed positive and negative samples in order to learn robust features,
+which achieves the state-of-the-art robustness.
+%
+However, the existing defense methods suffer from low efficiency as a
+relatively weak adversary is used in order to avoid model collapse.
+
+\section{Our Approach}
+\label{sec:3}
+
 Specifically, an imperceptible adversarial perturbation $r$ is added to the
 input image $X$ ($\|r\|_p \leq \varepsilon$, $X+r\in \mathcal{X}$), so that its
 embedding vector $\tilde{\vx}=\phi(X+r)$ will be moved off its original
 location towards other positions to fulfill the attacker's goal.
 
-\textbf{Defenses in DML.}
-%
-Although attacks against DML has been widely studied~\cite{advrank,advorder},
-the defense methods for improving adversarial robustness is much less explored.
-%
-As adversarial training~\cite{madry} remains to be one of the most effective
-defense for classification, existing defense methods for DML are also
-adversarial training-based.
 %
 Embedding-Shifted Triplet (EST)~\cite{advrank} adopts adversarial counterpars
 of $\va,\vp,\vn$ with maximum embedding move distance off their original
@@ -409,9 +409,6 @@ enough.
 %
 \oo{Furthermore, min-max form -- free adversarial training}.
 
-
-\section{Our Approach}
-\label{sec:3}
 
 In Deep Metric Learning (DML)~\cite{revisiting,dmlreality}, an embedding
 function $\phi:\mathcal{X}\mapsto \Phi \subseteq \mathbb{R}^D$ is learned to
