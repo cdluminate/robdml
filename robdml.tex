@@ -383,22 +383,28 @@ relatively weak adversary is used in order to avoid model collapse.
 \section{Our Approach}
 \label{sec:3}
 
+% Background DML formulation
+
 In Deep Metric Learning (DML)~\cite{revisiting,dmlreality}, an embedding
 function $\phi:\mathcal{X}\mapsto \Phi \subseteq \mathbb{R}^D$ is learned to
-map data points $X\in\mathcal{X}$ into an embedding space $\Phi$, which is usually
+map data points $\mX\in\mathcal{X}$ into an embedding space $\Phi$, which is usually
 normalized to the real unit hypersphere for regularization.
 %
 With a predefined distance function $d(\cdot,\cdot)$, which is usually the
-Euclidean distance, we can measure the distance between $X_i$ and $X_j$ as
-$d_\phi(X_i,X_j)=d(\phi(X_i),\phi(X_j))$.
+Euclidean distance, we can measure the distance between $\mX_i$ and $\mX_j$ as
+$d_\phi(\mX_i,\mX_j)=d(\phi(\mX_i),\phi(\mX_j))$.
 %
 In a typical setting, the triplet loss~\cite{facenet} can be used to learn the
 embedding function, and it could reach the state-of-the-art performance with an
 appropriate triplet sampling strategy~\cite{revisiting}.
 
-Given a triplet of image embeddings (anchor $\va=\phi(X_a)$, positive sample
-$\vp=\phi(X_p)$, negative sample $\vn=\phi(X_n)$), the triplet loss is defined
-as:
+% Background Triplet loss
+
+Given a sample triplet of anchor, positive, negative images, \ie, $\mA, \mP,
+\mN \in \mathcal{X}$, we first calculate their embeddings with $\phi(\cdot)$
+as $\va, \vp, \vn$, respectively.
+%
+Then the triplet loss~\cite{facenet} is defined as:
 %
 $
 %
