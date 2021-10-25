@@ -270,29 +270,17 @@ attacks aims to change the sample rankings in the same class~\cite{advrank}.
 Hence, we propose a simple \emph{intra-class} structure penalty term for
 adversarial training, which is expected to improve robustness.
 
-\oo{[3. Intra-Class Structure]}
-Given a triplet of samples, we may eventually get up to 6 samples avaiable
-for adversarial training. There could be some kind of hierarchy.
-
 % evaluation and conclusion
-We conduct experiments
-on three commonly used DML dataset, namely CUB-200-2011~\cite{cub200}, Cars-196~\cite{cars196}, and Stanford
-Online Product~\cite{sop}.
+The experiments are conducted on three commonly used DML datasets, namely
+CUB-200-2011~\cite{cub200}, Cars-196~\cite{cars196}, and Stanford Online
+Product~\cite{sop}.
 %
-The proposed method overwhelmingly outperforms the state-of-the-art defense
-in terms of robustness, training cost, as well as the penalty on benign
+The proposed method overwhelmingly outperforms the state-of-the-art defense in
+terms of training cost, robustness, as well as the performance on benign
 example retrieval.
-%
-Our conclusions are:
-%
-(1) Triplet sampling strategy is vital for adversarial training of tripet-loss
-based DML models.
-%
-\oo{...}
-
 
 % contributions
-In brief, our contribusions include:
+In brief, our contribusions includes:
 %
 \begin{enumerate}[nosep, noitemsep, leftmargin=*]
 	%
@@ -309,10 +297,9 @@ In brief, our contribusions include:
 		A linear function named Simple Graduate Adversary (SGA) is designed as
 		an example.
 		%
-	\item \oo{TODO} Inter-ID structure constraint. ((aa~p) + (pp~a))/2
-		(cross-id repelling) existing methods only care inter-class separation,
-		but not intra-class (inter-id) separation, because we may get a
-		6-element set (a,a~,p,p~,n,n~) from the original triplet.
+	\item \textit{Intra-Class Structure} penalty is proposed to further improve
+		the robustness of a DML model, while such possibility is neglected by
+		existing methods. 
 		%
 \end{enumerate}
 
