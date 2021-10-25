@@ -437,50 +437,21 @@ robustness, and performance on benign examples.
 	\label{fig:hm}
 \end{figure}
 
-\cref{fig:hm}
-
-by referencing
-another benign (but harder) sample triplet.
-
-make adversarially training a DML model
-with triplet loss feasible without model collapse, so the model could
-efficiently learn from a strong adversary.
-%
-Assume there are two data triplets, namely ``source triplet'' and ``destination
-triplet'' with the same anchor example, but sampled using different triplet
-sampling strategies.
-%
-And the ``destination triplet'' is expected to result in a higher loss value
-than another.
-%
-HM aims at creating adversarial examples of the ``source triplet'', that would
-increase the corresponding loss value until that of the unperturbed
-``destination triplet''.
-%
-This can also be interpreted as maximizing the loss value but ``stops early''
-at a certain point.
-%
-The resulting perturbed ``source triplet'' can be used for adversarial training
-of the model.
-
-Given an anchor image $X_a$, we sample a positive image $X_p^S$ (in the same
-class as the anchor) and a negative image $X_n^S$ (in different class as the
-anchor) with a certain sampling strategy (\eg, semi-hard~\cite{facenet}).
-%
-% For convenience we call this triplet as ``source triplet''.
-%
-Then its \emph{hardness} is defined as
+Given an image triplet ($\mA$, $\mP$, $\mN$) sampled with a certain sampling
+strategy (\eg, semi-hard~\cite{facenet}) within a mini-batch, we define its
+\emph{hardness} as a scalar:
 %
 \begin{equation}
 %
-H(X_a^S,X_p^S,X_n^S)=d_\phi(X_a,X_p^S)-d_\phi(X_a,X_n^S),
+H(\mA,\mP,\mN)=d_\phi(\mA,\mP)-d_\phi(\mA,\mN),
 %
 \end{equation}
 %
-which is an internal
-part of the triplet loss.
+which is an internal part of the triplet loss.
 %
-For convenience we call this as ``source hardness'', denoted as $H_\mathsf{S}$.
+For convenience we call this triplet as ``\emph{source} triplet'', and the
+corresponding $H(\cdots)$ value as ``\emph{source} hardness'', denoted as
+$H_\mathsf{S}$.
 
 In the traditional min-max adversarial training setting~\cite{madry}, the inner
 ``max'' problem should maximize $H(X_a,X_p^S,X_n^S)$ and hence maximize the triplet
@@ -527,6 +498,8 @@ follows:
 	\label{eq:hm}
 	%
 \end{equation}
+
+\cref{fig:hm}
 %
 The $\min(0,\cdot)$ part in \cref{eq:hm} truncates the gradient when $H_\mathsf{S}>H_\mathsf{D}$,
 automatically stopping the optimization.
@@ -579,6 +552,23 @@ Training~\cite{freeat}.
 \oo{[4. Free Adversarial Metric Learining]}
 Extension of FAT to adversarial deep metric learning.
 
+%
+Assume there are two data triplets, namely ``source triplet'' and ``destination
+triplet'' with the same anchor example, but sampled using different triplet
+sampling strategies.
+%
+And the ``destination triplet'' is expected to result in a higher loss value
+than another.
+%
+HM aims at creating adversarial examples of the ``source triplet'', that would
+increase the corresponding loss value until that of the unperturbed
+``destination triplet''.
+%
+This can also be interpreted as maximizing the loss value but ``stops early''
+at a certain point.
+%
+The resulting perturbed ``source triplet'' can be used for adversarial training
+of the model.
 \subsection{Gradual Adversary}
 \label{sec:32}
 
