@@ -457,37 +457,32 @@ $H_\mathsf{S}$.
 
 % define hardness manipulation
 
-Then, \emph{Hardness Manipulation} (HM) aims to increase the \emph{source} hardness
-$H_\mathsf{S}$ into a specified ``\emph{destination} hardness'' $H_\mathsf{D}$,
-by finding adversarial examples of the source triplet $(\mA, \mP, \mN)$, \ie,
-$(\mA + \hat{\vr}_a, \mP + \hat{\vr}_p, \mN + \hat{\vr}_n)$,
-where $(\hat{\vr}_a, \hat{\vr}_p, \hat{\vr}_n)$ are the adversarial perturbations.
+Then, \emph{Hardness Manipulation} (HM) aims to increase the \emph{source}
+hardness $H_\mathsf{S}$ into a specified ``\emph{destination} hardness''
+$H_\mathsf{D}$, by finding adversarial examples of the source triplet $(\mA,
+\mP, \mN)$, \ie, $(\mA + {\vr}_a, \mP + {\vr}_p, \mN + {\vr}_n)$, where
+$({\vr}_a, {\vr}_p, {\vr}_n)$ are the adversarial perturbations.
 %
 If we denote the hardness of the adversarially perturbed \emph{source} triplet
 as $\tilde{H}_\mathsf{S}$, the HM can be implemented as follows:
 %
 \begin{equation}
 	%
-	\hat{\vr}_a, \hat{\vr}_p, \hat{\vr}_n = \argmin_{r_a,r_p,r_n} \big\|\max(0,
-	H_\mathsf{D} - \tilde{H}_\mathsf{S} ) \big\|_2^2.
+	\hat{\vr}_a, \hat{\vr}_p, \hat{\vr}_n = \argmin_{\vr_a,\vr_p,\vr_n}
+	\Big\|\max(0, H_\mathsf{D} - \tilde{H}_\mathsf{S} ) \Big\|_2^2.
 	%
 	\label{eq:hm}
 	%
 \end{equation}
-
 %
-Note, it is not expected to lower the hardness during the attack, namely
-$E[H_\mathsf{D}]$ should be greater or equal to $E[H_\mathsf{S}]$.
+The $\max(0,\cdot)$ part in \cref{eq:hm} truncates the gradient when
+$H_\mathsf{S}>H_\mathsf{D}$, automatically stopping the optimization, because
+$H_\mathsf{S}$ is not desired to be reduced once being greater than
+$H_\mathsf{D}$.
 %
-%
-
-\cref{fig:hm}
-%
-The $\min(0,\cdot)$ part in \cref{eq:hm} truncates the gradient when $H_\mathsf{S}>H_\mathsf{D}$,
-automatically stopping the optimization.
-%
-This is because $H_\mathsf{S}$ will be reduced once greater than $H_\mathsf{D}$ in standard Mean
-Square Error.
+The \cref{eq:hm} is written in the L-$2$ norm form instead of the standard Mean Squared
+Error because HM can be directly extended into vector form for a
+mini-batch.
 %
 The optimization problem can be solved by projected gradient
 descent~\cite{madry}.
@@ -497,6 +492,13 @@ DML model:
 %
 $L_\text{T}(\phi(X_a+\bar{r}_a), \phi(X_p^S+\bar{r}_p),
 \phi(X_n^S+\bar{r}_n))$.
+
+\cref{fig:hm}
+%
+Note, it is not expected to lower the hardness during the attack, namely
+$E[H_\mathsf{D}]$ should be greater or equal to $E[H_\mathsf{S}]$.
+%
+%
 
 \begin{align}
 	&
