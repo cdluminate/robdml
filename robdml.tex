@@ -469,7 +469,7 @@ as $\tilde{H}_\mathsf{S}$, the HM can be implemented as follows:
 \begin{equation}
 	%
 	\hat{\vr}_a, \hat{\vr}_p, \hat{\vr}_n = \argmin_{\vr_a,\vr_p,\vr_n}
-	\Big\|\max(0, H_\mathsf{D} - \tilde{H}_\mathsf{S} ) \Big\|_2^2.
+	\big\|\max(0, H_\mathsf{D} - \tilde{H}_\mathsf{S} ) \big\|_2^2.
 	%
 	\label{eq:hm}
 	%
@@ -490,8 +490,11 @@ descent~\cite{madry}.
 And the resulting adversarial examples are used for adversarially training the
 DML model:
 %
-$L_\text{T}(\phi(X_a+\bar{r}_a), \phi(X_p^S+\bar{r}_p),
-\phi(X_n^S+\bar{r}_n))$.
+$L_\text{T}(\phi(\mA+\hat{\vr}_a), \phi(\mP+\hat{\vr}_p),
+\phi(\mN+\hat{\vr}_n))$.
+%
+We abbreviate the adversarial training with adversarial examples created through
+this way as $\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ in the following discussion.
 
 \cref{fig:hm}
 %
