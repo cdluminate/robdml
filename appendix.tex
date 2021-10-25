@@ -47,6 +47,29 @@ on questions that are unsuitable for the main part of manuscript.
 		as well as software / hardware differences.
 	\item full data sheet for tab 2?
 		\cref{tab:srcdest}
+
+	\item Details of existing defense methods?
+
+%
+Embedding-Shifted Triplet (EST)~\cite{advrank} adopts adversarial counterpars
+of $\va,\vp,\vn$ with maximum embedding move distance off their original
+locations, \ie,
+$L_\text{EST}=L_\text{T}(\tilde{\va},\tilde{\vp},\tilde{\vn};\gamma)$ where
+$\tilde{\va}=\phi(X+r^*)$, $r^*=\arg\max_{r}d_\phi(X+r, X)$.
+%
+Anti-Collapse Triplet (ACT)~\cite{robrank} collapses the embedding vectors of
+positive and negative sample, and enforces the model to separate them apart,
+\ie, $L_\text{ACT}=L_\text{T}(\va, \overrightarrow{\vp},
+\overleftarrow{\vn};\gamma)$, where $[\overrightarrow{\vp},\overleftarrow{\vn}]
+=[\phi(X_p+r_p^*), \phi(X_n+r_n^*)]$, and $[r_p^*,r_n^*]=\arg\min_{r_p,r_n}
+d_\phi(X_p+r_p, X_n+r_n)$.
+%
+However, compared to the standard min-max adversarial training
+paradigm~\cite{madry}, these methods merely indirectly increase the loss value,
+and thus, suffer from inefficient learning because the adversary is not strong
+enough.
+
+
 \end{enumerate}
 
 \input{tab-srcdest.tex}
