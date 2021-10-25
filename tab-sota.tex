@@ -1,52 +1,62 @@
 \begin{table*}
 \resizebox{\linewidth}{!}{
-\setlength{\tabcolsep}{0.3em}
-\renewcommand{\arraystretch}{1.1}%
+\setlength{\tabcolsep}{0.48em}
+\renewcommand{\arraystretch}{1.05}%
+
 \begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
-\hline 
+
+	\toprule
+
 \multirow{2}{*}{\textbf{Dataset}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Defense}}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
-\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17} 
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
  &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
-\hline 
-\hline 
-CUB & N/A & N/A & 53.9 & 66.4 & 26.1 & 59.5 & 0.0 & 100.0 & 0.0 & 99.9 & 0.883 & 1.762 & 0.0 & 0.0 & 14.1 & 0.0 & 3.8\tabularnewline
-\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18} 
- & EST & 8 & T:V &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
- & ACT & 8 & 30.6 & 40.1 & 16.5 & 45.6 & 13.7 & 46.8 & 12.6 & 39.3 & 0.547 & 0.902 & 13.6 & 9.8 & 21.9 & 1.3 & 31.3\tabularnewline
- & HM{[}S,SGA{]} & 8 & \textbf{38.0} & 48.3 & 21.8 & 49.3 & 12.7 & 46.4 & 11.6 & 39.9 & 0.567 & 0.783 & 16.8 & 11.9 & 27.9 & 1.4 & \textbf{32.4}\tabularnewline
- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
-\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18} 
- & EST & 32 & 8.5 & 13.0 & 2.6 & 25.2 & 2.7 & 97.9 & 0.4 & 97.3 & 0.848 & 1.576 & 1.4 & 0.0 & 4.0 & 0.0 & 5.3\tabularnewline
- & ACT & 32 & 27.5 & 38.2 & 12.2 & 43.0 & 15.5 & 37.7 & 15.1 & 32.2 & 0.472 & 0.821 & 11.1 & 9.4 & 14.9 & 1.0 & 33.9\tabularnewline
- & HM{[}S,SGA{]} & 32 & \textbf{36.5} & 46.7 & 21.0 & 48.6 & 14.7 & 39.6 & 15.6 & 34.2 & 0.523 & 0.736 & 16.5 & 15.0 & 26.7 & 2.9 & \textbf{35.9}\tabularnewline
- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
-\hline 
-\hline 
-CARS & N/A & N/A & 62.5 & 74.0 & 23.8 & 57.0 & 0.2 & 100.0 & 0.1 & 99.6 & 0.874 & 1.816 & 0.0 & 0.0 & 13.4 & 0.0 & 3.6\tabularnewline
-\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18} 
- & EST & 8 & T:V &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
- & ACT & 8 & T:V &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
- & HM{[}S,SGA{]} & 8 & T:V &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
-\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18} 
- & EST & 32 & 30.7 & 41.0 & 5.6 & 31.8 & 1.2 & 98.1 & 0.4 & 91.8 & 0.880 & 1.281 & 2.9 & 0.7 & 8.2 & 0.0 & 7.3\tabularnewline
- & ACT & 32 & 43.4 & 54.6 & 11.8 & 42.9 & 18.0 & 32.3 & 17.5 & 30.5 & 0.383 & 0.763 & 16.3 & 15.3 & 20.7 & 1.6 & 38.6\tabularnewline
- & HM{[}S,SGA{]} & 32 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
-\hline 
-\hline 
-SOP & N/A & N/A & 62.9 & 68.5 & 39.2 & 87.4 & 0.1 & 99.3 & 0.2 & 99.1 & 0.845 & 1.685 & 0.0 & 0.0 & 6.3 & 0.0 & 4.0\tabularnewline
-\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18} 
- & EST & 8 & T:V &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
- & ACT & 8 & T:V &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
- & HM{[}S,SGA{]} & 8 & T:V &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
-\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18} 
- & EST & 32 & 46.0 & 51.4 & 24.5 & 84.7 & 12.5 & 43.6 & 10.6 & 34.8 & 0.468 & 0.830 & 9.6 & 7.2 & 17.3 & 3.8 & 31.7\tabularnewline
- & ACT & 32 & 47.5 & 52.6 & 25.5 & 84.9 & 24.1 & 10.5 & 22.7 & 9.4 & 0.253 & 0.532 & 21.2 & 21.6 & 27.8 & 15.3 & 50.8\tabularnewline
- & HM{[}S,SGA{]} & 32 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+
+	\midrule
+
+\multirow{9}{*}{CUB} & N/A{[}$\mathcal{R}${]} & N/A & 53.9 & 66.4 & 26.1 & 59.5 & 0.0 & 100.0 & 0.0 & 99.9 & 0.883 & 1.762 & 0.0 & 0.0 & 14.1 & 0.0 & 3.8\tabularnewline
+\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18}
+ & EST{[}$\mathcal{R}${]} & 8 & 37.1 & 47.3 & 20.0 & 46.4 & 0.5 & 97.3 & 0.5 & 91.3 & 0.875 & 1.325 & 3.9 & 0.4 & 14.9 & 0.0 & 7.9\tabularnewline
+ & ACT{[}$\mathcal{R}${]} & 8 & 30.6 & 40.1 & 16.5 & 45.6 & 13.7 & 46.8 & 12.6 & 39.3 & 0.547 & 0.902 & 13.6 & 9.8 & 21.9 & 1.3 & 31.3\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]} & 8 & 38.0 & 48.3 & 21.8 & 49.3 & 12.7 & 46.4 & 11.6 & 39.9 & 0.567 & 0.783 & 16.8 & 11.9 & 27.9 & 1.4 & 32.4\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]}\&ICS & 8 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18}
+ & EST{[}$\mathcal{R}${]} & 32 & 8.5 & 13.0 & 2.6 & 25.2 & 2.7 & 97.9 & 0.4 & 97.3 & 0.848 & 1.576 & 1.4 & 0.0 & 4.0 & 0.0 & 5.3\tabularnewline
+ & ACT{[}$\mathcal{R}${]} & 32 & 27.5 & 38.2 & 12.2 & 43.0 & 15.5 & 37.7 & 15.1 & 32.2 & 0.472 & 0.821 & 11.1 & 9.4 & 14.9 & 1.0 & 33.9\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]} & 32 & 36.5 & 46.7 & 21.0 & 48.6 & 14.7 & 39.6 & 15.6 & 34.2 & 0.523 & 0.736 & 16.5 & 15.0 & 26.7 & 2.9 & 35.9\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]}\&ICS & 32 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+
+	\midrule
+
+\multirow{9}{*}{CARS} & N/A{[}$\mathcal{R}${]} & N/A & 62.5 & 74.0 & 23.8 & 57.0 & 0.2 & 100.0 & 0.1 & 99.6 & 0.874 & 1.816 & 0.0 & 0.0 & 13.4 & 0.0 & 3.6\tabularnewline
+\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18}
+ & EST{[}$\mathcal{R}${]} & 8 & 57.1 & 68.4 & 30.3 & 47.7 & 0.1 & 99.9 & 0.1 & 98.1 & 0.902 & 1.681 & 0.7 & 0.2 & 15.4 & 0.0 & 4.4\tabularnewline
+ & ACT{[}$\mathcal{R}${]} & 8 & 46.8 & 58.0 & 23.4 & 45.5 & 19.3 & 33.1 & 20.3 & 32.3 & 0.413 & 0.760 & 18.4 & 15.0 & 28.6 & 1.2 & 39.8\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]} & 8 & 63.2 & 73.7 & 36.8 & 53.5 & 15.3 & 32.0 & 17.9 & 33.9 & 0.463 & 0.653 & 23.4 & 28.5 & 44.6 & 5.8 & 42.4\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]}\&ICS & 8 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18}
+ & EST{[}$\mathcal{R}${]} & 32 & 30.7 & 41.0 & 5.6 & 31.8 & 1.2 & 98.1 & 0.4 & 91.8 & 0.880 & 1.281 & 2.9 & 0.7 & 8.2 & 0.0 & 7.3\tabularnewline
+ & ACT{[}$\mathcal{R}${]} & 32 & 43.4 & 54.6 & 11.8 & 42.9 & 18.0 & 32.3 & 17.5 & 30.5 & 0.383 & 0.763 & 16.3 & 15.3 & 20.7 & 1.6 & 38.6\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]} & 32 & T:V &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]}\&ICS & 32 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+
+	\midrule
+
+\multirow{9}{*}{SOP} & N/A{[}$\mathcal{R}${]} & N/A & 62.9 & 68.5 & 39.2 & 87.4 & 0.1 & 99.3 & 0.2 & 99.1 & 0.845 & 1.685 & 0.0 & 0.0 & 6.3 & 0.0 & 4.0\tabularnewline
+\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18}
+ & EST{[}$\mathcal{R}${]} & 8 & 52.7 & 58.5 & 14.8 & 85.7 & 6.4 & 69.7 & 3.9 & 64.6 & 0.611 & 1.053 & 3.8 & 2.2 & 10.2 & 1.3 & 19.0\tabularnewline
+ & ACT{[}$\mathcal{R}${]} & 8 & 45.1 & 50.2 & 11.5 & 84.7 & 27.0 & 10.2 & 27.0 & 7.9 & 0.285 & 0.483 & 15.6 & 16.1 & 23.9 & 10.7 & 50.3\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]} & 8 & 49.0 & 54.1 & 12.7 & 85.0 & 29.9 & 4.7 & 31.6 & 3.6 & 0.455 & 0.283 & 39.3 & 40.9 & 38.8 & 43.0 & 61.7\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]}\&ICS & 8 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18}
+ & EST{[}$\mathcal{R}${]} & 32 & 46.0 & 51.4 & 24.5 & 84.7 & 12.5 & 43.6 & 10.6 & 34.8 & 0.468 & 0.830 & 9.6 & 7.2 & 17.3 & 3.8 & 31.7\tabularnewline
+ & ACT{[}$\mathcal{R}${]} & 32 & 47.5 & 52.6 & 25.5 & 84.9 & 24.1 & 10.5 & 22.7 & 9.4 & 0.253 & 0.532 & 21.2 & 21.6 & 27.8 & 15.3 & 50.8\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]} & 32 & T:V &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{SGA}}${]}\&ICS & 32 &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+
+	\bottomrule
+
 \end{tabular}}
 
 \caption{Comparison to State of the art. (sort by sum of R1 and ERS)}
+	\label{tab:sota}
 \end{table*}
