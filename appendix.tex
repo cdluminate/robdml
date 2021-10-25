@@ -16,11 +16,18 @@ on questions that are unsuitable for the main part of manuscript.
 		A: We have tried some other combinations, and they are either not
 		effective, or causing negative effects.
 		%
-		In particular, adding $L_\text{T}(\va, \vp, \vn)$ on top of the
+		In particular, (1) adding $L_\text{T}(\va, \vp, \vn)$ on top of the
 		adversarial training loss
 		$L_\text{T}(\tilde{\va},\tilde{\vp},\tilde{\vn})$ can improve
 		performance on benign examples, but will drastically reduce model
-		robustness.
+		robustness;
+		%
+		(2) $L_\text{T}(\vp, \tilde{\vp}, \va)$ \oo{is duplicated, not necessary.}
+		%
+		(3) $L_\text{T}(\va, \tilde{\va}, \tilde{\vn})$ no distinct difference.
+		%
+		(4) $L_\text{T}(\va, \vp, \tilde{\vn})$ leads to better performance
+		on benign examples, but drastically reduce robustness.
 
 	\item Why not aa~p~ in ICS?
 		less adversarial, further.
