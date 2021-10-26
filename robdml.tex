@@ -706,7 +706,7 @@ are separated from the positve sample $\vp$ by reusing the triplet loss,
 %
 \begin{equation}
 	L_\text{ICS} = \lambda \cdot L_\text{T}(
-	\va, \tilde{\va}, \vp; 0),
+	\va, \phi(\mA + \hat{\vr}_a), \vp; 0),
 \end{equation}
 %
 where $\lambda$ is a constant weight for this loss term,
@@ -726,6 +726,8 @@ on three commonly used DML datasets: CUB-200-2011 (CUB)~\cite{cub200}, Cars-196
 %
 We follow the same experiment setup as the state-of-the-art work~\cite{robrank}
 for ease of comparison.
+
+\input{tab-hsort.tex}
 
 % evaluation: configuration
 
@@ -774,8 +776,6 @@ The comparison with the state-of-the-art DML defense methods will be presented i
 
 \subsection{Selection of Source \& Destination Hardness}
 \label{sec:41}
-
-\input{tab-hsort.tex}
 
 \input{tab-desth.tex}
 
