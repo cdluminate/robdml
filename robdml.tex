@@ -252,7 +252,7 @@ Any function that leads to a relatively weak adversary in the early training
 phase, and a relatively strong adversary in the late training phase belongs to
 this family.
 %
-As an example, we design a ``Simple Graduate Adversary'' (SGA) pseudo-hardness
+As an example, we design a ``Linear Graduate Adversary'' (LGA) pseudo-hardness
 function as the linearly scaled negative triplet margin, incorporating a strong
 assumption that the \emph{destination} hardness should remain Semihard.
 %
@@ -295,7 +295,7 @@ In brief, our contribusions includes:
 		functions for \emph{Hardness Manipulation}, which can balance the
 		training objectives during the training process.
 		%
-		A linear function named Simple Graduate Adversary (SGA) is designed as
+		A linear function named Linear Graduate Adversary (LGA) is designed as
 		an example.
 		%
 	\item \textit{Intra-Class Structure} penalty is proposed to further improve
@@ -638,50 +638,45 @@ of training, hence influence the model performance on benign examples.
 
 % Gradual Adversary
 
-Thus, a desired $H_\mathsf{D}$ should be (1) close to $H_\mathsf{S}$ in the
+Thus, $H_\mathsf{D}$ should be (1) close to $H_\mathsf{S}$ in the
 early training phase (indicated by a large loss value), and (2) clearly higher
 than $H_\mathsf{S}$ in the late training phase (indicated by a small loss
-value).
+value),
+%
+in order to automatically balance the training objectives (\ie, performance
+on benign examples \emph{v.s.} robustness).
 %
 We name the two conditions as ``Graduate Adversary'' for 
-pseudo-hardness functions.
+pseudo-hardness functions, as illustrated in \cref{fig:ga}.
 
-Additionally, if we have a strong prior knowledge on ``how hard the destination
-hardness should be'', the pseudo-hardness function can be independent from any
-benign triplet.
+% Linear graduate adversary
 
-
-% simple graduate adversary
-
-For instance, if we assume that the destination hardness should remain
-in the hardness range of Semihard~\cite{facenet}, the following function
-satisfies the two condictions of Gradual Adversary, dubbed
-``Simple Gradual Adversary'' (SGA):
+As an example, we propose a ``Linear Gradual Adversary'' (LGA) pseudo-hardness
+function that is independent to any benign triplets, incorporating an
+assumption that $H_\mathsf{D}$ should remain Semihard~\cite{facenet}, as
+follows:
 %
 \begin{equation}
 	%
-	g_\mathsf{SGA}(\bar{\ell}_{t-1}) =
-	-\gamma \cdot \bar{\ell}_{t-1} ~ \in [-\gamma,0].
+	g_\mathsf{LGA}(\bar{\ell}_{t-1}) = -\gamma \cdot \bar{\ell}_{t-1} ~ \in
+	[-\gamma,0].
 	%
 \end{equation}
 %
-And the adversarial examples from $\text{HM}(H_\mathsf{S},g_\mathsf{SGA})$
-can be used for adversarial training.
+And the training objectives will be automatically balanced in
+$\text{HM}[H_\mathsf{S},g_\mathsf{LGA}]$.
 %
-The design of this function will be empirically supported in the experiments
-section.
+The design choice of LGA is empirically supported by experimental observations.
 %
-\cref{fig:ga}
+We leave more complex pseudo-hardness functions for future study.
 %
-The exploration of other possible pseudo-hardness functions is omitted 
-for simplicity.
 
 \subsection{Intra-Class Structure}
 \label{sec:33}
 
 % motivation
 
-During adversarial training, the adversarial counterpart of each given sample
+During adversarial training with HM, the adversarial counterpart of each given sample
 triplet is fed to the model, and the triplet loss will enforce a good
 \emph{inter-class} structure.
 %
