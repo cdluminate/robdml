@@ -763,14 +763,38 @@ performance of white-box attack can be regarded as the upper bound of the
 black-box attacks, and thus a model that is empirically robust to the collection
 of white-box attacks is expected to be robust in general.
 
-\oo{Concretely, the collection of attack for computing ERS includes.}
+Concretely, the collection of attacks for ERS includes:
 %
-Further details can be found in the supplementary.
+(1) CA+, CA-, QA+ and QA-~\cite{advrank}, which move some selected candidates
+towards the topmost or bottommost part of ranking list;
+%
+(2) TMA~[], which increases the cosine similarity between two selected samples;
+%
+(3) ES~[][], which moves the embedding of a sample off its original position as
+distant as possible;
+%
+(4) LTM~[], which perturbs the ranking result by minimizing the distance of
+unmatched pairs while maximizing the distance of matched pairs;
+%
+(5) GTM~\cite{robrank}, which minimizes the distance between query and the
+closest unmatching sample.
+%
+(6) GTT~\cite{robrank}, aims to move the top-$1$ candidate out of the top-$4$
+retrieval results, which is simplified from [].
+%
+The setup of all the attacks for robustness evaluation are unchanged from
+\cite{robrank} for fair comparison.
+%
+Further details can be found in \cite{robrank} and the supplementary.
 
+\begin{comment}
+%
 In this section, we first carry out parameter search for the components of the
 proposed method, in order to illustrate their effectiveness.
 %
 The comparison with the state-of-the-art DML defense methods will be presented in the end.
+%
+\end{comment}
 
 \subsection{Selection of Source \& Destination Hardness}
 \label{sec:41}
