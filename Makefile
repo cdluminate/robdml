@@ -22,6 +22,8 @@ introplot.pdf:
 
 hmillust.pdf:
 	inkscape -o hmillust.pdf hmillust.svg
+	pdfcrop hmillust.pdf
+	mv hmillust-crop.pdf hmillust.pdf
 
 gaillust.pdf:
 	inkscape -o gaillust.pdf gaillust.svg

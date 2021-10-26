@@ -431,16 +431,10 @@ robustness, and performance on benign examples.
 \subsection{Hardness Manipulation}
 \label{sec:31}
 
-\begin{figure}
-	\includegraphics[width=\columnwidth]{hmillust.pdf}
-	\caption{Illustration of Hardness Manipulation.}
-	\label{fig:hm}
-\end{figure}
-
 % define hardness
 
 Given an image triplet ($\mA$, $\mP$, $\mN$) sampled with a certain sampling
-strategy (\eg, semi-hard~\cite{facenet}) within a mini-batch, we define its
+strategy (\eg, Random) within a mini-batch, we define its
 \emph{hardness} as a scalar:
 %
 \begin{equation}
@@ -495,6 +489,14 @@ $L_\text{T}(\phi(\mA+\hat{\vr}_a), \phi(\mP+\hat{\vr}_p),
 %
 We abbreviate the adversarial training with adversarial examples created through
 this way as $\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ in the following text.
+%
+And the overall procedure of HM is illustrated in \cref{fig:hm}.
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{hmillust.pdf}
+	\caption{Illustration of Hardness Manipulation.}
+	\label{fig:hm}
+\end{figure}
 
 % strong adversary
 
@@ -533,71 +535,54 @@ $H_\mathsf{D}$.
 This means the model learns from an efficient adversary during adversarial
 training with HM.
 
+Since the same $\Delta\vr$ can be used for both minimizing the HM objective
+and maximizing the triplet loss, one potential advantage of HM is that
+the gradients during the training process can be reused for creating
+adversarial examples for much faster adversarial training, according to 
+Free Adversarial Training~\cite{freeat}.
+%
+We leave this for future exploration.
 
-Instead of directly maximizing the source hardness, we propose to stop the
-maximization process when the adversarial examples reach a certain level of
-hardness in order to avoid model collapse.
+% selection of destination hardness
 
-\oo{uses gradient for maximization. Maxim is $HM(H_\mathsf{S}, 2)$.}
+\textbf{Destination Hardness} $H_\mathsf{D}$.
+%
+$\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ is a very flexible method as various
+\emph{destination} hardness $H_\mathsf{D}$ can be used, \eg, a constant, the
+hardness of another benign triplet, or even a pseudo-hardness function.
+%
+The case of maximizing the triplet loss is equivalent to
+$\text{HM}[H_\mathsf{S},2+\gamma]$, where $2+\gamma$ is the 
+upperbound of triplet loss.
 
-In the traditional min-max adversarial training setting~\cite{madry}, the inner
-``max'' problem should maximize $H(X_a,X_p^S,X_n^S)$ and hence maximize the triplet
-loss.
+As pushing $\tilde{H}_\mathsf{S}$ towards the upperbound will easily lead to
+model collapse, a valid $H_D\mathsf{D}$ should be choosed within the interval
+$[H_\mathsf{S},2+\gamma]$ without rendering model collapse.
+%
+Thus, intuitively, $H_\mathsf{D}$ can be the hardness of another benign triplet
+(with the same anchor) sampled with a strategy with a higher hardness
+expectation, \ie, $E[H_\mathsf{D}] > E[H_\mathsf{S}]$.
+%
+Or at least the $\text{Var}[H_\mathsf{D}]$ of such sampling strategy has to be
+large enough in order to create valid adversarial examples.
+%
+For instance, $H_\mathsf{D}$ can be the hardness of a Semihard~\cite{facenet}
+triplet when the \emph{source} triplet is sampled with Random sampler.
+%
+Predictably, the model performance will be significantly influenced by the
+triplet sampling strategies we chose for $H_\mathsf{D}$ in this case.
+%
+For convenience of further discussion, we denote the hardness of a Random
+triplet, Semihard triplet, and Softhard triplet as $\mathcal{R}$,
+$\mathcal{M}$, $\mathcal{S}$, respectively.
 
-In this paper, we argue that the hardness of triplet matters in adversarial
-training for DML.
-%
-The model does not collapse with EST or ACT because the expectation of hardness,
-\ie, $E[H]$ will be close to zero.
-%
-While the variance $\text{Var}[H]$ for EST is higher, and that for ACT is lower.
+If we have a strong prior knowledge on what the \emph{destination} hardness
+should be, we can even use a pseudo-hardness function $g(\cdot)$, which is a
+customized scalar function.
 
-\cref{fig:hm}
-%
-Note, it is not expected to lower the hardness during the attack, namely
-$E[H_\mathsf{D}]$ should be greater or equal to $E[H_\mathsf{S}]$.
-%
-%
 
-%
-Based on the same anchor image $X_a$, we sample another positive image $X_p^D$
-and negative image $X_n^D$ with a different triplet sampling strategy, and
-we call its hardness as ``destination hardness'', denoted as $H_\mathsf{D}$.
 
-Note, the design of HM is flexible, and not coupled with specific sampling
-strategy.
-%
-In other words, any existing or future triplet sampling strategy can
-be adopted in HM.
-%
-or even a pseudo hardness function $g(\cdot)$ as long as we have a strong
-prior knowledge on what the destination hardness should be.
 
-\oo{extend: fat}
-training process of a regular DML model, but existing defense methods are
-incompatible to acceleration methods like Free Adversarial
-Training~\cite{freeat}.
-
-\oo{[4. Free Adversarial Metric Learining]}
-Extension of FAT to adversarial deep metric learning.
-
-%
-Assume there are two data triplets, namely ``source triplet'' and ``destination
-triplet'' with the same anchor example, but sampled using different triplet
-sampling strategies.
-%
-And the ``destination triplet'' is expected to result in a higher loss value
-than another.
-%
-HM aims at creating adversarial examples of the ``source triplet'', that would
-increase the corresponding loss value until that of the unperturbed
-``destination triplet''.
-%
-This can also be interpreted as maximizing the loss value but ``stops early''
-at a certain point.
-%
-The resulting perturbed ``source triplet'' can be used for adversarial training
-of the model.
 \subsection{Gradual Adversary}
 \label{sec:32}
 
