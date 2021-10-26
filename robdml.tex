@@ -595,31 +595,28 @@ customized scalar function.
 % motivation of GA : late phase
 
 Even if $H_\mathsf{D}$ is calucated from another triplet harder than the
-\emph{source} triplet, the adversary may become weak in the late phase of
-training.
+\emph{source} triplet, the adversarial example may become weak in the late
+phase of training.
 %
-The training process of the model aims to reduce the expectation of triplet loss
-$E[L_\text{T}]$ to zero over the distribution of sample triplets,
-and thus the $E[H]$ of any given triplet will eventually tend to $-\gamma$,
-reducing the hardness of adversarial triplets from HM.
+The optimizer aims to reduce the expectation of triplet
+loss $E[L_\text{T}]$ to zero as possible over the distribution of sample triplets, and thus
+the $E[H]$ of any given triplet will tend to $-\gamma$, reducing the
+hardness of adversarial triplets from HM.
+%
+We speculate this will lower the level of robustness the model could reach.
 
-\cref{fig:ga}
 % hardness boosting
 
-Such deficiency in the late training process can be alleviated with a
-pseudo-hardness function that boosts the destination hardness when the loss
-value is low.
+Intuitively, such deficiency can be alleviated with a \emph{pseudo-hardness}
+function that slightly increase the value of $H_\mathsf{D}$ in the late phase
+of training.
 %
 Denoting the loss value from the previous training iteration as $\ell_{t-1}$,
 we first normalize it into $[0,1]$ as $\bar{\ell}_{t-1}=\min(u,\ell_{t-1})/u$,
-where $u$ is a manually specified parameter.
+where $u$ is a manually specified constant.
 %
-Note, $u$ is much less than the theoretical upperbound of the loss function,
-in order to avoid excessive hardness boost in the functions introduced below.
-%
-Then the expectation of destination hardness can be linearly shifted (boosted)
-by a scaled constant by a ``hardness boosting'' pseudo-hardness
-function, \ie,
+Then we can linearly shift the $E[H_\mathsf{D}]$ by a scaled constant $\xi$,
+\ie,
 %
 \begin{equation}
 	%
@@ -628,8 +625,10 @@ function, \ie,
 	%
 \end{equation}
 %
-And the adversarial examples from $\text{HM}(H_\mathsf{S},g_\mathsf{B}(H_\mathsf{D}))$
-can be used for training.
+The deficiency can be alleviated in
+$\text{HM}[H_\mathsf{S},g_\mathsf{B}(H_\mathsf{D})]$.
+
+\cref{fig:ga}
 
 % motivation of GA: early phase
 
@@ -758,6 +757,9 @@ Since adversarial training is not gradient masking~\cite{obfuscated}, the
 performance of white-box attack can be regarded as the upper bound of the
 black-box attacks, and thus a model that is empirically robust to the collection
 of white-box attacks is expected to be robust in general.
+
+Note, $u$ is much less than the theoretical upperbound of the loss function,
+in order to avoid excessive hardness boost in the functions introduced below.
 
 \oo{Concretely, the collection of attack for computing ERS includes.}
 %
