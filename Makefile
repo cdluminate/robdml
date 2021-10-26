@@ -2,7 +2,7 @@ LATEX:=pdflatex
 BIBTEX:=bibtex
 TEX:=robdml.tex
 
-PDFS:= introplot.pdf hmillust.pdf gaillust.pdf
+PDFS:= introplot.pdf hmillust.pdf gaillust.pdf icsapn.pdf
 
 robdml: $(PDFS)
 	$(LATEX) $(TEX)
@@ -27,3 +27,6 @@ hmillust.pdf:
 
 gaillust.pdf:
 	inkscape -o gaillust.pdf gaillust.svg
+
+icsapn.pdf:
+	inkscape -o icsapn.pdf icsapn.svg

@@ -674,6 +674,12 @@ We leave more complex pseudo-hardness functions for future study.
 \subsection{Intra-Class Structure}
 \label{sec:33}
 
+\begin{figure}[t]
+	\includegraphics[width=0.6\columnwidth]{icsapn.pdf}
+	\caption{Intra-Class Structure.}
+	\label{fig:ics}
+\end{figure}
+
 % motivation
 
 During adversarial training with HM, the adversarial counterpart of each given sample
@@ -691,7 +697,7 @@ rankings of samples in the same class~\cite{advrank}.
 % Solution
 
 We propose an additional loss function term to enforce such \emph{intra-class}
-structure, as shown in \oo{Fig.~[].}
+structure, as shown in \cref{fig:ics}.
 %
 Specifically, the anchor $\va$ and its adversarial counterpart $\tilde{\va}$
 are separated from the positve sample $\vp$ by reusing the triplet loss,
