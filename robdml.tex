@@ -556,7 +556,7 @@ $\text{HM}[H_\mathsf{S},2+\gamma]$, where $2+\gamma$ is the
 upperbound of triplet loss.
 
 As pushing $\tilde{H}_\mathsf{S}$ towards the upperbound will easily lead to
-model collapse, a valid $H_D\mathsf{D}$ should be choosed within the interval
+model collapse, a valid $H_\mathsf{D}$ should be choosed within the interval
 $[H_\mathsf{S},2+\gamma]$ without rendering model collapse.
 %
 Thus, intuitively, $H_\mathsf{D}$ can be the hardness of another benign triplet
@@ -577,9 +577,8 @@ triplet, Semihard triplet, and Softhard triplet as $\mathcal{R}$,
 $\mathcal{M}$, $\mathcal{S}$, respectively.
 
 If we have a strong prior knowledge on what the \emph{destination} hardness
-should be, we can even use a pseudo-hardness function $g(\cdot)$, which is a
+should be, we can even use a pseudo-hardness function $g(\cdot)$, \ie, a
 customized scalar function.
-
 
 
 
@@ -592,25 +591,19 @@ customized scalar function.
 	\label{fig:ga}
 \end{figure}
 
-\cref{fig:ga}
 
 % motivation of GA : late phase
 
-When benign triplets are used as reference for destination hardness, the
-adversary (\ie, hardness of adversarial triplets) could gradually become weaker
-than it should be in the late phase of training.
+Even if $H_\mathsf{D}$ is calucated from another triplet harder than the
+\emph{source} triplet, the adversary may become weak in the late phase of
+training.
 %
-During the training process of a DML model, the expectation of the triplet loss
-$E[L_\text{T}(\cdots)]$ on benign examples is gradually decreasing
-(with the lower bound being zero).
-%
-The corresponding expectation of hardness $E[H(\cdots)]$ will
-decrease as well (with the lower bound being $-\gamma$).
-%
-As a result, $E[H_\mathsf{D}-H_\mathsf{S}]$ will gradually tend to zero,
-indicating a gradually decreasing strength of attack, and inefficiency in
-learning from a strong adversary.
+The training process of the model aims to reduce the expectation of triplet loss
+$E[L_\text{T}]$ to zero over the distribution of sample triplets,
+and thus the $E[H]$ of any given triplet will eventually tend to $-\gamma$,
+reducing the hardness of adversarial triplets from HM.
 
+\cref{fig:ga}
 % hardness boosting
 
 Such deficiency in the late training process can be alleviated with a
