@@ -745,9 +745,10 @@ Adversarial examples are created under the perturbation budget
 $\varepsilon{=}8/255$ in infinity norm, using PGD~\cite{madry} with step size
 $\alpha{=}1/255$ and a default maximum step number $\eta{=}8$.
 %
-The parameter $u$ is equal to $\gamma$, much less than the upperbound of the
-loss function, in order to avoid excessive hardness boost in pseudo-hardness
-functions $g_\mathsf{B}$ and $g_\mathsf{LGA}$.
+The parameter $u$ is equal to $\gamma$, much less than the loss upperbound,
+in order to avoid excessive hardness boost in $g_\mathsf{B}$ and $g_\mathsf{LGA}$.
+%
+Parameter $\lambda$ in $L_\text{ICS}$ is $0.5$ by default.
 
 The model performance on benign (\ie, unperturbed) examples is measured in
 Recall@1 (R@1), Recall@2 (R@2), mAP and NMI
