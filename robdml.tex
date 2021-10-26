@@ -628,30 +628,28 @@ Then we can linearly shift the $E[H_\mathsf{D}]$ by a scaled constant $\xi$,
 The deficiency can be alleviated in
 $\text{HM}[H_\mathsf{S},g_\mathsf{B}(H_\mathsf{D})]$.
 
-\cref{fig:ga}
 
 % motivation of GA: early phase
 
-However, while the destination hardness is boosted in the late phase of
-training, the adversarial examples may still hamper the learning of a good
-embedding space in the early phase.
-%
-At this point, we argue that learning from a strong adversary in the early
-training phase (\ie, when the embedding space is not ``in-good-shape'') hampers the
-generalization on benign examples.
+Apart from the deficiency in the late phase of training, we speculate that
+relatively strong adversarial examples may hinder the model from 
+learning good embedding space for the benign examples in the very early phase
+of training, hence influence the model performance on benign examples.
 
 % Gradual Adversary
 
-In other words, the desired destination hardness should be (1) relatively weak
-in the early training phase, and (2) relatively strong in the late training
-phase.
+Thus, a desired $H_\mathsf{D}$ should be (1) close to $H_\mathsf{S}$ in the
+early training phase (indicated by a large loss value), and (2) clearly higher
+than $H_\mathsf{S}$ in the late training phase (indicated by a small loss
+value).
 %
-We name the family of pseudo-hardness functions that fulfills the two
-conditions as ``Graduate Adversary''.
-%
+We name the two conditions as ``Graduate Adversary'' for 
+pseudo-hardness functions.
+
 Additionally, if we have a strong prior knowledge on ``how hard the destination
-hardness should be'', the pseudo-hardness function can be independent from
-any benign triplet.
+hardness should be'', the pseudo-hardness function can be independent from any
+benign triplet.
+
 
 % simple graduate adversary
 
@@ -672,6 +670,8 @@ can be used for adversarial training.
 %
 The design of this function will be empirically supported in the experiments
 section.
+%
+\cref{fig:ga}
 %
 The exploration of other possible pseudo-hardness functions is omitted 
 for simplicity.
