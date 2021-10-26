@@ -85,6 +85,17 @@ Visualize robustness through the image retrieval task.
 \subsection{To be investigated}
 
 \begin{itemize}
+
+	\item [\xmark] Multicard DDP and single card training leads to different
+		performance, regardless of the exact model of GPUs.
+		%
+		According to the observation, single card training leadss to a lower
+		recall performance and a higher robustness score.
+		%
+		More efficient? This should be ok.
+		%
+		But be careful when doing ablation studies as this will greatly
+		interfere with the conclusions.
 	
 	\item [T] Sam's idea is interesting. By incorporating the idea of
 		on-manifold adversarial example to adversarial training, the
