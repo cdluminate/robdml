@@ -14518,7 +14518,7 @@ arraystretch}{1.1}
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="17" columns="18">
+<lyxtabular version="3" rows="18" columns="18">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -16315,7 +16315,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+37.1
 \end_layout
 
 \end_inset
@@ -16324,7 +16324,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+48.0
 \end_layout
 
 \end_inset
@@ -16333,7 +16333,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+22.1
 \end_layout
 
 \end_inset
@@ -16342,7 +16342,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+49.3
 \end_layout
 
 \end_inset
@@ -16351,7 +16351,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.0
 \end_layout
 
 \end_inset
@@ -16360,7 +16360,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+45.1
 \end_layout
 
 \end_inset
@@ -16369,7 +16369,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.9
 \end_layout
 
 \end_inset
@@ -16378,7 +16378,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+38.3
 \end_layout
 
 \end_inset
@@ -16387,7 +16387,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.696
 \end_layout
 
 \end_inset
@@ -16396,7 +16396,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.640
 \end_layout
 
 \end_inset
@@ -16405,7 +16405,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+17.3
 \end_layout
 
 \end_inset
@@ -16414,7 +16414,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.2
 \end_layout
 
 \end_inset
@@ -16423,7 +16423,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+27.1
 \end_layout
 
 \end_inset
@@ -16432,7 +16432,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1.9
 \end_layout
 
 \end_inset
@@ -16441,7 +16441,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+32.6
 \end_layout
 
 \end_inset
@@ -16938,6 +16938,170 @@ R:V
 
 \begin_layout Plain Layout
 36.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5 v4 R:V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
