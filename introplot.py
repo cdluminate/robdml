@@ -6,6 +6,8 @@ c = rich.get_console()
 plt.rcParams['font.family'] = 'serif'
 plt.rcParams['font.serif'] = 'FreeSerif'
 plt.rcParams['font.size'] = 15
+plt.rcParams['text.usetex'] = False
+plt.rcParams['mathtext.fallback'] = 'cm'
 
 ag = argparse.ArgumentParser()
 ag.add_argument('-w', '--whichone', type=int, required=True)
@@ -41,6 +43,20 @@ HM_SM = {
         (35.7, 34.8, 29.6, 22.1, 11.6),
         ),
 }
+HM_SSGA = {
+    'HM[S,SGA]': ( # [freeze]
+        (47.5, 42.7, 38.0, 37.0, 36.5),
+        (3.0, 5.0, 9.0, 17.0, 33.0),
+        (11.7, 20.8, 32.4, 34.5, 35.9),
+        ),
+}
+HM_SHM = {
+    'HM[S,-r/2]': ( # [freeze]
+        (44.5, 40.0, 36.8, 35.2, 34.7),
+        (3.0, 5.0, 9.0, 17.0, 33.0),
+        (12.4, 24.7, 33.8, 36.8, 37.0),
+        ),
+}
 
 if whichone == 0:
     # all
@@ -49,32 +65,12 @@ if whichone == 0:
         **ACT_S,
         **HM_RM,
         **HM_SM,
-        'HM(S,SGA)': ( # [freeze]
-            (47.5, 42.7, 38.0, 37.0, 36.5),
-            (3.0, 5.0, 9.0, 17.0, 33.0),
-            (11.7, 20.8, 32.4, 34.5, 35.9),
-            ),
-        'HM(S,-r/2)': ( # [freeze]
-            (44.5, 40.0, 36.8, 35.2, 34.7),
-            (3.0, 5.0, 9.0, 17.0, 33.0),
-            (12.4, 24.7, 33.8, 36.8, 37.0),
-            ),
     }
 elif whichone == 1:
     # fig 1
     data = {
         **ACT_R,
         **ACT_S,
-        'HM[S,SGA]': ( # [freeze]
-            (47.5, 42.7, 38.0, 37.0, 36.5),
-            (3.0, 5.0, 9.0, 17.0, 33.0),
-            (11.7, 20.8, 32.4, 34.5, 35.9),
-            ),
-        'HM[S,-r/2]': ( # [freeze]
-            (44.5, 40.0, 36.8, 35.2, 34.7),
-            (3.0, 5.0, 9.0, 17.0, 33.0),
-            (12.4, 24.7, 33.8, 36.8, 37.0),
-            ),
     }
 elif whichone == 2:
     # effectiveness of HM
@@ -83,6 +79,15 @@ elif whichone == 2:
         **ACT_S,
         **HM_RM,
         **HM_SM,
+    }
+elif whichone == 3:
+    # effectiveness of GA
+    data = {
+        **ACT_R,
+        **ACT_S,
+        **HM_SM,
+        **HM_SHM,
+        **HM_SSGA,
     }
 else:
     raise ValueError
@@ -108,6 +113,16 @@ styledict = {
         'linestyle': '-.',
         'color': 'tab:red',
     },
+    'HM[S,SGA]': {
+        'marker': 'h',
+        'linestyle': '-',
+        'color': 'tab:purple',
+    },
+    'HM[S,-r/2]': {
+        'marker': '+',
+        'linestyle': '-.',
+        'color': 'tab:gray',
+    },
 }
 
 plt.figure(figsize=[10.8, 4.7])
@@ -118,8 +133,6 @@ for (name, (r1, cost, ers)) in data.items():
 
     if name in styledict:
         plt.plot(cost, ers, **(styledict[name]))
-    elif name == 'HM(S,SGA)':
-        plt.plot(cost, ers, marker='h', linestyle='-', color='deeppink')
     else:
         plt.plot(cost, ers, marker='+', linestyle='-.', color='k')
     #if isinstance(cost, float):
@@ -145,6 +158,14 @@ if whichone == 2:
         'HM[$\mathcal{R},\mathcal{M}$]',
         'HM[$\mathcal{S},\mathcal{M}$]'],
         bbox_to_anchor=(0.55,0.5))
+if whichone == 3:
+    ax.legend(['ACT[$\mathcal{R}$]',
+        'ACT[$\mathcal{S}$]',
+        'HM[$\mathcal{S},\mathcal{M}$]',
+        'HM[$\mathcal{S},-\gamma/2$]',
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]',
+        ],
+        bbox_to_anchor=(0.50,0.57))
 
 ax = plt.subplot(1,2,2)
 for (name, (r1, cost, ers)) in data.items():
@@ -152,8 +173,6 @@ for (name, (r1, cost, ers)) in data.items():
 
     if name in styledict:
         plt.plot(r1, ers, **(styledict[name]))
-    elif name == 'HM(S,SGA)':
-        plt.plot(r1, ers, f'h-', color='deeppink')
     else:
         plt.plot(r1, ers, f'-o', color='k')
     #if isinstance(ers, float):
@@ -179,11 +198,22 @@ if whichone == 2:
         'HM[$\mathcal{R},\mathcal{M}$]',
         'HM[$\mathcal{S},\mathcal{M}$]'],
         bbox_to_anchor=(0.55,0.5))
+if whichone == 3:
+    ax.legend(['ACT[$\mathcal{R}$]',
+        'ACT[$\mathcal{S}$]',
+        'HM[$\mathcal{S},\mathcal{M}$]',
+        'HM[$\mathcal{S},-\gamma/2$]',
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]',
+        ],
+        loc='lower right',
+        bbox_to_anchor=(0.999,0.1))
 
 plt.tight_layout(pad=1.0)
 #plt.show()
 
 if whichone == 2:
     plt.savefig('fighmeff.svg')
+elif whichone == 3:
+    plt.savefig('figgaeff.svg')
 else:
     plt.savefig('introplot.svg')
