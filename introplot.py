@@ -71,6 +71,7 @@ elif whichone == 1:
     data = {
         **ACT_R,
         **ACT_S,
+        **HM_SSGA,
     }
 elif whichone == 2:
     # effectiveness of HM
@@ -97,41 +98,49 @@ styledict = {
         'marker': '.',
         'linestyle': ':',
         'color': 'tab:cyan',
+        'linewidth': 2.0,
     },
     'ACT[S]': {
         'marker': '.',
         'linestyle': ':',
         'color': 'tab:orange',
+        'linewidth': 2.0,
     },
     'HM[R,M]': {
         'marker': 'v',
         'linestyle': '-.',
         'color': 'tab:blue',
+        'linewidth': 2.0,
     },
     'HM[S,M]': {
         'marker': '^',
         'linestyle': '-.',
         'color': 'tab:red',
+        'linewidth': 2.0,
     },
     'HM[S,SGA]': {
         'marker': 'h',
         'linestyle': '-',
         'color': 'tab:purple',
+        'linewidth': 2.0,
     },
     'HM[S,-r/2]': {
         'marker': '+',
         'linestyle': '-.',
         'color': 'tab:gray',
+        'linewidth': 2.0,
     },
     'EST[R]': {
         'marker': 'd',
         'linestyle': ':',
         'color': 'tab:gray',
+        'linewidth': 2.0,
     },
     'HM[S,SGA]ICS': {
         'marker': 'o',
         'linestyle': '-.',
         'color': 'crimson',
+        'linewidth': 2.0,
     },
 }
 
@@ -162,6 +171,10 @@ ax.annotate('↘ Worse', xy=(0.75, 0.06), xycoords='axes fraction',
         bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
         size=17)
 
+if whichone == 1:
+    ax.legend(['ACT[$\mathcal{R}$]',
+        'ACT[$\mathcal{S}$]',
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]'])
 if whichone == 2:
     ax.legend(['ACT[$\mathcal{R}$]',
         'ACT[$\mathcal{S}$]',
@@ -202,6 +215,10 @@ ax.annotate('↘ Worse', xy=(0.75, 0.06), xycoords='axes fraction',
         bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="k", lw=2),
         size=17)
 
+if whichone == 1:
+    ax.legend(['ACT[$\mathcal{R}$]',
+        'ACT[$\mathcal{S}$]',
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]'])
 if whichone == 2:
     ax.legend(['ACT[$\mathcal{R}$]',
         'ACT[$\mathcal{S}$]',
@@ -221,6 +238,8 @@ if whichone == 3:
 plt.tight_layout(pad=1.0)
 #plt.show()
 
+if whichone == 1:
+    plt.savefig('introplot.svg')
 if whichone == 2:
     plt.savefig('fighmeff.svg')
 elif whichone == 3:
