@@ -2,7 +2,7 @@ LATEX:=pdflatex
 BIBTEX:=bibtex
 TEX:=robdml.tex
 
-PDFS:= introplot.pdf hmillust.pdf gaillust.pdf icsapn.pdf
+PDFS:= hmillust.pdf gaillust.pdf icsapn.pdf fighmeff.pdf figgaeff.pdf
 
 robdml: $(PDFS)
 	$(LATEX) $(TEX)
@@ -30,3 +30,15 @@ gaillust.pdf:
 
 icsapn.pdf:
 	inkscape -o icsapn.pdf icsapn.svg
+
+fighmeff.pdf:
+	python3 introplot.py -w 2
+	inkscape -o fighmeff.pdf fighmeff.svg
+	pdfcrop fighmeff.pdf
+	mv fighmeff-crop.pdf fighmeff.pdf
+
+figgaeff.pdf:
+	python3 introplot.py -w 3
+	inkscape -o figgaeff.pdf figgaeff.svg
+	pdfcrop figgaeff.pdf
+	mv figgaeff-crop.pdf figgaeff.pdf
