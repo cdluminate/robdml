@@ -123,6 +123,16 @@ styledict = {
         'linestyle': '-.',
         'color': 'tab:gray',
     },
+    'EST[R]': {
+        'marker': 'd',
+        'linestyle': ':',
+        'color': 'tab:gray',
+    },
+    'HM[S,SGA]ICS': {
+        'marker': 'o',
+        'linestyle': '-.',
+        'color': 'crimson',
+    },
 }
 
 plt.figure(figsize=[10.8, 4.7])
