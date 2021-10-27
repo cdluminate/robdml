@@ -136,18 +136,12 @@ styledict = {
     'HM[S,SGA]': {
         'marker': 'h',
         'linestyle': '-',
-        'color': 'tab:purple',
+        'color': 'darkviolet',
         'linewidth': 2.0,
     },
     'HM[S,-r/2]': {
         'marker': '+',
         'linestyle': '-.',
-        'color': 'tab:gray',
-        'linewidth': 2.0,
-    },
-    'EST[R]': {
-        'marker': 'd',
-        'linestyle': ':',
         'color': 'tab:gray',
         'linewidth': 2.0,
     },
@@ -199,7 +193,9 @@ if whichone == 2:
         'ACT[$\mathcal{S}$]',
         'HM[$\mathcal{R},\mathcal{M}$]',
         'HM[$\mathcal{S},\mathcal{M}$]'],
-        bbox_to_anchor=(0.55,0.5))
+        bbox_to_anchor=(0.55,0.5),
+        labelcolor='linecolor',
+        )
 if whichone == 3:
     ax.legend(['ACT[$\mathcal{R}$]',
         'ACT[$\mathcal{S}$]',
@@ -207,7 +203,18 @@ if whichone == 3:
         'HM[$\mathcal{S},-\gamma/2$]',
         'HM[$\mathcal{S},g_\mathsf{SGA}$]',
         ],
-        bbox_to_anchor=(0.50,0.57))
+        bbox_to_anchor=(0.50,0.57),
+        labelcolor='linecolor',
+        )
+if whichone == 4:
+    ax.legend(['ACT[$\mathcal{R}$]',
+        'ACT[$\mathcal{S}$]',
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]',
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]&ICS'],
+        loc='lower right',
+        bbox_to_anchor=(0.99, 0.12),
+        labelcolor='linecolor',
+        )
 
 ax = plt.subplot(1,2,2)
 for (name, (r1, cost, ers)) in data.items():
@@ -247,7 +254,9 @@ if whichone == 2:
         'ACT[$\mathcal{S}$]',
         'HM[$\mathcal{R},\mathcal{M}$]',
         'HM[$\mathcal{S},\mathcal{M}$]'],
-        bbox_to_anchor=(0.55,0.5))
+        bbox_to_anchor=(0.55,0.5),
+        labelcolor='linecolor',
+        )
 if whichone == 3:
     ax.legend(['ACT[$\mathcal{R}$]',
         'ACT[$\mathcal{S}$]',
@@ -256,16 +265,29 @@ if whichone == 3:
         'HM[$\mathcal{S},g_\mathsf{SGA}$]',
         ],
         loc='lower right',
-        bbox_to_anchor=(0.999,0.1))
+        bbox_to_anchor=(0.999,0.1),
+        labelcolor='linecolor',
+        )
+if whichone == 4:
+    ax.legend(['ACT[$\mathcal{R}$]',
+        'ACT[$\mathcal{S}$]',
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]',
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]&ICS'],
+        loc='lower right',
+        bbox_to_anchor=(0.99, 0.12),
+        labelcolor='linecolor',
+        )
 
 plt.tight_layout(pad=1.0)
 #plt.show()
 
 if whichone == 1:
     plt.savefig('introplot.svg')
-if whichone == 2:
+elif whichone == 2:
     plt.savefig('fighmeff.svg')
 elif whichone == 3:
     plt.savefig('figgaeff.svg')
+elif whichone == 4:
+    plt.savefig('figics.svg')
 else:
     plt.savefig('introplot.svg')

@@ -2,7 +2,7 @@ LATEX:=pdflatex
 BIBTEX:=bibtex
 TEX:=robdml.tex
 
-PDFS:= hmillust.pdf gaillust.pdf icsapn.pdf fighmeff.pdf figgaeff.pdf sotaplot.pdf introplot.pdf
+PDFS:= hmillust.pdf gaillust.pdf icsapn.pdf fighmeff.pdf figgaeff.pdf sotaplot.pdf introplot.pdf figics.pdf
 
 robdml: $(PDFS)
 	$(LATEX) $(TEX)
@@ -48,3 +48,9 @@ sotaplot.pdf:
 	inkscape -o sotaplot.pdf sotaplot.svg
 	pdfcrop sotaplot.pdf
 	mv sotaplot-crop.pdf sotaplot.pdf
+
+figics.pdf:
+	python3 introplot.py -w 4
+	inkscape -o figics.pdf figics.svg
+	pdfcrop figics.pdf
+	mv figics-crop.pdf figics.pdf
