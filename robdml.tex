@@ -30,6 +30,7 @@
 \usepackage{colortbl}
 \usepackage{soul}
 \usepackage{comment}
+\usepackage{todonotes}
 
 %\DeclareMathOperator*{\argmax}{arg\,max}
 %\DeclareMathOperator*{\argmin}{arg\,min}
@@ -822,32 +823,24 @@ portion of the given triplets should be increased.
 %
 Thus, we first sort the existing samplers, namely Random,
 Semihard~\cite{facenet}, Softhard~\cite{revisiting},
-Distance-weighted~\cite{distance}, and the within-batch Hardest negative
-sampler, based on the approximated mean hardness of their outputs, as shown
-in~\cref{tab:hsort}.
+Distance-weighted~\cite{distance} (\emph{abbr}., Distance), and the
+within-batch Hardest negative sampler, based on the approximated mean hardness
+of their outputs, as shown in~\cref{tab:hsort}.
 %
-Then we adversarially train models on the CUB dataset with all combinations
-respectively, and summarize the R@1 and ERS performance in \cref{tab:desth}.
+Then we adversarially train models on CUB dataset with all combinations
+respectively, and summarize the R@1 and ERS in \cref{tab:desth}.
 
 % 2. table: left and right
 
-Recall that triplet-based model is already prone to collapse with very hard
-examples, even if they are unperturbed.
-%
-Similarly, the model is expected to collapse with excessively hard adversarial
-examples as well.
-%
 As shown in the last three columns of \cref{tab:desth}, almost all combinations
-will result in model collapse as long as the destination hardness is softhard,
-distance, or hardest.
+lead to model collapse as long as $H_\mathsf{D}$ is calculated from a Softhard,
+Distance, or Hardest triplet.
 %
-The only exception is the combination of distance and hardest.
-%
-We empirically observe that the $E[H]$ of distance and hardest sampling are
-very close to each other, which means the attack will be rather weak.
-%
-The model does not collapse in this case, but the robustness gain is negligible
-as well.
+Due to the small $E[H_\mathsf{D}-H_\mathsf{S}]$ in the combination of Distance
+and Hardest triplets, the adversarial examples will be weak and the model does
+collapse, but the robustness gain is negligible.
+
+\todo{Rev}
 
 % 3. table: upper and lower
 
@@ -963,6 +956,7 @@ Number of PGD Steps $\eta$.
 	\includegraphics[width=\columnwidth]{sotaplot.pdf}
 	\caption{sota plot}
 \end{figure}
+
 
 \section{Conclusion}
 \label{sec:5}
