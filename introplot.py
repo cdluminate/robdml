@@ -192,6 +192,7 @@ if whichone == 1:
         'HM[$\mathcal{S},g_\mathsf{SGA}$]&ICS'],
         loc='lower right',
         bbox_to_anchor=(0.99, 0.12),
+        labelcolor='linecolor',
         )
 if whichone == 2:
     ax.legend(['ACT[$\mathcal{R}$]',
@@ -239,6 +240,7 @@ if whichone == 1:
         'HM[$\mathcal{S},g_\mathsf{SGA}$]&ICS'],
         loc='lower right',
         bbox_to_anchor=(0.99, 0.12),
+        labelcolor='linecolor',
         )
 if whichone == 2:
     ax.legend(['ACT[$\mathcal{R}$]',
