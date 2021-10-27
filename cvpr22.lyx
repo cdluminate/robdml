@@ -14518,7 +14518,7 @@ arraystretch}{1.1}
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="19" columns="18">
+<lyxtabular version="3" rows="17" columns="18">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -14940,7 +14940,7 @@ GTT
 </cell>
 </row>
 <row>
-<cell multirow="3" alignment="center" valignment="middle" topline="true" rightline="true" usebox="none">
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -15117,174 +15117,6 @@ HM[
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-HM[
-\begin_inset Formula $\mathcal{R},\mathcal{M}$
-\end_inset
-
-]&ICS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-25.6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-34.3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-12.5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-41.8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-21.9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-41.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-23.6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-26.4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.497
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.766
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14.5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-13.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-21.8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4.7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-39.0
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -15293,7 +15125,7 @@ HM[
 \begin_inset Formula $\mathcal{R},\mathcal{M}$
 \end_inset
 
-]&ICS1.0
+]&ICS
 \end_layout
 
 \end_inset
@@ -15311,7 +15143,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-25.0
+25.6
 \end_layout
 
 \end_inset
@@ -15329,7 +15161,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-12.4
+12.5
 \end_layout
 
 \end_inset
@@ -15338,7 +15170,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-41.6
+41.8
 \end_layout
 
 \end_inset
@@ -15347,7 +15179,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-21.7
+21.9
 \end_layout
 
 \end_inset
@@ -15356,7 +15188,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-37.5
+41.0
 \end_layout
 
 \end_inset
@@ -15374,7 +15206,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-24.9
+26.4
 \end_layout
 
 \end_inset
@@ -15383,7 +15215,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.444
+0.497
 \end_layout
 
 \end_inset
@@ -15392,7 +15224,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.734
+0.766
 \end_layout
 
 \end_inset
@@ -15401,7 +15233,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-15.3
+14.5
 \end_layout
 
 \end_inset
@@ -15410,7 +15242,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-12.8
+13.0
 \end_layout
 
 \end_inset
@@ -15419,7 +15251,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-23.8
+21.8
 \end_layout
 
 \end_inset
@@ -15428,7 +15260,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.6
+4.7
 \end_layout
 
 \end_inset
@@ -15437,7 +15269,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-40.3
+39.0
 \end_layout
 
 \end_inset
@@ -15621,174 +15453,6 @@ HM[
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-HM[
-\begin_inset Formula $\mathcal{S},\mathcal{M}$
-\end_inset
-
-]&ICS
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-T:V
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell multirow="4" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
@@ -15797,7 +15461,7 @@ HM[
 \begin_inset Formula $\mathcal{S},\mathcal{M}$
 \end_inset
 
-]&ICS1.0
+]&ICS
 \end_layout
 
 \end_inset
@@ -15815,7 +15479,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-35.0
+36.9
 \end_layout
 
 \end_inset
@@ -15824,7 +15488,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-45.7
+48.9
 \end_layout
 
 \end_inset
@@ -15833,7 +15497,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-19.8
+21.6
 \end_layout
 
 \end_inset
@@ -15842,7 +15506,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-47.6
+48.8
 \end_layout
 
 \end_inset
@@ -15851,7 +15515,25 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-17.1
+12.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+42.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.5
 \end_layout
 
 \end_inset
@@ -15869,7 +15551,34 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-18.3
+0.850
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.446
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13.9
 \end_layout
 
 \end_inset
@@ -15887,7 +15596,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.904
+1.9
 \end_layout
 
 \end_inset
@@ -15896,52 +15605,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.313
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-20.1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-16.2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-28.4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-36.9
+32.3
 \end_layout
 
 \end_inset
