@@ -832,6 +832,7 @@ respectively, and summarize the R@1 and ERS in \cref{tab:desth}.
 
 % 2. table: left and right
 
+
 As shown in the last three columns of \cref{tab:desth}, almost all combinations
 lead to model collapse as long as $H_\mathsf{D}$ is calculated from a Softhard,
 Distance, or Hardest triplet.
@@ -843,6 +844,7 @@ collapse, but the robustness gain is negligible.
 Although $E[H]$ of Softhard is less than that of Distance or Hardest,
 some hard adversarial examples are still created due to its large
 $\text{Var}[H]$, which still result in a slow collapse.
+\todo{merge this para into upper triangular and lower triangular}
 
 % 3. table: upper and lower
 
@@ -856,19 +858,15 @@ improving the robustness without model collapse, at an penalty on the R@1.
 
 \todo{R}
 
-For cases in lower triangular of \cref{tab:desth}, $E[H_\mathsf{S}] \geqslant E[H_\mathsf{D}]$,
-which means most tirplet will not be turned into adversarial according to
-\cref{eq:hm}.
+For cases in lower triangular of \cref{tab:desth}, where $E[H_\mathsf{S}]
+\geqslant E[H_\mathsf{D}]$, a large portion of given triplets will be
+unchanged according to \cref{eq:hm}, and hence lead to weak robustness.
 %
-In such cases, the model will not be able to effectively learn from a strong
-adversary, and hence will behave as if no defense is equipped.
+As an exception, $\text{HM}[\mathcal{S},\mathcal{M}]$ is still effective in
+improving adversarial robustness, where a notable number of adversarial
+examples are created due the high $\text{Var}[H]$ of Softhard.
 %
-As an exception, HM from softhard to semihard can also lead to relatively high
-adversarial robustness.
 %
-Due to the high variance of hardness of softhard sampling strategy, the
-hardness of a notable portion of triplets will be less than that of semihard,
-and hence HM will create some adversarial examples for training.
 %
 In other words, HM in this case can be interpreted as mixing some unperturbed
 softhard triplets and some semihard adversarial triplets.
