@@ -844,18 +844,17 @@ Although $E[H]$ of Softhard is less than that of Distance or Hardest,
 some hard adversarial examples are still created due to its large
 $\text{Var}[H]$, which still result in a slow collapse.
 
-\todo{Rev}
-
 % 3. table: upper and lower
 
-For cases in upper triangular of \cref{tab:desth}, $E[H_\mathsf{S}] \leqslant E[H_\mathsf{D}]$,
-which means most triplets will be turned into adversarial example by HM
-to increase the hardness.
+For cases in the upper triangular of \cref{tab:desth} where $E[H_\mathsf{S}]
+\leqslant E[H_\mathsf{D}]$, most given triplets will be turned adversarial with
+an increased hardness.
 %
-Although most of such cases end up with model collapse, the preliminary 
-result suggests that HM from random to semihard is effective in significantly
-improve the robustness without model collapse, at an expected cost on the R@1
-performance on benign examples.
+Although most of such cases end up with model collapse, the preliminary result
+suggests that $\text{HM}[\mathcal{R},\mathcal{M}]$ is still effective in
+improving the robustness without model collapse, at an penalty on the R@1.
+
+\todo{R}
 
 For cases in lower triangular of \cref{tab:desth}, $E[H_\mathsf{S}] \geqslant E[H_\mathsf{D}]$,
 which means most tirplet will not be turned into adversarial according to
