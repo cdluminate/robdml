@@ -804,27 +804,30 @@ The comparison with the state-of-the-art DML defense methods will be presented i
 
 \input{tab-hmeff.tex}
 
-% 1. possible combinations
+% where to start
 
-Although any of the existing triplet sampling strategies, such as Random,
+To validate the effectivenss of HM, we start from using the hardness of another
+benign triplet sampled with a different triplet sampler as $H_\mathsf{D}$, as
+the existing triplet samplers are known not to result in model collapse in
+regular training.
+
+% combinations
+
+Due to the flexibility of HM, any of the existing (and future) triplet samplers
+can be used for calculating $H_\mathsf{S}$ and $H_\mathsf{D}$.
+%
+But not all possible combinations are expected to be effective or efficient in
+terms of adversarial training, as the \emph{source} hardness of a notable
+portion of the given triplets should be increased.
+%
+Thus, we first sort the existing samplers, namely Random,
 Semihard~\cite{facenet}, Softhard~\cite{revisiting},
 Distance-weighted~\cite{distance}, and the within-batch Hardest negative
-sampling method, can be selected for source hardness $H_\mathsf{S}$ and
-destination hardness $H_\mathsf{D}$, not all combinations are effective and
-efficient.
+sampler, based on the approximated mean hardness of their outputs, as shown
+in~\cref{tab:hsort}.
 %
-In this subsection, we find a proper combination empirically as a baseline for
-further experiments.
-
-% 2. sort sampling strategies
-
-As HM is expected to increase the hardness of the source triplet, we first sort
-the triplet sampling methods according to their approximated mean hardness of
-$1000$ mini-batches from CUB dataset with an imagenet-initialized RN18 model,
-as shown in~\cref{tab:hsort}.
-%
-Then we adversarially train models on the CUB dataset with all possible
-combinations, and summarize their R@1 and ERS performance in \cref{tab:desth}.
+Then we adversarially train models on the CUB dataset with all combinations
+respectively, and summarize the R@1 and ERS performance in \cref{tab:desth}.
 
 % 2. table: left and right
 
