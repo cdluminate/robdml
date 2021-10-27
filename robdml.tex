@@ -839,6 +839,10 @@ Distance, or Hardest triplet.
 Due to the small $E[H_\mathsf{D}-H_\mathsf{S}]$ in the combination of Distance
 and Hardest triplets, the adversarial examples will be weak and the model does
 collapse, but the robustness gain is negligible.
+%
+Although $E[H]$ of Softhard is less than that of Distance or Hardest,
+some hard adversarial examples are still created due to its large
+$\text{Var}[H]$, which still result in a slow collapse.
 
 \todo{Rev}
 
