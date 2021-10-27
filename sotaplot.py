@@ -14,18 +14,20 @@ data_cub = {
         (30.6, 27.5), (9.0, 33.0), (31.3, 33.9) ),
     'HM[S,SGA]': (
         (38.0, 36.5), (9.0, 33.0), (32.4, 35.9) ),
+    'HM[S,SGA]ICS': (
+        (37.2, 37.2), (9.0, 33.0), (33.5, 33.5) ),
 }
 data_cars = {
     'ACT[R]': (
         (46.8, 43.4), (9.0, 33.0), (39.8, 38.6) ),
     'HM[S,SGA]': (
-        (63.2, 63.2), (9.0, 9.0), (42.4, 42.4)),
+        (63.2, 62.3), (9.0, 9.0), (42.4, 44.9)),
 }
 data_sop = {
     'ACT[R]': (
         (45.1, 47.5), (9.0, 33.0), (50.3, 50.8) ),
     'HM[S,SGA]': (
-        (49.0,), (9.0,), (61.7,)),
+        (49.0, 49.0), (9.0, 33.0), (61.7, 61.7) ),
 }
 
 styledict = {
@@ -33,49 +35,43 @@ styledict = {
         'marker': '.',
         'linestyle': ':',
         'color': 'tab:cyan',
-        'linewidth': 3.0,
+        'linewidth': 2.0,
     },
     'ACT[S]': {
         'marker': '.',
         'linestyle': ':',
         'color': 'tab:orange',
-        'linewidth': 3.0,
+        'linewidth': 2.0,
     },
     'HM[R,M]': {
         'marker': 'v',
         'linestyle': '-.',
         'color': 'tab:blue',
-        'linewidth': 3.0,
+        'linewidth': 2.0,
     },
     'HM[S,M]': {
         'marker': '^',
         'linestyle': '-.',
         'color': 'tab:red',
-        'linewidth': 3.0,
+        'linewidth': 2.0,
     },
     'HM[S,SGA]': {
         'marker': 'h',
         'linestyle': '-',
-        'color': 'tab:purple',
-        'linewidth': 3.0,
+        'color': 'darkviolet',
+        'linewidth': 2.0,
     },
     'HM[S,-r/2]': {
         'marker': '+',
         'linestyle': '-.',
         'color': 'tab:gray',
-        'linewidth': 3.0,
-    },
-    'EST[R]': {
-        'marker': 'd',
-        'linestyle': ':',
-        'color': 'tab:gray',
-        'linewidth': 3.0,
+        'linewidth': 2.0,
     },
     'HM[S,SGA]ICS': {
         'marker': 'o',
         'linestyle': '-.',
         'color': 'crimson',
-        'linewidth': 3.0,
+        'linewidth': 2.0,
     },
 }
 
@@ -92,6 +88,7 @@ plt.ylabel('Robustness (ERS)')
 plt.xscale('log', base=2)
 ax.legend(['ACT[$\mathcal{R}$]',
         'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        labelcolor='linecolor',
         )
 plt.title('CUB Dataset')
 
@@ -106,6 +103,7 @@ plt.ylabel('Robustness (ERS)')
 plt.gca().invert_xaxis()
 ax.legend(['ACT[$\mathcal{R}$]',
         'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        labelcolor='linecolor',
         )
 plt.title('CUB Dataset')
 
@@ -120,6 +118,7 @@ plt.ylabel('Robustness (ERS)')
 plt.xscale('log', base=2)
 ax.legend(['ACT[$\mathcal{R}$]',
         'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        labelcolor='linecolor',
         )
 plt.title('CARS Dataset')
 
@@ -134,6 +133,7 @@ plt.ylabel('Robustness (ERS)')
 plt.gca().invert_xaxis()
 ax.legend(['ACT[$\mathcal{R}$]',
         'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        labelcolor='linecolor',
         )
 plt.title('CARS Dataset')
 
@@ -148,6 +148,7 @@ plt.ylabel('Robustness (ERS)')
 plt.xscale('log', base=2)
 ax.legend(['ACT[$\mathcal{R}$]',
         'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        labelcolor='linecolor',
         )
 plt.title('SOP Dataset')
 
@@ -162,6 +163,7 @@ plt.ylabel('Robustness (ERS)')
 plt.gca().invert_xaxis()
 ax.legend(['ACT[$\mathcal{R}$]',
         'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        labelcolor='linecolor',
         )
 plt.title('SOP Dataset')
 
