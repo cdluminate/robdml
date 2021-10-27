@@ -57,6 +57,13 @@ HM_SHM = {
         (12.4, 24.7, 33.8, 36.8, 37.0),
         ),
 }
+HM_SSGAICS = {
+    'HM[S,SGA]ICS': ( # [freeze]
+        (45.2, 41.8, 37.2, 35.5),
+        (3.0, 5.0, 9.0, 17.0),
+        (15.2, 24.6, 33.5, 36.0),
+        ),
+}
 
 if whichone == 0:
     # all
@@ -71,7 +78,7 @@ elif whichone == 1:
     data = {
         **ACT_R,
         **ACT_S,
-        **HM_SSGA,
+        **HM_SSGAICS,
     }
 elif whichone == 2:
     # effectiveness of HM
@@ -89,6 +96,14 @@ elif whichone == 3:
         **HM_SM,
         **HM_SHM,
         **HM_SSGA,
+    }
+elif whichone == 4:
+    # effectivenss of ICS
+    data = {
+        **ACT_R,
+        **ACT_S,
+        **HM_SSGA,
+        **HM_SSGAICS,
     }
 else:
     raise ValueError
@@ -174,7 +189,10 @@ ax.annotate('↘ Worse', xy=(0.75, 0.06), xycoords='axes fraction',
 if whichone == 1:
     ax.legend(['ACT[$\mathcal{R}$]',
         'ACT[$\mathcal{S}$]',
-        'HM[$\mathcal{S},g_\mathsf{SGA}$]'])
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]&ICS'],
+        loc='lower right',
+        bbox_to_anchor=(0.99, 0.12),
+        )
 if whichone == 2:
     ax.legend(['ACT[$\mathcal{R}$]',
         'ACT[$\mathcal{S}$]',
@@ -218,7 +236,10 @@ ax.annotate('↘ Worse', xy=(0.75, 0.06), xycoords='axes fraction',
 if whichone == 1:
     ax.legend(['ACT[$\mathcal{R}$]',
         'ACT[$\mathcal{S}$]',
-        'HM[$\mathcal{S},g_\mathsf{SGA}$]'])
+        'HM[$\mathcal{S},g_\mathsf{SGA}$]&ICS'],
+        loc='lower right',
+        bbox_to_anchor=(0.99, 0.12),
+        )
 if whichone == 2:
     ax.legend(['ACT[$\mathcal{R}$]',
         'ACT[$\mathcal{S}$]',
