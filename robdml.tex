@@ -567,7 +567,7 @@ Thus, intuitively, $H_\mathsf{D}$ can be the hardness of another benign triplet
 expectation, \ie, $E[H_\mathsf{D}] > E[H_\mathsf{S}]$.
 %
 Or at least the $\text{Var}[H_\mathsf{D}]$ of such sampling strategy has to be
-large enough in order to create valid adversarial examples.
+large enough in order to create a notable number of valid adversarial examples.
 %
 For instance, $H_\mathsf{D}$ can be the hardness of a Semihard~\cite{facenet}
 triplet when the \emph{source} triplet is sampled with Random sampler.
@@ -575,8 +575,8 @@ triplet when the \emph{source} triplet is sampled with Random sampler.
 Predictably, the model performance will be significantly influenced by the
 triplet sampling strategies we chose for $H_\mathsf{D}$ in this case.
 %
-For convenience of further discussion, we denote the hardness of a Random
-triplet, Semihard triplet, and Softhard triplet as $\mathcal{R}$,
+For convenience of further discussion, we denote the hardness of a Random,
+Semihard, and Softhard triplets as $\mathcal{R}$,
 $\mathcal{M}$, $\mathcal{S}$, respectively.
 
 If we have a strong prior knowledge on what the \emph{destination} hardness
