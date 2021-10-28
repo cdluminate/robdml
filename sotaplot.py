@@ -12,21 +12,21 @@ plt.rcParams['mathtext.fallback'] = 'cm'
 data_cub = {
     'ACT[R]': (
         (30.6, 27.5), (9.0, 33.0), (31.3, 33.9) ),
-    'HM[S,SGA]': (
+    'HM[S,LGA]': (
         (38.0, 36.5), (9.0, 33.0), (32.4, 35.9) ),
-    'HM[S,SGA]ICS': (
+    'HM[S,LGA]ICS': (
         (37.2, 37.2), (9.0, 33.0), (33.5, 33.5) ),
 }
 data_cars = {
     'ACT[R]': (
         (46.8, 43.4), (9.0, 33.0), (39.8, 38.6) ),
-    'HM[S,SGA]': (
+    'HM[S,LGA]': (
         (63.2, 62.3), (9.0, 9.0), (42.4, 44.9)),
 }
 data_sop = {
     'ACT[R]': (
         (45.1, 47.5), (9.0, 33.0), (50.3, 50.8) ),
-    'HM[S,SGA]': (
+    'HM[S,LGA]': (
         (49.0, 49.0), (9.0, 33.0), (61.7, 61.7) ),
 }
 
@@ -55,7 +55,7 @@ styledict = {
         'color': 'tab:red',
         'linewidth': 2.0,
     },
-    'HM[S,SGA]': {
+    'HM[S,LGA]': {
         'marker': 'h',
         'linestyle': '-',
         'color': 'darkviolet',
@@ -67,7 +67,7 @@ styledict = {
         'color': 'tab:gray',
         'linewidth': 2.0,
     },
-    'HM[S,SGA]ICS': {
+    'HM[S,LGA]ICS': {
         'marker': 'o',
         'linestyle': '-.',
         'color': 'crimson',
@@ -87,7 +87,7 @@ plt.xlabel('Training Cost')
 plt.ylabel('Robustness (ERS)')
 plt.xscale('log', base=2)
 ax.legend(['ACT[$\mathcal{R}$]',
-        'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        'HM[$\mathcal{S},g_\mathsf{LGA}$]'],
         labelcolor='linecolor',
         )
 plt.title('CUB Dataset')
@@ -102,7 +102,7 @@ plt.xlabel('Recall@1')
 plt.ylabel('Robustness (ERS)')
 plt.gca().invert_xaxis()
 ax.legend(['ACT[$\mathcal{R}$]',
-        'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        'HM[$\mathcal{S},g_\mathsf{LGA}$]'],
         labelcolor='linecolor',
         )
 plt.title('CUB Dataset')
@@ -117,7 +117,7 @@ plt.xlabel('Training Cost')
 plt.ylabel('Robustness (ERS)')
 plt.xscale('log', base=2)
 ax.legend(['ACT[$\mathcal{R}$]',
-        'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        'HM[$\mathcal{S},g_\mathsf{LGA}$]'],
         labelcolor='linecolor',
         )
 plt.title('CARS Dataset')
@@ -132,7 +132,7 @@ plt.xlabel('Recall@1')
 plt.ylabel('Robustness (ERS)')
 plt.gca().invert_xaxis()
 ax.legend(['ACT[$\mathcal{R}$]',
-        'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        'HM[$\mathcal{S},g_\mathsf{LGA}$]'],
         labelcolor='linecolor',
         )
 plt.title('CARS Dataset')
@@ -147,7 +147,7 @@ plt.xlabel('Training Cost')
 plt.ylabel('Robustness (ERS)')
 plt.xscale('log', base=2)
 ax.legend(['ACT[$\mathcal{R}$]',
-        'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        'HM[$\mathcal{S},g_\mathsf{LGA}$]'],
         labelcolor='linecolor',
         )
 plt.title('SOP Dataset')
@@ -162,7 +162,7 @@ plt.xlabel('Recall@1')
 plt.ylabel('Robustness (ERS)')
 plt.gca().invert_xaxis()
 ax.legend(['ACT[$\mathcal{R}$]',
-        'HM[$\mathcal{S},g_\mathsf{SGA}$]'],
+        'HM[$\mathcal{S},g_\mathsf{LGA}$]'],
         labelcolor='linecolor',
         )
 plt.title('SOP Dataset')
