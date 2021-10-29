@@ -527,12 +527,12 @@ maximizing $L_\text{T}$), \ie,
 %
 assuming that $H_\mathsf{D}>\tilde{H}_\mathsf{S}$.
 %
-And the perturbation $\vr$ is updated as $\vr \leftarrow \vr + \alpha \Delta \vr$
-by PGD for $\eta$ steps with a step size $\alpha$.
+And the perturbation $\vr$ is updated as $\vr \leftarrow \vr + \alpha \Delta
+\vr$ by PGD for $\eta$ steps with a step size $\alpha$.
 %
-Thus, the optimization of HM objective can be interpreted as directly
-maximizing $\tilde{H}_\mathsf{S}$, but stops very early once it reaches
-$H_\mathsf{D}$.
+Thus, the optimization of HM objective can be interpreted as direct
+maximization of $\tilde{H}_\mathsf{S}$, which discontinues very early once it
+reaches $H_\mathsf{D}$.
 %
 This means the model learns from an efficient adversary during adversarial
 training with HM.
@@ -963,6 +963,16 @@ Number of PGD Steps $\eta$.
 	\caption{sota plot}
 \end{figure}
 \end{comment}
+
+For adversarial training of a DML model, being selective to both benign and
+adversarial training samples is crucial for preventing model collapse, and
+achieving good performance on both kinds of samples.
+%
+Hardness Manipulation is a flexible tool for us to specify such ``selection'',
+and Graduate Adversary is a selection rule for adversarial examples.
+%
+Intra-Class Structure loss helps the model exploit more information from the
+adversarial examples.
 
 
 \section{Conclusion}
