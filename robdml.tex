@@ -808,69 +808,73 @@ The comparison with the state-of-the-art DML defense methods will be presented i
 
 % where to start
 
-To validate the effectivenss of HM, we start from using the hardness of another
-benign triplet sampled with a different triplet sampler as $H_\mathsf{D}$, as
-the existing triplet samplers are known not to result in model collapse in
-regular training.
+As discussed in \cref{sec:31}, we start from the $H_\mathsf{D}$ calculated from
+a harder benign triplet sampled in a different strategy, such as Random,
+Semihard~\cite{facenet}, Softhard~\cite{revisiting},
+Distance-weighted~\cite{distance} (\emph{abbr}., Distance), or the within-batch
+Hardest negative sampling strategy, because we know these strategies do not
+result in model collapse in regular training.
 
 % combinations
 
-Due to the flexibility of HM, any of the existing (and future) triplet samplers
-can be used for calculating $H_\mathsf{S}$ and $H_\mathsf{D}$.
+HM is flexible so that any existing or future triplet sampling strategy
+can be used for the source triplet or calculating $H_\mathsf{D}$.
 %
-But not all possible combinations are expected to be effective or efficient in
-terms of adversarial training, as the \emph{source} hardness of a notable
-portion of the given triplets should be increased.
+But not all potential combinations are expected to be effective for HM, as it
+will not create an adversarial triplet when $H_\mathcal{S}\geqslant
+H_\mathcal{D}$.
 %
-Thus, we first sort the existing samplers, namely Random,
-Semihard~\cite{facenet}, Softhard~\cite{revisiting},
-Distance-weighted~\cite{distance} (\emph{abbr}., Distance), and the
-within-batch Hardest negative sampler, based on the approximated mean hardness
-of their outputs, as shown in~\cref{tab:hsort}.
+Thus, we sort the strategies based on the mean hardness of their
+outputs in~\cref{tab:hsort}.
 %
 Then we adversarially train models on CUB dataset with all combinations
-respectively, and summarize the R@1 and ERS in \cref{tab:desth}.
+respectively, and summarize their R@1 and ERS in \cref{tab:desth}.
 
-% 2. table: left and right
-
-
-As shown in the last three columns of \cref{tab:desth}, almost all combinations
-lead to model collapse as long as $H_\mathsf{D}$ is calculated from a Softhard,
-Distance, or Hardest triplet.
-%
-Due to the small $E[H_\mathsf{D}-H_\mathsf{S}]$ in the combination of Distance
-and Hardest triplets, the adversarial examples will be weak and the model does
-collapse, but the robustness gain is negligible.
-%
-Although $E[H]$ of Softhard is less than that of Distance or Hardest,
-some hard adversarial examples are still created due to its large
-$\text{Var}[H]$, which still result in a slow collapse.
-\todo{merge this para into upper triangular and lower triangular}
 
 % 3. table: upper and lower
 
 For cases in the upper triangular of \cref{tab:desth} where $E[H_\mathsf{S}]
-\leqslant E[H_\mathsf{D}]$, most given triplets will be turned adversarial with
-an increased hardness.
+\leqslant E[H_\mathsf{D}]$, most of the given triplets will be turned
+adversarial.
 %
-Although most of such cases end up with model collapse, the preliminary result
-suggests that $\text{HM}[\mathcal{R},\mathcal{M}]$ is still effective in
-improving the robustness without model collapse, at an penalty on the R@1.
-
-\todo{R}
+Although almost all of them end up with model collapse, the
+$\text{HM}[\mathcal{R},\mathcal{M}]$ is still effective in improving the
+robustness, with an expected performance drop in R@1.
+%
+The combination of Distance and Hardest triplets does not trigger model
+collapse due to the small $E[H_\mathsf{D}-H_\mathsf{S}]$, which leads to weak
+adversarial examples and a negligible robustness gain.
 
 For cases in lower triangular of \cref{tab:desth}, where $E[H_\mathsf{S}]
-\geqslant E[H_\mathsf{D}]$, a large portion of given triplets will be
-unchanged according to \cref{eq:hm}, and hence lead to weak robustness.
+\geqslant E[H_\mathsf{D}]$, a large portion of given triplets will be unchanged
+according to \cref{eq:hm}, and hence lead to weak robustness.
 %
 As an exception, $\text{HM}[\mathcal{S},\mathcal{M}]$ is still effective in
 improving adversarial robustness, where a notable number of adversarial
 examples are created due the high $\text{Var}[H]$ of Softhard.
 %
+Although $E[H]$ of Softhard is less than that of Distance or Hardest, some hard
+adversarial examples are still created
 %
+\footnote{Differently, Softhard also samples a
+hard positive instead of a random positive besides a hard negative.
 %
-In other words, HM in this case can be interpreted as mixing some unperturbed
-softhard triplets and some semihard adversarial triplets.
+As a result, the hardness of a small number of Softhard triplets will be 
+greater than that of a given Hardest triplet.}
+%
+due to its large $\text{Var}[H]$, which
+still result in a slow collapse.
+
+In summary, HM creates mini-batches mixing some unperturbed source triplets and
+some adversarial triplets.
+%
+The $\text{HM}[\mathcal{R}, \mathcal{M}]$ and $\text{HM}[\mathcal{S},
+\mathcal{M}]$ achieve such balanced mixtures.
+%
+Empirically, the hardness range of Semihard strategy is appropriate for
+$H_\mathcal{D}$.
+
+\todo{R}
 
 % 4. summary
 
