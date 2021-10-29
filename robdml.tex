@@ -865,24 +865,18 @@ greater than that of a given Hardest triplet.}
 due to its large $\text{Var}[H]$, which
 still result in a slow collapse.
 
+% 4. summary
+
 In summary, HM creates mini-batches mixing some unperturbed source triplets and
 some adversarial triplets.
 %
 The $\text{HM}[\mathcal{R}, \mathcal{M}]$ and $\text{HM}[\mathcal{S},
 \mathcal{M}]$ achieve such balanced mixtures.
 %
-Empirically, the hardness range of Semihard strategy is appropriate for
-$H_\mathcal{D}$.
-
-\todo{R}
-
-% 4. summary
-
-In summary, according to \cref{tab:desth}, HM from random to semihard, or from
-softhard to semihard are two choices that can effectively lead to robust
-DML model.
+Subsequent experiments will be based on the two effective combinations.
 %
-The subsequent experiments will be based on the two choices.
+Empirically, the hardness range of Semihard strategy,
+\ie, $[-\gamma,0]$ is appropriate for $H_\mathcal{D}$.
 
 \subsection{Effectiveness of Our Approach}
 \label{sec:42}
