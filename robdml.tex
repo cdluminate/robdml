@@ -528,7 +528,7 @@ maximizing $L_\text{T}$), \ie,
 assuming that $H_\mathsf{D}>\tilde{H}_\mathsf{S}$.
 %
 And the perturbation $\vr$ is updated as $\vr \leftarrow \vr + \alpha \Delta \vr$
-by PGD, where $\alpha$ is a step size parameter.
+by PGD for $\eta$ steps with a step size $\alpha$.
 %
 Thus, the optimization of HM objective can be interpreted as directly
 maximizing $\tilde{H}_\mathsf{S}$, but stops very early once it reaches
