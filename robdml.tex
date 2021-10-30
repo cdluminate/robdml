@@ -418,9 +418,9 @@ $
 %
 where $\gamma$ is a predefined margin parameter.
 %
-To attack the DML model, an imperceptible adversarial perturbation $\vr$ is
-added to the input image $\mX$, which is subject to $\|\vr\|_p \leq
-\varepsilon$ and $\mX+\vr\in \mathcal{X}$, so that its embedding vector
+To attack the DML model, an imperceptible adversarial perturbation $\vr \in
+\Gamma$ is added to the input image $\mX$, where $\Gamma = \{\vr | \mX+\vr\in
+\mathcal{X},  \|\vr\|_p \leq \varepsilon\}$, so that its embedding vector
 $\tilde{\vx}=\phi(\mX+\vr)$ will be moved off its original location to other
 positions to fulfill the attacker's goal~[][][][][].
 %
@@ -527,8 +527,8 @@ maximizing $L_\text{T}$), \ie,
 %
 assuming that $H_\mathsf{D}>\tilde{H}_\mathsf{S}$.
 %
-And the perturbation $\vr$ is updated as $\vr \leftarrow \vr + \alpha \Delta
-\vr$ by PGD for $\eta$ steps with a step size $\alpha$.
+And the perturbation $\vr$ is updated as $\vr \leftarrow \text{Proj}_\Gamma\{\vr + \alpha \Delta
+\vr\}$ by PGD for $\eta$ steps with a step size $\alpha$.
 %
 Thus, the optimization of HM objective can be interpreted as direct
 maximization of $\tilde{H}_\mathsf{S}$, which discontinues very early once it
