@@ -893,9 +893,14 @@ The results can be found in \cref{tab:hmeff}.
 The performance of the state-of-the-art defense, \ie, ACT~\cite{robrank} is
 also provided as a baseline.
 %
-ACT[$\mathcal{R}$] and ACT[$\mathcal{S}$] mean the training
-triplet is sampled using Random and Softhard strategy, respectively.
+ACT[$\mathcal{R}$] and ACT[$\mathcal{S}$] mean the training triplet is sampled
+using Random and Softhard strategy, respectively.
 %
+We also plot curves in \cref{fig:hmeff} based on the robustness, training
+cost~\footnote{Training cost is the number of forward-backward computation
+cycle in each adversarial training iteration, and is calculated as $\eta+1$.},
+as well as the R@1 performance on benign examples to reflect the
+characteristics of these methods.
 
 Why G4 so promising?
 
@@ -934,6 +939,7 @@ result, why?} mix 0.5
 \begin{figure}[t]
 	\includegraphics[width=\columnwidth]{fighmeff.pdf}
 	\caption{HM eff}
+	\label{fig:hmeff}
 \end{figure}
 
 
