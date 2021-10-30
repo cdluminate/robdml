@@ -1,13 +1,14 @@
 \newpage
 \appendix
 
-\section{More Details Explained}
+\section{More Technical Details}
 
 In this section, we provide more details on the reasons of our design,
 additional details of our implementation, as well as more discussions
 on questions that are unsuitable for the main part of manuscript.
 
-\begin{enumerate}[noitemsep, label={Q.{\arabic*}}]
+%\begin{enumerate}[noitemsep, label={Q{\arabic*}.}]
+\begin{enumerate}[noitemsep]
 		%
 	\item \ul{\it There is only $L_\text{T}(\va, \tilde{\va}, \vp)$ in the ICS
 		term.  Is it possible to introduce any other triplet combinations among
@@ -53,6 +54,10 @@ on questions that are unsuitable for the main part of manuscript.
 	\item Loss normalization with $u$?
 
 	\item Hardware and software platform?
+
+	\item Details of EST?
+
+	\item Details of ACT?
 %
 Embedding-Shifted Triplet (EST)~\cite{advrank} adopts adversarial counterpars
 of $\va,\vp,\vn$ with maximum embedding move distance off their original
@@ -72,6 +77,7 @@ paradigm~\cite{madry}, these methods merely indirectly increase the loss value,
 and thus, suffer from inefficient learning because the adversary is not strong
 enough.
 
+	\item Complete Table for Sec~4.1 Hardness Selection?
 
 \end{enumerate}
 
@@ -81,7 +87,58 @@ enough.
 
 Visualize robustness through the image retrieval task.
 
-\section{Complete Table for Sec~4.1 Hardness Selection}
+\section{Miscellaneous}
+
+\textbf{Societal Impact}.
+%
+As encouraged by the author guidelines, we briefly discuss the potential
+societal impact of our work.
+%
+Adversarial attacks may raise security considerations on deep learning
+applications, and hence may have negative impact.
+%
+In contrast, in this manuscript, we focus on defending against the attacks and
+enhancing a model's adversarial robustness, and hence is expected to have a
+positive impact.
+%
+Besides, although adversarial training is not environment-friendly due to its
+high training cost in GPU time, our study has significantly improved the
+adversarial training efficiency compared to the previous works.
+
+\textbf{Limitations}.
+%
+\begin{quote}
+
+Considering the limitations of an approach is an important part of good
+academic scholarship. While many high-quality CVPR papers thoroughly consider
+and discuss limitations, CVPR 2022 aims to emphasize the importance of an
+honest treatment of limitations. Authors are thus explicitly encouraged to
+discuss limitations, ideally by creating a separate "Limitations" (sub-)section
+in their papers.
+
+Such discussion shall point out any strong assumptions and how robust the
+results are to violations of these assumptions (e.g., independence assumptions,
+noiseless settings, model well-specification, asymptotic approximations only
+held locally). Authors need to reflect on how these assumptions might be
+violated in practice and what the implications would be.
+
+The discussion shall also reflect on the scope of their claims, e.g., if the
+authors only tested their approach on a few datasets or did a few runs. In
+general, empirical results often depend on implicit assumptions, which should
+be articulated. The discussion shall reflect on the factors that influence the
+performance of the approach. For example, a recognition algorithm may perform
+poorly when image resolution is low or images are taken in low lighting.
+
+We understand that authors might fear that complete honesty about limitations
+might be used by reviewers as grounds for rejection. It is worth keeping in
+mind that a worse outcome might be if reviewers discover limitations that are
+not acknowledged in the paper. In general, we advise authors to use their best
+judgement and recognize that individual actions in favor of transparency play
+an important role in developing norms that preserve the integrity of the
+community. Reviewers will be specifically instructed to not penalize honesty
+concerning limitations
+
+\end{quote}
 
 \section{My Memo}
 
@@ -89,8 +146,6 @@ Visualize robustness through the image retrieval task.
 
 \begin{itemize}
 	
-	\item [\cmark] check cvpr 2022 author guidelines.
-
 	\item [\xmark] Multicard DDP and single card training leads to different
 		performance, regardless of the exact model of GPUs.
 		%
@@ -240,9 +295,6 @@ Visualize robustness through the image retrieval task.
 	\item [\xmark] Combine and even better. | Mixing ACT and AMDsemi does result
 		in clearly better results. It's on par with AMDsemi. Are they really
 		that different?
-
-	\item [\xmark] can we learn a good destination distribution? | too
-		complicated? not necessary currently.
 
 	\item [\xmark] re-design Gradual Adversary for HM based on that for the amdsemi. |
 		\[
