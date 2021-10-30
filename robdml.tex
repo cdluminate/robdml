@@ -881,12 +881,21 @@ Empirically, the hardness range of Semihard strategy,
 \subsection{Effectiveness of Our Approach}
 \label{sec:42}
 
-\begin{figure}[t]
-	\includegraphics[width=\columnwidth]{fighmeff.pdf}
-	\caption{HM eff}
-\end{figure}
-
 \noindent\textbf{I. Effectivenss of Hardness Manipulation}.
+
+To figure out the efficacy of HM with $H_\mathcal{D}$ calculated from benign
+triplets, we adversarialy train models dataset using $\text{HM}[\mathcal{R},
+\mathcal{M}]$ and $\text{HM}[\mathcal{S}, \mathcal{M}]$ on the CUB dataset,
+with varying PGD steps, \ie, $\eta\in\{2,4,8,16,32\}$, respectively.
+%
+The results can be found in \cref{tab:hmeff}.
+%
+The performance of the state-of-the-art defense, \ie, ACT~\cite{robrank} is
+also provided as a baseline.
+%
+ACT[$\mathcal{R}$] and ACT[$\mathcal{S}$] mean the training
+triplet is sampled using Random and Softhard strategy, respectively.
+%
 
 Why G4 so promising?
 
@@ -921,6 +930,11 @@ result, why?} mix 0.5
 
 
 \noindent\textbf{II. Effectiveness of Gradual Adversary}.
+
+\begin{figure}[t]
+	\includegraphics[width=\columnwidth]{fighmeff.pdf}
+	\caption{HM eff}
+\end{figure}
 
 
 \begin{figure}[t]
