@@ -881,19 +881,20 @@ Empirically, the hardness range of Semihard strategy,
 \subsection{Effectiveness of Our Approach}
 \label{sec:42}
 
-\noindent\textbf{I. Effectivenss of Hardness Manipulation}.
 
 % What we do
 
-To figure out the efficacy of HM with $H_\mathcal{D}$ calculated from benign
-triplets, we adversarialy train models dataset using $\text{HM}[\mathcal{R},
+\noindent\textbf{I. Hardness Manipulation.}
+%
+To validate HM with $H_\mathcal{D}$ calculated from benign
+triplets, we adversarially train models using $\text{HM}[\mathcal{R},
 \mathcal{M}]$ and $\text{HM}[\mathcal{S}, \mathcal{M}]$ on the CUB dataset,
 with varying PGD steps, \ie, $\eta\in\{2,4,8,16,32\}$, respectively.
 %
 The results can be found in \cref{tab:hmeff}.
 %
 The performance of the state-of-the-art defense, \ie, ACT~\cite{robrank} is
-also provided as a baseline.
+provided as a baseline.
 %
 ACT[$\mathcal{R}$] and ACT[$\mathcal{S}$] mean the training triplet is sampled
 using Random and Softhard strategy, respectively.
@@ -901,8 +902,7 @@ using Random and Softhard strategy, respectively.
 We also plot curves in \cref{fig:hmeff} based on the robustness, training
 cost\footnote{Training cost is the number of times for forward and backward
 propagation in each adversarial training iteration, which is calculated as
-$\eta+1$.}, as well as the R@1 performance on benign examples to reflect the
-characteristics of these methods.
+$\eta+1$.}, as well as the R@1 performance on benign examples.
 
 % first review the sota curve
 
@@ -956,6 +956,9 @@ ACT[$\mathcal{R}$], but can achieve a significantly higher R@1.
 It achieves a balance between ERS and R@1 on par with ACT[$\mathcal{S}$], but
 in a significantly higher efficiency.
 
+\input{tab-gaeff.tex}
+\input{tab-ics.tex}
+
 % the reasons
 
 Overall, as discussed in \cref{sec:31}, HM uses the same projected gradient as
@@ -978,29 +981,28 @@ strategy is selective for the training data.
 %
 Further experiments will be based on HM[$\mathcal{S},\mathcal{M}$].
 
-
-\noindent\textbf{II. Effectiveness of Gradual Adversary}.
-
-
 \begin{figure}[t]
+	\vspace{-1em}
 	\includegraphics[width=\columnwidth]{figgaeff.pdf}
+	\vspace{-1.5em}
 	\caption{GA eff}
 \end{figure}
 
 \begin{figure}[t]
+	\vspace{-1em}
 	\includegraphics[width=\columnwidth]{figics.pdf}
+	\vspace{-1.5em}
 	\caption{ICS eff}
 \end{figure}
 
-\input{tab-gaeff.tex}
+
+\noindent\textbf{II. Gradual Adversary.}
 
 \cref{tab:gaeff}
 
-\input{tab-ics.tex}
+\noindent\textbf{III. Intra-Class Structure.}
 
-Put together for easier comparison.
-
-\noindent\textbf{III. Effectivenss of Intra-Class Structure}.
+\cref{tab:ics}
 
 \subsection{Comparison with State-of-the-art}
 \label{sec:43}
@@ -1015,6 +1017,7 @@ SOP 8 32
 
 Number of PGD Steps $\eta$.
 \cref{fig:introplot}
+
 
 \begin{comment}
 \begin{figure}[t]
