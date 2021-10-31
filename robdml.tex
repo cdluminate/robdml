@@ -908,53 +908,21 @@ characteristics of these methods.
 
 As shown, ACT[$\mathcal{R}$] can achieve a high ERS, but with a significant
 performance drop in R@1, while ACT[$\mathcal{S}$] can retain a relative high
-R@1, but is much less efficient in gaining robustness.
+R@1, but is much less efficient in gaining robustness under a fixed training
+cost.
 %
 Notably, ACT relies on the attack that can successfully pull the adversarial
 positive and negative samples close to each other in order to learn robust
 features~\cite{robrank}.
 %
-As a result, ACT's ERS with a small $\eta$ is relatively low.
-
-% then review hm and compare
-
-Why G4 so promising?
-
-RM = random original (not representative for what the model should learn) plus semihard adv ex (strong advex)
-
-SM = softhard original (selective) plus semihard adv ex (strong adv)
-
-Ignore $H_D$
-
-1. source triplet affects p[erformance regardless of the attack method used for adversarial training.
-
-2. as long as a portion of semihard adversarial example is provided. fully explore the range of semihard.
-
-
-HM + different pgditer
-CUB, 2 4 8 16 32
-\cref{tab:hmeff}
-
-8; empirically selected as the base for further ablation study.
-
-Conditions for a good source and destination hardness:
-%
-(1) the destination hardness is semihard (or something between semihard
-and softhard, we leave new sampling strategy for future work).
-(2) the source hardness should have high variance and a relatively high mean
-value to ensure number of benign example and number of adversarial example ratio.
-
-\oo{Note, naive combination of benign training and adv train does not lead to better
-result, why?} mix 0.5
-
-\oo{experiment, 8 step by default}
-
-
-\noindent\textbf{II. Effectiveness of Gradual Adversary}.
+As a result, ACT's ERS with a small $\eta$ (indicating a weak attack effect) is
+relatively low.
 
 \begin{figure}[t]
 	%
 	\includegraphics[width=\columnwidth]{fighmeff.pdf}
+	%
+	\vspace{-1.5em}
 	%
 	\caption{Performance of $\text{HM}[\mathcal{R},\mathcal{M}]$
 	%
@@ -965,6 +933,53 @@ result, why?} mix 0.5
 	\label{fig:hmeff}
 	%
 \end{figure}
+
+% then review hm and compare
+
+In contrast, HM[$\mathcal{R},\mathcal{M}$] achieves an even higher ERS under
+the same training cost, but with a larger penalty in R@1 compared to
+ACT[$\mathcal{R}$].
+%
+Compared to ACT[$\mathcal{S}$], HM[$\mathcal{S},\mathcal{M}$] is able to retain
+a relatively high R@1, but in a much higher efficiency.
+%
+According to \cref{fig:hmeff}, HM[$\mathcal{R},\mathcal{M}$] achieves the
+highest ERS and efficiency but with the most significant drop in R@1, which is
+not acceptable in applications.
+%
+Apart from that, HM[$\mathcal{S},\mathcal{M}$] achieves a promising result
+in every aspect.
+%
+Its efficiency in gaining robustness is basically on par with
+ACT[$\mathcal{R}$], but can achieve a significantly higher R@1.
+%
+It achieves a balance between ERS and R@1 on par with ACT[$\mathcal{S}$], but
+in a significantly higher efficiency.
+
+% the reasons
+
+Overall, as discussed in \cref{sec:31}, HM uses the same projected gradient as
+to directly maximize the hardness, which endows this method a high efficiency
+in creating strong adversarial examples at a fixed training cost.
+%
+Besides, unlike ACT, HM does not rely on the attack to successfully move the
+embeddings to some specific locations, and hence does not suffer from low
+efficiency when $\eta$ is small.
+%
+HM[$\mathcal{R},\mathcal{M}$] creates training batches with some Random benign
+examples and a large portion of Semihard adversarial examples, and hence
+achieve a high ERS and a relatively low R@1 because the Random triplet sampling
+strategy is not selective for data on which the model cannot generalize well.
+%
+HM[$\mathcal{S},\mathcal{M}$] creates training batches with some Semihard
+adversarial examples and a large portion of Softhard benign examples, and hence
+achieve a relatively high ERS as well as a high R@1 since Softhard sampling
+strategy is selective for the training data.
+%
+Further experiments will be based on HM[$\mathcal{S},\mathcal{M}$].
+
+
+\noindent\textbf{II. Effectiveness of Gradual Adversary}.
 
 
 \begin{figure}[t]
