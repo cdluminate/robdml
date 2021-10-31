@@ -883,6 +883,8 @@ Empirically, the hardness range of Semihard strategy,
 
 \noindent\textbf{I. Effectivenss of Hardness Manipulation}.
 
+% What we do
+
 To figure out the efficacy of HM with $H_\mathcal{D}$ calculated from benign
 triplets, we adversarialy train models dataset using $\text{HM}[\mathcal{R},
 \mathcal{M}]$ and $\text{HM}[\mathcal{S}, \mathcal{M}]$ on the CUB dataset,
@@ -897,10 +899,16 @@ ACT[$\mathcal{R}$] and ACT[$\mathcal{S}$] mean the training triplet is sampled
 using Random and Softhard strategy, respectively.
 %
 We also plot curves in \cref{fig:hmeff} based on the robustness, training
-cost~\footnote{Training cost is the number of forward-backward computation
-cycle in each adversarial training iteration, and is calculated as $\eta+1$.},
-as well as the R@1 performance on benign examples to reflect the
+cost\footnote{Training cost is the number of times for forward and backward
+propagation in each adversarial training iteration, which is calculated as
+$\eta+1$.}, as well as the R@1 performance on benign examples to reflect the
 characteristics of these methods.
+
+% first review the sota curve
+
+As shown, k
+
+% then review hm and compare
 
 Why G4 so promising?
 
@@ -937,9 +945,17 @@ result, why?} mix 0.5
 \noindent\textbf{II. Effectiveness of Gradual Adversary}.
 
 \begin{figure}[t]
+	%
 	\includegraphics[width=\columnwidth]{fighmeff.pdf}
-	\caption{HM eff}
+	%
+	\caption{Performance of $\text{HM}[\mathcal{R},\mathcal{M}]$
+	%
+	\& $\text{HM}[\mathcal{S},\mathcal{M}]$ in \cref{tab:hmeff}.
+%
+	}
+	%
 	\label{fig:hmeff}
+	%
 \end{figure}
 
 
