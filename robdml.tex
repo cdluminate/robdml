@@ -906,7 +906,15 @@ characteristics of these methods.
 
 % first review the sota curve
 
-As shown, k
+As shown, ACT[$\mathcal{R}$] can achieve a high ERS, but with a significant
+performance drop in R@1, while ACT[$\mathcal{S}$] can retain a relative high
+R@1, but is much less efficient in gaining robustness.
+%
+Notably, ACT relies on the attack that can successfully pull the adversarial
+positive and negative samples close to each other in order to learn robust
+features~\cite{robrank}.
+%
+As a result, ACT's ERS with a small $\eta$ is relatively low.
 
 % then review hm and compare
 
