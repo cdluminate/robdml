@@ -984,20 +984,43 @@ Further experiments will be based on HM[$\mathcal{S},\mathcal{M}$].
 \begin{figure}[t]
 	\vspace{-1em}
 	\includegraphics[width=\columnwidth]{figgaeff.pdf}
-	\vspace{-1.5em}
-	\caption{Performance of HM[$\mathcal{S},g_\mathsf{LGA}$] in
-	\cref{tab:gaeff}}
+	\vspace{-1.9em}
+	\caption{Performance of ``HM[$\mathcal{S},g_\mathsf{LGA}$]'' in
+	\cref{tab:gaeff}.}
+	\label{fig:gaeff}
 \end{figure}
 
 \noindent\textbf{II. Gradual Adversary.}
-
-\cref{tab:gaeff}
+%
+As discussed in \cref{sec:32}, the HM[$\mathcal{S},\mathcal{M}$] may still suffer
+from the imbalance between learning the embeddings and gaining adversarial
+robustness.
+%
+Hence, we conduct further experiments %with an improved $H_\mathsf{D}$
+following the discussion, as shown in \cref{tab:gaeff} and \cref{fig:gaeff}.
+%
+Compared to HM[$\mathcal{S},\mathcal{M}$], slightly boosting the hardness in
+the late phase of training with $g_\mathsf{B}(\cdot)$ where $\xi{=}0.1$
+benefits the ERS, but results in a notably lower R@1;
+%
+A constant $H_\mathsf{D}$ at the upper bound of Semihard (\ie, $0$; too high
+for both early and late phase) renders model collapse;
+%
+$H_\mathsf{D}$ at the lower bound (\ie, $-\gamma$; too low for the late phase)
+leads to insignificant ERS improvement;
+%
+$H_\mathsf{D}{=}-\gamma/2$ provides a balance between the lower and upper
+bound, but still suffers from inflexibility.
+%
+In contrast, being not susceptible to the problems of other choices,
+HM[$\mathcal{S},g_\mathsf{LGA}$] achieves an ERS on par with
+HM[$\mathcal{S},\mathcal{M}$], but at the lowest R@1 penalty among all choices.
 
 \begin{figure}[t]
 	\vspace{-1em}
 	\includegraphics[width=\columnwidth]{figics.pdf}
-	\vspace{-1.5em}
-	\caption{ICS eff}
+	\vspace{-1.9em}
+	\caption{Performance of ``HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS'' in \cref{tab:ics}.}
 \end{figure}
 
 
