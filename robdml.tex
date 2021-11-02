@@ -1044,9 +1044,21 @@ After validating the effectiveness of our proposed method, we conduct
 experiments on CUB, CARS and SOP to compare our proposed method
 with the state-of-the-art defense methods, \ie, EST~\cite{advrank}
 and ACT~\cite{robrank}, as shown in \cref{tab:sota}.
+%
+An ideal defense method should be able to achieve a high ERS, a high R@1,
+as well as a high efficiency (\ie, being able to gain higher robustness
+under a fixed training cost).
 
-According to the results, EST[$\mathcal{R}$] achieves a relatively high
-R@1 when $\eta=8$,
+According to the results, EST[$\mathcal{R}$] achieves a relatively high R@1
+when $\eta{=}8$, but suffers from a drastic drop in R@1 when $\eta$ is
+increased to $32$.
+%
+Nevertheless, EST[$\mathcal{R}$] only lead to a moderate robustness in all
+settings compared to other methods.
+%
+Experiments for EST[$\mathcal{S}$] is omitted as it is expected to result
+in even lower ERS based on the observations in previous subsections, and
+EST has been greatly outperformed by ACT~\cite{robrank}.
 
 CUB 8 32
 
