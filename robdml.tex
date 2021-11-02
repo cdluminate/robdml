@@ -310,6 +310,10 @@ In brief, our contribusions includes:
 \section{Related Works}
 \label{sec:2}
 
+\oo{In potential of future works}
+Deep metric learning on adversarial example is also used for improving
+adversarial robustness for deep classifiers~\cite{mao2019metric}.
+
 \textbf{Adversarial Attack.}
 %
 Szegedy \etal~\cite{l-bfgs} find misclassification of DNN can be triggered by
@@ -1109,36 +1113,19 @@ given adversarial examples.
 \section{Conclusion}
 \label{sec:5}
 
+Adversarial robustness is important for DML applications.
+%
 Our core contribution is the improvement in adversarial training efficiency
 through HM.
 %
-Since regular training and the min-max adversarial training can be expressed
-as two boundary cases as HM, Graduate Adversary is modeled as an ``intermediate
-hardness'' the two cases.
+Since regular training and the min-max adversarial training can be expressed as
+two boundary cases as HM, Graduate Adversary is modeled as an ``intermediate
+hardness'' the two cases, and is effective.
 %
-Enforcing the previously neglected Intra-Class Structure is also beneficial
-for model robustness and adversarial training efficiency.
-
-Adversarial robustness is important for DML applications, but
-the existing defenses still suffer from low efficiency and low
-performance.
+Enforcing the previously neglected Intra-Class Structure can further improve 
+model robustness and adversarial training efficiency.
 %
-In this paper, 
-Hardness Manipulation is proposed as as a flexible tool to create
-adversarial examples for more efficient adversarial training.
-%
-Meanwhile, Gradual Adversary is proposed as a family of pseudo-hardness
-functions to better balance the training objectives.
-%
-Besides, an Intra-Class Structure penalty is proposed to enforce better
-embedding structure for higher robustness.
-%
-According to experimental evaluations, the proposed method overwhelmingly
-outperforms the state-of-the-art defenses.
-
-\oo{In potential of future works}
-Deep metric learning on adversarial example is also used for improving
-adversarial robustness for deep classifiers~\cite{mao2019metric}.
+Our method outperforms previous methods.
 
 %%%%%%%%% REFERENCES
 {\small
