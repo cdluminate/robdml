@@ -147,10 +147,10 @@ To counter the attacks (\ie, mitigating the vulnerability), the
 	%\vspace{-2.0em}
 	\caption{
 		%
-		Comparison in Robustness, Training Cost, and Recall@1 Performance
+		Comparison in Robustness, Training Cost, and Recall@1 
 		between Our Method (\ie, ``HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS'')
 		and the State-of-The-Art Method (\ie, ``ACT[$\mathcal{R}$]'' and
-		``ACT[$\mathcal{S}$]'').
+		``ACT[$\mathcal{S}$]'') on CUB Dataset.
 		%
 	}
 	\label{fig:introplot}
@@ -1071,23 +1071,22 @@ but along with a significantly lower ERS.
 %
 Thus, results for ACT[$\mathcal{S}$] are omitted from the table.
 
-It must be acknowledged that the high R@1 performance of our method largely
-stems from the source triplet sampling strategy, namely Softhard, instead of
-our contribution.
+Apart from that, our method HM[$\mathcal{S},g_\mathsf{LGA}$] out performs the
+previous methods in every aspect, as shown in \cref{fig:introplot} for 
+example.
 %
-Our core contribution is
+Although HM[$\mathcal{R},\mathcal{M}$] and HM[$\mathcal{R},g_\mathsf{LGA}$] can reach
+a higher ERS, they are excluded from comparison because they induce a
+significant performance drop in R@1.
 
-minimizing a slightly different objective than the triplet loss.
-
-CUB 8 32
-
-CARS 8 32
-
-SOP 8 32
-
-Number of PGD Steps $\eta$.
-\cref{fig:introplot}
-
+It \emph{must} be acknowledged that the high R@1 performance of our method
+largely stems from the source triplet sampling strategy, namely Softhard,
+instead of our contribution.
+%
+In terms of the overall performance, our method can achieve the highest ERS at
+the lowest performance drop in R@1 under a fixed training cost.
+%
+The existing methods are overwhelmingly outperformed by our method.
 
 \begin{comment}
 \begin{figure}[t]
@@ -1098,17 +1097,27 @@ Number of PGD Steps $\eta$.
 
 For adversarial training of a DML model, being selective to both benign and
 adversarial training samples is crucial for preventing model collapse, and
-achieving good performance on both kinds of samples.
+achieving good performance on both types of samples.
 %
 Hardness Manipulation is a flexible tool for us to specify such ``selection'',
 and Graduate Adversary is a selection rule for adversarial examples.
 %
 Intra-Class Structure loss helps the model exploit more information from the
-adversarial examples.
+given adversarial examples.
 
 
 \section{Conclusion}
 \label{sec:5}
+
+Our core contribution is the improvement in adversarial training efficiency
+through HM.
+%
+Since regular training and the min-max adversarial training can be expressed
+as two boundary cases as HM, Graduate Adversary is modeled as an ``intermediate
+hardness'' the two cases.
+%
+Enforcing the previously neglected Intra-Class Structure is also beneficial
+for model robustness and adversarial training efficiency.
 
 Adversarial robustness is important for DML applications, but
 the existing defenses still suffer from low efficiency and low
