@@ -1046,9 +1046,11 @@ experiments on CUB, CARS and SOP to compare our proposed method
 with the state-of-the-art defense methods, \ie, EST~\cite{advrank}
 and ACT~\cite{robrank}, as shown in \cref{tab:sota}.
 %
-An ideal defense method should be able to achieve a high ERS, a high R@1,
-as well as a high efficiency (\ie, being able to gain higher robustness
-under a fixed training cost).
+An ideal defense method should be able to achieve a high ERS and a high R@1
+at a low training cost (\ie, $\eta+1$).
+%
+The ability of a method to achieve a high ERS under a fixed training cost
+indicates a high efficiency.
 
 According to the results, EST[$\mathcal{R}$] achieves a relatively high R@1
 when $\eta{=}8$, but suffers from a drastic drop in R@1 when $\eta$ is
@@ -1057,9 +1059,25 @@ increased to $32$.
 Nevertheless, EST[$\mathcal{R}$] only lead to a moderate robustness in all
 settings compared to other methods.
 %
-Experiments for EST[$\mathcal{S}$] is omitted as it is expected to result
-in even much lower ERS based on the observations in previous subsections, and
-EST has been greatly outperformed by ACT~\cite{robrank}.
+Experiments for EST[$\mathcal{S}$] is omitted as it is expected to result in
+even much lower ERS based on the observations in previous subsections, and EST
+has been greatly outperformed by ACT~\cite{robrank}.
+%
+Although ACT[$\mathcal{R}$] achieves a relatively high ERS, its R@1 performance
+drop is distinct on every dataset.
+%
+According the previous subsections, ACT[$\mathcal{S}$] can lead to a high R@1,
+but along with a significantly lower ERS.
+%
+Thus, results for ACT[$\mathcal{S}$] are omitted from the table.
+
+It must be acknowledged that the high R@1 performance of our method largely
+stems from the source triplet sampling strategy, namely Softhard, instead of
+our contribution.
+%
+Our core contribution is
+
+minimizing a slightly different objective than the triplet loss.
 
 CUB 8 32
 
