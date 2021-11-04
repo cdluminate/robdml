@@ -80,34 +80,32 @@ Johns Hopkins University\\
 %%%%%%%%% ABSTRACT
 \begin{abstract}
 	% background
-	Owing to the security implications of adversarial vulnerability, the
-	adversarial robustness of deep metric learning models has to be improved
-	via defense.
+	Owing to security implications of adversarial vulnerability, adversarial
+	robustness of deep metric learning models has to be improved.
 	% insight
 	In order to avoid model collapse due to excessively hard examples, the
-	existing defenses refrain from using the min-max adversarial training, but
-	instead learns from a weak adversary inefficiently.
+	existing defenses dismiss the min-max adversarial training, but instead
+	learn from a weak adversary inefficiently.
 	% our starting point
-	Conversely, we argue that a model can learn from a strong adversary without
-	collapse, where the key is triplet hardness.
-	% HM framework
-	To this end, Hardness Manipulation is proposed to adversarially perturb the
-	training triplet to increase its hardness into a specified level, according
-	to another benign triplet or a pseudo-hardness function.
+	Conversely, we propose Hardness Manipulation to efficiently perturb the
+	training triplet till a specified level of hardness for adversarial
+	training, according to a harder benign triplet or a pseudo-hardness
+	function.
+	% merit
+	It is flexible as regular training and min-max adversarial training
+	are its boundary cases.
 	% GA Adversary
-	Based on this, Gradual Adversary is proposed as a family of pseudo-hardness
-	functions to overcome problems of referencing other benign triplets, and
-	achieve a better balance in the learning objective.
+	Besides, Gradual Adversary, a family of pseudo-hardness functions is
+	proposed to gradually increase the specified hardness level during training
+	for a better balance between performance and robustness.
 	% Intra-Class Structure
-	Besides, a penalty on Intra-Class Structure among benign and adversarial
-	examples can further improve model robustness, which is neglected by
-	previous methods.
+	Additionally, an Intra-Class Structure loss term among benign and adversarial
+	examples further improves training efficiency and model robustness.
 	% Experiment and Conclusion
-	Comprehensive experimental results on commonly used deep metric
-	learning datasets suggest that the proposed method, although simple in
-	its form, overwhelmingly outperforms the state-of-the-art defense methods in
-	terms of training time cost, robustness, as well as recall performance on
-	benign examples.
+	Comprehensive experimental results suggest that the proposed method,
+	although simple in its form, overwhelmingly outperforms the
+	state-of-the-art defenses in terms of training cost,
+	robustness, as well as performance on benign examples.
 %
 \end{abstract}
 
