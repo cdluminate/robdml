@@ -220,25 +220,21 @@ Then, how hard should such ``\emph{destination} hardness'' be?
 Recall that the model is already prone to collapse with excessively hard benign
 triplets~\cite{facenet}, let alone adversarial examples.
 %
-Thus, intuitively, the \emph{destination} hardness can be that of another
-benign triplet which is harder than the given triplet (\eg, a
-Semihard~\cite{facenet} triplet).
+Thus, intuitively, the \emph{destination} hardness can be the hardness of
+another benign triplet which is moderately harder than the given triplet (\eg,
+a Semihard~\cite{facenet} triplet).
 %
-However, in the late phase of training, the
-expectation of \emph{destination} hardness of another benign triplet
-will be small, and close to the \emph{hardness} expectation of the given triplet.
+However, in the late phase of training, the expectation of the difference
+between such \emph{destination} hardness and that of the given triplet will be
+small, leading to weak adversarial examples and inefficient adversarial
+learning.
 %
-This leads to weak attacks, and inefficient learning from a weak adversary.
-%
-Besides, we speculate a strong adversary in the early phase of DML training may
+Besides, strong adversarial examples in the early phase of training may also
 hinder the model from learning good embeddings, and hence influence the
-eventual performance on benign examples.
+performance on benign examples.
 %
-Based on these, a \emph{destination} hardness calculated from benign examples
-may not be the best choice.
-%
-A better \emph{destination} hardness should be able to balance the training
-objectives in the early and late phases of training.
+Namely, a better \emph{destination} hardness should be able to balance the
+training objectives in the early and late phases of training.
 
 % Gradual Adversary
 
