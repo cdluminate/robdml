@@ -156,41 +156,37 @@ To counter the attacks (\ie, mitigating the vulnerability), the
 
 % existing methods & problem
 
-Existing defense methods for DML~\cite{advrank,robrank} are adversarial
-training-based, inspired by Madry's \emph{min-max} adversarial
-training~\cite{madry} because it is one of the most effective methods for deep
-neural network classifiers.
+Existing defense methods~\cite{advrank,robrank} are adversarial training-based,
+inspired by Madry's \emph{min-max} adversarial training~\cite{madry} because it
+is consistently one of the most effective methods for classification task.
 %
 Specifically, Madry's method involves a inner problem to \emph{maximize} the
 loss by perturbing the inputs into adversarial examples, and an outer problem
 to \emph{minimize} the loss by updating the model parameters.
 %
-However, in order to avoid model collapse, the existing DML defenses refrain
-from directly adopting such paradigm, but instead use some indirect and
-relatively weak objectives to increase the loss value to a certain level.
+However, in order to avoid model collapse due to excessively hard examples, the
+existing defenses refrain from directly adopting such min-max paradigm, but
+instead replace the inner problem to indirectly increase the loss value to a
+certain level, which suffers from low efficiency and weak adversary (and hence
+weak robustness).
 %
-As a result, the model is not learning from a strong adversary, and suffers
-from low efficiency in gaining robustness within limited time. 
-%
-Furthermore, adversarial training already suffers from significant training
-cost (compared to the normal training process).
-%
-Hence, efficiency in gaining adversarial robustness is an inevitable major
-issue for DML defense methods.
+Since training cost is already a serious issue of adversarial training, the
+efficiency in gaining higher adversarial robustness under a fixed budget is
+inevitable and important for DML defense.
 
 % we argue / insight
 
-As suggested by previous works, an appropriate adversary for the inner
-\emph{maximization} problem should increase the loss to a certain point between
-that of benign examples (\ie, unperturbed examples) and the theoretical upper
-bound.
+Previous works suggest that an appropriate adversary for the inner
+\emph{maximization} problem should increase the loss to an ``intermediate''
+point between that of benign examples (\ie, unperturbed examples) and the
+theoretical upper bound.
 %
-What if this point is reached by a strong adversary, directly and
-efficiently?
+In this paper, we argue such point can be reached by a direct and efficient
+adversary.
 %
-Besides, as the mathematical expectation of loss is also greatly influenced by
-the triplet sampling strategy, we conjecture that the triplet sampling strategy
-and triplet ``hardness'' have a key impact for adversarial training.
+Besides, we conjecture the triplet sampling strategy has a key impact in
+adversarial training, because it is also able to greatly influence the
+mathematical expectation of loss even without adversarial attack.
 
 % hardness manipulation
 
