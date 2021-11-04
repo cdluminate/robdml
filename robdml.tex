@@ -191,27 +191,27 @@ mathematical expectation of loss even without adversarial attack.
 % hardness manipulation
 
 In this paper, we first define the ``\emph{hardness}'' of a sample triplet as
-the difference between the anchor-positive distance and the anchor-negative
+the difference between the anchor-positive distance and anchor-negative
 distance.
 %
 Then, Hardness Manipulation (HM) is proposed to adversarially perturb a given
 sample triplet and increase its hardness into a specified \emph{destination}
-hardness level.
+hardness level for adversarial training.
 %
-HM is implemented as an objective to minimize the L-$2$ norm of the thresholded
-difference between the hardness of the given sample triplet and the specified
+The objective of HM is to minimize the L-$2$ norm of the thresholded difference
+between the hardness of the given sample triplet and the specified
 \emph{destination} hardness.
 %
-Mathematically, when the objective is optimized using Projected Gradient
-Descent~\cite{madry}, the gradient of HM objective with respect to the
-adversarial perturbation is the same as that of directly \emph{maximizing} the
-triplet loss.
+HM is flexible as regular training and min-max adversarial training
+can be expressed as its boundary cases, as shown in \cref{fig:hmflexible}.
 %
-Thus, the optimization process of HM objective can be interpreted as a direct
-\emph{maximization} process of the loss (indicating a direct strong adversary)
-which stops halfway at the specified \emph{destination} hardness level.
-
-\oo{regular and max can be expressed as two boundary cases of HM}
+Mathematically, when the HM objective is optimized using Projected Gradient
+Descent~\cite{madry}, the sign of its gradient with respect to the adversarial
+perturbation is the same as that of directly \emph{maximizing} the loss.
+%
+Thus, the optimization of HM objective can be interpreted as a direct and
+efficient \emph{maximization} process of the loss which stops halfway at the
+specified \emph{destination} hardness level, \ie, the ``intermediate'' point.
 
 % how hard? benign destination
 
