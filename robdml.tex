@@ -422,14 +422,14 @@ where $\gamma$ is a predefined margin parameter.
 To attack the DML model, an imperceptible adversarial perturbation $\vr \in
 \Gamma$ is added to the input image $\mX$, where $\Gamma = \{\vr | \mX+\vr\in
 \mathcal{X},  \|\vr\|_p \leq \varepsilon\}$, so that its embedding vector
-$\tilde{\vx}=\phi(\mX+\vr)$ will be moved off its original location to other
-positions to fulfill the attacker's goal~[][][][][].
+$\tilde{\vx}=\phi(\mX+\vr)$ will be moved off its original location towards
+other positions to achieve the attacker's goal.
 %
 To defend against the attacks, the DML model can be adversarially trained to
 reduce the effect of attacks~\cite{advrank,robrank}.
 %
 The most important metrics for a good defense is training cost, adversarial
-robustness, and performance on benign examples.
+robustness, and performance drop on benign examples.
 
 \subsection{Hardness Manipulation}
 \label{sec:31}
@@ -437,20 +437,20 @@ robustness, and performance on benign examples.
 % define hardness
 
 Given an image triplet ($\mA$, $\mP$, $\mN$) sampled with a certain sampling
-strategy (\eg, Random) within a mini-batch, we define its
-\emph{hardness} as a scalar:
+strategy (\eg, Random) within a mini-batch, we define its \emph{hardness} as a
+scalar which is within $[-2,2]$:
 %
 \begin{equation}
 %
-H(\mA,\mP,\mN)=d_\phi(\mA,\mP)-d_\phi(\mA,\mN),
+H(\mA,\mP,\mN)=d_\phi(\mA,\mP)-d_\phi(\mA,\mN).
 %
 \end{equation}
 %
-which is an internal part of the triplet loss.
+Clearly, it is an internal part of the triplet loss.
 %
-For convenience we call this triplet as ``\emph{source} triplet'', and the
-corresponding $H(\cdots)$ value as ``\emph{source} hardness'', denoted as
-$H_\mathsf{S}$.
+For convenience, we call this triplet ($\mA$, $\mP$, $\mN$) as ``\emph{source}
+triplet'', and its corresponding hardness value as ``\emph{source}
+hardness'', denoted as $H_\mathsf{S}$.
 
 % define hardness manipulation
 
@@ -552,12 +552,12 @@ We leave this for future exploration.
 %
 $\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ is flexible as various
 types of $H_\mathsf{D}$ can be specified, \eg, a constant, the
-hardness of another benign triplet, or even a pseudo-hardness function.
+hardness of another benign triplet, or a pseudo-hardness function.
 %
 The case of maximizing the triplet loss is equivalent to
-$\text{HM}[H_\mathsf{S},2+\gamma]$, where $2+\gamma$ is the 
-upper bound of loss, while $\text{HM}[H_\mathsf{S},H_\mathsf{S}]$
-is regular DML training.
+$\text{HM}[H_\mathsf{S},2]$, where $2$ is the 
+upper bound of hardness, while $\text{HM}[H_\mathsf{S},H_\mathsf{S}]$
+is regular DML training, as shown in \cref{fig:hmflexible}.
 
 As pushing $\tilde{H}_\mathsf{S}$ towards the upper bound will easily lead to
 model collapse, a valid $H_\mathsf{D}$ should be chosen within the interval
