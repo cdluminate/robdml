@@ -2,7 +2,7 @@ LATEX:=pdflatex
 BIBTEX:=bibtex
 TEX:=robdml.tex
 
-PDFS:= hmillust.pdf gaillust.pdf icsapn.pdf fighmeff.pdf figgaeff.pdf sotaplot.pdf introplot.pdf figics.pdf
+PDFS:= hmillust.pdf gaillust.pdf icsapn.pdf fighmeff.pdf figgaeff.pdf sotaplot.pdf introplot.pdf figics.pdf hmflexible.pdf
 
 robdml: $(PDFS)
 	$(LATEX) $(TEX)
@@ -54,3 +54,6 @@ figics.pdf:
 	inkscape -o figics.pdf figics.svg
 	pdfcrop figics.pdf
 	mv figics-crop.pdf figics.pdf
+
+hmflexible.pdf:
+	inkscape -o hmflexible.pdf hmflexible.svg
