@@ -437,8 +437,8 @@ robustness, and performance drop on benign examples.
 % define hardness
 
 Given an image triplet ($\mA$, $\mP$, $\mN$) sampled with a certain sampling
-strategy (\eg, Random) within a mini-batch, we define its \emph{hardness} as a
-scalar which is within $[-2,2]$:
+strategy (\eg, Random) within a mini-batch, we define its ``\emph{hardness}''
+as a scalar which is within $[-2,2]$:
 %
 \begin{equation}
 %
@@ -449,19 +449,23 @@ H(\mA,\mP,\mN)=d_\phi(\mA,\mP)-d_\phi(\mA,\mN).
 Clearly, it is an internal part of the triplet loss.
 %
 For convenience, we call this triplet ($\mA$, $\mP$, $\mN$) as ``\emph{source}
-triplet'', and its corresponding hardness value as ``\emph{source}
-hardness'', denoted as $H_\mathsf{S}$.
+triplet'', and its corresponding hardness value as ``\emph{source} hardness'',
+denoted as $H_\mathsf{S}$.
 
 % define hardness manipulation
 
 Then, \emph{Hardness Manipulation} (HM) aims to increase the \emph{source}
 hardness $H_\mathsf{S}$ into a specified ``\emph{destination} hardness''
-$H_\mathsf{D}$, by finding adversarial examples of the source triplet $(\mA,
-\mP, \mN)$, \ie, $(\mA + {\vr}_a, \mP + {\vr}_p, \mN + {\vr}_n)$, where
-$({\vr}_a, {\vr}_p, {\vr}_n)$ are the adversarial perturbations.
+$H_\mathsf{D}$, by finding adversarial examples of the source triplet, \ie,
+$(\mA{+} {\vr}_a, \mP {+} {\vr}_p, \mN {+} {\vr}_n)$, where $({\vr}_a, {\vr}_p,
+{\vr}_n)$ are the adversarial perturbations.
 %
-If we denote the hardness of the adversarially perturbed \emph{source} triplet
-as $\tilde{H}_\mathsf{S}$, the HM can be implemented as follows:
+Denoting the hardness of the adversarially perturbed \emph{source} triplet
+as $\tilde{H}_\mathsf{S}$, \ie,
+%
+$\tilde{H}_\mathsf{S} = H(\mA{+} {\vr}_a, \mP {+} {\vr}_p, \mN {+} {\vr}_n)$,
+%
+the HM is implemented as:
 %
 \begin{equation}
 	%
@@ -474,26 +478,26 @@ as $\tilde{H}_\mathsf{S}$, the HM can be implemented as follows:
 %
 The $\max(0,\cdot)$ part in \cref{eq:hm} truncates the gradient when
 $H_\mathsf{S}>H_\mathsf{D}$, automatically stopping the optimization, because
-$H_\mathsf{S}$ is not desired to be reduced once being greater than
-$H_\mathsf{D}$.
+$H_\mathsf{S}$ is not desired to be reduced once it exceeds $H_\mathsf{D}$.
 %
-The \cref{eq:hm} is written in the L-$2$ norm form instead of the standard Mean Squared
-Error because HM can be directly extended into vector form for a
+The \cref{eq:hm} is written in the L-$2$ norm form instead of the standard Mean
+Squared Error because HM can be directly extended into vector form for a
 mini-batch.
 %
-The optimization problem can be solved by Projected Gradient
-Descent (PGD)~\cite{madry}.
+The optimization problem can be solved by Projected Gradient Descent
+(PGD)~\cite{madry}.
 %
 And the resulting adversarial examples are used for adversarially training the
-DML model:
+DML model with
 %
 $L_\text{T}(\phi(\mA+\hat{\vr}_a), \phi(\mP+\hat{\vr}_p),
 \phi(\mN+\hat{\vr}_n))$.
 %
-We abbreviate the adversarial training with adversarial examples created through
-this way as $\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ in the following text.
+The overall procedure of HM is illustrated in \cref{fig:hm}.
 %
-And the overall procedure of HM is illustrated in \cref{fig:hm}.
+For convenience,
+we abbreviate the adversarial training with adversarial examples created
+through this way as $\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ in this paper.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{hmillust.pdf}
@@ -526,14 +530,14 @@ maximizing $L_\text{T}$), \ie,
 		\big\},
 \end{align}
 %
-assuming that $H_\mathsf{D}>\tilde{H}_\mathsf{S}$.
+assuming $H_\mathsf{D}>\tilde{H}_\mathsf{S}$.
 %
-And the perturbation $\vr$ is updated as $\vr \leftarrow \text{Proj}_\Gamma\{\vr + \alpha \Delta
+The perturbation $\vr$ is updated as $\vr \leftarrow \text{Proj}_\Gamma\{\vr + \alpha \Delta
 \vr\}$ by PGD for $\eta$ steps with a step size $\alpha$.
 %
 Thus, the optimization of HM objective can be interpreted as direct
 maximization of $\tilde{H}_\mathsf{S}$, which discontinues very early once it
-reaches $H_\mathsf{D}$.
+exceeds $H_\mathsf{D}$.
 %
 This means the model learns from an efficient adversary during adversarial
 training with HM.
