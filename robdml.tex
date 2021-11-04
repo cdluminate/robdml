@@ -324,8 +324,8 @@ Subsequent first-order gradient-based methods can compromise the DNNs more
 effectively under the white-box assumption~\cite{i-fgsm,madry,apgd}.
 %
 In contrast, black-box attacks have been explored by query-based
-methods~\cite{nes-atk,spsa-atk} and transferrability-based methods~[], which
-are more practical for real-world scenarios.
+methods~\cite{nes-atk,spsa-atk} and transferrability-based
+methods~\cite{di-fgsm}, which are more practical for real-world scenarios.
 
 \textbf{Adversarial Defense.}
 %
@@ -365,8 +365,9 @@ well~\cite{advrank,advorder,robrank}, which raises concerns on safety,
 security, or fairness for a DML application.
 %
 The existing attacks aims to completely subvert the image retrieval
-results~[][][], or covertly alter the top-ranking results without being
-abnormal~[][][][].
+results~\cite{qair,learn-to-misrank,advdpqn,advpattern,flowertower,universalret},
+or covertly alter the top-ranking results without being
+abnormal~\cite{advrank,advorder}.
 
 %
 \textbf{Defenses in DML.} Different from attacks, defense methods are less
