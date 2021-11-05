@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.28"
-     inkscape:cx="869.14061"
-     inkscape:cy="112.89062"
+     inkscape:zoom="2.56"
+     inkscape:cx="397.85156"
+     inkscape:cy="145.89844"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="0"
@@ -2324,7 +2324,7 @@
        inkscape:path-effect="#path-effect6060"
        inkscape:original-d="M 446.28054,108.60026 C 495.03369,94.809565 543.78585,81.017871 592.537,67.225177" />
     <path
-       style="fill:#ff0000;fill-opacity:0.843137;stroke:#000000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.843137;marker-end:url(#Arrow1Mend)"
+       style="fill:none;fill-opacity:0.843137;stroke:#000000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.843137;marker-end:url(#Arrow1Mend)"
        d="m 446.15147,108.65674 c 83.59331,22.0393 167.18544,44.07829 250.77638,66.11696"
        id="path6288"
        inkscape:path-effect="#path-effect6290"
@@ -2519,13 +2519,13 @@
          y="297.33163"
          id="tspan49938-0-0">     Loss Term </tspan></text>
     <path
-       style="fill:none;stroke:#ff0000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.843137;marker-end:url(#Arrow1Mend-9)"
+       style="fill:none;stroke:#ff0000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.84313726;marker-end:url(#Arrow1Mend-9)"
        d="M 824.46527,110.58924 C 873.21808,96.797355 921.97024,83.005655 970.7217,69.214154"
        id="path6058-8"
        inkscape:path-effect="#path-effect1587"
        inkscape:original-d="M 824.46527,110.58924 C 873.21842,96.798542 921.97058,83.006848 970.7217,69.214154" />
     <path
-       style="fill:#ff0000;fill-opacity:0.843137;stroke:#ff0000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.843137;marker-end:url(#Arrow1Mend-9)"
+       style="fill:none;fill-opacity:0.843137;stroke:#ff0000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.84313726;marker-end:url(#Arrow1Mend-9)"
        d="m 825.40855,110.53602 c 10.10591,26.45935 20.2114,52.9176 30.31647,79.37476"
        id="path6288-5"
        inkscape:original-d="m 825.40855,110.53602 c 10.10561,26.45946 20.2111,52.91771 30.31647,79.37476"
