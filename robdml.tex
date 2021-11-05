@@ -703,7 +703,7 @@ triplet is fed to the model, and the triplet loss will enforce a good
 %
 Since the anchor, positive sample, and their adversarial counterpart belongs to
 the same class, it should be noted that the \emph{intra-class} structure can be
-enforced as well, and This has been neglected by the existing DML defenses.
+enforced as well, but this has been neglected by the existing DML defenses.
 %
 \emph{Intra-class} structure is also important for robustness besides the
 \emph{inter-class} structure, because the attack may attempt to change the
@@ -714,7 +714,7 @@ rankings of samples in the same class~\cite{advrank}.
 We propose an additional loss function term to enforce such \emph{intra-class}
 structure, as shown in \cref{fig:ics}.
 %
-Specifically, the anchor $\va$ and its adversarial counterpart $\tilde{\va}$
+Specifically, the anchor $\va$ and its adversarial counterpart
 are separated from the positive sample $\vp$ by reusing the triplet loss,
 \ie,
 %
@@ -726,7 +726,7 @@ are separated from the positive sample $\vp$ by reusing the triplet loss,
 where $\lambda$ is a constant weight for this loss term,
 and the margin is set as zero to avoid negative effect.
 %
-The $L_\text{ICS}$ term can be added to the loss function for
+The $L_\text{ICS}$ term can be appended to the loss function for
 adversarial training.
 
 \section{Experiments}
@@ -783,19 +783,19 @@ Concretely, the collection of attacks for ERS includes:
 (1) CA+, CA-, QA+ and QA-~\cite{advrank}, which move some selected candidates
 towards the topmost or bottommost part of ranking list;
 %
-(2) TMA~[], which increases the cosine similarity between two selected samples;
+(2) TMA~\cite{flowertower} which increases the cosine similarity between two selected samples;
 %
-(3) ES~[][], which moves the embedding of a sample off its original position as
+(3) ES~\cite{advrank,advdpqn}, which moves the embedding of a sample off its original position as
 distant as possible;
 %
-(4) LTM~[], which perturbs the ranking result by minimizing the distance of
+(4) LTM~\cite{learn-to-misrank}, which perturbs the ranking result by minimizing the distance of
 unmatched pairs while maximizing the distance of matched pairs;
 %
 (5) GTM~\cite{robrank}, which minimizes the distance between query and the
 closest unmatching sample.
 %
 (6) GTT~\cite{robrank}, aims to move the top-$1$ candidate out of the top-$4$
-retrieval results, which is simplified from [].
+retrieval results, which is simplified from \cite{qair}.
 %
 The setup of all the attacks for robustness evaluation are unchanged from
 \cite{robrank} for fair comparison.
