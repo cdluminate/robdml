@@ -1,13 +1,16 @@
 \begin{table*}
 \resizebox{\linewidth}{!}{
-\setlength{\tabcolsep}{0.3em}%
+\setlength{\tabcolsep}{0.48em}%
 \begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
-\hline 
+
+	\toprule
+
 \multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS}}\tabularnewline
 \cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17} 
  &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
-\hline 
-\hline 
+
+	\midrule
+
 \multirow{5}{*}{CUB} & HM{[}$\mathcal{R},\mathcal{R}${]} & N/A & 53.9 & 66.4 & 26.1 & 59.5 & 0.0 & 100.0 & 0.0 & 99.9 & 0.883 & 1.762 & 0.0 & 0.0 & 14.1 & 0.0 & 3.8\tabularnewline
  & HM{[}$\mathcal{R},\mathcal{M}${]} & 8 & 27.0 & 36.0 & 13.2 & 42.5 & 19.4 & 48.0 & 22.2 & 32.0 & 0.535 & 0.867 & 11.6 & 10.4 & 19.3 & 2.9 & 35.1\tabularnewline
  & HM{[}$\mathcal{R},\mathcal{S}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
@@ -37,8 +40,17 @@
  & HM{[}$\mathcal{H},\mathcal{S}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
  & HM{[}$\mathcal{H},\mathcal{D}${]} & 8 & 52.6 & 64.9 & 34.4 & 60.0 & 0.0 & 100.0 & 0.2 & 99.9 & 0.835 & 1.720 & 0.1 & 0.0 & 20.0 & 0.0 & 5.1\tabularnewline
  & HM{[}$\mathcal{H},\mathcal{H}${]} & N/A & 48.9 & 61.2 & 30.3 & 56.5 & 0.0 & 100.0 & 0.4 & 99.9 & 0.830 & 1.752 & 0.2 & 0.0 & 19.5 & 0.0 & 5.0\tabularnewline
+
+	\bottomrule
+
 \end{tabular}}
 
-\caption{Full data table for desth matrix.}
+	\caption{Full Data Sheet for Tab.2 in the Paper. The symbols $\mathcal{R},
+	\mathcal{M}, \mathcal{S}, \mathcal{D}, \mathcal{H}$ denote Random, Semihard,
+	Softhard, Distance and Hardest triplet sampling strategies, respectively.
+	%
+	Experiments that end up with model collapse are left with a placeholder 
+	in the table.
+	}
 \label{tab:srcdest}
 \end{table*}

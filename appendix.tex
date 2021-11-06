@@ -106,11 +106,50 @@ and the public code of the state-of-the-art defense method~\cite{robrank}
 \noindent\textbf{I. Hardware and Software Platform.}
 
 We conduct the experiments with two Nvidia Titan Xp GPUs under the Ubuntu 16.04
-operating system with PyTorch 1.8.2.
+operating system with PyTorch 1.8.2 in distributed data parallel mode.
 
-In this section, we provide more details on the reasons of our design,
-additional details of our implementation, as well as more discussions
-on questions that are unsuitable for the main part of manuscript.
+\noindent\textbf{II. Embedding-Shifted Triplet (EST).}~\cite{advrank}
+
+Embedding-Shifted Triplet (EST)~\cite{advrank} adopts adversarial counterparts
+of $\va,\vp,\vn$ with maximum embedding move distance off their original
+locations, \ie,
+$L_\text{EST}=L_\text{T}(\tilde{\va},\tilde{\vp},\tilde{\vn};\gamma)$ where
+$\tilde{\va}=\phi(X+r^*)$, and $r^*=\arg\max_{r}d_\phi(X+r, X)$.
+%
+The $\tilde{\vp}$ and $\tilde{\vn}$ are obtained similarly.
+
+\ul{Relationship with HM:}
+%
+Since EST only aims to maximize the embedding move distance off its original
+location without specifying any direction, it leads to a random hardness
+value.
+%
+Because the perturbed triplet can be either harder or easier than the benign
+triplet.
+%
+Namely, EST merely indirectly increase the hardness of the training
+triplet, and may even decrease its hardness.
+%
+Thus, EST suffers from inefficiency in adversarial training compared to HM.
+
+\noindent\textbf{III. Anti-Collapse Triplet (ACT).}~\cite{robrank}
+
+Anti-Collapse Triplet (ACT)~\cite{robrank} ``collapses'' the embedding vectors
+of positive and negative sample, and enforces the model to separate them apart,
+\ie, $L_\text{ACT}=L_\text{T}(\va, \overrightarrow{\vp},
+\overleftarrow{\vn};\gamma)$, where $[\overrightarrow{\vp},\overleftarrow{\vn}]
+=[\phi(X_p+r_p^*), \phi(X_n+r_n^*)]$, and $[r_p^*,r_n^*]=\arg\min_{r_p,r_n}
+d_\phi(X_p+r_p, X_n+r_n)$.
+
+\ul{Relationship with HM:}
+
+\oo{todo}
+
+
+However, compared to the standard min-max adversarial training
+paradigm~\cite{madry}, these methods merely indirectly increase the loss value,
+and thus, suffer from inefficient learning because the adversary is not strong
+enough.
 
 %\begin{enumerate}[noitemsep, label={Q{\arabic*}.}]
 \begin{enumerate}[noitemsep]
@@ -161,28 +200,6 @@ on questions that are unsuitable for the main part of manuscript.
 	\item Loss normalization with $u$?
 
 	\item Hardware and software platform?
-
-	\item Details of EST?
-
-	\item Details of ACT?
-%
-Embedding-Shifted Triplet (EST)~\cite{advrank} adopts adversarial counterpars
-of $\va,\vp,\vn$ with maximum embedding move distance off their original
-locations, \ie,
-$L_\text{EST}=L_\text{T}(\tilde{\va},\tilde{\vp},\tilde{\vn};\gamma)$ where
-$\tilde{\va}=\phi(X+r^*)$, $r^*=\arg\max_{r}d_\phi(X+r, X)$.
-%
-Anti-Collapse Triplet (ACT)~\cite{robrank} collapses the embedding vectors of
-positive and negative sample, and enforces the model to separate them apart,
-\ie, $L_\text{ACT}=L_\text{T}(\va, \overrightarrow{\vp},
-\overleftarrow{\vn};\gamma)$, where $[\overrightarrow{\vp},\overleftarrow{\vn}]
-=[\phi(X_p+r_p^*), \phi(X_n+r_n^*)]$, and $[r_p^*,r_n^*]=\arg\min_{r_p,r_n}
-d_\phi(X_p+r_p, X_n+r_n)$.
-%
-However, compared to the standard min-max adversarial training
-paradigm~\cite{madry}, these methods merely indirectly increase the loss value,
-and thus, suffer from inefficient learning because the adversary is not strong
-enough.
 
 	\item Complete Table for Sec~4.1 Hardness Selection?
 
@@ -243,33 +260,12 @@ Visualize robustness through the image retrieval task.
 
 	\item [TODO] arxiv 2105.04906 for collapse issue.
 
-	\item [?] Can we learn more from the third and fourth standard moments?
-		Namely skewness and kurtosis.
-	
-	\item [M] manuscript notes on LGA.
-
 	\item [\cmark] We don't have to mix HM(R,M) and HM(S,M).
 
 	\item [Q] Is ACT equivalent to $HM(H_\mathsf{S},0)$.
 
 	\item [ICS] should investigate other metric learning loss functions and see
 		how they deal with hierarchy. e.g. MS, LSS, GLift, quadrup, etc.
-
-	\item [GA] Also scale the $H_D-H_S$ part?
-		(1) $$ H_\mathsf{GA} \leftarrow (H_\mathsf{D} + U - H_\mathsf{S}) * nL $$
-		(2) $$ H_\mathsf{GA} \leftarrow H_\mathsf{D} + U * nL $$
-		(3) pure GA for ablation $$ H_\mathsf{GA} \leftarrow U * nL $$
-		interpret with lessons learned from HM matrix.
-
-	\item [ICS] Adversarial training (does not allow any distance moving) may
-		encourage collapse (a trivial solution to the requirement). What if we
-		loosen the requirement and convert it into a new constraint? For
-		instance, \[
-			L=L_{base}(a,p,n)+\lambda_{1}L(a,\tilde{a},p)+\lambda_{2}L_{triplet}(a,\tilde{a},n)
-		\] where the $L_{base}$ can be either $L_{triplet}$, $L_{rest}$, or
-		$L_{act}$. Question: should we do this for every sample? i.e., \[
-			L_{loosen}(a,p,n)=L_{base}(a,p,n)+\sum_{x\in\{a,p,n\}}L(x,\tilde{x},n_{x})
-		\]
 
 	\item [ICS] adversarial training that does not allow embedding move may
 		encourage model collapse. Maybe we just apply some loosened restrction
