@@ -6,7 +6,7 @@
 \section{Additional Information}
 \label{sec:a}
 
-\subsection{Potential Societal Impact.}
+\subsection{Potential Societal Impact}
 
 \noindent\textbf{I. Security.}
 
@@ -26,7 +26,7 @@ computation than regular training), our method has significantly improved the
 adversarial training efficiency compared to the previous works (hence is a
 little bit more environment-friendly).
 
-\subsection{Limitations.}
+\subsection{Limitations of Our Method}
 
 \noindent\textbf{I. Assumptions.}
 
@@ -204,16 +204,18 @@ and their corresponding papers are properly cited.
 and the public code of the state-of-the-art defense method~\cite{robrank}
 (License: Apache-2.0).
 
-\section{More Technical and Design Details}
+\section{More Technical Details}
 \label{sec:b}
 
-\noindent\textbf{I. Hardware and Software Platform.}
+\subsection{Hardware and Software Platform}
 
-We conduct the experiments with two Nvidia Titan Xp GPUs under the Ubuntu 16.04
-operating system with PyTorch 1.8.2 in distributed data parallel mode.
+We conduct the experiments with two Nvidia Titan Xp GPUs (12GB of memory each)
+under the Ubuntu 16.04 operating system with PyTorch 1.8.2 in distributed data
+parallel mode.
 
-~\newline
-\noindent\textbf{II. Embedding-Shifted Triplet (EST).}~\cite{advrank}
+\subsection{State-of-The-Art Defenses}
+
+\noindent\textbf{I. Embedding-Shifted Triplet (EST).}~\cite{advrank}
 
 Embedding-Shifted Triplet (EST)~\cite{advrank} adopts adversarial counterparts
 of $\va,\vp,\vn$ with maximum embedding move distance off their original
@@ -240,7 +242,7 @@ and may even decrease its hardness.
 Thus, EST suffers from inefficiency in adversarial training compared to HM.
 
 ~\newline
-\noindent\textbf{III. Anti-Collapse Triplet (ACT).}~\cite{robrank}
+\noindent\textbf{II. Anti-Collapse Triplet (ACT).}~\cite{robrank}
 
 Anti-Collapse Triplet (ACT)~\cite{robrank} ``collapses'' the embedding vectors
 of positive and negative sample, and enforces the model to separate them apart,
@@ -265,8 +267,9 @@ optimize in practice.
 In brief, ACT is also indirectly increasing the loss value, suffering from
 inefficient adversarial learning.
 
-~\newline
-\noindent\textbf{IV. Hardness Manipulation (HM).}
+\subsection{Hardness Manipulation (HM)}
+
+\oo{todo}
 
 %\begin{enumerate}[noitemsep, label={Q{\arabic*}.}]
 \begin{enumerate}[noitemsep]
