@@ -753,16 +753,16 @@ The margin $\gamma$ in triplet loss is $0.2$, which is consistent to standard
 DML~\cite{revisiting}.
 %
 Adam~\cite{adam} optimizer is used for parameter updates, with a learning rate
-as $1.0{\times}10^{-3}$ for $150$ epochs, and a mini-batch size of $112$.
+of $1.0{\times}10^{-3}$ for $150$ epochs, and a mini-batch size of $112$.
 %
 Adversarial examples are created under the perturbation budget
 $\varepsilon{=}8/255$ in infinity norm, using PGD~\cite{madry} with step size
 $\alpha{=}1/255$ and a default maximum step number $\eta{=}8$.
 %
-The parameter $u$ is equal to $\gamma$, much less than the loss upper bound,
+The parameter $u$ is equal to $\gamma$, much less than the loss upper bound
 in order to avoid excessive hardness boost in $g_\mathsf{B}$ and $g_\mathsf{LGA}$.
 %
-Parameter $\lambda$ in $L_\text{ICS}$ is $0.5$ by default.
+Parameter $\lambda$ for $L_\text{ICS}$ is $0.5$ by default ($0.05$ on SOP).
 
 The model performance on benign (\ie, unperturbed) examples is measured in
 Recall@1 (R@1), Recall@2 (R@2), mAP and NMI
@@ -771,7 +771,7 @@ following~\cite{revisiting,robrank}.
 The adversarial robustness of a model is measured in Empirical Robustness Score
 (ERS)~\cite{robrank}, a normalized score (the higher the better) from
 an collection of existing attacks against DML or their simplified white-box
-alternatives optimized with PGD ($\eta=32$ for strong effect).
+alternatives optimized with PGD ($\eta=32$ for strong attack).
 %
 Since adversarial training is not ``gradient masking''~\cite{obfuscated}, the
 performance of white-box attack can be regarded as the upper bound of the
@@ -800,16 +800,7 @@ retrieval results, which is simplified from \cite{qair}.
 The setup of all the attacks for robustness evaluation are unchanged from
 \cite{robrank} for fair comparison.
 %
-Further details can be found in \cite{robrank} and the supplementary.
-
-\begin{comment}
-%
-In this section, we first carry out parameter search for the components of the
-proposed method, in order to illustrate their effectiveness.
-%
-The comparison with the state-of-the-art DML defense methods will be presented in the end.
-%
-\end{comment}
+Further details can be found in \cite{robrank} or the supplementary.
 
 \subsection{Selection of Source \& Destination Hardness}
 \label{sec:41}
@@ -821,7 +812,7 @@ The comparison with the state-of-the-art DML defense methods will be presented i
 % where to start
 
 As discussed in \cref{sec:31}, we start from the $H_\mathsf{D}$ calculated from
-a harder benign triplet sampled in a different strategy, such as Random,
+a harder benign triplet sampled by a different strategy, such as Random,
 Semihard~\cite{facenet}, Softhard~\cite{revisiting},
 Distance-weighted~\cite{distance} (\emph{abbr}., Distance), or the within-batch
 Hardest negative sampling strategy, because we know these strategies do not
@@ -833,8 +824,8 @@ HM is flexible so that any existing or future triplet sampling strategy
 can be used for the source triplet or calculating $H_\mathsf{D}$.
 %
 But not all potential combinations are expected to be effective for HM, as it
-will not create an adversarial triplet when $H_\mathcal{S}\geqslant
-H_\mathcal{D}$.
+will not create an adversarial triplet when $H_\mathsf{S}\geqslant
+H_\mathsf{D}$.
 %
 Thus, we sort the strategies based on the mean hardness of their
 outputs in~\cref{tab:hsort}.
@@ -866,7 +857,7 @@ improving adversarial robustness, where a notable number of adversarial
 examples are created due the high $\text{Var}[H]$ of Softhard.
 %
 Although $E[H]$ of Softhard is less than that of Distance or Hardest, some hard
-adversarial examples are still created
+adversarial examples are still created%
 %
 \footnote{Differently, Softhard also samples a
 hard positive instead of a random positive besides a hard negative.
@@ -879,7 +870,7 @@ still result in a slow collapse.
 
 % 4. summary
 
-In summary, HM creates mini-batches mixing some unperturbed source triplets and
+In practice, HM creates mini-batches mixing some unperturbed source triplets and
 some adversarial triplets.
 %
 The $\text{HM}[\mathcal{R}, \mathcal{M}]$ and $\text{HM}[\mathcal{S},
@@ -888,7 +879,7 @@ The $\text{HM}[\mathcal{R}, \mathcal{M}]$ and $\text{HM}[\mathcal{S},
 Subsequent experiments will be based on the two effective combinations.
 %
 Empirically, the hardness range of Semihard strategy,
-\ie, $[-\gamma,0]$ is appropriate for $H_\mathcal{D}$.
+\ie, $[-\gamma,0]$ is found appropriate for $H_\mathsf{D}$.
 
 \subsection{Effectiveness of Our Approach}
 \label{sec:42}
@@ -898,7 +889,7 @@ Empirically, the hardness range of Semihard strategy,
 
 \noindent\textbf{I. Hardness Manipulation.}
 %
-To validate HM with $H_\mathcal{D}$ calculated from benign
+To validate HM with $H_\mathsf{D}$ calculated from benign
 triplets, we adversarially train models using $\text{HM}[\mathcal{R},
 \mathcal{M}]$ and $\text{HM}[\mathcal{S}, \mathcal{M}]$ on the CUB dataset,
 with varying PGD steps, \ie, $\eta\in\{2,4,8,16,32\}$, respectively.
@@ -983,13 +974,13 @@ efficiency when $\eta$ is small.
 %
 HM[$\mathcal{R},\mathcal{M}$] creates training batches with some Random benign
 examples and a large portion of Semihard adversarial examples, and hence
-achieve a high ERS and a relatively low R@1 because the Random triplet sampling
-strategy is not selective for data on which the model cannot generalize well.
+achieve a high ERS and a relatively low R@1 because the Random sampling
+strategy is not selective to benign samples on which the model does not generalize well.
 %
 HM[$\mathcal{S},\mathcal{M}$] creates training batches with some Semihard
 adversarial examples and a large portion of Softhard benign examples, and hence
-achieve a relatively high ERS as well as a high R@1 since Softhard sampling
-strategy is selective for the training data.
+achieve a relatively high ERS and a high R@1 because Softhard sampling
+strategy is selective.
 %
 Further experiments will be based on HM[$\mathcal{S},\mathcal{M}$].
 
@@ -1004,29 +995,29 @@ Further experiments will be based on HM[$\mathcal{S},\mathcal{M}$].
 
 \noindent\textbf{II. Gradual Adversary.}
 %
-As discussed in \cref{sec:32}, the HM[$\mathcal{S},\mathcal{M}$] may still suffer
-from the imbalance between learning the embeddings and gaining adversarial
-robustness.
+As discussed in \cref{sec:32}, the HM[$\mathcal{S},\mathcal{M}$] may still
+suffer from the imbalance between learning the embeddings and gaining
+adversarial robustness.
 %
 Hence, we conduct further experiments %with an improved $H_\mathsf{D}$
 following the discussion, as shown in \cref{tab:gaeff} and \cref{fig:gaeff}.
 %
-Compared to HM[$\mathcal{S},\mathcal{M}$], slightly boosting the hardness in
-the late phase of training with $g_\mathsf{B}(\cdot)$ where $\xi{=}0.1$
-benefits the ERS, but results in a notably lower R@1;
+Compared to HM[$\mathcal{S},\mathcal{M}$], slightly boosting the hardness
+training with $g_\mathsf{B}(\cdot)$ where $\xi{=}0.1$ benefits the ERS, but
+results in a notably lower R@1;
 %
 A constant $H_\mathsf{D}$ at the upper bound of Semihard (\ie, $0$; too high
-for both early and late phase) renders model collapse;
+for both the early and the late phase of training) renders model collapse;
 %
 $H_\mathsf{D}$ at the lower bound (\ie, $-\gamma$; too low for the late phase)
 leads to insignificant ERS improvement;
 %
-$H_\mathsf{D}{=}-\gamma/2$ provides a balance between the lower and upper
-bound, but still suffers from inflexibility.
+$H_\mathsf{D}{=}-\gamma/2$ provides a balance in training objectives, but
+still suffers from inflexibility.
 %
-In contrast, being not susceptible to the problems of other choices,
+In contrast, being not susceptible to the mentioned problems of other choices,
 HM[$\mathcal{S},g_\mathsf{LGA}$] achieves an ERS on par with
-HM[$\mathcal{S},\mathcal{M}$], but at the lowest R@1 penalty among all choices.
+HM[$\mathcal{S},\mathcal{M}$], but is at the lowest R@1 performance penalty among all choices.
 
 \begin{figure}[t]
 	\vspace{-1em}
