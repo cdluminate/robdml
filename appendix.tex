@@ -1,24 +1,34 @@
 \clearpage
 \appendix
 
+\tableofcontents
+
 \section{Additional Information}
+\label{sec:a}
 
-\noindent\textbf{I. Potential Societal Impact.}
+\subsection{Potential Societal Impact.}
 
-(1) \ul{Security:} Adversarial attacks may raise security considerations on
+\noindent\textbf{I. Security.}
+
+Adversarial attacks may raise security considerations on
 deep learning applications, and even cause negative effect.
 %
 In contrast, in this manuscript, we focus on defending against the attacks and
 enhancing a model's adversarial robustness, and hence is expected to have a
 positive impact instead.
 
-(2) \ul{Environment:} Although adversarial training is not
+~\newline
+\noindent\textbf{II. Environment.}
+
+Although adversarial training is not
 environment-friendly due to its high training cost (in terms of more intensive
 computation than regular training), our method has significantly improved the
 adversarial training efficiency compared to the previous works (hence is a
 little bit more environment-friendly).
 
-\noindent\textbf{II. Limitations.}
+\subsection{Limitations.}
+
+\noindent\textbf{I. Assumptions.}
 
 (1) \ul{The assumption that an ``intermediate point'' exists between regular
 training of DML model and min-max adversarial training of DML model.}
@@ -69,8 +79,10 @@ Even if this assumption is broken under some new experiment settings,
 we can further reduce the range of $H_\mathsf{D}$ until our method works again,
 thanks to the flexibility of HM.
 
-(4) \ul{A factor that influence the performance of our approach, namely
-backbone model.}
+~\newline
+\noindent\textbf{II. Performance-Sensitive Factors.}
+
+(1) \ul{Backbone deep neural network model.}
 
 The backbone model significantly influences the performance in every aspect, as
 the standard DML adopts ImageNet-initialized backbones for further training.
@@ -81,8 +93,17 @@ defense~\cite{robrank} for fair comparison.
 Since our proposed defense method is independent to backbone selection, it is
 expected to be effective on other backbone models as well.
 
-(5) \ul{A factor that influence the performance of our approach, namely
-adversarial training budget $\eta$.}
+Adversarial training requires more time and GPU memory than regular training.
+%
+The adversarial training of ResNet-18 with our method requires about 7\~{}10GB
+of memory per GPU in distributed data parallel mode, which is affordable to
+most researchers in the community.
+%
+Adversarial training of ResNet-50 requires much more than 12GB of memory per
+GPU, which will make it harder for some readers to reproduce the results
+and compare.
+
+(2) \ul{Adversarial training budget $\eta$.}
 
 As demonstrated in our experiments, the adversarial training budget, namely the
 maximum number of PGD iterations $\eta$ for creating the adversarial examples
@@ -92,6 +113,38 @@ We conduct experiments with multiple choices of $\eta$, and we can see from the
 curves that the model performance has a converging trend with large $\eta$
 settings.
 
+(3) \ul{Source hardness $H_\mathsf{S}$ and destination hardness
+$H_\mathsf{D}$.}
+
+The source hardness $H_\mathsf{S}$ depends on triplet sampling strategy, which
+is another research topic in the DML field.
+%
+The available triplet sampling strategies includes Random, Semihard, Softhard,
+Distance-weighted, as well as within-batch Hardest sampling strategies.
+%
+We conduct experiments and figure out an appropriate choice in our experiments.
+
+The range of choices for $H_\mathsf{D}$ is wider than that of $H_\mathsf{S}$.
+%
+When we use another benign sample triplet to calculate $H_\mathsf{D}$, the
+``another benign sample triplet'' can be sampled with the existing triplet
+sampling strategies as well.
+%
+We tested every combination of sampling strategies in our experiments.
+%
+Besides, $H_\mathsf{D}$ can be a pseudo-hardness function in order to avoid
+disadvantages (discussed in our approach) of using another benign triplet as
+reference.
+%
+Graduate Adversary is a family of such pseudo-hardness functions, and Linear
+Graduate Adversary (LGA) is a simple and straightforward example which is
+already effective.
+%
+Although $H_\mathsf{D}$ can be a constant as well, such choice lacks
+flexibility and is only used for demonstrating the advantage of LGA in our
+experiments.
+
+~\newline
 \noindent\textbf{III. Use of Existing Assets.}
 
 (1) \ul{Datasets:} All the datasets used in our paper are public datasets,
@@ -102,12 +155,14 @@ and the public code of the state-of-the-art defense method~\cite{robrank}
 (License: Apache-2.0).
 
 \section{More Technical and Design Details}
+\label{sec:b}
 
 \noindent\textbf{I. Hardware and Software Platform.}
 
 We conduct the experiments with two Nvidia Titan Xp GPUs under the Ubuntu 16.04
 operating system with PyTorch 1.8.2 in distributed data parallel mode.
 
+~\newline
 \noindent\textbf{II. Embedding-Shifted Triplet (EST).}~\cite{advrank}
 
 Embedding-Shifted Triplet (EST)~\cite{advrank} adopts adversarial counterparts
@@ -118,20 +173,23 @@ $\tilde{\va}=\phi(X+r^*)$, and $r^*=\arg\max_{r}d_\phi(X+r, X)$.
 %
 The $\tilde{\vp}$ and $\tilde{\vn}$ are obtained similarly.
 
-\ul{Relationship with HM:}
-%
+\ul{(1) Relationship with HM:}
+
 Since EST only aims to maximize the embedding move distance off its original
-location without specifying any direction, it leads to a random hardness
-value.
+location without specifying any direction, it leads to a random hardness value.
+%
+The expectation $E[H(\cdot)]$ of its resulting adversarial triplet is expected
+to be close to $E[H_\mathsf{S}]$.
 %
 Because the perturbed triplet can be either harder or easier than the benign
 triplet.
 %
-Namely, EST merely indirectly increase the hardness of the training
-triplet, and may even decrease its hardness.
+Namely, EST merely indirectly increase the hardness of the training triplet,
+and may even decrease its hardness.
 %
 Thus, EST suffers from inefficiency in adversarial training compared to HM.
 
+~\newline
 \noindent\textbf{III. Anti-Collapse Triplet (ACT).}~\cite{robrank}
 
 Anti-Collapse Triplet (ACT)~\cite{robrank} ``collapses'' the embedding vectors
@@ -141,15 +199,24 @@ of positive and negative sample, and enforces the model to separate them apart,
 =[\phi(X_p+r_p^*), \phi(X_n+r_n^*)]$, and $[r_p^*,r_n^*]=\arg\min_{r_p,r_n}
 d_\phi(X_p+r_p, X_n+r_n)$.
 
-\ul{Relationship with HM:}
+\ul{(1) Relationship with HM:}
 
-\oo{todo}
+When ACT successively ``collapses'' the positive and negative embedding
+vectors together, the hardness will be zero, \ie, $E[H(\cdot)]=0$.
+%
+But ACT is not equivalent to $HM[\cdot,0]$ because the two methods have
+different objectives and use different gradients.
+%
+Besides, in order to avoid the ``misleading gradients''~\cite{robrank}, ACT
+fixes the anchor and only perturb the positive and negative samples, which
+makes the objective for creating adversarial examples more difficult to
+optimize in practice.
+%
+In brief, ACT is also indirectly increasing the loss value, suffering from
+inefficient adversarial learning.
 
-
-However, compared to the standard min-max adversarial training
-paradigm~\cite{madry}, these methods merely indirectly increase the loss value,
-and thus, suffer from inefficient learning because the adversary is not strong
-enough.
+~\newline
+\noindent\textbf{IV. Hardness Manipulation (HM).}
 
 %\begin{enumerate}[noitemsep, label={Q{\arabic*}.}]
 \begin{enumerate}[noitemsep]
