@@ -322,6 +322,21 @@ L_\text{T}(\mA, \mP, \mN; \gamma) = \max(0, H(\mA, \mP, \mN) + \gamma),
 %
 we have $L_\text{T}\in[0, 2+\gamma]$.
 
+~\newline
+\noindent\textbf{II. Parameters or Adjustable Items}
+
+The only two tunables in HM are $H_\mathsf{S}$ and $H_\mathsf{D}$.
+%
+They are further discussed in the previous section in this supplementary
+material (see the ``Performance-Sensitive Factors'' part of the previous
+section).
+
+Since PGD~\cite{madry} is adopted for optimizing the objective of HM, the
+PGD parameters (including perturbation budget $\varepsilon$, maximum step
+$\eta$, as well as step size $\alpha$) will also influence the result.
+%
+We following the parameter setting following the state-of-the-art
+defense~\cite{robrank} for fair comparison.
 
 
 	 fix the anchor like ACT?
