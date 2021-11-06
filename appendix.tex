@@ -144,6 +144,56 @@ Although $H_\mathsf{D}$ can be a constant as well, such choice lacks
 flexibility and is only used for demonstrating the advantage of LGA in our
 experiments.
 
+The $H_\mathsf{S}$ and $H_\mathsf{D}$ are the only two tunables of Hardness
+Manipulation.
+
+(4) \ul{Parameters in $g_\mathsf{LGA}$ and $g_\mathsf{B}$.}
+
+A constant $u$ is used to normalize the loss value of the previous training
+iteration $\ell_{t-1}$ into $\bar{\ell}_{t-1}\in[0,1]$.
+%
+The constant is empirically selected as $u=\gamma$ in our experiment.
+%
+According to our observation, the loss value will quickly decrease below
+$\gamma$, and will remain in the $[0,\gamma]$ range for the whole training
+process.
+%
+If we set $u$ to a larger constant than $\gamma$, the normalized loss
+$\bar{\ell}_{t-1}$ will be smaller, and results in stronger adversarial
+examples through HM and harms the model performance on benign examples.
+
+A parameter $\xi$ is used by $g_\mathsf{B}$ to slightly boost a given
+$H_\mathsf{D}$ calculated from another benign triplet.
+%
+As mentioned in the experiments section, $\xi$ is set to $0.1$ in our
+experiment.
+%
+We refrain from conducting further parameter search because $g_\mathsf{B}$
+is only proposed to demonstrate that the problem in the late phase of
+training can be alleviated in our step-by-step description of our approach.
+%
+And $g_\mathsf{B}$ does not alleviate the problem in the early phase of
+training, and hence it does not belong to Graduate Adversary.
+%
+The function $g_\mathsf{B}$ is not a key point.
+
+Our LGA function $g_\mathsf{LGA}$ reuses the triplet margin parameter $\gamma$
+in order to remain in the range of Semihard, \ie, $-\gamma<g_\mathsf{LGA}<0$.
+%
+Apart from this, LGA is parameter-free.
+
+(5) \ul{Weight constant $\lambda$ of ICS loss term $L_\text{ICS}$.}
+
+The weight constant $\lambda$ is set as $0.5$ by default, and $0.05$ on SOP.
+%
+As demonstrated in the experiments, there is a trade-off between robustness and
+performance on benign examples when tuning the $\lambda$ parameter.
+%
+Our experiments demonstrate that the ICS loss term is effective in improving
+adversarial training efficiency and model robustness, but in practice, the
+adopters of our method may need to re-evaluate the trade-off between
+performance and robustness, and ajudst $\lambda$ accordingly.
+
 ~\newline
 \noindent\textbf{III. Use of Existing Assets.}
 
