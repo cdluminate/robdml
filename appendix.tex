@@ -376,10 +376,29 @@ that of HM[$\mathcal{S},g_\mathsf{LGA}$] according to our observation.
 \subsection{Graduate Adversary}
 \label{sec:b3}
 
-	 Another example for the GA pseudo-hardness function family?
-		sqaure and sqrt.
+\noindent\textbf{I. Parameters or Adjustable Items}
 
-	 Loss normalization with $u$?
+The parameters, namely $u$ and $\xi$ are discussed in the previous section
+of this supplementary material, see ``Performance-Sensitive Factors''.
+
+~\newline
+\noindent\textbf{II. Non-linear Graduate Adversary}
+
+In the manuscript, Linear Graduate Adversarial is demonstrated effective,
+and more complicated choices are left for future work.
+%
+Here we provide two Non-linear Graduate Adversary examples, namely
+$g_\mathsf{2}$ and $g_\mathsf{1/2}$, as follows:
+%
+\begin{align}
+	g_\mathsf{2}(\cdot)   &= -\gamma \cdot (\bar{\ell}_{t-1})^{2}  &~ \in [-\gamma,0]\\
+	g_\mathsf{1/2}(\cdot) &= -\gamma \cdot (\bar{\ell}_{t-1})^{1/2} &~ \in [-\gamma, 0]
+\end{align}
+%
+Compared to LGA, $g_\mathsf{2}$ is more ``eager'' to result in strong adversarial
+examples in the early phase of training, while $g_\mathsf{1/2}$ is more ``conservative''
+in creating strong adversarial examples in the early phase of training
+(adversarial examples from HM are stronger if the function value is closer to $0$).
 
 \subsection{Intra-Class Structure (ICS)}
 
