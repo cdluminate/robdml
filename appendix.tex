@@ -209,12 +209,6 @@ and the public code of the state-of-the-art defense method~\cite{robrank}
 \section{More Technical Details}
 \label{sec:b}
 
-\subsection{Hardware and Software Platform}
-
-We conduct the experiments with two Nvidia Titan Xp GPUs (12GB of memory each)
-under the Ubuntu 16.04 operating system with PyTorch 1.8.2 in distributed data
-parallel mode.
-
 \subsection{State-of-The-Art Defenses}
 
 \noindent\textbf{I. Embedding-Shifted Triplet (EST).}~\cite{advrank}
@@ -386,6 +380,24 @@ defense~\cite{robrank} for fair comparison.
 		such as aap? i.e. $(a,\tilde{a},p;\gamma=0)$.
 
 \subsection{Empirical Robustness Score (ERS)}
+
+\subsection{Hardware and Software Platform}
+
+We conduct the experiments with two Nvidia Titan Xp GPUs (12GB of memory each)
+under the Ubuntu 16.04 operating system with PyTorch 1.8.2 in distributed data
+parallel mode.
+%
+Note, the training result of all methods in distributed data parallel mode
+slightly differs from the result obtained in single-GPU mode, due to the
+asynchronized gradient updates in the distributed mode (this is a common
+phenomenon in distributed deep learning).
+%
+In fact, our method can be even more efficient in single-GPU mode thanks to the
+synchornized gradients, but single-GPU mode will be extremely time consuming
+(more than a week for a single run of the most time-consuming experiment).
+%
+All of our experiments are conducted in distributed data parallel mode for ease
+of comparison, as well as controlling the time cost.
 
 \subsection{Experiment and Evaluation}
 
