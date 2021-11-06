@@ -7,6 +7,7 @@
 \label{sec:a}
 
 \subsection{Potential Societal Impact}
+\label{sec:a1}
 
 \noindent\textbf{I. Security.}
 
@@ -27,6 +28,7 @@ adversarial training efficiency compared to the previous works (hence is a
 little bit more environment-friendly).
 
 \subsection{Limitations of Our Method}
+\label{sec:a2}
 
 \noindent\textbf{I. Assumptions.}
 
@@ -269,12 +271,26 @@ inefficient adversarial learning.
 
 \subsection{Hardness Manipulation (HM)}
 
-\oo{todo}
+	 fix the anchor like ACT?
+		not quite helpful. not necessary.
 
-%\begin{enumerate}[noitemsep, label={Q{\arabic*}.}]
-\begin{enumerate}[noitemsep]
-		%
-	\item \ul{\it There is only $L_\text{T}(\va, \tilde{\va}, \vp)$ in the ICS
+	 What if we mix HM(RM) and HM(SM)?
+		works but not good enough.
+
+	 Note, naive combination of benign training and adv train does not lead to better result, why? mix 0.5
+
+\subsection{Graduate Adversary}
+
+	 Another example for the GA pseudo-hardness function family?
+		sqaure and sqrt.
+
+	 Loss normalization with $u$?
+
+\subsection{Intra-Class Structure (ICS)}
+
+	 Gradient in figure 5?
+
+	\ul{\it There is only $L_\text{T}(\va, \tilde{\va}, \vp)$ in the ICS
 		term.  Is it possible to introduce any other triplet combinations among
 		the six samples (\ie, three benign and three adversarial)?}\\
 		%
@@ -294,46 +310,52 @@ inefficient adversarial learning.
 		(4) $L_\text{T}(\va, \vp, \tilde{\vn})$ leads to better performance
 		on benign examples, but drastically reduce robustness.
 
-	\item Gradient in figure 5?
-
-	\item Why not aa~p~ in ICS?
+	 Why not aa~p~ in ICS?
 		less adversarial, further.
-	\item Have you tried FAT?
-	\item What if we mix HM(RM) and HM(SM)?
-		works but not good enough.
-	\item Another example for the GA pseudo-hardness function family?
-		sqaure and sqrt.
-	\item Why not ResNet-50?
+
+	 [ICS] adversarial training that does not allow embedding move may
+		encourage model collapse. Maybe we just apply some loosened restrction
+		such as aap? i.e. $(a,\tilde{a},p;\gamma=0)$.
+
+\subsection{Empirical Robustness Score (ERS)}
+
+\subsection{Experiment and Evaluation}
+
+	 why experiment, 8 step by default
+
+	 Why not ResNet-50?
 		ttx and video memory.
-	\item fix the anchor like ACT?
-		not quite helpful. not necessary.
-	\item Why compare in theoretical time cost instead of walltime cost?
+
+	 Why compare in theoretical time cost instead of walltime cost?
 		Walltime cost does not precisely indicate the true efficiency
 		of a defense method, and may even result in unfair comparison.
 		isolate the discrepancy from implementation and engineering tricks,
 		as well as software / hardware differences.
-	\item full data sheet for tab 2?
+
+	 Complete Table for Sec~4.1 Hardness Selection?
+
+	 full data sheet for tab 2?
 		\cref{tab:srcdest}
 
-	\item Details of existing defense methods?
+	[\xmark] Multicard DDP and single card training leads to different
+		performance, regardless of the exact model of GPUs.
+		%
+		According to the observation, single card training leadss to a lower
+		recall performance and a higher robustness score.
+		%
+		More efficient? This should be ok.
+		%
+		But be careful when doing ablation studies as this will greatly
+		interfere with the conclusions.
+	
+\subsection{Potential Future Work}
 
-	\item Loss normalization with $u$?
+	 Have you tried FAT?
 
-	\item Hardware and software platform?
-
-	\item Complete Table for Sec~4.1 Hardness Selection?
-
-	\item Why not wall time as training cost?
-
-	\item the destination hardness is semihard (or something between semihard
+	 the destination hardness is semihard (or something between semihard
 		and softhard, we leave new sampling strategy for future work).
 
-	\item Note, naive combination of benign training and adv train does not lead to better
-result, why? mix 0.5
 
-	\item why experiment, 8 step by default
-
-\end{enumerate}
 
 \input{tab-srcdest.tex}
 
@@ -346,17 +368,6 @@ Visualize robustness through the image retrieval task.
 \subsection{To be investigated}
 
 \begin{itemize}
-	
-	\item [\xmark] Multicard DDP and single card training leads to different
-		performance, regardless of the exact model of GPUs.
-		%
-		According to the observation, single card training leadss to a lower
-		recall performance and a higher robustness score.
-		%
-		More efficient? This should be ok.
-		%
-		But be careful when doing ablation studies as this will greatly
-		interfere with the conclusions.
 	
 	\item [T] Sam's idea is interesting. By incorporating the idea of
 		on-manifold adversarial example to adversarial training, the
@@ -382,14 +393,8 @@ Visualize robustness through the image retrieval task.
 
 	\item [\cmark] We don't have to mix HM(R,M) and HM(S,M).
 
-	\item [Q] Is ACT equivalent to $HM(H_\mathsf{S},0)$.
-
 	\item [ICS] should investigate other metric learning loss functions and see
 		how they deal with hierarchy. e.g. MS, LSS, GLift, quadrup, etc.
-
-	\item [ICS] adversarial training that does not allow embedding move may
-		encourage model collapse. Maybe we just apply some loosened restrction
-		such as aap? i.e. $(a,\tilde{a},p;\gamma=0)$.
 
 	\item [?] verify model collapse. are the parameters really going towards zero?
 
