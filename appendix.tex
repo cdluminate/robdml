@@ -146,8 +146,8 @@ Although $H_\mathsf{D}$ can be a constant as well, such choice lacks
 flexibility and is only used for demonstrating the advantage of LGA in our
 experiments.
 
-The $H_\mathsf{S}$ and $H_\mathsf{D}$ are the only two tunables of Hardness
-Manipulation.
+The $H_\mathsf{S}$ and $H_\mathsf{D}$ are the only two adjustable items of
+Hardness Manipulation.
 
 (4) \ul{Parameters in $g_\mathsf{LGA}$ and $g_\mathsf{B}$.}
 
@@ -210,6 +210,7 @@ and the public code of the state-of-the-art defense method~\cite{robrank}
 \label{sec:b}
 
 \subsection{State-of-The-Art Defenses}
+\label{sec:b1}
 
 \noindent\textbf{I. Embedding-Shifted Triplet (EST).}~\cite{advrank}
 
@@ -362,12 +363,18 @@ anchor is omitted from manuscript to avoid complexity.
 \noindent\textbf{IV. Mixing HM[$\mathcal{R},\mathcal{M}$] and
 HM[$\mathcal{S},\mathcal{M}$]}
 
-	 What if we mix HM(RM) and HM(SM)?
-		works but not good enough.
-
-	 Note, naive combination of benign training and adv train does not lead to better result, why? mix 0.5
+According to the experimental results, HM[$\mathcal{R},\mathcal{M}$] achieves 
+a high ERS and adversarial training efficiency, but suffers from a low R@1.
+%
+HM[$\mathcal{S},\mathcal{M}$] achieves a high R@1, but its ERS and efficiency
+could be further improved.
+%
+They can be mixed for adversarial training with a probability $p$ to combine
+their advantages, but the eventual overall performance is still lower than
+that of HM[$\mathcal{S},g_\mathsf{LGA}$] according to our observation.
 
 \subsection{Graduate Adversary}
+\label{sec:b3}
 
 	 Another example for the GA pseudo-hardness function family?
 		sqaure and sqrt.
