@@ -402,7 +402,39 @@ in creating strong adversarial examples in the early phase of training
 
 \subsection{Intra-Class Structure (ICS)}
 
-	 Gradient in figure 5?
+\noindent\textbf{I. Parameters or Adjustable Items}
+
+The ICS loss term can be appended to the loss for adversarial training.
+%
+The only parameter for ICS loss term is the weight constant $\lambda$.
+%
+The selection of this parameter is discussed in the previous section of this
+supplementary material (see ``Performance-Sensitive Factors'').
+
+~\newline
+\noindent\textbf{II. Gradients in Fig.~5 (a) in Manuscript}
+
+According to \cite{robrank}, when the embedding vectors are normalized onto the
+real unit hypersphere and Euclidean distance is used, the gradients of the
+triplet loss with respect to the anchor, positive, and negative embedding
+vectors are respectively:
+%
+\begin{align}
+%
+	\frac{\partial L_\text{T}}{\partial \va} &= \frac{\va - \vp}{\|\va - \vp\|}
+	- \frac{\va - \vn}{\| \va - \vn \|} \\
+	\frac{\partial L_\text{T}}{\partial \vp} &= \frac{\vp - \va}{\|\va - \vp\|} \\
+	\frac{\partial L_\text{T}}{\partial \vn} &= \frac{\va - \vn}{\|\va - \vn\|},
+%
+\end{align}
+%
+when $L_\text{T}>0$.
+And the above equations have been reflected in Fig.~5 (a) with correct directions.
+
+~\newline
+\noindent\textbf{III. Alternative Design for Exploiting Sextuplet}
+
+
 
 	\ul{\it There is only $L_\text{T}(\va, \tilde{\va}, \vp)$ in the ICS
 		term.  Is it possible to introduce any other triplet combinations among
@@ -451,7 +483,7 @@ synchornized gradients, but single-GPU mode will be extremely time consuming
 All of our experiments are conducted in distributed data parallel mode for ease
 of comparison, as well as controlling the time cost.
 
-\subsection{Experiment and Evaluation}
+\subsection{Experiments and Evaluation}
 
 
 	 Why not ResNet-50?
@@ -486,6 +518,28 @@ of comparison, as well as controlling the time cost.
 	 the destination hardness is semihard (or something between semihard
 		and softhard, we leave new sampling strategy for future work).
 
+	 [\xmark] Faster training (algorithm tweak) based FAT/other | this is
+		a dead end. ACT has a different loss function to the outer minimization
+		problem, and hence result in different gradient and we cannot reuse
+		these gradients for algorithms like free adversarial training.
+		Re-calculating the gradients we need would simple double the
+		computational cost of the algorithm and diminish the gain from Free
+		Adversarial Training. We are no longer using the core benefit of FAT in
+		this way. In contrast, the AMD / AMDhm formulation can benefit from
+		this setup. | Further experiments suggest very weak robustness and the
+		models are very prone to collapse due to the non-zero initial delta
+		(results in too hard adversarial example).  | gradient approximation
+		does not look convincing. triplet gradient and ACT gradient does not
+		look convertible.
+
+	 [\cmark] implement FAT for faster exp iteration | works on toy
+		dataset. too prone to collapse. if we try to avoid model collapse, the
+		adversarial robustness will decrease significantly.
+
+	 [\cmark] what if we use stopat for RAMD? | similar effect to amdsemi.
+		misguiding gradient does not significantly affect AMD defense. So it
+		is not quite necessary.
+	
 
 
 \input{tab-srcdest.tex}
@@ -571,23 +625,6 @@ Visualize robustness through the image retrieval task.
 
 \begin{enumerate}
 
-	\item [\xmark] do we fix the anchor like ACT? | negative result observed
-		on fashion-mnist (rhetrm).
-
-	\item [\xmark] What if we truncate $H_D$. Clamp it with $\min=-\gamma$.
-		| clipping leads to negative effect on fashion-mnist. (ghmetrm 8)
-		Not every triplet is useful in this regard. Not all of them have to
-		contribute to the final gradient.
-
-	\item [\xmark] Re-design Gradual Adversary (Linear Addition)
-		\[
-			\big(1-\frac{\text{Clip}_0^{U_L}[l_{t-1}]}{U_L} \big)\times U_H
-		\]
-		Increase $E[H]$ to $E[H]+\alpha U_H$. $E[H]$ is expected to decrease
-		with a well-learned model. So without GA, the strength of adversary
-		will decrease. | Linear GA has a negative effect as observed on
-		Fashion-MNIST.
-	
 	\item [-] effectiveness of AMD Semi is to be verified. | as effective
 		as ACT, reaches slightly higher ERS. But performs worse than ACT on
 		some attacks, while performs better one some other attacks. | needs to
@@ -605,13 +642,6 @@ Visualize robustness through the image retrieval task.
 		the adversarial example will not vibrate around the boundary, and will
 		automatically stop when $H_s>H_d$.
 
-	\item [\xmark] mixing amdsemi and act for adversarial training. They are good
-		at different aspects. | not necessary for now. harms novelty.
-
-	\item [\xmark] Combine and even better. | Mixing ACT and AMDsemi does result
-		in clearly better results. It's on par with AMDsemi. Are they really
-		that different?
-
 	\item [\xmark] re-design Gradual Adversary for HM based on that for the amdsemi. |
 		\[
 			(1-\frac{\text{prev\_loss}|_0^{2+\beta}}{2+\beta}) \times
@@ -621,37 +651,8 @@ Visualize robustness through the image retrieval task.
 		$prevloss \rightarrow 0$, $E[H_\text{dst}]\rightarrow \phi$.
 		| This has a weak effect. Redesign required.
 	
-	\item [\cmark] revise HM. align dap dan directly instead of the loss.
-
 	\item [\cmark] \checkmark dynamically changing schedule for amdsemi? |
 		looks good | the sqrt scheme works the best. (gradually increasing the
 		hardness makes sense)
 
-	\item [\cmark] (codecheck) does amd really honour the pgditer parameter? |
-		direct adoptation of madry defense is really prone to model collapse.
-
-	\item [\xmark] MSE attack? | TMA is already close enough to it.
-
-	\item [\xmark] Faster training (algorithm tweak) based FAT/other | this is
-		a dead end. ACT has a different loss function to the outer minimization
-		problem, and hence result in different gradient and we cannot reuse
-		these gradients for algorithms like free adversarial training.
-		Re-calculating the gradients we need would simple double the
-		computational cost of the algorithm and diminish the gain from Free
-		Adversarial Training. We are no longer using the core benefit of FAT in
-		this way. In contrast, the AMD / AMDhm formulation can benefit from
-		this setup. | Further experiments suggest very weak robustness and the
-		models are very prone to collapse due to the non-zero initial delta
-		(results in too hard adversarial example).  | gradient approximation
-		does not look convincing. triplet gradient and ACT gradient does not
-		look convertible.
-
-	\item [\cmark] implement FAT for faster exp iteration | works on toy
-		dataset. too prone to collapse. if we try to avoid model collapse, the
-		adversarial robustness will decrease significantly.
-
-	\item [\cmark] what if we use stopat for RAMD? | similar effect to amdsemi.
-		misguiding gradient does not significantly affect AMD defense. So it
-		is not quite necessary.
-	
 \end{enumerate}
