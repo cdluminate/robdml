@@ -400,6 +400,8 @@ examples in the early phase of training, while $g_\mathsf{1/2}$ is more ``conser
 in creating strong adversarial examples in the early phase of training
 (adversarial examples from HM are stronger if the function value is closer to $0$).
 
+\oo{experiments?}
+
 \subsection{Intra-Class Structure (ICS)}
 
 \noindent\textbf{I. Parameters or Adjustable Items}
@@ -434,7 +436,24 @@ And the above equations have been reflected in Fig.~5 (a) with correct direction
 ~\newline
 \noindent\textbf{III. Alternative Design for Exploiting Sextuplet}
 
+Let $\tilde{\va}$, $\tilde{\vp}$, and $\tilde{\vn}$ be $\phi(\mA+\hat{\vr}_a)$,
+$\phi(\mP+\hat{\vr}_p)$ and $\phi(\mN+\hat{\vr}_n)$ respectively.
+%
+In our proposed ICS loss term, only $(\va, \tilde{\va}, \vp)$ are involved.
+%
+Other alternative sections of triplets from the sextuplet are also
+possible.
 
+\ul{(1) Why not use $L_\text{T}(\va, \tilde{\va}, \tilde{\vp})$? }
+
+As shown in Fig.~5 (c) in the manuscript, the position of $\tilde{\vp}$ is
+always further away from both $\va$ and $\tilde{\va}$ than $\vp$ due to
+the gradient direction.
+%
+Thus, the loss term in the question is not as effective as $L_\text{ICS}$.
+
+	 Why not aa~p~ in ICS?
+		less adversarial, further.
 
 	\ul{\it There is only $L_\text{T}(\va, \tilde{\va}, \vp)$ in the ICS
 		term.  Is it possible to introduce any other triplet combinations among
@@ -455,9 +474,6 @@ And the above equations have been reflected in Fig.~5 (a) with correct direction
 		%
 		(4) $L_\text{T}(\va, \vp, \tilde{\vn})$ leads to better performance
 		on benign examples, but drastically reduce robustness.
-
-	 Why not aa~p~ in ICS?
-		less adversarial, further.
 
 	 [ICS] adversarial training that does not allow embedding move may
 		encourage model collapse. Maybe we just apply some loosened restrction
