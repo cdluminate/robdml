@@ -452,32 +452,40 @@ the gradient direction.
 %
 Thus, the loss term in the question is not as effective as $L_\text{ICS}$.
 
-	 Why not aa~p~ in ICS?
-		less adversarial, further.
+\ul{(2) What if $L_\text{T}(\va, \vp, \vn)$ is used? Namely, the regular training
+and adversarial training are mixed together.}
 
-	\ul{\it There is only $L_\text{T}(\va, \tilde{\va}, \vp)$ in the ICS
-		term.  Is it possible to introduce any other triplet combinations among
-		the six samples (\ie, three benign and three adversarial)?}\\
-		%
-		A: We have tried some other combinations, and they are either not
-		effective, or causing negative effects.
-		%
-		In particular, (1) adding $L_\text{T}(\va, \vp, \vn)$ on top of the
-		adversarial training loss
-		$L_\text{T}(\tilde{\va},\tilde{\vp},\tilde{\vn})$ can improve
-		performance on benign examples, but will drastically reduce model
-		robustness;
-		%
-		(2) $L_\text{T}(\vp, \tilde{\vp}, \va)$ \oo{is duplicated, not necessary.}
-		%
-		(3) $L_\text{T}(\va, \tilde{\va}, \tilde{\vn})$ no distinct difference.
-		%
-		(4) $L_\text{T}(\va, \vp, \tilde{\vn})$ leads to better performance
-		on benign examples, but drastically reduce robustness.
+According to our observation, mixing regular training and adversarial training
+leads to better R@1 but very drastic robustness degradation for both ACT and
+our proposed defense.
 
-	 [ICS] adversarial training that does not allow embedding move may
-		encourage model collapse. Maybe we just apply some loosened restrction
-		such as aap? i.e. $(a,\tilde{a},p;\gamma=0)$.
+\ul{(3) Why not use the symmetric counterpart of $L_\text{ICS}$, \ie,
+		$L_\text{T}(\vp, \tilde{\vp}, \va)$?}
+
+Every sample in the training dataset will be used as anchor for once per
+epoch.
+%
+Such symmetric loss term is duplication to $L_\text{ICS}$ and is
+not necessary.
+%
+Experimental results suggest negligible difference.
+
+\ul{(4) $\tilde{\vn}$ is very close to $\va$ in Fig.~5 in manuscript.
+Why not use $L_\text{T}(\va, \tilde{\va}, \tilde{\vn})$?}
+
+The loss term in question is enforcing inter-class structure instead of
+intra-class structure.
+%
+Besides, experimental results suggest negligible difference.
+%
+We speculate this loss term is duplicated to the adversarial training term,
+\ie, $L_\text{T}(\tilde{\va}, \tilde{\vp}, \tilde{\vn})$, which enforces
+inter-class structure in a stronger manner.
+
+\ul{(5) Similar to question (4), why not use $L_\text{T}(\va, \vp, \tilde{\vn})$ ?}
+
+According to our observation, it leads to better R@1 performance on benign
+examples, but drastically reduce the robustness.
 
 \subsection{Empirical Robustness Score (ERS)}
 
