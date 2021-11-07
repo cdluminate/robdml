@@ -489,6 +489,8 @@ examples, but drastically reduce the robustness.
 
 \subsection{Empirical Robustness Score (ERS)}
 
+\oo{todo}
+
 \subsection{Hardware and Software Platform}
 
 We conduct the experiments with two Nvidia Titan Xp GPUs (12GB of memory each)
@@ -509,20 +511,40 @@ of comparison, as well as controlling the time cost.
 
 \subsection{Experiments and Evaluation}
 
+\noindent\textbf{I. Training Cost}
 
-	 Why not ResNet-50?
-		ttx and video memory.
+In the manuscript, the training cost of adversarial training is caluclated as
+$\eta+1$, which is a theoretical number of forward-backward propagation
+involved in each iteration of the training process.
+%
+The wall time is not used, because the wall time is noisy, and will be affected
+by many irrevevant factors which eventually makes the result uncomparable or
+unfair.
+%
+The factors that affect the wall time for adversarial training include but are
+not limited to:
+%
+(1) GPU Performance. For instance, the wall time reported based on eight Nvidia
+A100 GPUs will not be valuable for readers who do not have access to the same
+hardware;
+%
+(2) System load when training, CPU performance, and I/O device performance;
+%
+(3) Code implementation and engineering tricks. Well-optimized code will
+consume less time.
+%
+Namely, the wall time is a noisy measure of training cost which will render
+invalid comparison or unfair comparison.
+%
+In contrast, the training cost measure ($\eta+1$) in the manuscript has
+isolated all irrelevant factors.
 
-	 Why compare in theoretical time cost instead of walltime cost?
-		Walltime cost does not precisely indicate the true efficiency
-		of a defense method, and may even result in unfair comparison.
-		isolate the discrepancy from implementation and engineering tricks,
-		as well as software / hardware differences.
+~\newline
+\noindent\textbf{II. Complete Experimental Results for Tab.~2 in Manuscript}
 
-	 Complete Table for Sec~4.1 Hardness Selection?
+They can be found in \cref{tab:srcdest} of this supplementary material.
 
-	 full data sheet for tab 2?
-		\cref{tab:srcdest}
+\hrule
 
 	[\xmark] Multicard DDP and single card training leads to different
 		performance, regardless of the exact model of GPUs.
