@@ -539,25 +539,29 @@ invalid comparison or unfair comparison.
 In contrast, the training cost measure ($\eta+1$) in the manuscript has
 isolated all irrelevant factors.
 
+For reference, the adversarial training cost of RN18 with two Nvidia Titan Xp
+GPUs in terms of wall time is summarized in
+%
+\oo{todo}
+
 ~\newline
-\noindent\textbf{II. Complete Experimental Results for Tab.~2 in Manuscript}
+\noindent\textbf{II. Complete Results for Tab.~2 in Manuscript}
 
-They can be found in \cref{tab:srcdest} of this supplementary material.
+Complete experimental results for ``Tab.~2: Combinations of Source \&
+Destination Hardness. \ldots'' can be found in \cref{tab:srcdest} of this
+supplementary material.
 
-\hrule
-
-	[\xmark] Multicard DDP and single card training leads to different
-		performance, regardless of the exact model of GPUs.
-		%
-		According to the observation, single card training leadss to a lower
-		recall performance and a higher robustness score.
-		%
-		More efficient? This should be ok.
-		%
-		But be careful when doing ablation studies as this will greatly
-		interfere with the conclusions.
-	
 \subsection{Potential Future Work}
+
+\noindent\textbf{I. Further Improving Efficiency of HM}
+
+Being able to gain a higher robustness at a lower training cost indiates a
+higher efficiency.
+%
+As discusssed in Sec.~3.1, one potential way to further improve the adversarial
+training efficiency is to incorporate adversarial training acceleration methods
+such as Free Adversarial Training~\cite{freeat} (for classification) into our
+DML adversarial training.
 
 	 Have you tried FAT?
 
