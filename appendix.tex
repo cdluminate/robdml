@@ -52,6 +52,36 @@ This assumption is a limitation of our method.
 Adversarial training with other DML loss functions is unexplored and is left
 for future study.
 
+(2) \ul{Embedding Space Assumption.}
+
+In this paper, we follow the common assumptions of deep metric
+learning~\cite{revisiting} on the embedding space.
+%
+Namely, we assume the embedding vectors are normalized onto the real unit
+hypersphere.
+%
+Meanwhile, the distance function $d(\cdot,\cdot)$ is assumed to be Euclidean
+distance.
+%
+Our formulations are developed on the two assumptions.
+%
+It is unknown whether the proposed method method will be effective on an
+embedding vectors that are NOT normalized.
+%
+And it is unknown whether the proposed method will be effective when
+$d(\cdot,\cdot)$ is replaced as, \eg, cosine distance.
+%
+The gradient directions in Fig.~5 (a) in the manuscript are established on the
+two assumptions (the gradient directions will differ if the two assumptions are
+not satisfied).
+%
+We follow the common choice~\cite{revisiting,robrank} in the two aspects.
+%
+But we acknowledge the effectiveness of our method is unknown when the
+two assumptions are broken.
+%
+And they may become limintations of our method.
+
 (2) \ul{The assumption that an ``intermediate point'' exists between regular
 training of DML model and min-max adversarial training of DML model.}
 (discussed in Sec.~1; this is the motivation of HM)
