@@ -215,6 +215,35 @@ adversarial training efficiency and model robustness, but in practice, the
 adopters of our method may need to re-evaluate the trade-off between
 performance and robustness, and ajudst $\lambda$ accordingly.
 
+(6) \ul{Optimization algorithm for adversarial attacks.}
+
+In this paper, PGD~\cite{madry} is adopted as the optimization algorithm for
+creating adversarial examples.
+%
+It is also adopted by the ERS metric~\cite{robrank} for robustness evaluation
+with a collection of white-box attacks.
+%
+In the literature, some other optimization methods exists, such as
+APGD~\cite{apgd}.
+%
+However, we adopt PGD~\cite{madry} to keep aligned with the state-of-the-art
+work for sake of fair comparison.
+
+A replacement of such algorithm for adversarial training will affect the
+model's performance on benign examples and robustness.
+%
+Stronger adversarial examples during adversarial training may further boost the
+robustness of a model, and further reduce the performance on benign examples.
+
+A replacement of such algorithm for ERS evaluation will affect the robustness
+score for all existing methods.
+%
+All existing methods are expected to have a lower (to a certain extent)
+robustness against a stronger algorithm than PGD.
+%
+In this case, a robust method still remains robust, and a not robust method
+remains not robust.
+
 ~\newline
 \noindent\textbf{III. Use of Existing Assets.}
 
@@ -695,7 +724,4 @@ inspire the defense for unsupervised robust feature learning.
 	%
 	Is there anything in common?
 
- [T] APGD as the optimization algorithm? | postpone.
-	Just shifting robustness of all methods down by a bit.
-	Robust methods are still robust. Unrobust methods are still not robust.
 \end{comment}
