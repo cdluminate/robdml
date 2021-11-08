@@ -1,6 +1,14 @@
 \clearpage
 \appendix
 
+\section*{Supplementary Material}
+
+In this supplementary material, we provide further technical details and
+discussions that are not included in the manuscript due to space limit.
+%
+Discussions required by the author guidelines can also be found in this
+supplementary material.
+
 \tableofcontents
 
 \section{Additional Information}
@@ -110,12 +118,11 @@ expected to be effective on other backbone models as well.
 Adversarial training requires more time and GPU memory than regular training.
 %
 The adversarial training of ResNet-18 with our method requires about 7\~{}10GB
-of memory per GPU in distributed data parallel mode, which is affordable to
-most researchers in the community.
+of memory per GPU in distributed data parallel mode.
 %
-Adversarial training of ResNet-50 requires much more than 12GB of memory per
-GPU, which will make it harder for some readers to reproduce the results
-and compare.
+%Adversarial training of ResNet-50 requires much more than 12GB of memory per
+%GPU, which will make it harder for some readers to reproduce the results
+%and compare.
 
 (2) \ul{Adversarial training budget $\eta$.}
 
@@ -523,7 +530,24 @@ of comparison, as well as controlling the time cost.
 
 \subsection{Experiments and Evaluation}
 
-\noindent\textbf{I. Training Cost}
+\noindent\textbf{I. Detailed Interpretation of Experimental Results}
+
+\ul{(1) Table.~1: ``Mean \& Variance ...'''}
+
+\ul{(2) Table.~2: ``... Source \& Destination Hardness ...''}
+
+\ul{(3) Table.~3: ``Hardness Manipulation ...'' and Fig.~6}
+
+\ul{(4) Table.~4: ``... Graduate Adversary ...'' and Fig.~7}
+
+\ul{(5) Table.~5: ``Intra-Class Structure ...'' and Fig.~8}
+
+\ul{(6) Table.~6: ``... State-of-The-Art ...''}
+
+\oo{todo}
+
+~\newline
+\noindent\textbf{II. Training Cost}
 
 In the manuscript, the training cost of adversarial training is caluclated as
 $\eta+1$, which is a theoretical number of forward-backward propagation
@@ -551,13 +575,15 @@ invalid comparison or unfair comparison.
 In contrast, the training cost measure ($\eta+1$) in the manuscript has
 isolated all irrelevant factors.
 
-For reference, the adversarial training cost of RN18 with two Nvidia Titan Xp
-GPUs in terms of wall time is summarized in
+For reference, the most time-consuming experiment is
+HM[$\mathcal{S},g_\mathsf{LGA}$] on the SOP dataset.
 %
-\oo{todo}
+When $\eta=8$, the experiment takes $32$ hours with two Nvidia Titan Xp GPUs;
+%
+When $\eta=32$, the experiment takes $105$ hours with two Nvidia Titan Xp GPUs.
 
 ~\newline
-\noindent\textbf{II. Complete Results for Tab.~2 in Manuscript}
+\noindent\textbf{III. Complete Results for Tab.~2 in Manuscript}
 
 \input{tab-srcdest.tex}
 
@@ -645,6 +671,16 @@ also left for future study.
 
 \oo{[TODO] arxiv 2105.04906 for collapse issue.}
 
+~\newline\textbf{IV. DML \& Classification}
+
+It is unknown how defense methods for DML relates to the classification defense
+task.
+%
+DML is closely related to self-supervised learning.
+%
+It is also unknown if a defense for the supervised learning scenario will
+inspire the defense for unsupervised robust feature learning.
+
 \begin{comment}
 	
  [T] By incorporating the idea of
@@ -658,13 +694,6 @@ also left for future study.
 	examples used for training.
 	%
 	Is there anything in common?
-
- [T] Face recognition methods such as ArcFace can be used for
-	metric learning.
-	%
-	Is defense for face recognition missing from the literature?
-
- [T] Unsup learning with DML robustness.
 
  [T] APGD as the optimization algorithm? | postpone.
 	Just shifting robustness of all methods down by a bit.
