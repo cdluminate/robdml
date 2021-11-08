@@ -18665,7 +18665,7 @@ arraystretch}{1.1}
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="36" columns="18">
+<lyxtabular version="3" rows="37" columns="18">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -23969,6 +23969,174 @@ R:G
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HM[
+\begin_inset Formula $\mathcal{S},g_{\mathsf{LGA}}$
+\end_inset
+
+]&ICS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R:V
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell multirow="4" alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
@@ -24004,6 +24172,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 42.4
 \end_layout
 
@@ -24013,6 +24183,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 47.1
 \end_layout
 
@@ -24022,6 +24194,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 10.2
 \end_layout
 
@@ -24031,6 +24205,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 84.2
 \end_layout
 
@@ -24040,6 +24216,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 34.9
 \end_layout
 
@@ -24049,6 +24227,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 3.8
 \end_layout
 
@@ -24058,6 +24238,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 36.7
 \end_layout
 
@@ -24067,6 +24249,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 2.3
 \end_layout
 
@@ -24076,6 +24260,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 0.879
 \end_layout
 
@@ -24085,6 +24271,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 0.093
 \end_layout
 
@@ -24094,6 +24282,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 35.3
 \end_layout
 
@@ -24103,6 +24293,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 36.5
 \end_layout
 
@@ -24112,6 +24304,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 35.2
 \end_layout
 
@@ -24121,6 +24315,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 49.1
 \end_layout
 
@@ -24130,6 +24326,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 60.1
 \end_layout
 
@@ -24508,7 +24706,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-R:V
+47.7
 \end_layout
 
 \end_inset
@@ -24517,7 +24715,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+52.7
 \end_layout
 
 \end_inset
@@ -24526,7 +24724,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+25.3
 \end_layout
 
 \end_inset
@@ -24535,7 +24733,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+84.8
 \end_layout
 
 \end_inset
@@ -24571,7 +24769,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3.5
 \end_layout
 
 \end_inset
@@ -24580,7 +24778,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.466
 \end_layout
 
 \end_inset
@@ -24589,7 +24787,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.266
 \end_layout
 
 \end_inset
@@ -24598,7 +24796,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+38.6
 \end_layout
 
 \end_inset
@@ -24607,7 +24805,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+40.3
 \end_layout
 
 \end_inset
@@ -24616,7 +24814,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+38.6
 \end_layout
 
 \end_inset
@@ -24625,7 +24823,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+44.3
 \end_layout
 
 \end_inset
@@ -24634,7 +24832,7 @@ R:V
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+61.8
 \end_layout
 
 \end_inset
@@ -24676,6 +24874,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 41.5
 \end_layout
 
@@ -24685,6 +24885,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 46.1
 \end_layout
 
@@ -24694,6 +24896,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 9.9
 \end_layout
 
@@ -24703,6 +24907,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 84.1
 \end_layout
 
@@ -24712,6 +24918,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 36.1
 \end_layout
 
@@ -24721,6 +24929,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 3.1
 \end_layout
 
@@ -24730,6 +24940,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 37.6
 \end_layout
 
@@ -24739,6 +24951,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 2.1
 \end_layout
 
@@ -24748,6 +24962,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 0.873
 \end_layout
 
@@ -24757,6 +24973,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 0.086
 \end_layout
 
@@ -24766,6 +24984,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 35.7
 \end_layout
 
@@ -24775,6 +24995,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 36.8
 \end_layout
 
@@ -24784,6 +25006,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 34.7
 \end_layout
 
@@ -24793,6 +25017,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 50.2
 \end_layout
 
@@ -24802,6 +25028,8 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\bar under
 60.8
 \end_layout
 
