@@ -259,7 +259,7 @@ based on our empirical observation.
 Additionally, it is noted that a sample triplet will be augmented into a
 sextuplet (both benign and adversarial examples) during adversarial training.
 %
-In this case, the \emph{intra-class} structure can be enforced, has been
+In this case, the \emph{intra-class} structure can be enforced, which has been
 neglected by existing methods.
 %
 Since some existing attacks aim to change the sample rankings in the same
@@ -288,22 +288,22 @@ examples.
 \end{figure}
 
 % contributions
-In brief, our contributions include:
+In brief, our contributions include proposing:
 %
 \begin{enumerate}[nosep, noitemsep, leftmargin=*]
 	%
-	\item {\textit{Hardness Manipulation}} (HM) is proposed as a flexible and
-		efficient tool to create adversarial example triplets for subsequent
-		adversarial training of DML model.
+	\item {\textit{Hardness Manipulation}} (HM) as a flexible and efficient
+		tool to create adversarial example triplets for subsequent adversarial
+		training of DML model.
 		%
-	\item \textit{Linear Gradual Adversary} (LGA) is proposed as a
-		pseudo-hardness function for HM, which incorporates our empirical
+	\item \textit{Linear Gradual Adversary} (LGA) as a Graduate Adversary, \ie,
+		a pseudo-hardness function for HM, which incorporates our empirical
 		observations and can balance the training objectives during the
 		training process.
 		%
-	\item \textit{Intra-Class Structure} (ICS) loss term is proposed to further
-		improve the DML model robustness, while such possibility is neglected
-		by existing methods. 
+	\item \textit{Intra-Class Structure} (ICS) loss term to further improve
+		model robustness (especially intra-class-wise), while such structure is
+		neglected by existing methods. 
 		%
 \end{enumerate}
 
@@ -1029,14 +1029,14 @@ HM[$\mathcal{S},\mathcal{M}$], but is at the lowest R@1 performance penalty amon
 
 \noindent\textbf{III. Intra-Class Structure.}
 %
-Although independent to HM, ACT is incompatible with $L_\text{ICS}$ as it does
-not create an adversarial anchor.
+$L_\text{ICS}$ is independent to HM, but is not incompatible with ACT as it
+does not create adversarial anchor.
 %
 Thus, we validate this loss term with HM.
 %
 As shown in \cref{tab:ics} and \cref{fig:ics}, $L_\text{ICS}$ consistently
-leads to a higher efficiency in gaining robustness, while retaining a
-good trade-off between ERS and R@1.
+leads to a higher efficiency in gaining robustness (especially
+intra-class-wise), while retaining an acceptable trade-off in R@1.
 
 \input{tab-sota.tex}
 
