@@ -1370,6 +1370,34 @@
            id="path3862" />
       </symbol>
     </g>
+    <marker
+       style="overflow:visible"
+       id="marker5649-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="DotS"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.2,0,0,0.2,1.48,0.2)"
+         style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:1pt;stroke-opacity:1"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         id="path5647-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1483-5-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(-0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#808080;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path1481-3-4" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1378,9 +1406,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="360.65623"
-     inkscape:cy="82.180591"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="415.10263"
+     inkscape:cy="23.196726"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -1397,6 +1425,10 @@
        position="104.6994,61.197918"
        orientation="1,0"
        id="guide2510" />
+    <sodipodi:guide
+       position="78.745069,-4.6677068"
+       orientation="1,0"
+       id="guide2009" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -1747,13 +1779,13 @@
        id="rect7658"
        width="55.323925"
        height="11.999999"
-       x="104.48587"
+       x="102.36921"
        y="30.943569"
        rx="1.3855344"
        ry="1.1652797" />
     <g
        inkscape:label=""
-       transform="translate(16.222032,-42.541944)"
+       transform="translate(14.105364,-42.541944)"
        id="g1767">
       <g
          id="g1744">
@@ -2118,7 +2150,7 @@
     <g
        style="fill:#666666;fill-opacity:1;stroke-width:1.35905"
        id="g2263"
-       transform="matrix(0.73580906,0,0,0.73580906,116.49648,-49.222152)">
+       transform="matrix(0.73580906,0,0,0.73580906,116.87964,-53.793115)">
       <use
          xlink:href="#symbol2128"
          x="91.925003"
@@ -2163,7 +2195,7 @@
     <g
        style="fill:#666666;fill-opacity:1;stroke-width:1.35905"
        id="g4851"
-       transform="matrix(0.73580906,0,0,0.73580906,95.760474,-42.217654)">
+       transform="matrix(0.73580906,0,0,0.73580906,96.14363,-46.788617)">
       <use
          xlink:href="#symbol3375"
          x="119.31219"
@@ -2297,5 +2329,124 @@
        y="0.89303905"
        rx="1.597615"
        ry="1.2208986" />
+    <g
+       id="g1943"
+       transform="rotate(-90,34.513337,33.215421)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="25.628965"
+         y="36.863274"
+         id="text1421"><tspan
+           sodipodi:role="line"
+           id="tspan1419"
+           x="25.628965"
+           y="36.863274"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00aad4;fill-opacity:1;stroke-width:0.264583">Regular</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="24.892372"
+         y="42.045845"
+         id="text1421-1"><tspan
+           sodipodi:role="line"
+           id="tspan1419-9"
+           x="24.892372"
+           y="42.045845"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00aad4;fill-opacity:1;stroke-width:0.264583">Training</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5649-2);marker-end:url(#marker1483-5-6)"
+       d="m 194.06625,14.846972 v 5.087555"
+       id="path1147-5-1" />
+    <g
+       id="g1927"
+       transform="rotate(-90,155.6679,40.903158)"
+       style="fill:#d40000;fill-opacity:1">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;line-height:1.25;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d40000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="155.28661"
+         y="50.965351"
+         id="text1421-14"
+         inkscape:transform-center-x="1.8679565"
+         inkscape:transform-center-y="8.2841973"><tspan
+           sodipodi:role="line"
+           id="tspan1419-6"
+           x="155.28661"
+           y="50.965351"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d40000;fill-opacity:1;stroke-width:0.264583">Min-max</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;line-height:1.25;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d40000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="155.99747"
+         y="59.201694"
+         id="text1421-9"><tspan
+           sodipodi:role="line"
+           id="tspan1419-4"
+           x="155.99747"
+           y="59.201694"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d40000;fill-opacity:1;stroke-width:0.264583">Training</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;line-height:1.25;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d40000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="153.39944"
+         y="55.074348"
+         id="text1421-9-2"><tspan
+           sodipodi:role="line"
+           id="tspan1419-4-8"
+           x="153.39944"
+           y="55.074348"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#d40000;fill-opacity:1;stroke-width:0.264583">Adversarial</tspan></text>
+    </g>
+    <g
+       id="g2019"
+       transform="rotate(-90,78.646359,43.858924)"
+       style="fill:#ff9955;fill-opacity:1">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;line-height:1.25;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff9955;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="79.129395"
+         y="55.000122"
+         id="text1947"><tspan
+           sodipodi:role="line"
+           x="79.129395"
+           y="55.000122"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#ff9955;fill-opacity:1"
+           id="tspan1951">Adversarial</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;line-height:1.25;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff9955;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="78.886322"
+         y="58.587585"
+         id="text1959"><tspan
+           sodipodi:role="line"
+           id="tspan1957"
+           x="78.886322"
+           y="58.587585"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#ff9955;fill-opacity:1">Training w/</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;line-height:1.25;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff9955;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="81.14727"
+         y="63.110611"
+         id="text1963"><tspan
+           sodipodi:role="line"
+           x="81.14727"
+           y="63.110611"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#ff9955;fill-opacity:1"
+           id="tspan1965">Hardness</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;line-height:1.25;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff9955;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="78.915848"
+         y="66.679726"
+         id="text1971"><tspan
+           sodipodi:role="line"
+           id="tspan1969"
+           x="78.915848"
+           y="66.679726"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583;fill:#ff9955;fill-opacity:1">Manipulation</tspan></text>
+    </g>
   </g>
 </svg>
