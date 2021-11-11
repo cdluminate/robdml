@@ -1,6 +1,8 @@
 LATEX:=pdflatex
 BIBTEX:=bibtex
 TEX:=robdml.tex
+SUPP:=supp.tex
+VIEWER:=evince
 
 PDFS:= hmillust.pdf gaillust.pdf icsapn.pdf fighmeff.pdf figgaeff.pdf  introplot.pdf figics.pdf hmflexible.pdf
 
@@ -9,7 +11,14 @@ robdml: $(PDFS)
 	$(BIBTEX) robdml
 	$(LATEX) $(TEX)
 	$(LATEX) $(TEX)
-	-evince robdml.pdf
+	-$(VIEWER) robdml.pdf
+
+supp: $(PDFS)
+	$(LATEX) $(SUPP)
+	$(BIBTEX) supp
+	$(LATEX) $(SUPP)
+	$(LATEX) $(SUPP)
+	-$(VIEWER) supp.pdf
 
 clean:
 	-$(RM) *.aux *.bbl *.blg *.brf *.log *.out *.pdf
