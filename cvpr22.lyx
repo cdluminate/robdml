@@ -18665,7 +18665,7 @@ arraystretch}{1.1}
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="38" columns="18">
+<lyxtabular version="3" rows="36" columns="18">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -22870,7 +22870,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-12.7
+26.4
 \end_layout
 
 \end_inset
@@ -22979,342 +22979,6 @@ HM[
 
 \begin_layout Plain Layout
 61.7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-HM[
-\begin_inset Formula $\mathcal{S},g_{\mathsf{LGA}}$
-\end_inset
-
-]&ICS(0.25)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-X m10
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-50eph
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-36.8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.121
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-35.4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-46.0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-HM[
-\begin_inset Formula $\mathcal{S},g_{\mathsf{LGA}}$
-\end_inset
-
-]&ICS(0.125)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-X m10
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-50eph
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-35.9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.723
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.153
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-36.5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-47.7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
@@ -24176,7 +23840,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-47.7
+48.3
 \end_layout
 
 \end_inset
@@ -24185,7 +23849,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-52.7
+53.4
 \end_layout
 
 \end_inset
@@ -24194,7 +23858,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-12.2
+25.7
 \end_layout
 
 \end_inset
@@ -24203,7 +23867,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-84.8
+84.9
 \end_layout
 
 \end_inset
@@ -24212,7 +23876,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-30.6
+32.5
 \end_layout
 
 \end_inset
@@ -24221,7 +23885,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.7
+4.8
 \end_layout
 
 \end_inset
@@ -24230,7 +23894,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-31.2
+32.4
 \end_layout
 
 \end_inset
@@ -24248,7 +23912,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.466
+0.586
 \end_layout
 
 \end_inset
@@ -24257,7 +23921,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.266
+0.239
 \end_layout
 
 \end_inset
@@ -24275,7 +23939,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-40.3
+39.8
 \end_layout
 
 \end_inset
@@ -24284,7 +23948,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-38.6
+38.3
 \end_layout
 
 \end_inset
@@ -24293,7 +23957,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-44.3
+44.5
 \end_layout
 
 \end_inset
@@ -24302,7 +23966,7 @@ HM[
 \begin_inset Text
 
 \begin_layout Plain Layout
-61.8
+61.2
 \end_layout
 
 \end_inset
@@ -24326,7 +23990,7 @@ HM[
 \begin_inset Formula $\mathcal{S},g_{\mathsf{LGA}}$
 \end_inset
 
-]&ICS
+]&ICS 0.5
 \end_layout
 
 \end_inset
@@ -25028,7 +24692,7 @@ HM[
 \begin_inset Formula $\mathcal{S},g_{\mathsf{LGA}}$
 \end_inset
 
-]&ICS
+]&ICS 0.5
 \end_layout
 
 \end_inset
