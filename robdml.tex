@@ -1026,13 +1026,15 @@ Its ERS is marginally lower than HM[$\mathcal{S},{-}\gamma/2$] because the
 loss value eventually converges around ${-}\gamma/2$ due to optimization
 difficulty, which means
 adversarial triplets with $H_\mathsf{D}{\in}[{-}\gamma/2,0]$
-are seldom used.
+are seldom created.
 
 \begin{figure}[t]
 	\vspace{-1.5em}
 	\includegraphics[width=\columnwidth]{figics.pdf}
 	\vspace{-1.9em}
 	\caption{Performance of ``HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS'' in \cref{tab:ics}.}
+	\vspace{-1em}
+	\label{fig:icscurve}
 \end{figure}
 
 
@@ -1043,7 +1045,7 @@ not create adversarial anchor.
 %
 Thus, we validate this loss term with HM.
 %
-{\bf{As shown in \cref{tab:ics} and \cref{fig:ics}, $L_\text{ICS}$ consistently
+{\bf{As shown in \cref{tab:ics} and \cref{fig:icscurve}, $L_\text{ICS}$ consistently
 leads to a higher efficiency in gaining higher robustness at a low training
 cost, while retaining an acceptable trade-off in R@1.}}
 
