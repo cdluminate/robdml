@@ -772,8 +772,8 @@ following~\cite{revisiting,robrank}.
 %
 The adversarial robustness of a model is measured in Empirical Robustness Score
 (ERS)~\cite{robrank}, a normalized score (the higher the better) from
-an collection of existing attacks against DML or their simplified white-box
-alternatives optimized with PGD ($\eta=32$ for strong attack).
+a collection of (simplified white-box) attacks against DML, which are
+optimized with PGD ($\eta=32$ for strong attack).
 %
 Since adversarial training is not ``gradient masking''~\cite{obfuscated}, the
 performance of white-box attack can be regarded as the upper bound of the
@@ -802,7 +802,7 @@ retrieval results, which is simplified from \cite{qair}.
 The setup of all the attacks for robustness evaluation are unchanged from
 \cite{robrank} for fair comparison.
 %
-Further details can be found in \cite{robrank} and in the supplementary document.
+Further details of these attacks can be found in \cite{robrank}.
 
 \subsection{Selection of Source \& Destination Hardness}
 \label{sec:41}
