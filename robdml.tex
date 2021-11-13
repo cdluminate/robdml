@@ -737,12 +737,12 @@ adversarial training.
 
 % evaluation: dataset
 
-To validate the proposed defense, we conduct experiments
+To validate our defense method, we conduct experiments
 on three commonly used DML datasets: CUB-200-2011 (CUB)~\cite{cub200}, Cars-196
-(CARS)~\cite{cars196}, and Stanford-Online-Products (SOP)~\cite{sop}.
+(CARS)~\cite{cars196}, and Stanford-Online-Product (SOP)~\cite{sop}.
 %
-We follow the same experimental setup as that used in the state-of-the-art works~\cite{robrank,revisiting}
-for ease of comparison.
+We follow the same experimental setup as that used in the state-of-the-art
+defense work~\cite{robrank} and standard DML~\cite{revisiting} for ease of comparison.
 
 \input{tab-hsort.tex}
 
@@ -752,14 +752,13 @@ Specifically, we (adversarially) train ImageNet-initialized ResNet-18
 (RN18)~\cite{resnet} with the output dimension of the last layer changed to
 $N{=}512$.
 %
-The margin $\gamma$ in the triplet loss is $0.2$, which is consistent with the standard
-DML~\cite{revisiting}.
+The margin $\gamma$ in the triplet loss is $0.2$.
 %
 Adam~\cite{adam} optimizer is used for parameter updates, with a learning rate
 of $1.0{\times}10^{-3}$ for $150$ epochs, and a mini-batch size of $112$.
 %
-Adversarial examples are created under the perturbation budget
-$\varepsilon{=}8/255$ in infinity norm, using PGD~\cite{madry} with step size
+Adversarial examples are created within $\Gamma$ with
+$\varepsilon{=}8/255$ and $p{=}\infty$, using PGD~\cite{madry} with step size
 $\alpha{=}1/255$ and a default maximum step number $\eta{=}8$.
 %
 The parameter $u$ is equal to $\gamma$, much less than the loss upper bound
