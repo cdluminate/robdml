@@ -355,12 +355,12 @@ cost and performance drop on benign examples~\cite{odds}.
 %
 A wide range of applications such as image retrieval~\cite{imagesim2},
 cross-modal retrieval~\cite{ladderloss}, and face recognition~\cite{facenet}
-can be formulated as Deep Metric Learning.
+can be formulated as DML problem.
 %
 A well-designed loss function and a proper sampling method are crucial for DML
-performance~\cite{dmlreality}.  As suggested by recent study, the classical
-triplet loss could reach state-of-the-art performance with an appropriate
-triplet sampling strategy~\cite{revisiting}.
+performance~\cite{dmlreality}.  For instance, the classical
+triplet loss~\cite{facenet} could reach state-of-the-art performance with an appropriate
+sampling strategy~\cite{revisiting}.
 
 \textbf{Attacks in DML.}
 %
@@ -413,8 +413,8 @@ Given a sample triplet of anchor, positive, negative images, \ie, $\mA, \mP,
 $\va, \vp, \vn$, respectively.
 %
 Then the triplet loss~\cite{facenet} is defined as:
-\setlength{\belowdisplayskip}{0pt} \setlength{\belowdisplayshortskip}{0pt}
-\setlength{\abovedisplayskip}{0pt} \setlength{\abovedisplayshortskip}{0pt}
+%\setlength{\belowdisplayskip}{0pt} \setlength{\belowdisplayshortskip}{0pt}
+%\setlength{\abovedisplayskip}{0pt} \setlength{\abovedisplayshortskip}{0pt}
 %
 \begin{equation}
 %
