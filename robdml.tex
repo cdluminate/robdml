@@ -987,7 +987,7 @@ strategy is selective.
 Further experiments will be based on HM[$\mathcal{S},\mathcal{M}$].
 
 \begin{figure}[t]
-	\vspace{-1em}
+	\vspace{-1.5em}
 	\includegraphics[width=\columnwidth]{figgaeff.pdf}
 	\vspace{-1.9em}
 	\caption{Performance of ``HM[$\mathcal{S},g_\mathsf{LGA}$]'' in
@@ -1005,7 +1005,7 @@ Hence, we conduct further experiments %with an improved $H_\mathsf{D}$
 following the discussion, as shown in \cref{tab:gaeff} and \cref{fig:gaeff}.
 %
 Compared to HM[$\mathcal{S},\mathcal{M}$], slightly boosting the hardness
-training with $g_\mathsf{B}(\cdot)$ where $\xi{=}0.1$ benefits the ERS, but
+with $g_\mathsf{B}(\cdot)$ benefits the ERS, but
 results in a notably lower R@1;
 %
 A constant $H_\mathsf{D}$ at the upper bound of Semihard (\ie, $0$; too high
@@ -1014,15 +1014,21 @@ for both the early and the late phase of training) renders model collapse;
 $H_\mathsf{D}$ at the lower bound (\ie, $-\gamma$; too low for the late phase)
 leads to insignificant ERS improvement;
 %
-$H_\mathsf{D}{=}-\gamma/2$ provides a balance in training objectives, but
+$H_\mathsf{D}{=}-\gamma/2$ provides a fair balance in training objectives, but
 still suffers from inflexibility.
 %
 In contrast, being not susceptible to the mentioned problems of other choices,
 HM[$\mathcal{S},g_\mathsf{LGA}$] achieves an ERS on par with
 HM[$\mathcal{S},\mathcal{M}$], but is at the lowest R@1 performance penalty among all choices.
+%
+Its ERS is marginally lower than HM[$\mathcal{S},{-}\gamma/2$] because the
+loss value eventually converges around ${-}\gamma/2$ due to optimization
+difficulty, which means
+adversarial triplets with $H_\mathsf{D}{\in}[{-}\gamma/2,0]$
+are seldom used.
 
 \begin{figure}[t]
-	\vspace{-1em}
+	\vspace{-1.5em}
 	\includegraphics[width=\columnwidth]{figics.pdf}
 	\vspace{-1.9em}
 	\caption{Performance of ``HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS'' in \cref{tab:ics}.}
