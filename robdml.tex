@@ -131,11 +131,11 @@ recognition~\cite{facenet,domainface}, and widely influences some other areas
 such as self-supervised learning~\cite{dmlreality}.
 
 Despite the advancements in this field thanks to deep learning, recent studies
-find DML models vulnerable to adversarial attack, where an imperceptible
-perturbation can incur unexpected retrieval result, or covertly change the
+find DML models vulnerable to adversarial attacks, where  imperceptible
+perturbations can incur unexpected retrieval result, or covertly change the
 rankings~\cite{advrank,advorder}.
 %
-Such vulnerability raises security, safety, and fairness concerns in DML
+Such vulnerability raises security, safety, and fairness concerns in the DML
 applications.
 %
 For example, impersonation or recognition evasion are possible on a vulnerable
@@ -149,10 +149,10 @@ To counter the attacks (\ie, mitigating the vulnerability), the
 	%\vspace{-2.0em}
 	\caption{
 		%
-		Comparison in Robustness, Training Cost, and Recall@1 
-		between Our Method (\ie, ``HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS'')
-		and the State-of-The-Art Method (\ie, ``ACT[$\mathcal{R}$]'' and
-		``ACT[$\mathcal{S}$]'') on CUB Dataset.
+		Comparison in robustness, training cost, and recall@1 
+		between our method (\ie, ``HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS'')
+		and the state-of-the-art method (\ie, ``ACT[$\mathcal{R}$]'' and
+		``ACT[$\mathcal{S}$]'') on the CUB Dataset.
 		%
 	}
 	\label{fig:introplot}
@@ -180,10 +180,10 @@ inevitable and important for DML defense.
 
 % we argue / insight
 
-Previous works imply that an appropriate adversary for the inner
+{\bf{Previous works \cite{} imply that an appropriate adversary for the inner
 \emph{maximization} problem should increase the loss to an ``intermediate''
 point between that of benign examples (\ie, unperturbed examples) and the
-theoretical upper bound.
+theoretical upper bound.}}
 %
 In this paper, we argue such point can be reached by a direct and efficient
 adversary.
@@ -237,7 +237,7 @@ Besides, strong adversarial examples in the early phase of training may also
 hinder the model from learning good embeddings, and hence influence the
 performance on benign examples.
 %
-Namely, a better \emph{destination} hardness should be able to balance the
+In particular, a better \emph{destination} hardness should be able to balance the
 training objectives in the early and late phases of training.
 
 % Gradual Adversary
@@ -246,7 +246,7 @@ To this end, Graduate Adversary, a family of pseudo-hardness functions is
 proposed, which can be used as the \emph{destination} hardness.
 %
 A function that leads to relatively weak and relatively strong adversarial
-examples respectively in the early and late phase of training belongs to this
+examples, respectively in the early and late phase of training belongs to this
 family.
 %
 As an example, we design a ``Linear Graduate Adversary'' (LGA)
@@ -280,7 +280,7 @@ examples.
 \begin{figure}
 	\includegraphics[width=\columnwidth]{hmflexible.pdf}
 	\vspace{-1.8em}
-	\caption{Flexibility of Hardness Manipulation.
+	\caption{Flexibility of hardness manipulation.
 	%
 	Regular training and min-max adversarial training are its boundary cases.
 	}
@@ -288,13 +288,13 @@ examples.
 \end{figure}
 
 % contributions
-In brief, our contributions include proposing:
+In summary, our contributions include proposing:
 %
 \begin{enumerate}[nosep, noitemsep, leftmargin=*]
 	%
 	\item {\textit{Hardness Manipulation}} (HM) as a flexible and efficient
 		tool to create adversarial example triplets for subsequent adversarial
-		training of DML model.
+		training of a DML model.
 		%
 	\item \textit{Linear Gradual Adversary} (LGA) as a Graduate Adversary, \ie,
 		a pseudo-hardness function for HM, which incorporates our empirical
@@ -334,20 +334,20 @@ methods~\cite{di-fgsm}, which are more practical for real-world scenarios.
 \textbf{Adversarial Defense.}
 %
 To battle against the attacks, some defenses incur gradient masking
-effect, but leads to a false sense of security~\cite{obfuscated}.
+effect, but often lead to a false sense of security~\cite{obfuscated}.
 %
-Defensive distillation~\cite{distill2} is compromised~\cite{cw}.
+Defensive distillation~\cite{distill2} is compromised in~\cite{cw}.
 %
-Ensemble of weak defenses is not robust~\cite{ensembleweak}.
+It has been shown that ensemble of weak defenses is not robust~\cite{ensembleweak}.
 %
 Other defenses are also proposed, such as input
 preprocessing~\cite{deflecting}, or a randomization inside the
 network~\cite{self-ensemble}.
 %
-But many defenses are still susceptible to adaptive attack~\cite{adaptive}.
+But many defenses are still susceptible to adaptive attacks~\cite{adaptive}.
 %
 Of all defenses, adversarial training remains to be one of the most effective
-method~\cite{bilateral,advtrain-triplet,benchmarking}, consistently showing
+methods~\cite{bilateral,advtrain-triplet,benchmarking}, consistently showing
 promising empirical robustness, although suffers from high training
 cost and performance drop on benign examples~\cite{odds}.
 
@@ -368,7 +368,7 @@ DML has been found vulnerable to adversarial attacks as
 well~\cite{advrank,advorder,robrank}, which raises concerns on safety,
 security, or fairness for a DML application.
 %
-The existing attacks aims to completely subvert the image retrieval
+The existing attacks aim to completely subvert the image retrieval
 results~\cite{qair,learn-to-misrank,advdpqn,advpattern,flowertower,universalret},
 or covertly alter the top-ranking results without being
 abnormal~\cite{advrank,advorder}.
@@ -386,14 +386,14 @@ collapsed positive and negative samples apart in order to learn robust
 features, which achieves the state-of-the-art robustness.
 %
 However, the existing defense methods suffer from low efficiency as the
-inner problem is replaced into a indirect form in order to avoid model collapse.
+inner problem is replaced into an indirect form in order to avoid model collapse.
 
 \section{Our Approach}
 \label{sec:3}
 
 % Background DML formulation
 
-In Deep Metric Learning (DML)~\cite{revisiting,dmlreality}, an embedding
+In DML~\cite{revisiting,dmlreality}, an embedding
 function $\phi:\mathcal{X}\mapsto \Phi \subseteq \mathbb{R}^D$ is learned to
 map data points $\mX\in\mathcal{X}$ into an embedding space $\Phi$, which is usually
 normalized to the real unit hypersphere for regularization.
@@ -413,13 +413,16 @@ Given a sample triplet of anchor, positive, negative images, \ie, $\mA, \mP,
 $\va, \vp, \vn$, respectively.
 %
 Then the triplet loss~\cite{facenet} is defined as:
+\setlength{\belowdisplayskip}{0pt} \setlength{\belowdisplayshortskip}{0pt}
+\setlength{\abovedisplayskip}{0pt} \setlength{\abovedisplayshortskip}{0pt}
 %
-$
+\begin{equation}
 %
 	L_\text{T}(\va, \vp, \vn; \gamma) = \max(0, d(\va, \vp) - d(\va, \vn) +
 	\gamma),
+	\end{equation}
 %
-$
+%$
 %
 where $\gamma$ is a predefined margin parameter.
 %
@@ -484,7 +487,7 @@ The $\max(0,\cdot)$ part in \cref{eq:hm} truncates the gradient when
 $H_\mathsf{S}>H_\mathsf{D}$, automatically stopping the optimization, because
 $H_\mathsf{S}$ is not desired to be reduced once it exceeds $H_\mathsf{D}$.
 %
-The \cref{eq:hm} is written in the L-$2$ norm form instead of the standard Mean
+ \cref{eq:hm} is written in the L-$2$ norm form instead of the standard Mean
 Squared Error because HM can be directly extended into vector form for a
 mini-batch.
 %
@@ -506,7 +509,7 @@ through this way as $\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ in this paper.
 \begin{figure}
 	\includegraphics[width=\columnwidth]{hmillust.pdf}
 	\vspace{-1.8em}
-	\caption{Illustration of Hardness Manipulation.}
+	\caption{Illustration of hardness manipulation.}
 	\label{fig:hm}
 \end{figure}
 
@@ -590,7 +593,7 @@ Semihard, and Softhard triplets as $\mathcal{R}$, $\mathcal{M}$, $\mathcal{S}$,
 respectively.
 
 If we have a strong prior knowledge on what the \emph{destination} hardness
-should be, we can even use a pseudo-hardness function $g(\cdot)$, \ie, a
+should be, then we can even use a pseudo-hardness function $g(\cdot)$, \ie, a
 customized scalar function.
 
 
@@ -600,7 +603,7 @@ customized scalar function.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{gaillust.pdf}
-	\caption{Illustration of (Linear) Gradual Adversary.}
+	\caption{Illustration of (linear) gradual adversary.}
 	\label{fig:ga}
 \end{figure}
 
@@ -622,7 +625,7 @@ Weakened adversarial examples are insufficient for robustness.
 % hardness boosting
 
 Intuitively, such deficiency can be alleviated with a \emph{pseudo-hardness}
-function that slightly increase the value of $H_\mathsf{D}$ in the late phase
+function that slightly increases the value of $H_\mathsf{D}$ in the late phase
 of training.
 %
 Denoting the loss value from the previous training iteration as $\ell_{t-1}$,
@@ -682,8 +685,8 @@ robustness will be automatically balanced in
 $\text{HM}[H_\mathsf{S},g_\mathsf{LGA}]$, leading to a better eventual overall
 performance.
 %
-More complicated or non-linear pseudo-hardness functions are left for future study
-for sake of simplicity.
+More complicated or non-linear pseudo-hardness functions are left for future study.
+%for sake of simplicity.
 %
 
 \subsection{Intra-Class Structure}
@@ -691,7 +694,7 @@ for sake of simplicity.
 
 \begin{figure}[t]
 	\includegraphics[width=1.0\columnwidth]{icsapn.pdf}
-	\caption{Illustration of Intra-Class Structure Loss Term.}
+	\caption{Illustration of intra-class structure loss term.}
 	\label{fig:ics}
 \end{figure}
 
@@ -738,7 +741,7 @@ To validate the proposed defense, we conduct experiments
 on three commonly used DML datasets: CUB-200-2011 (CUB)~\cite{cub200}, Cars-196
 (CARS)~\cite{cars196}, and Stanford-Online-Products (SOP)~\cite{sop}.
 %
-We follow the same experiment setup as the state-of-the-art work~\cite{robrank,revisiting}
+We follow the same experimental setup as that used in the state-of-the-art works~\cite{robrank,revisiting}
 for ease of comparison.
 
 \input{tab-hsort.tex}
@@ -749,7 +752,7 @@ Specifically, we (adversarially) train ImageNet-initialized ResNet-18
 (RN18)~\cite{resnet} with the output dimension of the last layer changed to
 $N{=}512$.
 %
-The margin $\gamma$ in triplet loss is $0.2$, which is consistent to standard
+The margin $\gamma$ in the triplet loss is $0.2$, which is consistent with the standard
 DML~\cite{revisiting}.
 %
 Adam~\cite{adam} optimizer is used for parameter updates, with a learning rate
@@ -764,7 +767,7 @@ in order to avoid excessive hardness boost in $g_\mathsf{B}$ and $g_\mathsf{LGA}
 %
 Parameter $\lambda$ for $L_\text{ICS}$ is $0.5$ by default ($0.05$ on SOP).
 
-The model performance on benign (\ie, unperturbed) examples is measured in
+The model performance on the benign (\ie, unperturbed) examples is measured in terms of 
 Recall@1 (R@1), Recall@2 (R@2), mAP and NMI
 following~\cite{revisiting,robrank}.
 %
@@ -778,7 +781,7 @@ performance of white-box attack can be regarded as the upper bound of the
 black-box attacks, and thus a model that is empirically robust to the collection
 of white-box attacks is expected to be robust in general.
 
-Concretely, the collection of attacks for ERS includes:
+Concretely, the collection of attacks for ERS include:
 %
 (1) CA+, CA-, QA+ and QA-~\cite{advrank}, which move some selected candidates
 towards the topmost or bottommost part of ranking list;
@@ -800,7 +803,7 @@ retrieval results, which is simplified from \cite{qair}.
 The setup of all the attacks for robustness evaluation are unchanged from
 \cite{robrank} for fair comparison.
 %
-Further details can be found in \cite{robrank} or the supplementary.
+Further details can be found in \cite{robrank} and in the supplementary document.
 
 \subsection{Selection of Source \& Destination Hardness}
 \label{sec:41}
@@ -830,7 +833,7 @@ H_\mathsf{D}$.
 Thus, we sort the strategies based on the mean hardness of their
 outputs in~\cref{tab:hsort}.
 %
-Then we adversarially train models on CUB dataset with all combinations
+Then we adversarially train models on the CUB dataset with all combinations
 respectively, and summarize their R@1 and ERS in \cref{tab:desth}.
 
 
@@ -946,7 +949,7 @@ ACT[$\mathcal{R}$].
 Compared to ACT[$\mathcal{S}$], HM[$\mathcal{S},\mathcal{M}$] is able to retain
 a relatively high R@1, but in a much higher efficiency.
 %
-According to \cref{fig:hmeff}, HM[$\mathcal{R},\mathcal{M}$] achieves the
+As can be seen from \cref{fig:hmeff}, HM[$\mathcal{R},\mathcal{M}$] achieves the
 highest ERS and efficiency but with the most significant drop in R@1, which is
 not acceptable in applications.
 %
@@ -995,7 +998,7 @@ Further experiments will be based on HM[$\mathcal{S},\mathcal{M}$].
 
 \noindent\textbf{II. Gradual Adversary.}
 %
-As discussed in \cref{sec:32}, the HM[$\mathcal{S},\mathcal{M}$] may still
+As discussed in \cref{sec:32},  HM[$\mathcal{S},\mathcal{M}$] may still
 suffer from the imbalance between learning the embeddings and gaining
 adversarial robustness.
 %
@@ -1034,9 +1037,9 @@ not create adversarial anchor.
 %
 Thus, we validate this loss term with HM.
 %
-As shown in \cref{tab:ics} and \cref{fig:ics}, $L_\text{ICS}$ consistently
+{\bf{As shown in \cref{tab:ics} and \cref{fig:ics}, $L_\text{ICS}$ consistently
 leads to a higher efficiency in gaining higher robustness at a low training
-cost, while retaining an acceptable trade-off in R@1.
+cost, while retaining an acceptable trade-off in R@1.}}
 
 \input{tab-sota.tex}
 
@@ -1046,7 +1049,7 @@ cost, while retaining an acceptable trade-off in R@1.
 After validating the effectiveness of our proposed method, we conduct
 experiments on CUB, CARS and SOP to compare our proposed method
 with the state-of-the-art defense methods, \ie, EST~\cite{advrank}
-and ACT~\cite{robrank}, as shown in \cref{tab:sota}.
+and ACT~\cite{robrank}. The corresponding results are shown in \cref{tab:sota}.
 %
 An ideal defense method should be able to achieve a high ERS and a high R@1
 at a low training cost (\ie, $\eta+1$).
@@ -1101,8 +1104,8 @@ while LGA is a selection rule for adversarial examples.
 ICS loss term helps the model exploit more information from the
 given sextuplet.
 
-Further experiment discussions, technical details, limitations and societal
-impact are presented in supplementary.
+Further discussions on experiments, technical details, limitations and societal
+impact are presented in the supplementary document.
 
 
 \section{Conclusion}
