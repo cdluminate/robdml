@@ -1045,9 +1045,15 @@ not create adversarial anchor.
 %
 Thus, we validate this loss term with HM.
 %
-{\bf{As shown in \cref{tab:ics} and \cref{fig:icscurve}, $L_\text{ICS}$ consistently
+As shown in \cref{tab:ics} and \cref{fig:icscurve}, $L_\text{ICS}$ consistently
 leads to a higher efficiency in gaining higher robustness at a low training
-cost, while retaining an acceptable trade-off in R@1.}}
+cost, while retaining an acceptable trade-off in R@1.
+
+\noindent\textbf{IV. Summary.}
+%
+Eventually, HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS overwhelmingly outperforms
+the state-of-the-art defense in robustness, training cost, and R@1 
+performance, as shown in \cref{fig:introplot}.
 
 \input{tab-sota.tex}
 
@@ -1084,7 +1090,7 @@ but along with a significantly lower ERS.
 %
 Thus, results for ACT[$\mathcal{S}$] are omitted for being insufficiently robust.
 
-Apart from that, our method HM[$\mathcal{S},g_\mathsf{LGA}$] outperforms the
+Apart from that, our method HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS outperforms the
 previous methods in every aspect, as shown in \cref{fig:introplot} for 
 example.
 %
