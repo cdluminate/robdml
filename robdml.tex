@@ -1099,27 +1099,30 @@ higher ERS, but are excluded from comparison due to significant performance
 drop in R@1.
 
 It \emph{must} be acknowledged that the high R@1 performance of our method
-largely stems from the source triplet sampling strategy, namely Softhard,
+largely stems from the source triplet sampling strategy, \ie, Softhard,
 instead of our contribution.
 %
-In terms of the overall performance, our method can achieve the highest ERS at
-the lowest performance drop in R@1 under a fixed training cost.
+But the other methods cannot reach the same level of robustness with the same
+sampling strategy.
 %
-The existing methods are overwhelmingly outperformed by our method in overall
-performance.
+Besides, our method achieves the highest ERS at
+the lowest R@1 drop under a fixed training cost.
+%
+Thus, our proposed method overwhelmingly outperforms the existing defenses
+in overall performance.
+%
 
-For adversarial training of a DML model, selectiveness on both benign and
+Conclusively, being selective on both benign and
 adversarial training samples is crucial for preventing model collapse, and
 achieving good performance on both types of samples.
 %
-HM is a flexible tool for specifying such a ``selection'',
-while LGA is a selection rule for adversarial examples.
+HM is a flexible tool for specifying such ``selection'' of adversarial
+examples, while LGA can be interpreted as a concrete ``selection''.
 %
-ICS loss term helps the model exploit more information from the
-given sextuplet.
+ICS loss further exploits the given sextuplet.
 
-Further discussions on experiments, technical details, limitations and societal
-impact are presented in the supplementary document.
+Further discussions, technical details, and limitations, \etc,
+are presented in the supplementary document.
 
 
 \section{Conclusion}
