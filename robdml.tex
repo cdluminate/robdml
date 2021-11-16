@@ -266,7 +266,7 @@ Since some existing attacks aim to change the sample rankings in the same
 class~\cite{advrank},
 %
 we propose a simple \emph{intra-class} structure loss term for adversarial
-training, which is expected to further improve robustness.
+training, which is expected to further improve adversarial robustness.
 
 % evaluation and conclusion
 Comprehensive experiments are conducted on three commonly used DML datasets,
@@ -274,7 +274,7 @@ namely CUB-200-2011~\cite{cub200}, Cars-196~\cite{cars196}, and Stanford Online
 Product~\cite{sop}.
 %
 The proposed method overwhelmingly outperforms the state-of-the-art defense in
-terms of training cost, robustness, as well as the performance on benign
+terms of robustness, training efficiency, as well as the performance on benign
 examples.
 
 \begin{figure}
@@ -303,7 +303,7 @@ In summary, our contributions include proposing:
 		%
 	\item \textit{Intra-Class Structure} (ICS) loss term to further improve
 		model robustness and adversarial training efficiency, while such structure is
-		neglected by existing methods. 
+		neglected by existing defenses. 
 		%
 \end{enumerate}
 
@@ -344,7 +344,7 @@ Ensemble of weak defenses is not
 robust~\cite{ensembleweak}.
 %
 Other defenses such as input
-preprocessing~\cite{deflecting}, or a randomization~\cite{self-ensemble} are proposed.
+preprocessing~\cite{deflecting}, or randomization~\cite{self-ensemble} are proposed.
 %
 But many of them are still susceptible to adaptive attacks~\cite{adaptive}.
 %
