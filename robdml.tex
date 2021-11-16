@@ -666,13 +666,12 @@ loss value),
 in order to automatically balance the training objectives (\ie, performance on
 benign examples \emph{v.s.} robustness).
 %
-A satisfactory pseudo-hardness function is a ``Graduate Adversary'', as
-illustrated in \cref{fig:ga}.
+A satisfactory pseudo-hardness function is a ``Graduate Adversary''.
 
 % Linear graduate adversary
 
 As an example, we propose a ``Linear Gradual Adversary'' (LGA) pseudo-hardness
-function that is independent to any benign triplets, incorporating an empirical
+function that is independent to any benign triplets, incorporating our empirical
 observation that $H_\mathsf{D}$ should remain Semihard~\cite{facenet}, as
 follows:
 %
@@ -683,10 +682,12 @@ follows:
 	%
 \end{equation}
 %
+Our empirical observation is obtained from \cref{sec:41}.
+%
 And the training objectives, namely performance on benign examples and
 robustness will be automatically balanced in
 $\text{HM}[H_\mathsf{S},g_\mathsf{LGA}]$, leading to a better eventual overall
-performance.
+performance, as illustrated in \cref{fig:ga}.
 %
 More complicated or non-linear pseudo-hardness functions are left for future study.
 %for sake of simplicity.
