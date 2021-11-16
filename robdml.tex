@@ -206,7 +206,7 @@ The objective of HM is to minimize the L-$2$ norm of the thresholded difference
 between the hardness of the given sample triplet and the specified
 \emph{destination} hardness.
 %
-HM is flexible as regular training and min-max adversarial training
+HM is flexible as regular training and min-max adversarial training~\cite{madry}
 can be expressed as its boundary cases, as shown in \cref{fig:hmflexible}.
 %
 Mathematically, when the HM objective is optimized using Projected Gradient
@@ -215,7 +215,7 @@ perturbation is the same as that of directly \emph{maximizing} the loss.
 %
 Thus, the optimization of HM objective can be interpreted as a direct and
 efficient \emph{maximization} process of the loss which stops halfway at the
-specified \emph{destination} hardness level, \ie, the ``intermediate'' point.
+specified \emph{destination} hardness level, \ie, the aforementioned ``intermediate'' point.
 
 % how hard? benign destination
 
