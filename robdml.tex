@@ -104,12 +104,12 @@ Johns Hopkins University\\
 	for a better balance between performance and robustness.
 	% Intra-Class Structure
 	Additionally, an Intra-Class Structure loss term among benign and adversarial
-	examples further improves training efficiency and model robustness.
+	examples further improves model robustness and efficiency.
 	% Experiment and Conclusion
 	Comprehensive experimental results suggest that the proposed method,
 	although simple in its form, overwhelmingly outperforms the
-	state-of-the-art defenses in terms of training cost,
-	robustness, as well as performance on benign examples.
+	state-of-the-art defenses in terms of robustness, training efficiency,
+	as well as performance on benign examples.
 %
 \end{abstract}
 
@@ -169,7 +169,7 @@ loss by perturbing the inputs into adversarial examples, and an outer problem
 to \emph{minimize} the loss by updating the model parameters.
 %
 However, in order to avoid model collapse due to excessively hard examples, the
-existing defenses refrain from directly adopting such min-max paradigm, but
+existing DML defenses refrain from directly adopting such min-max paradigm, but
 instead replace the inner problem to indirectly increase the loss value to a
 certain level, which suffers from low efficiency and weak adversary (and hence
 weak robustness).
