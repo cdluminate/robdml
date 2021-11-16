@@ -1090,27 +1090,21 @@ but along with a significantly lower ERS.
 %
 Thus, results for ACT[$\mathcal{S}$] are omitted for being insufficiently robust.
 
-In most cases, our method outperforms the previous methods in every important
-aspect, \ie, ERS, training cost (efficiency), and R@1, as shown in
-\cref{tab:sota}.
+Our method overwhelmingly outperforms the previous methods in terms of the
+overall performance. Namely, our method achieves the highest ERS with a very
+low decrement in R@1 under a fixed training cost.
 %
-HM[$\mathcal{R},\mathcal{M}$] and HM[$\mathcal{R},g_\mathsf{LGA}$] can reach a
-higher ERS, but are excluded from comparison due to significant performance
-drop in R@1.
+HM[$\mathcal{R},\mathcal{M}$] or HM[$\mathcal{R},g_\mathsf{LGA}$] can reach an
+even higher ERS, but are excluded from comparison due to significant drop in
+R@1.
+%
 
 It \emph{must} be acknowledged that the high R@1 performance of our method
-largely stems from the source triplet sampling strategy, \ie, Softhard,
-instead of our contribution.
+largely stems from the source triplet sampling strategy, \ie, Softhard, instead
+of our contribution.
 %
-But the other methods cannot reach the same level of robustness with the same
-sampling strategy.
-%
-Besides, our method achieves the highest ERS at
-the lowest R@1 drop under a fixed training cost.
-%
-Thus, our proposed method overwhelmingly outperforms the existing defenses
-in overall performance.
-%
+Nevertheless, the state-of-the-art method, \ie, ACT could not reach the same
+level of robustness with the same sampling strategy.
 
 Conclusively, being selective on both benign and
 adversarial training samples is crucial for preventing model collapse, and
