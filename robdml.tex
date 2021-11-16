@@ -333,12 +333,13 @@ methods~\cite{di-fgsm}, which are more practical for real-world scenarios.
 
 \textbf{Adversarial Defense.}
 %
-To battle against the attacks, some defenses incur gradient masking
-effect, but often lead to a false sense of security~\cite{obfuscated}.
+To battle against the attacks, some defenses incur gradient masking effect, but
+often lead to a false sense of security~\cite{obfuscated}.
 %
 Defensive distillation~\cite{distill2} is compromised in~\cite{cw}.
 %
-It has been shown that ensemble of weak defenses is not robust~\cite{ensembleweak}.
+It has been shown that ensemble of weak defenses is not
+robust~\cite{ensembleweak}.
 %
 Other defenses are also proposed, such as input
 preprocessing~\cite{deflecting}, or a randomization inside the
@@ -346,10 +347,11 @@ network~\cite{self-ensemble}.
 %
 But many defenses are still susceptible to adaptive attacks~\cite{adaptive}.
 %
-Of all defenses, adversarial training remains to be one of the most effective
-methods~\cite{bilateral,advtrain-triplet,benchmarking}, consistently showing
-promising empirical robustness, although suffers from high training
-cost and performance drop on benign examples~\cite{odds}.
+Of all defenses, adversarial training consistently remains to be one of the
+most effective
+methods~\cite{bilateral,advtrain-triplet,benchmarking,smoothat,trades,robustwrn,gowal,weightperturb},
+but suffers from high training cost~\cite{freeat} and performance drop on
+benign examples~\cite{odds,overfitting,geometry}.
 
 \textbf{Deep Metric Learning.}
 %
