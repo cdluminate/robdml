@@ -438,8 +438,8 @@ other positions to achieve the attacker's goal.
 To defend against the attacks, the DML model can be adversarially trained to
 reduce the effect of attacks~\cite{advrank,robrank}.
 %
-The most important metrics for a good defense is training cost, adversarial
-robustness, and performance drop on benign examples.
+The most important metrics for a good defense are adversarial
+robustness, training efficiency, and performance on benign examples.
 
 \subsection{Hardness Manipulation}
 \label{sec:31}
@@ -487,8 +487,8 @@ the HM is implemented as:
 \end{equation}
 %
 The $\max(0,\cdot)$ part in \cref{eq:hm} truncates the gradient when
-$H_\mathsf{S}>H_\mathsf{D}$, automatically stopping the optimization, because
-$H_\mathsf{S}$ is not desired to be reduced once it exceeds $H_\mathsf{D}$.
+$\tilde{H}_\mathsf{S}>H_\mathsf{D}$, automatically stopping the optimization, because
+$\tilde{H}_\mathsf{S}$ is not desired to be reduced once it exceeds $H_\mathsf{D}$.
 %
  \cref{eq:hm} is written in the L-$2$ norm form instead of the standard Mean
 Squared Error because HM can be directly extended into vector form for a
@@ -507,7 +507,7 @@ The overall procedure of HM is illustrated in \cref{fig:hm}.
 %
 For convenience,
 we abbreviate the adversarial training with adversarial examples created
-through this way as $\text{HM}[H_\mathsf{S},H_\mathsf{D}]$ in this paper.
+through this way as ``$\text{HM}[H_\mathsf{S},H_\mathsf{D}]$'' in this paper.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{hmillust.pdf}
