@@ -330,7 +330,7 @@ Hardest
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Expectation and Variance.
+(Freeze) Expectation and Variance.
  1000 batches.
 \end_layout
 
@@ -19289,7 +19289,7 @@ ICS gamma 0.2
 \begin_inset Text
 
 \begin_layout Plain Layout
-R
+35.8
 \end_layout
 
 \end_inset
@@ -19298,7 +19298,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+46.6
 \end_layout
 
 \end_inset
@@ -19307,7 +19307,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+16.4
 \end_layout
 
 \end_inset
@@ -19316,7 +19316,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+48.3
 \end_layout
 
 \end_inset
@@ -19325,7 +19325,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+13.2
 \end_layout
 
 \end_inset
@@ -19334,7 +19334,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+39.9
 \end_layout
 
 \end_inset
@@ -19343,7 +19343,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+12.7
 \end_layout
 
 \end_inset
@@ -19352,7 +19352,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+33.3
 \end_layout
 
 \end_inset
@@ -19361,7 +19361,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.775
 \end_layout
 
 \end_inset
@@ -19370,7 +19370,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.507
 \end_layout
 
 \end_inset
@@ -19379,7 +19379,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+15.9
 \end_layout
 
 \end_inset
@@ -19388,7 +19388,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+14.9
 \end_layout
 
 \end_inset
@@ -19397,7 +19397,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+27.2
 \end_layout
 
 \end_inset
@@ -19406,7 +19406,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2.7
 \end_layout
 
 \end_inset
@@ -19415,7 +19415,7 @@ R
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+33.6
 \end_layout
 
 \end_inset
