@@ -549,7 +549,13 @@ supplementary material.
 ~\newline
 \noindent\textbf{IV. Additional Notes on the Experimental Results}
 
-\oo{explain lower ERS with high eta? overfit.}
+\noindent\ul{(1) Slight ERS decrease with a larger $\eta$}
+
+In some cases, \eg, HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS on the CARS dataset
+reaches a slightly lower ERS with $\eta=32$ compared to that with $\eta=8$.
+%
+We speculate this is because adversarial training suffers from overfitting~\cite{bagoftricks,overfitting}
+on adversarial examples, as mentioned in Sec.~2.
 
 \subsection{Potential Future Work}
 
@@ -566,25 +572,6 @@ that can maximize the loss.
 %
 Thus, non-trivial modifications are still required to incorporate FAT FAT into
 adversarial training with HM. This is left for future work.
-
-\begin{comment}
-FAT works on toy dataset only for adversarial DML.
-
-Further experiments suggest very weak robustness and the
-models are very prone to collapse due to the non-zero initial delta
-(results in too hard adversarial example).
-
-Gradient approximation does not work. Triplet gradient and ACT
-gradient are convertible.
-
-Does the new generic HM work under FAT?
-	Previous FAT leads to collapse because (even if in the amdsemi +fat
-	experiment due to implementation issue) the delta is going to be universal
-	so that for every input $x$ it will increase $H[L(x)]$ as much as possible.
-	This is too prone to lead to collpase. Can we reuse the gradient for 
-	Hardness Manipulation then? We linearly scale down the delta?
-	We want to minimize $E[|H_{src}(x)-H_{dst}(x)|]$ (to a specified hardness).
-\end{comment}
 
 ~\newline\textbf{II. Better Choice for Destination Hardness}
 
@@ -608,8 +595,6 @@ left for future study.
 Besides, model collapse is an inevitable problem for adversarial training
 with triplet loss, and it is unknown whether other loss functions could
 mitigate this issue.
-
-\oo{[TODO] arxiv 2105.04906 for collapse issue.}
 
 ~\newline\textbf{IV. DML \& Classification}
 
