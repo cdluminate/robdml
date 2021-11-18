@@ -548,36 +548,19 @@ supplementary material.
 
 \subsection{Potential Future Work}
 
-\noindent\textbf{I. Further Improving Efficiency of HM}
+\noindent\textbf{I. Faster Adversarial Training with HM}
 
-Being able to gain a higher robustness at a lower training cost indicates a
-higher efficiency.
+As discussed in Sec.~3.1, one potential adversarial training acceleration
+method is to incorporate Free Adversarial Training (FAT)~\cite{freeat}
+(originally for classification) into our DML adversarial training with HM.
 %
-As discussed in Sec.~3.1, one potential way to further improve the adversarial
-training efficiency is to incorporate adversarial training acceleration methods
-such as Free Adversarial Training (FAT)~\cite{freeat} (for classification) into
-our DML adversarial training.
-
-We have tried to direct adopt FAT for adversarial training of DML model.
+Besides, directly incorporating FAT into the min-max adversarial training of
+DML will easily result in model collapse as well, because the FAT algorithm can
+be interpreted as to maintain a universal (agnostic to sample) perturbation
+that can maximize the loss.
 %
-According to our observation, the model (RN18 on CUB dataset) is still prone
-to collapse because the FAT algorithm can be interpreted as to maintain
-a universal (agnostic to sample) perturbation that can maximize the loss.
-%
-Simple workarounds such as decaying the perturbation does not address this
-issue.
-
-Thus, our conclusion is that a non-trivial modification is still required
-to incorporate the idea of FAT into adversarial training of DML model.
-
-On the other hand, ACT~\cite{robrank} has a different inner loss function to
-the outer minimization problem, and hence result in different gradients in the
-inner and outer problems.
-%
-In this way, the gradients cannot be reused by FAT.
-%
-Re-calculating the gradients we need would simply double the
-computational cost of the algorithm and halves the efficiency gain from FAT.
+Thus, non-trivial modifications are still required to incorporate FAT FAT into
+adversarial training with HM. This is left for future work.
 
 \begin{comment}
 FAT works on toy dataset only for adversarial DML.
@@ -598,20 +581,16 @@ Does the new generic HM work under FAT?
 	We want to minimize $E[|H_{src}(x)-H_{dst}(x)|]$ (to a specified hardness).
 \end{comment}
 
-~\newline\textbf{II. More Appropriate Destination Hardness}
+~\newline\textbf{II. Better Choice for Destination Hardness}
 
-We drew the conclusion that ``adversarial triplets should remain Semihard''
-based on the empirical experimental results in Tab.~2 in the manuscript.
+The proposed LGA function incorporates our empirical observation that
+``adversarial triplets should remain Semihard'' based on the results in Tab.~2.
 %
-However, a better choice for $H_\mathsf{D}$ may exist between ``Semihard''
-and ``Softhard''.
+However, a better choice for $H_\mathsf{D}$ may exist between ``Semihard'' and
+``Softhard'' that can achieve better overall performance.
 %
-Exploration of a better source triplet sampling strategy for adversarial
-training, as well as a better hardness range for adversarial triplets
-may also be a direction for further robustness improvement.
-%
-In the manuscript, we only use the existing sampling methods in order to focus
-on our contributions.
+In the manuscript, we only use the existing sampling methods and simple
+pseudo-hardness functions in order to avoid distraction from our focus.
 
 ~\newline\textbf{III. Other Loss Functions}
 
@@ -629,13 +608,8 @@ mitigate this issue.
 
 ~\newline\textbf{IV. DML \& Classification}
 
-It is unknown how defense methods for DML relates to the classification defense
-task.
-%
-DML is closely related to self-supervised learning.
-%
-It is also unknown if a defense for the supervised learning scenario will
-inspire the defense for unsupervised robust feature learning.
+It is unknown whether DML defenses will improve the robustness in the
+classification task.
 
 \begin{comment}
 	
