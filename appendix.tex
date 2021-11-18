@@ -6,12 +6,9 @@
 
 \section*{Supplementary Material}
 
-In this supplementary material, we provide further technical details and the
-less important discussions that are not included in the manuscript due to space
+In this supplementary material, we provide more technical details and
+additional discussions that are excluded from the manuscript due to space
 limit.
-%
-Discussions required by the author guidelines are also included in this
-supplementary material.
 
 \tableofcontents
 
@@ -185,10 +182,13 @@ and worse robustness.
 ~\newline
 \noindent\ul{(5) Backbone deep neural network.}
 
-We adopt ResNet-18 following the state-of-the-art defense~\cite{robrank} for fair comparison.
+We adopt ResNet-18 following the state-of-the-art defense~\cite{robrank} for
+fair comparison.
 %
-Different backbone models are expected to achieve significantly different
-robustness and benign example performance.
+Since our proposed method is independent to the backbone choice, and hence
+is expected to be effective with different backbone models.
+
+\oo{TODO: mnasnet ghmetsm ghmetsmi}
 
 \subsection{Use of Existing Assets}
 
@@ -213,7 +213,7 @@ and the public code of the state-of-the-art defense method ACT~\cite{robrank}
 \section{Technical Details \& Minor Discussions}
 \label{sec:b}
 
-\subsection{State-of-The-Art Defenses}
+\subsection{Difference between Existing Defenses \& HM}
 \label{sec:b1}
 
 \noindent\textbf{I. Embedding-Shifted Triplet (EST).}~\cite{advrank}
@@ -318,7 +318,7 @@ triplet loss-based DML is:
 Previous works~\cite{advrank,robrank} point out this method will easily lead
 to model collapse.
 %
-Our observation is the same.
+Our observation suggests the same.
 
 \ul{(1) Relationship with HM:}
 
@@ -338,7 +338,7 @@ previous section.
 
 
 ~\newline
-\noindent\textbf{II. Range of Hardness.}
+\noindent\textbf{II. Extreme Values of Hardness.}
 
 As reflected in Sec.~3.1 and Fig.~2, the range of $H(\cdot)$ is $[-2, 2]$.
 %
@@ -373,20 +373,6 @@ L_\text{T}(\mA, \mP, \mN; \gamma) = \max(0, H(\mA, \mP, \mN) + \gamma),
 \end{equation}
 %
 we have $L_\text{T}\in[0, 2+\gamma]$.
-
-~\newline
-\noindent\textbf{III. Mixing HM[$\mathcal{R},\mathcal{M}$] and
-HM[$\mathcal{S},\mathcal{M}$]}
-
-According to the experimental results, HM[$\mathcal{R},\mathcal{M}$] achieves 
-a high ERS and adversarial training efficiency, but suffers from a low R@1.
-%
-HM[$\mathcal{S},\mathcal{M}$] achieves a high R@1, but its ERS and efficiency
-could be further improved.
-%
-They can be mixed for adversarial training with a probability $p$ to combine
-their advantages, but the eventual overall performance is still lower than
-that of HM[$\mathcal{S},g_\mathsf{LGA}$] according to our observation.
 
 \subsection{Graduate Adversary}
 \label{sec:b3}
@@ -423,18 +409,15 @@ in creating strong adversarial examples in the early phase of training
 %
 The corresponding experiments can be found in \cref{tab:nonlinga}.
 
-\oo{TODO}
-
 \subsection{Intra-Class Structure (ICS)}
 
-\noindent\textbf{I. Parameters or Adjustable Items}
+\noindent\textbf{I. Parameters}
 
 The ICS loss term can be appended to the loss for adversarial training.
 %
-The only parameter for ICS loss term is the weight constant $\lambda$.
-%
-The selection of this parameter is discussed in the previous section of this
-supplementary material (see ``Performance-Sensitive Factors'').
+The only parameter for ICS loss term is the weight constant $\lambda$,
+and has been discussed in the ``Performance-Sensitive Factors'' part
+of the previous section.
 
 ~\newline
 \noindent\textbf{II. Gradients in Fig.~5 (a) in Manuscript}
@@ -454,7 +437,7 @@ vectors are respectively:
 \end{align}
 %
 when $L_\text{T}>0$.
-And the above equations have been reflected in Fig.~5 (a) with correct directions.
+And the above equations have been reflected in Fig.~5 (a) in terms of vector direction.
 
 ~\newline
 \noindent\textbf{III. Alternative Design for Exploiting Sextuplet}
@@ -464,75 +447,57 @@ $\phi(\mP+\hat{\vr}_p)$ and $\phi(\mN+\hat{\vr}_n)$ respectively.
 %
 In our proposed ICS loss term, only $(\va, \tilde{\va}, \vp)$ are involved.
 %
-Other alternative sections of triplets from the sextuplet are also
-possible.
+Other alternative selections of triplets from the sextuplet are possible,
+but are not as effective as $L_\text{ICS}$ for improving adversarial robustness.
 
-\ul{(1) Why not use $L_\text{T}(\va, \tilde{\va}, \tilde{\vp})$? }
+\ul{(1) $L_\text{T}(\va, \tilde{\va}, \tilde{\vp})$}
 
 As shown in Fig.~5 (c) in the manuscript, the position of $\tilde{\vp}$ is
 always further away from both $\va$ and $\tilde{\va}$ than $\vp$ due to
 the gradient direction.
 %
-Thus, the loss term in the question is not as effective as $L_\text{ICS}$.
+Thus, the loss value of $L_\text{T}(\va, \tilde{\va}, \tilde{\vp})$ will always
+be smaller than $L_\text{ICS}$, and hence is less effective than $L_\text{ICS}$.
 
-\ul{(2) What if $L_\text{T}(\va, \vp, \vn)$ is used? Namely, the regular training
-and adversarial training are mixed together.}
+\ul{(2) $L_\text{T}(\va, \vp, \vn)$: Mixing regular training
+and adversarial training.}
 
 According to our observation, mixing regular training and adversarial training
-leads to better R@1 but very drastic robustness degradation for both ACT and
-our proposed defense.
+leads to better R@1 with drastic robustness degradation for both ACT and
+our defense.
 
-\ul{(3) Why not use the symmetric counterpart of $L_\text{ICS}$, \ie,
-		$L_\text{T}(\vp, \tilde{\vp}, \va)$?}
+\ul{(3) $L_\text{T}(\vp, \tilde{\vp}, \va)$: Symmetric counterpart of $L_\text{ICS}$.}
 
 Every sample in the training dataset will be used as anchor for once per
 epoch.
 %
-Such symmetric loss term is duplication to $L_\text{ICS}$ and is
+Such symmetric loss term is duplicated to $L_\text{ICS}$ and is
 not necessary.
 %
-Experimental results suggest negligible difference.
+Experimental results suggest negligible difference compared to $L_\text{ICS}$.
 
-\ul{(4) $\tilde{\vn}$ is very close to $\va$ in Fig.~5 in manuscript.
-Why not use $L_\text{T}(\va, \tilde{\va}, \tilde{\vn})$?}
+\ul{(4) $L_\text{T}(\va, \tilde{\va}, \tilde{\vn})$: $\tilde{\vn}$ is very close to $\va$ in Fig.~5.}
 
-The loss term in question is enforcing inter-class structure instead of
-intra-class structure.
+It enforces \emph{inter}-class structure instead of intra-class structure.
 %
 Besides, experimental results suggest negligible difference.
 %
-We speculate this loss term is duplicated to the adversarial training term,
+We speculate this loss term is duplicated to the adversarial training loss term,
 \ie, $L_\text{T}(\tilde{\va}, \tilde{\vp}, \tilde{\vn})$, which enforces
-inter-class structure in a stronger manner.
+inter-class structure as well in a stronger manner.
 
-\ul{(5) Similar to question (4), why not use $L_\text{T}(\va, \vp, \tilde{\vn})$ ?}
+\ul{(5) $L_\text{T}(\va, \vp, \tilde{\vn})$}
 
 According to our observation, it leads to better R@1 performance on benign
 examples, but drastically reduce the robustness.
 
-\subsection{Empirical Robustness Score (ERS)}
+\subsection{Experiments and Evaluation}
 
-\oo{todo}
-
-\subsection{Hardware and Software Platform}
+\noindent\textbf{I Hardware and Software Configuration}
 
 We conduct the experiments with two Nvidia Titan Xp GPUs (12GB of memory each)
 under the Ubuntu 16.04 operating system with PyTorch 1.8.2 in distributed data
-parallel mode.
-%
-Note, the training result of all methods in distributed data parallel mode
-slightly differs from the result obtained in single-GPU mode, due to the
-asynchronized gradient updates in the distributed mode (this is a common
-phenomenon in distributed deep learning).
-%
-In fact, our method can be even more efficient in single-GPU mode thanks to the
-synchornized gradients, but single-GPU mode will be extremely time consuming
-(more than a week for a single run of the most time-consuming experiment).
-%
-All of our experiments are conducted in distributed data parallel mode for ease
-of comparison, as well as controlling the time cost.
-
-\subsection{Experiments and Evaluation}
+parallel.
 
 \noindent\textbf{I. Detailed Interpretation of Experimental Results}
 
