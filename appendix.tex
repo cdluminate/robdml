@@ -1,6 +1,9 @@
 \clearpage
 \appendix
 
+\setcounter{figure}{8}
+\setcounter{table}{6}
+
 \section*{Supplementary Material}
 
 In this supplementary material, we provide further technical details and the
@@ -56,6 +59,14 @@ And it is unknown whether our method will be effective when $d(\cdot,\cdot)$ is
 replaced as other distance metrics, \eg, cosine distance.
 
 ~\newline
+\noindent \ul{(3) Optimizer Assumption.}
+
+Our method assumes PGD~\cite{madry} is used for optimizing the HM objective
+to create adversarial examples.
+%
+The Eq.~(4)-(5) may not necessarily hold with other possible optimizers.
+
+~\newline
 \noindent\textbf{II. Performance-Sensitive Factors.}
 
 ~\newline
@@ -101,15 +112,22 @@ design LGA based on the empirical observations.
 \setlength{\tabcolsep}{0.47em}
 \renewcommand{\arraystretch}{1.1}%
 \begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
-\hline
+	\toprule
 \multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
 \cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
  &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
-\hline
-\hline
+ \midrule
 \multirow{2}{*}{CUB} & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]} & 8 & 38.0 & 48.3 & 21.8 & 49.3 & 12.7 & 46.4 & 11.6 & 39.9 & 0.567 & 0.783 & 16.8 & 11.9 & 27.9 & 1.4 & 32.4\tabularnewline
- & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]} ($u=2.2$) &  & 34.8 & 45.5 & 15.2 & 47.1 & 13.4 & 36.0 & 17.2 & 26.1 & 0.934 & 0.244 & 20.1 & 15.9 & 27.3 & 3.8 & 36.1\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]} ($u=2.2$) & 8 & 34.8 & 45.5 & 15.2 & 47.1 & 13.4 & 36.0 & 17.2 & 26.1 & 0.934 & 0.244 & 20.1 & 15.9 & 27.3 & 3.8 & 36.1\tabularnewline
+ \bottomrule
 \end{tabular}}
+	\caption{The efficacy of parameter $u$ for clipping loss value $\ell_{t-1}$.
+	%
+	Stronger adversarial examples will be created for training if the loss value is not
+	clipped (equivalent to setting $u$ to the theoretical upper bound of loss,
+	\ie, 2.2).
+	}
+	\label{tab:u}
 \end{table*}
 
 
@@ -124,134 +142,76 @@ process.
 %
 If we set $u$ to a larger constant than $\gamma$, the normalized loss
 $\bar{\ell}_{t-1}$ will be smaller, and results in stronger adversarial
-examples through HM and harms the model performance on benign examples.
+examples through HM[$\mathsf{S},g_\mathsf{LGA}$] and harms the model performance on benign examples,
+as shown in \cref{tab:u}.
 
-Our LGA function $g_\mathsf{LGA}$ reuses the triplet margin parameter $\gamma$
-in order to remain in the range of Semihard, \ie, $-\gamma<g_\mathsf{LGA}<0$.
+Another parameter in $g_\mathsf{LGA}$ is the triplet margin parameter $\gamma$
+in order to align to the hardness range of Semihard triplets, \ie, $-\gamma<g_\mathsf{LGA}<0$.
 %
-Apart from this, LGA is parameter-free.
-
-(5) \ul{Weight constant $\lambda$ of ICS loss term $L_\text{ICS}$.}
-
-The weight constant $\lambda$ is set as $0.5$ by default, and $0.05$ on SOP.
-%
-As demonstrated in the experiments, there is a trade-off between robustness and
-performance on benign examples when tuning the $\lambda$ parameter.
-%
-Our experiments demonstrate that the ICS loss term is effective in improving
-adversarial training efficiency and model robustness, but in practice, the
-adopters of our method may need to re-evaluate the trade-off between
-performance and robustness, and ajudst $\lambda$ accordingly.
-
-(6) \ul{Optimization algorithm for adversarial attacks.}
-
-In this paper, PGD~\cite{madry} is adopted as the optimization algorithm for
-creating adversarial examples.
-%
-It is also adopted by the ERS metric~\cite{robrank} for robustness evaluation
-with a collection of white-box attacks.
-%
-In the literature, some other optimization methods exists, such as
-APGD~\cite{apgd}.
-%
-However, we adopt PGD~\cite{madry} to keep aligned with the state-of-the-art
-work for sake of fair comparison.
-
-A replacement of such algorithm for adversarial training will affect the
-model's performance on benign examples and robustness.
-%
-Stronger adversarial examples during adversarial training may further boost the
-robustness of a model, and further reduce the performance on benign examples.
-
-A replacement of such algorithm for ERS evaluation will affect the robustness
-score for all existing methods.
-%
-All existing methods are expected to have a lower (to a certain extent)
-robustness against a stronger algorithm than PGD.
-%
-In this case, a robust method still remains robust, and a not robust method
-remains not robust.
+We follow the common setup~\cite{revisiting} for this parameter.
 
 ~\newline
-\noindent\ul{Backbone deep neural network model.}
+\noindent\ul{(4) Constant parameter $\lambda$ for ICS loss term $L_\text{ICS}$.}
 
-The backbone model significantly influences the performance in every aspect, as
-the standard DML adopts ImageNet-initialized backbones for further training.
+The weight constant $\lambda$ is set as $0.5$ by default, and $0.05$ on the SOP dataset.
 %
-In this paper, we adopt ResNet-18 following the state-of-the-art
-defense~\cite{robrank} for fair comparison.
-%
-Since our proposed defense method is independent to backbone selection, it is
-expected to be effective on other backbone models as well.
+As demonstrated in Tab.~5, there is a trade-off between robustness and
+performance on benign examples when tuning the $\lambda$ parameter.
 
-Adversarial training requires more time and GPU memory than regular training.
+Additional experiments with $\lambda=0.5$ on the SOP dataset can be found in \cref{tab:soplambda}.
 %
-The adversarial training of ResNet-18 with our method requires about 7\~{}10GB
-of memory per GPU in distributed data parallel mode.
+Our method is sensitive to this parameter.
+An excessively large $\lambda$ on the SOP datasets leads to worse performance on benign examples
+and worse robustness.
+
+\begin{table*}
+\resizebox{\linewidth}{!}{
+\setlength{\tabcolsep}{0.42em}
+\renewcommand{\arraystretch}{1.1}%
+\begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
+	\toprule
+\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
+ &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
+ \midrule
+\multirow{2}{*}{SOP} & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS ($\lambda=0.5$) & 8 & 42.4 & 47.1 & 10.2 & 84.2 & 34.9 & 3.8 & 36.7 & 2.3 & 0.879 & 0.093 & 35.3 & 36.5 & 35.2 & 49.1 & 60.1\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS ($\lambda=0.5$) & 32 & 41.5 & 46.1 & 9.9 & 84.1 & 36.1 & 3.1 & 37.6 & 2.1 & 0.873 & 0.086 & 35.7 & 36.8 & 34.7 & 50.2 & 60.8\tabularnewline
+ \bottomrule
+\end{tabular}}
+	\caption{An excessively large $\lambda$ may lead to worse performance and robustness.}
+	\label{tab:soplambda}
+\end{table*}
+
+~\newline
+\noindent\ul{(5) Backbone deep neural network.}
+
+We adopt ResNet-18 following the state-of-the-art defense~\cite{robrank} for fair comparison.
+%
+Different backbone models are expected to achieve significantly different
+robustness and benign example performance.
 
 \subsection{Use of Existing Assets}
 
-(1) \ul{Datasets:} All the datasets used in our paper are public datasets,
-and their corresponding papers are properly cited.
+\noindent\ul{(1) Datasets.}
 
-(2) \ul{Code and Implementation:} Our implementation is built upon PyTorch
-and the public code of the state-of-the-art defense method~\cite{robrank}
+All the datasets used in our paper are public datasets,
+and their corresponding papers are cited.
+%
+The CUB~\cite{cub200} dataset includes images of birds.
+%
+The CARS~\cite{cars196} dataset includes images of cars.
+%
+The SOP~\cite{sop} dataset includes images of online products.
+
+~\newline
+\noindent\ul{(2) Code and Implementation.}
+
+Our implementation is built upon PyTorch
+and the public code of the state-of-the-art defense method ACT~\cite{robrank}
 (License: Apache-2.0).
 
-\section{More Technical Details}
+\section{Technical Details \& Minor Discussions}
 \label{sec:b}
-
-\oo{FIXME} 
-
-(2) \ul{The assumption that an ``intermediate point'' exists between regular
-training of DML model and min-max adversarial training of DML model.}
-(discussed in Sec.~1; this is the motivation of HM)
-
-We propose the flexible tool HM where regular training and min-max adversarial
-training are equivalent to its boundary cases.
-%
-By adjusting the destination hardness $H_\mathsf{D}$ in HM, we can obtain
-different results from adversarial training.
-%
-In the experiments section, we empirically search for valid options of the
-destination hardness, and add further improvements (\ie, LGA and ICS) on top of
-them.
-%
-The proposed method has been validated on three commonly used dataset, which
-demonstrates its robustness empirically.
-
-Even if the proposed method stopped working in a new dataset or with some other
-different experimental settings, we can reduce
-the value $H_\mathsf{D}$ towards $H_\mathsf{S}$ until this method works.
-%
-Since HM falls back into regular training when $H_\mathsf{D}=H_\mathsf{S}$,
-we believe our proposed method will work before $H_\mathsf{D}$ is reduced
-to $H_\mathsf{S}$.
-
-Hence, this assumption is not expected to be a limitation.
-
-(3) \ul{The assumption on optimization of the HM objective.}
-(discussed in Sec.~3.1)
-
-Our proposed method HM does not rely on an optimizer that can really optimize
-the HM objective to zero.
-%
-In contrast, the state-of-the-art defense ACT~\cite{robrank} relies on the
-optimizer to successfully push the adversarial positive sample and adversarial
-negative sample close to each other in the embedding space.
-%
-This is hard to achieve given a low adversarial training budget (\eg, $\eta=8$),
-as can be shown in our experiments and acknowledged by \cite{robrank}.
-
-(4) \ul{The assumption that $H_\mathsf{D}$ should remain Semihard.}
-(discussed in Sec.~3.2)
-
-This is empirically supported by our experimental observations.
-%
-Even if this assumption is broken under some new experiment settings,
-we can further reduce the range of $H_\mathsf{D}$ until our method works again,
-thanks to the flexibility of HM.
-
 
 \subsection{State-of-The-Art Defenses}
 \label{sec:b1}
@@ -325,9 +285,26 @@ inefficient adversarial learning.
 
 ~\newline\textbf{III. Min-max Adversarial Training with Triplet Loss.}
 
-TODO
+The direct formulation of min-max adversarial training~\cite{madry} for
+triplet loss-based DML is:
+%
+\begin{equation}
+%
+	\theta^* = \argmin_\theta [ \argmax_{\vr_a, \vr_p, \vr_n} L_\text{T}(
+	\mA + \vr_a, \mP + \vr_p, \mN + \vr_n)]
+%
+\end{equation}
+%
+Previous works~\cite{advrank,robrank} point out this method will easily lead
+to model collapse.
+%
+Our observation is the same.
 
-Collapse even with $\eta=2$ and $\alpha=1$.
+\ul{(1) Relationship with HM:}
+
+Maximizing $L_\text{T}$ is equivalent to maximizing $\tilde{H}_\mathsf{S}$.
+%
+This can be expressed as HM[$H_\mathsf{S},2$] as discussed in Sec.~3.1.
 
 \subsection{Hardness Manipulation (HM)}
 \label{sec:b2}
@@ -784,19 +761,3 @@ After deadline: supplementary
 \end{tabular}}
 \end{table*}
 
-\begin{table*}
-\resizebox{\linewidth}{!}{
-\setlength{\tabcolsep}{0.3em}
-\renewcommand{\arraystretch}{1.1}%
-\begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
-\hline
-\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
-\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
- &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
-\hline
-\hline
-\multirow{2}{*}{SOP} & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS ($\lambda=0.5$) & 8 & 42.4 & 47.1 & 10.2 & 84.2 & 34.9 & 3.8 & 36.7 & 2.3 & 0.879 & 0.093 & 35.3 & 36.5 & 35.2 & 49.1 & 60.1\tabularnewline
-\cline{2-18} \cline{3-18} \cline{4-18} \cline{5-18} \cline{6-18} \cline{7-18} \cline{8-18} \cline{9-18} \cline{10-18} \cline{11-18} \cline{12-18} \cline{13-18} \cline{14-18} \cline{15-18} \cline{16-18} \cline{17-18} \cline{18-18}
- & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS ($\lambda=0.5$) & 32 & 41.5 & 46.1 & 9.9 & 84.1 & 36.1 & 3.1 & 37.6 & 2.1 & 0.873 & 0.086 & 35.7 & 36.8 & 34.7 & 50.2 & 60.8\tabularnewline
-\end{tabular}}
-\end{table*}
