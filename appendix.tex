@@ -283,6 +283,26 @@ optimize in practice.
 In brief, ACT is also indirectly increasing the loss value, suffering from
 inefficient adversarial learning.
 
+\begin{table*}[t]
+\resizebox{\linewidth}{!}{
+\setlength{\tabcolsep}{0.47em}
+\renewcommand{\arraystretch}{1.1}%
+\begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
+	\toprule
+\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
+ &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
+ \midrule
+\multirow{3}{*}{CUB} & HM{[}$\mathcal{S},g_{\mathsf{1/2}}${]} & 8 & 38.7 & 48.5 & 22.0 & 49.2 & 12.6 & 48.6 & 12.3 & 41.3 & 0.562 & 0.825 & 13.5 & 12.9 & 26.9 & 1.8 & 31.7\tabularnewline
+& HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]} & 8 & 38.0 & 48.3 & 21.8 & 49.3 & 12.7 & 46.4 & 11.6 & 39.9 & 0.567 & 0.783 & 16.8 & 11.9 & 27.9 & 1.4 & 32.4\tabularnewline
+& HM{[}$\mathcal{S},g_{\mathsf{2}}${]} & 8 & 37.4 & 48.2 & 17.1 & 49.2 & 12.9 & 45.1 & 13.2 & 39.1 & 0.599 & 0.738 & 17.7 & 12.8 & 27.5 & 1.9 & 33.1\tabularnewline
+\bottomrule
+\end{tabular}}
+	\caption{Non-linear Gradual Adversary Examples.}
+	\label{tab:nonlinga}
+\end{table*}
+
+
 ~\newline\textbf{III. Min-max Adversarial Training with Triplet Loss.}
 
 The direct formulation of min-max adversarial training~\cite{madry} for
@@ -309,7 +329,16 @@ This can be expressed as HM[$H_\mathsf{S},2$] as discussed in Sec.~3.1.
 \subsection{Hardness Manipulation (HM)}
 \label{sec:b2}
 
-\noindent\textbf{I. Range of Hardness.}
+\noindent\textbf{I. Adjustable Items}
+
+The only two adjustable items in HM are $H_\mathsf{S}$ and $H_\mathsf{D}$.
+%
+They are discussed in the ``Performance-Sensitive Factors'' part of the
+previous section.
+
+
+~\newline
+\noindent\textbf{II. Range of Hardness.}
 
 As reflected in Sec.~3.1 and Fig.~2, the range of $H(\cdot)$ is $[-2, 2]$.
 %
@@ -346,48 +375,7 @@ L_\text{T}(\mA, \mP, \mN; \gamma) = \max(0, H(\mA, \mP, \mN) + \gamma),
 we have $L_\text{T}\in[0, 2+\gamma]$.
 
 ~\newline
-\noindent\textbf{II. Parameters or Adjustable Items}
-
-The only two adjustable items in HM are $H_\mathsf{S}$ and $H_\mathsf{D}$.
-%
-They are further discussed in the previous section in this supplementary
-material (see the ``Performance-Sensitive Factors'' part of the previous
-section).
-
-Since PGD~\cite{madry} is adopted for optimizing the objective of HM, the
-PGD parameters (including perturbation budget $\varepsilon$, maximum step
-$\eta$, as well as step size $\alpha$) will also influence the result.
-%
-We use the parameter setting following the state-of-the-art
-defense~\cite{robrank} for fair comparison.
-
-In most experiments that demonstrate the effectiveness of our method, the
-$\eta$ is set as $8$ because the ERS start to plateau with a larger $\eta$
-according to our observation.
-
-~\newline
-\noindent\textbf{III. HM and ACT}
-
-ACT~\cite{robrank} is proposed in order to address the ``misleading gradient''
-and ``inefficient mini-batch exploitation'' problems.
-%
-HM does not push the embeddings towards arbitrary directions, and hence does
-not suffer from both issues.
-%
-On the other hand, ACT does not perturb the anchor sample, and the same
-can be done in HM.
-%
-When the anchor sample is unperturbed, adversarial training with HM leads to
-a higher performance on benign examples but a lower robustness.
-%
-Unlike perturbing $(\mA, \mP, \mN)$ altogether, only perturbing $(\mP, \mN)$
-leads to a weaker adversarial examples, and hence lower robustness.
-%
-Our first priority is to improve model robustness, so the case with fixed
-anchor is omitted from manuscript to avoid complexity.
-
-~\newline
-\noindent\textbf{IV. Mixing HM[$\mathcal{R},\mathcal{M}$] and
+\noindent\textbf{III. Mixing HM[$\mathcal{R},\mathcal{M}$] and
 HM[$\mathcal{S},\mathcal{M}$]}
 
 According to the experimental results, HM[$\mathcal{R},\mathcal{M}$] achieves 
@@ -403,18 +391,24 @@ that of HM[$\mathcal{S},g_\mathsf{LGA}$] according to our observation.
 \subsection{Graduate Adversary}
 \label{sec:b3}
 
-\noindent\textbf{I. Parameters or Adjustable Items}
+\noindent\textbf{I. Parameters}
 
-The parameters, namely $u$ and $\xi$ are discussed in the previous section
+The parameters, namely $u$ and $\gamma$ are discussed in the previous section
 of this supplementary material, see ``Performance-Sensitive Factors''.
+
+The parameter $\xi$ in $g_\mathsf{B}$ is set as $0.1$, but it is not an important parameter.
+%
+The function $g_\mathsf{B}$ is only used for demonstrating that ``slightly
+boosting the destination hardness can further increase ERS'' as discussed
+in Sec.~3.1.
+
 
 ~\newline
 \noindent\textbf{II. Non-linear Graduate Adversary}
 
-In the manuscript, Linear Graduate Adversarial is demonstrated effective,
-and more complicated choices are left for future work.
+In Sec.~3.2, more complicated designs are left for future work.
 %
-Here we provide two Non-linear Graduate Adversary examples, namely
+We provide two Non-linear Graduate Adversary examples, namely
 $g_\mathsf{2}$ and $g_\mathsf{1/2}$, as follows:
 %
 \begin{align}
@@ -426,8 +420,10 @@ Compared to LGA, $g_\mathsf{2}$ is more ``eager'' to result in strong adversaria
 examples in the early phase of training, while $g_\mathsf{1/2}$ is more ``conservative''
 in creating strong adversarial examples in the early phase of training
 (adversarial examples from HM are stronger if the function value is closer to $0$).
+%
+The corresponding experiments can be found in \cref{tab:nonlinga}.
 
-\oo{experiments?}
+\oo{TODO}
 
 \subsection{Intra-Class Structure (ICS)}
 
