@@ -6,6 +6,8 @@ VIEWER:=evince
 
 PDFS:= hmillust.pdf gaillust.pdf icsapn.pdf fighmeff.pdf figgaeff.pdf  introplot.pdf figics.pdf hmflexible.pdf
 
+default: supp
+
 robdml: $(PDFS)
 	$(LATEX) $(TEX)
 	$(BIBTEX) robdml
