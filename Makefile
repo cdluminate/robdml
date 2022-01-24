@@ -8,6 +8,9 @@ PDFS:= hmillust.pdf gaillust.pdf icsapn.pdf fighmeff.pdf figgaeff.pdf  introplot
 
 default: supp
 
+reb:
+	$(MAKE) -C reb
+
 robdml: $(PDFS)
 	$(LATEX) $(TEX)
 	$(BIBTEX) robdml
