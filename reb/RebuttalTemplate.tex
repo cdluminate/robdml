@@ -6,6 +6,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{soul}
 
 
 % If you comment hyperref and then uncomment it, you should delete
@@ -53,33 +55,78 @@
 \appendix
 
 %%%%%%%%% BODY TEXT - ENTER YOUR RESPONSE BELOW
-\section{To Reviewer \#1}
+\section*{To Reviewer \#1}
 
-This manuscript investigates the joint area of DML and robustness against adversarial attacks of deep model. I understand that some DML applications may require robustness. However, the potential impact of the research topic is limited. From my view, the DML models are not special in terms of robustness against adversarial attacks compared to other deep models.
+\noindent\textbf{Q1.}
+%
+\ul{
+From my view, the DML models are not special in terms of robustness against
+adversarial attacks compared to other deep models.
+}
 
-Another non-negligible problem is the discussion of the relationship between the proposed method and a series of adversarial training algorithms is missing. I’m hoping that the author could complete it in the related works section, including reference 29. “Sat: Improving adversarial training via curriculum-based loss smoothing” in the original manuscript and some other studies, such as [1] and [2]. I think the idea of the proposed method bears a certain similarity to these.
+\noindent\textbf{Q2.}
+%
+\ul{
+The discussion of the relationship between the proposed method and a series of
+adversarial training algorithms is missing.
+}
+
+I’m hoping that the author could complete it in the related works section,
+including reference 29. “Sat: Improving adversarial training via
+curriculum-based loss smoothing” in the original manuscript and some other
+studies, such as [1] and [2]. I think the idea of the proposed method bears a
+certain similarity to these.
 
 [1]. Cai, Qi-Zhi, et al. "Curriculum adversarial training." arXiv preprint arXiv:1805.04807 (2018).
 
 [2]. Zhu, Xiaojin. "An optimal control view of adversarial machine learning." arXiv preprint arXiv:1811.04422 (2018).
 
-\section{To Reviewer \#2}
+\section*{To Reviewer \#2}
 
-- Paper is sometimes hard to read, sentences tend to be too long and complex, method abbreviations are confusing and hard to remember.
+\noindent\textbf{Q1.}
+%
+\ul{
+Sentences tend to be too long and complex; Method abbreviations are confusing
+and hard to remember.
+}
 
-- Tables are hard to grasp at a first glance, too many abbreviations and notations. It would be useful to make captions self explanatory and refresh the notation in them so that I dont have to search for them in different places of the paper. Also, some color coding or marking the most important results would be useful it is hard to ONE table with 20 rows and 20 columns, even harder with 5 such tables.
+\noindent\textbf{Q2.}
+%
+\ul{
+Tables are hard to grasp at a first glance, too many abbreviations and
+notations. It would be useful to make captions self explanatory and refresh the
+notation in them so that I dont have to search for them in different places of
+the paper. Also, some color coding or marking the most important results would
+be useful it is hard to ONE table with 20 rows and 20 columns, even harder with
+5 such tables.
+}
 
-- Paragraph on memory and time complexity between methods missing, are they all equal?
+\noindent\textbf{Q3.}
+%
+\ul{
+Paragraph on memory and time complexity between methods missing, are they all
+equal?
+}
 
 \section{To Reviewer \#3}
 
-1. Robustness is important and many novel methods have been proposed, e.g., TRADES and AWP. I wonder whether these methods are not suitable for the metric learning task, and why the robustness of the metric learning task is unique.
+\noindent\textbf{Q1.}
+%
+\ul{
+Robustness is important and many novel methods have been proposed, e.g., TRADES and AWP. I wonder whether these methods are not suitable for the metric learning task, and why the robustness of the metric learning task is unique.
+}
 
-2. The main motivation of this work is that previous works suffer from excessively hard examples and this work aims to control the hardness. Does simple tricks like mixup work for adjusting the hardness.
+\noindent\textbf{Q2.}
+%
+The main motivation of this work is that previous works suffer from excessively hard examples and this work aims to control the hardness. Does simple tricks like mixup work for adjusting the hardness.
 
-3. Tables (e.g., Tab.3) is hard to read. The authors may need to re-organize them and highlight somewhere.
+\noindent\textbf{Q3.}
+%
+Tables (e.g., Tab.3) is hard to read. The authors may need to re-organize them and highlight somewhere.
 
-4. The performance on benign examples seems to drop a lot. Does it mean the HM is just another trade-off way?
+\noindent\textbf{Q4.}
+%
+The performance on benign examples seems to drop a lot. Does it mean the HM is just another trade-off way?
 
 %%%%%%%%% REFERENCES
 {\small
