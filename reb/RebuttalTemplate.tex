@@ -8,12 +8,43 @@
 \usepackage{booktabs}
 \usepackage{microtype}
 \usepackage{soul}
-
+\usepackage{xpatch}
 
 % If you comment hyperref and then uncomment it, you should delete
 % egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
 % run, let it finish, and you should be clear).
 \usepackage[pagebackref,breaklinks,colorlinks,bookmarks=false]{hyperref}
+
+%%START
+%% https://tex.stackexchange.com/questions/378160/how-to-customize-bibtex-numbering-in-a-document
+\makeatletter
+\xpatchcmd{\@bibitem}
+%  {\item}
+  {\H@item}
+  {\item[\@biblabel{\changekey{#1}}]}
+  {}{}
+\xpatchcmd{\@bibitem}
+  {\the\value{\@listctr}}
+  {\changekey{#1}}
+  {}{}
+\makeatother
+
+\ExplSyntaxOn
+\cs_new:Npn \changekey #1
+ {
+  \str_case:nVF {#1} \g_changekey_list_tl { ?? }
+ }
+\cs_new_protected:Npn \setchangekey #1 #2
+ {
+  \tl_gput_right:Nn \g_changekey_list_tl { {#1}{#2} }
+ }
+\tl_new:N \g_changekey_list_tl
+\cs_generate_variant:Nn \str_case:nnF { nV }
+\ExplSyntaxOff
+
+\setchangekey{currat}{10}
+\setchangekey{smoothat}{29}
+%%END
 
 % Support for easy cross-referencing
 \usepackage[capitalize]{cleveref}
@@ -67,18 +98,19 @@ adversarial attacks compared to other deep models.
 \textbf{A:} 
 %
 We agree with the reviewer. Adversarial robustness at the visual representation
-level remains to be an open but insightful problem. Since deep metric learning
-can be interpreted as ``representation learning in metric space'', we believe
-the defense for deep metric learning is one step closer to the
-representation-level robustness, and may inspire future works for 
-robustness disentangled from specific vision tasks.
+level remains to be an open but insightful problem. Since DML can be
+interpreted as ``representation learning in metric space'', we believe the
+defense for DML is one step closer to the representation-level robustness,
+which is disentangled from specific vision tasks.
 
 \noindent\textbf{Q2.}
 %
 \ul{
-The discussion of the relationship between the proposed method and a series of
-adversarial training algorithms is missing.
+The relationship between the proposed method and a series of
+adversarial training algorithms.
 }
+
+\cite{smoothat}
 
 I’m hoping that the author could complete it in the related works section,
 including reference 29. “Sat: Improving adversarial training via
@@ -87,6 +119,7 @@ studies, such as [1] and [2]. I think the idea of the proposed method bears a
 certain similarity to these.
 
 [1]. Cai, Qi-Zhi, et al. "Curriculum adversarial training." arXiv preprint arXiv:1805.04807 (2018).
+\cite{currat}
 
 [2]. Zhu, Xiaojin. "An optimal control view of adversarial machine learning." arXiv preprint arXiv:1811.04422 (2018).
 
