@@ -153,9 +153,33 @@ methods in the same way as the corresponding colored legends in the figures.
 \noindent\textbf{Q3.}
 %
 \ul{
-Paragraph on memory and time complexity between methods missing. Are they all
+Comparison in memory and time complexity between defense methods is missing. Are they all
 equal?
 }
+
+\textbf{A:}
+%
+Not equal but similar in practice.
+%
+As a common part across methods, PGD has the same
+space and time complexities for every sample triplet across methods.
+%
+The difference in complexities stem from triplet sampling strategy and
+adversarial perturbation object functions.
+%
+In terms of time complexity, EST O(), ACT O(), HM O().
+In terms of space complexity, EST O(), ACT O(), HM O().
+%
+In practice, such difference lead to minor difference in training time
+and memory consumption.
+%
+Take the CUB datset with
+$\eta=32$ as example, the TODO.
+%
+We note these values are sensitive to hardware, software, and
+programming tricks, which makes it uneasy for future works to compare.
+%
+This information in the revised manuscript.
 
 \section*{To Reviewer \#3}
 
