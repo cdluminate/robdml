@@ -9,6 +9,7 @@
 \usepackage{microtype}
 \usepackage{soul}
 \usepackage{xpatch}
+\usepackage{comment}
 
 % If you comment hyperref and then uncomment it, you should delete
 % egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
@@ -108,8 +109,7 @@ which is disentangled from specific vision tasks.
 %
 \ul{
 The relationship between the proposed method and a series of
-adversarial training algorithms
-}(\cite{smoothat,currat,optcontrolaml}).
+adversarial training algorithms}~\cite{smoothat,currat,optcontrolaml}.
 
 \cite{smoothat}
 
@@ -133,7 +133,7 @@ Sentences tend to be too long and complex; Method abbreviations are confusing
 and hard to remember.
 }
 
-\textbf{A:} Thanks for the suggestion. We will polish the sentences to make
+\noindent\textbf{A:} Thanks for the suggestion. We will polish the sentences to make
 them shorter and simpler, as well as use better abbreviations in the next
 revision.
 
@@ -144,7 +144,7 @@ Tables are hard to grasp at a first glance due to too many abbreviations and
 notations.
 }
 
-\textbf{A:} Thanks for the suggestion. In order to make the tables easier to
+\noindent\textbf{A:} Thanks for the suggestion. In order to make the tables easier to
 read in the next revision, we will (1) extend the captions to make them
 self-explanatory; (2) repeat the definitions of symbols and abbreviations in
 caption; (3) highlight the columns for imporant performance metrics
@@ -158,7 +158,7 @@ Comparison in memory and time complexity between defense methods is missing. Are
 equal?
 }
 
-\textbf{A:}
+\noindent\textbf{A:}
 %
 Not equal but similar in practice.
 %
@@ -187,20 +187,25 @@ This information in the revised manuscript.
 \noindent\textbf{Q1.}
 %
 \ul{
-Robustness is important and many novel methods have been proposed, e.g., TRADES and AWP. I wonder whether these methods are not suitable for the metric learning task, and why the robustness of the metric learning task is unique.
+Many novel methods have been proposed, e.g., TRADES and AWP.
+I wonder whether these methods are not suitable for the metric learning task, and why the robustness of the metric learning task is unique.
 }
+
+\noindent\textbf{A:}
+
+\begin{comment}
+\noindent\textbf{Q2.} \ul{Does simple tricks for adjusting the hardness.}
+\end{comment}
 
 \noindent\textbf{Q2.}
 %
-The main motivation of this work is that previous works suffer from excessively hard examples and this work aims to control the hardness. Does simple tricks like mixup work for adjusting the hardness.
+Tables (e.g., Tab.3) is hard to read. The authors may need to re-organize them and highlight somewhere.
 
 \noindent\textbf{Q3.}
 %
-Tables (e.g., Tab.3) is hard to read. The authors may need to re-organize them and highlight somewhere.
-
-\noindent\textbf{Q4.}
-%
 The performance on benign examples seems to drop a lot. Does it mean the HM is just another trade-off way?
+
+\emph{The main motivation of this work is that previous works suffer from excessively hard examples and this work aims to control the hardness.}
 
 %%%%%%%%% REFERENCES
 {\small
