@@ -111,18 +111,19 @@ which is disentangled from specific vision tasks.
 The relationship between the proposed method and a series of
 adversarial training algorithms}~\cite{smoothat,currat,optcontrolaml}.
 
-\cite{smoothat}
+\noindent\textbf{A:}
+%
+CAT~\cite{currat} creates adversarial examples with gradually increasing
+strength (\emph{i.e.}, PGD step) for adversarial training, while our
+LGA gradually increases destination hardness $H_\mathsf{D}$ (with a
+fixed PGD step) based on loss value.
+%
+SAT~\cite{smoothat} TODO.
+%
+Zhu~\emph{et al.}~\cite{optcontrolaml} TODO.
+%
+We will discuss these similar works in the revised manuscript.
 
-I’m hoping that the author could complete it in the related works section,
-including reference 29. “Sat: Improving adversarial training via
-curriculum-based loss smoothing” in the original manuscript and some other
-studies, such as [1] and [2]. I think the idea of the proposed method bears a
-certain similarity to these.
-
-[1]. Cai, Qi-Zhi, et al. "Curriculum adversarial training." arXiv preprint arXiv:1805.04807 (2018).
-\cite{currat}
-
-[2]. Zhu, Xiaojin. "An optimal control view of adversarial machine learning." arXiv preprint arXiv:1811.04422 (2018). \cite{optcontrolaml}
 
 \section*{To Reviewer \#2}
 
