@@ -44,6 +44,7 @@
 \cs_generate_variant:Nn \str_case:nnF { nV }
 \ExplSyntaxOff
 
+\setchangekey{trades}{47}
 \setchangekey{optcontrolaml}{55}
 \setchangekey{currat}{54}
 \setchangekey{smoothat}{29}
@@ -226,8 +227,7 @@ These will be provided in the next revision.
 
 \noindent\textbf{Q1.}
 %
-\ul{
-Many novel methods have been proposed, e.g., TRADES and AWP.
+\ul{Many methods have been proposed, e.g., TRADES}\cite{trades} \ul{and AWP.
 I wonder whether these methods are not suitable for the metric learning task, and why the robustness of the metric learning task is unique.
 }
 
@@ -245,7 +245,8 @@ I wonder whether these methods are not suitable for the metric learning task, an
 
 \noindent\textbf{Q3.}
 %
-The performance on benign examples seems to drop a lot. Does it mean the HM is just another trade-off way?
+\ul{The performance on benign examples seems to drop a lot. Does it mean the
+HM is just another trade-off way?}
 
 \emph{The main motivation of this work is that previous works suffer from excessively hard examples and this work aims to control the hardness.}
 
