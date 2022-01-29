@@ -241,12 +241,15 @@ These information will be provided in the next revision.
 }
 
 \noindent\textbf{A:}
+%
+They are designed for classification instead of DML, and the cross-entropy loss
+used by them is unsuitable for metric learning.
+%
+The adaptation of TRADES, namely minimizing a benign triplet loss plus the
+maximized embedding move distance (lead by adversarial attack) has been
+demonstrated less effective than ACT in \cite{robrank} (see Eq.~19 ``SES loss''
+and Table.~5 of \cite{robrank}).
 
-\emph{The main motivation of this work is that previous works suffer from excessively hard examples and this work aims to control the hardness.}
-
-\begin{comment}
-\noindent\textbf{Q2.} \ul{Does simple tricks for adjusting the hardness.}
-\end{comment}
 
 \noindent\textbf{Q2.}
 %
