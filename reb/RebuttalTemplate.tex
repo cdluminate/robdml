@@ -237,6 +237,8 @@ These will be provided in the next revision.
 
 \noindent\textbf{A:}
 
+\emph{The main motivation of this work is that previous works suffer from excessively hard examples and this work aims to control the hardness.}
+
 \begin{comment}
 \noindent\textbf{Q2.} \ul{Does simple tricks for adjusting the hardness.}
 \end{comment}
@@ -255,15 +257,13 @@ HM is just another trade-off way?}
 \noindent\textbf{A:}
 %
 Performance drop on benign example is inevitable for adversarial training
-methods \cite{madry,trades,awp,advrank,robrank}, and they face a trade-off
+\cite{madry,trades,awp,advrank,robrank}, and the trade-off exists
 between benign example performance and robustness via hyper-parameters
 (\emph{e.g.}, $\varepsilon$).
 %
-Our proposed method is not a trade-off method, because it quantitatively
-achieves higher robustness, training efficiency, and benign example performance
-than previous state-of-the-arts~\cite{advrank,robrank}.
-
-\emph{The main motivation of this work is that previous works suffer from excessively hard examples and this work aims to control the hardness.}
+Our method is not a trade-off way, because trade-off method cannot
+simultaneously achieve higher robustness, training efficiency, and benign
+example performance than previous state-of-the-arts~\cite{advrank,robrank}.
 
 %%%%%%%%% REFERENCES
 {\small
