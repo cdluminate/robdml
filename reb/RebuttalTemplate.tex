@@ -247,16 +247,20 @@ unique.}
 They are designed for classification instead of DML, and the cross-entropy loss
 used by them is unsuitable for metric learning.
 %
-The adaptation of TRADES (Eq.~5 in \cite{trades}), namely minimizing a benign
+Adaptation of TRADES (Eq.~5 in \cite{trades}), namely minimizing a benign
 triplet loss plus the maximized embedding move distance (lead by adversarial
 attack) has been demonstrated less effective than ACT in \cite{robrank} (see
 Eq.~19 ``SES loss'' and Table.~5 of \cite{robrank}), while ACT is outperformed
 by our method.
 %
+Adaptation of AWP (Eq.~7 in \cite{awp}) involves direct maximization
+of loss, which still does not address the model collapse issue on
+excessively hard examples for DML.
+%
 Apart from that, the robustness that is not task-specific remains an open
 problem as explained in the answer to Q1 of Reviewer \#1.
 %
-These details will be included in the next revision.
+These will be included in the next revision.
 
 
 \noindent\textbf{Q2.}
