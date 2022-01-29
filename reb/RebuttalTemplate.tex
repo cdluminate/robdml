@@ -94,7 +94,9 @@
 \appendix
 
 %%%%%%%%% BODY TEXT - ENTER YOUR RESPONSE BELOW
-\section*{To Reviewer \#1}
+%\subsubsection*{To Reviewer \#1}
+\noindent\textbf{To Reviewer \#1}
+\vspace{0.3em}
 
 \noindent\textbf{Q1.}
 %
@@ -136,7 +138,9 @@ Although they do not mention DML, the similarities will be included in
 introduction and related works for next revision.
 
 
-\section*{To Reviewer \#2}
+%\subsubsection*{To Reviewer \#2}
+\vspace{0.3em}
+\noindent\textbf{To Reviewer \#2}\vspace{0.3em}
 
 \noindent\textbf{Q1.}
 %
@@ -173,7 +177,7 @@ equal?
 
 \noindent\textbf{A:}
 %
-Not equal but only introduce minor difference in practice.
+They do not equal but only lead to minor difference in practice.
 %
 We conduct experiments with two ``Nvidia TITAN Xp'' GPUs on the CUB dataset
 with $\eta{=}8$, as follows:
@@ -215,19 +219,20 @@ with $\eta{=}8$, as follows:
 The PGD complexities per adversarial
 example are identical across different defenses, and hence omitted.
 %
-As triplet sampler complexities differ across strategies, all defenses use
-``Softhard'' for fair comparison in the above table.
+Triplet sampler has been aligned to ``Softhard'' for identical complexities, and
+hence omitted.
 %
-Apart from these, the complexities stem from the adversarial perturbation
-objective functions.
+The rest complexities stem from the adversarial perturbation objective functions,
+as reported in table.
 %
-Note, the reported values are subject to change in GPU, software, and
-programming tricks, \emph{etc.}, which makes them uneasy to compare for future
-works.
+Note, the reported values are sensitive to hardware, software, and
+programming tricks, which makes them uneasy to compare for future works.
 %
 These will be provided in the next revision.
 
-\section*{To Reviewer \#3}
+%\subsubsection*{To Reviewer \#3}
+~\newline
+\noindent\textbf{To Reviewer \#3}
 
 \noindent\textbf{Q1.}
 %
