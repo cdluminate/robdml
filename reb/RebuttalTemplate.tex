@@ -128,7 +128,7 @@ adversarial machine learning, where our method can also be interpreted as
 ``adversarial training against test-time attack''.
 %
 Although they do not mention DML, the similarities will be included in
-introduction and related works for next reivision.
+introduction and related works for next revision.
 
 
 \section*{To Reviewer \#2}
@@ -154,7 +154,7 @@ notations.
 \noindent\textbf{A:} Thanks for the suggestion.
 In the next revision, we will (1) extend the captions to make them
 self-explanatory; (2) repeat the definitions of symbols and abbreviations in
-captions; (3) highlight the columns for imporant performance metrics
+captions; (3) highlight the columns for important performance metrics
 (\emph{i.e.}, R@1 and ERS); (4) colorize the abbreviations for different
 defense methods in the same color as their corresponding legends in the
 performance curve figures. 
@@ -170,42 +170,49 @@ equal?
 %
 Not equal but only introduce minor difference in practice.
 %
+We conduct experiments with two ``Nvidia TITAN Xp'' GPUs on the CUB dataset
+with $\eta{=}8$, as follows:
+%
 \noindent%
 \resizebox{1.0\columnwidth}{!}{
-\begin{tabular}{c|c|c|c|c|c}
+\begin{tabular}{c|c|c|c|c}
 	\toprule
-	 & EST & ACT & HM[$\mathcal{S},\mathcal{M}$] &
-		 HM[$\mathcal{S},g_\mathsf{LGA}$] &
-		 HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS \\
+	 & EST[$\mathcal{S}$]
+	 & ACT[$\mathcal{S}$]
+	 & HM[$\mathcal{S},g_\mathsf{LGA}$]
+	 & HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS \\
 	 \midrule
-	Time Complexity & & & & & \\
-	Actual Training Time & & & & & \\
+	Time Complexity
+	& $\mathcal{O}_\mathsf{PGD} + \mathcal{O}_\mathsf{sampler}$
+	& $\mathcal{O}_\mathsf{PGD} + \mathcal{O}_\mathsf{sampler}$
+	&
+	& \\
+	Actual Training Time
+	& 2.2hour 
+	&
+	&
+	& \\
 	\hline
-	Space Complexity & & & & & \\
-	GPU Memory Usage & & & & & \\
+	Space Complexity & & & & \\
+	GPU Memory Usage & & & & \\
 	\bottomrule
 \end{tabular}
 	}
 %
-As a common part across methods, PGD has the same
-space and time complexities for every sample triplet across methods.
+The PGD complexities per adversarial
+example are identical across different defenses, and hence omitted.
 %
-The difference in complexities stem from triplet sampling strategy and
-adversarial perturbation object functions.
+As triplet sampler complexities differ across strategies, all defenses use
+``Softhard'' for fair comparison in the above table.
 %
-In terms of time complexity, EST O(), ACT O(), HM O().
-In terms of space complexity, EST O(), ACT O(), HM O().
+Apart from these, the complexities stem from the adversarial perturbation
+objective functions.
 %
-In practice, such difference lead to minor difference in training time
-and memory consumption.
+Note, the reported values are subject to change in GPU, software, and
+programming tricks, \emph{etc.}, which makes them uneasy to compare for future
+works.
 %
-Take the CUB datset with
-$\eta=32$ as example, the TODO.
-%
-We note these values are sensitive to hardware, software, and
-programming tricks, which makes it uneasy for future works to compare.
-%
-This information in the revised manuscript.
+These will be provided in the next revision.
 
 \section*{To Reviewer \#3}
 
