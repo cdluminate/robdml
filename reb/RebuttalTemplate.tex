@@ -113,16 +113,19 @@ adversarial training algorithms}~\cite{smoothat,currat,optcontrolaml}.
 
 \noindent\textbf{A:}
 %
-CAT~\cite{currat} creates adversarial examples with gradually increasing
-strength (\emph{i.e.}, PGD step) for adversarial training, while our
-LGA gradually increases destination hardness $H_\mathsf{D}$ (with a
-fixed PGD step) based on loss value.
+CAT~\cite{currat} uses adversarial examples with gradually increasing strength
+(\emph{i.e.}, PGD step), while our LGA gradually increases destination hardness
+$H_\mathsf{D}$ (with a fixed PGD step).
 %
-SAT~\cite{smoothat} TODO.
+SAT~\cite{smoothat} gradually increases the difficulty of adversarial examples
+in order to achieve smoothness of loss landscape, while our HM is similar to
+``early termination of PGD''~\cite{smoothat} with a dynamic ``termination''
+threshold determined by LGA.
 %
 Zhu~\emph{et al.}~\cite{optcontrolaml} TODO.
 %
-We will discuss these similar works in the revised manuscript.
+Although these works focus on classification instead of DML, these similarities
+will be included in the next reivision.
 
 
 \section*{To Reviewer \#2}
