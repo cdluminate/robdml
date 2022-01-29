@@ -10,6 +10,7 @@
 \usepackage{soul}
 \usepackage{xpatch}
 \usepackage{comment}
+\usepackage{booktabs}
 
 % If you comment hyperref and then uncomment it, you should delete
 % egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
@@ -167,7 +168,24 @@ equal?
 
 \noindent\textbf{A:}
 %
-Not equal but similar in practice.
+Not equal but only introduce minor difference in practice.
+%
+\noindent%
+\resizebox{1.0\columnwidth}{!}{
+\begin{tabular}{c|c|c|c|c|c}
+	\toprule
+	 & EST & ACT & HM[$\mathcal{S},\mathcal{M}$] &
+		 HM[$\mathcal{S},g_\mathsf{LGA}$] &
+		 HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS \\
+	 \midrule
+	Time Complexity & & & & & \\
+	Actual Training Time & & & & & \\
+	\hline
+	Space Complexity & & & & & \\
+	GPU Memory Usage & & & & & \\
+	\bottomrule
+\end{tabular}
+	}
 %
 As a common part across methods, PGD has the same
 space and time complexities for every sample triplet across methods.
