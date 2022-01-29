@@ -47,8 +47,11 @@
 \setchangekey{awp}{56}
 \setchangekey{optcontrolaml}{55}
 \setchangekey{currat}{54}
+\setchangekey{robrank}{53}
+\setchangekey{advrank}{51}
 \setchangekey{trades}{47}
 \setchangekey{smoothat}{29}
+\setchangekey{madry}{19}
 %%END
 
 % Support for easy cross-referencing
@@ -248,6 +251,17 @@ These will be provided in the next revision.
 %
 \ul{The performance on benign examples seems to drop a lot. Does it mean the
 HM is just another trade-off way?}
+
+\noindent\textbf{A:}
+%
+Performance drop on benign example is inevitable for adversarial training
+methods \cite{madry,trades,awp,advrank,robrank}, and they face a trade-off
+between benign example performance and robustness via hyper-parameters
+(\emph{e.g.}, $\varepsilon$).
+%
+Our proposed method is not a trade-off method, because it quantitatively
+achieves higher robustness, training efficiency, and benign example performance
+than previous state-of-the-arts~\cite{advrank,robrank}.
 
 \emph{The main motivation of this work is that previous works suffer from excessively hard examples and this work aims to control the hardness.}
 
