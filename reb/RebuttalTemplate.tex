@@ -177,7 +177,7 @@ equal?
 
 \noindent\textbf{A:}
 %
-They do not equal but only lead to minor difference in practice.
+They have same complexity polynomials in terms of time and space.
 %
 We conduct experiments with two ``Nvidia TITAN Xp'' GPUs on the CUB dataset
 with $\eta{=}32$, as follows:
@@ -192,10 +192,10 @@ with $\eta{=}32$, as follows:
 	 & HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS \\
 	 \midrule
 	Time Complexity
-	& $\mathcal{O}(\eta D)$
-	& $\mathcal{O}(\eta D)$
-	&
-	& \\
+	& $\mathcal{O}(\eta D + 1)$
+	& $\mathcal{O}(\eta D + 1)$
+	& $\mathcal{O}(\eta D + 1)$
+	& $\mathcal{O}(\eta D + 1)$\\
 	Actual Training Time
 	& 8.4 hour 
 	& hour
@@ -203,10 +203,10 @@ with $\eta{=}32$, as follows:
 	& 9.4 hour \\
 	\hline
 	Space Complexity 
-	& $\mathcal{O}(\eta D)$
-	& $\mathcal{O}(\eta D)$
-	&
-	& \\
+	& $\mathcal{O}(\eta D + 1)$
+	& $\mathcal{O}(\eta D + 1)$
+	& $\mathcal{O}(\eta D + 1)$
+	& $\mathcal{O}(\eta D + 1)$\\
 	GPU Memory Usage 
 	& 6559 MB
 	& 6617 MB
@@ -222,7 +222,7 @@ example are identical across different defenses.
 Triplet sampler is aligned in the table for identical
 sampling complexities.
 %
-Omitting the identical terms, the rest stem from adversarial perturbation objective functions and loss function.
+Omitting the identical terms, the rest complexity stems from adversarial perturbation objective functions and loss function.
 %
 The reported values are uneasy to compare for future work as they are sensitive
 to hardware, software, and programming tricks.
