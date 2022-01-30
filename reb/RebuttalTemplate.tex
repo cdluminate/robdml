@@ -186,27 +186,28 @@ with $\eta{=}32$, as follows:
 \resizebox{1.0\columnwidth}{!}{
 \begin{tabular}{c|c|c|c|c}
 	\toprule
+	 Defense Method
 	 & EST[$\mathcal{S}$]
 	 & ACT[$\mathcal{S}$]
 	 & HM[$\mathcal{S},g_\mathsf{LGA}$]
 	 & HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS \\
 	 \midrule
 	Time Complexity
-	& $\mathcal{O}(\eta D + \eta)$
-	& $\mathcal{O}(\eta D + \eta)$
-	& $\mathcal{O}(\eta D + \eta)$
-	& $\mathcal{O}(\eta D + \eta)$\\
+	& $\mathcal{O}(\eta D + \eta + 1)$
+	& $\mathcal{O}(\eta D + \eta + 1)$
+	& $\mathcal{O}(\eta D + \eta + 1)$
+	& $\mathcal{O}(\eta D + \eta + 1)$\\
 	Actual Training Time
 	& 8.4 hour 
-	& hour
+	& 9.3 hour
 	& 9.1 hour
 	& 9.4 hour \\
 	\hline
 	Space Complexity 
-	& $\mathcal{O}(\eta D + 1)$
-	& $\mathcal{O}(\eta D + 1)$
-	& $\mathcal{O}(\eta D + 1)$
-	& $\mathcal{O}(\eta D + 1)$\\
+	& $\mathcal{O}(D + 1)$
+	& $\mathcal{O}(D + 1)$
+	& $\mathcal{O}(D + 1)$
+	& $\mathcal{O}(D + 1)$\\
 	GPU Memory Usage 
 	& 6559 MB
 	& 6617 MB
