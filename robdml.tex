@@ -262,14 +262,14 @@ training objectives in the early and late phases of training.
 
 % Gradual Adversary
 
-To this end, Graduate Adversary, a family of pseudo-hardness functions is
+To this end, Gradual Adversary, a family of pseudo-hardness functions is
 proposed, which can be used as the \emph{destination} hardness.
 %
 A function that leads to relatively weak and relatively strong adversarial
 examples, respectively in the early and late phase of training belongs to this
 family.
 %
-As an example, we design a ``Linear Graduate Adversary'' (LGA)
+As an example, we design a ``Linear Gradual Adversary'' (LGA)
 function as the linearly scaled negative triplet margin, incorporating a strong
 prior that the \emph{destination} hardness should remain Semihard
 based on our empirical observation.
@@ -316,7 +316,7 @@ In summary, our contributions include proposing:
 		tool to create adversarial example triplets for subsequent adversarial
 		training of a DML model.
 		%
-	\item \textit{Linear Gradual Adversary} (LGA) as a Graduate Adversary, \ie,
+	\item \textit{Linear Gradual Adversary} (LGA) as a Gradual Adversary, \ie,
 		a pseudo-hardness function for HM, which incorporates our empirical
 		observations and can balance the training objectives during the
 		training process.
@@ -686,9 +686,9 @@ loss value),
 in order to automatically balance the training objectives (\ie, performance on
 benign examples \emph{v.s.} robustness).
 %
-A satisfactory pseudo-hardness function is a ``Graduate Adversary''.
+A satisfactory pseudo-hardness function is a ``Gradual Adversary''.
 
-% Linear graduate adversary
+% Linear gradual adversary
 
 As an example, we propose a ``Linear Gradual Adversary'' (LGA) pseudo-hardness
 function that is independent to any benign triplets, incorporating our empirical
