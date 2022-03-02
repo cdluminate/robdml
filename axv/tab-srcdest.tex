@@ -1,0 +1,56 @@
+\begin{table*}
+\resizebox{\linewidth}{!}{
+\setlength{\tabcolsep}{0.48em}%
+\begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
+
+	\toprule
+
+\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS}}\tabularnewline
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17} 
+ &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
+
+	\midrule
+
+\multirow{5}{*}{CUB} & HM{[}$\mathcal{R},\mathcal{R}${]} & N/A & 53.9 & 66.4 & 26.1 & 59.5 & 0.0 & 100.0 & 0.0 & 99.9 & 0.883 & 1.762 & 0.0 & 0.0 & 14.1 & 0.0 & 3.8\tabularnewline
+ & HM{[}$\mathcal{R},\mathcal{M}${]} & 8 & 27.0 & 36.0 & 13.2 & 42.5 & 19.4 & 48.0 & 22.2 & 32.0 & 0.535 & 0.867 & 11.6 & 10.4 & 19.3 & 2.9 & 35.1\tabularnewline
+ & HM{[}$\mathcal{R},\mathcal{S}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+ & HM{[}$\mathcal{R},\mathcal{D}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+ & HM{[}$\mathcal{R},\mathcal{H}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+\hline 
+\multirow{5}{*}{CUB} & HM{[}$\mathcal{M},\mathcal{R}${]} & 8 & 43.9 & 55.9 & 27.1 & 54.2 & 0.2 & 100.0 & 0.4 & 99.6 & 0.849 & 1.640 & 0.2 & 0.1 & 19.1 & 0.0 & 5.4\tabularnewline
+ & HM{[}$\mathcal{M},\mathcal{M}${]} & N/A & 44.0 & 56.1 & 27.2 & 54.6 & 0.1 & 100.0 & 0.4 & 99.8 & 0.843 & 1.717 & 0.3 & 0.3 & 18.4 & 0.0 & 5.0\tabularnewline
+ & HM{[}$\mathcal{M},\mathcal{S}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+ & HM{[}$\mathcal{M},\mathcal{D}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+ & HM{[}$\mathcal{M},\mathcal{H}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+\hline 
+\multirow{5}{*}{CUB} & HM{[}$\mathcal{S},\mathcal{R}${]} & 8 & 48.3 & 60.1 & 30.3 & 56.3 & 2.0 & 84.4 & 1.4 & 85.4 & 0.835 & 0.895 & 6.1 & 1.6 & 21.0 & 0.0 & 13.7\tabularnewline
+ & HM{[}$\mathcal{S},\mathcal{M}${]} & 8 & 38.4 & 49.7 & 22.9 & 50.3 & 10.9 & 50.5 & 10.8 & 44.6 & 0.680 & 0.722 & 13.3 & 11.2 & 25.8 & 1.2 & 29.6\tabularnewline
+ & HM{[}$\mathcal{S},\mathcal{S}${]} & N/A & 55.7 & 68.2 & 35.8 & 61.0 & 0.0 & 100.0 & 0.0 & 99.6 & 0.942 & 1.272 & 0.0 & 0.0 & 19.2 & 0.0 & 6.2\tabularnewline
+ & HM{[}$\mathcal{S},\mathcal{D}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+ & HM{[}$\mathcal{S},\mathcal{H}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+\hline 
+\multirow{5}{*}{CUB} & HM{[}$\mathcal{D},\mathcal{R}${]} & 8 & 52.7 & 64.0 & 33.7 & 58.9 & 0.0 & 100.0 & 0.2 & 100.0 & 0.841 & 1.749 & 0.1 & 0.0 & 19.0 & 0.0 & 4.8\tabularnewline
+ & HM{[}$\mathcal{D},\mathcal{M}${]} & 8 & 50.7 & 63.8 & 33.1 & 58.7 & 0.0 & 100.0 & 0.3 & 99.9 & 0.841 & 1.744 & 0.2 & 0.0 & 18.5 & 0.0 & 4.8\tabularnewline
+ & HM{[}$\mathcal{D},\mathcal{S}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+ & HM{[}$\mathcal{D},\mathcal{D}${]} & N/A & 51.4 & 64.2 & 33.4 & 59.3 & 0.0 & 100.0 & 0.4 & 99.9 & 0.842 & 1.753 & 0.0 & 0.0 & 19.7 & 0.0 & 4.9\tabularnewline
+ & HM{[}$\mathcal{D},\mathcal{H}${]} & 8 & 54.7 & 66.9 & 36.2 & 60.0 & 0.0 & 100.0 & 0.2 & 99.8 & 0.874 & 1.569 & 0.4 & 0.0 & 18.6 & 0.0 & 5.4\tabularnewline
+\hline 
+\multirow{5}{*}{CUB} & HM{[}$\mathcal{H},\mathcal{R}${]} & 8 & 51.0 & 63.5 & 32.9 & 59.2 & 0.0 & 100.0 & 0.2 & 99.9 & 0.837 & 1.750 & 0.0 & 0.0 & 17.7 & 0.0 & 4.7\tabularnewline
+ & HM{[}$\mathcal{H},\mathcal{M}${]} & 8 & 52.2 & 64.0 & 33.1 & 58.4 & 0.0 & 100.0 & 0.2 & 100.0 & 0.841 & 1.750 & 0.0 & 0.0 & 18.9 & 0.0 & 4.8\tabularnewline
+ & HM{[}$\mathcal{H},\mathcal{S}${]} & 8 & C & o & l & l & a & p & s & e &  &  &  &  &  &  & \tabularnewline
+ & HM{[}$\mathcal{H},\mathcal{D}${]} & 8 & 52.6 & 64.9 & 34.4 & 60.0 & 0.0 & 100.0 & 0.2 & 99.9 & 0.835 & 1.720 & 0.1 & 0.0 & 20.0 & 0.0 & 5.1\tabularnewline
+ & HM{[}$\mathcal{H},\mathcal{H}${]} & N/A & 48.9 & 61.2 & 30.3 & 56.5 & 0.0 & 100.0 & 0.4 & 99.9 & 0.830 & 1.752 & 0.2 & 0.0 & 19.5 & 0.0 & 5.0\tabularnewline
+
+	\bottomrule
+
+\end{tabular}}
+
+	\caption{Full data sheet for Tab.2 in the Paper. The symbols $\mathcal{R},
+	\mathcal{M}, \mathcal{S}, \mathcal{D}, \mathcal{H}$ denote Random, Semihard,
+	Softhard, Distance and Hardest triplet sampling strategies, respectively.
+	%
+	Experiments that end up with model collapse are left with a placeholder 
+	in the table.
+	}
+\label{tab:srcdest}
+\end{table*}

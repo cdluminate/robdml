@@ -1,0 +1,22 @@
+\begin{table}
+\resizebox{\columnwidth}{!}{
+	\setlength{\tabcolsep}{0.8em}
+\begin{tabular}{c|ccccc}
+\toprule
+\rowcolor{black!7} Statistics & Random & Semihard & Softhard & Distance & Hardest\tabularnewline
+\midrule
+$E[H]$ & $-0.164$ & $-0.126$ & $-0.085$ & $0.043$ & $0.044$\tabularnewline
+$\text{Var}[H]$ & $0.00035$ & $0.00013$ & $0.00122$ & $0.00021$ & $0.00021$\tabularnewline
+\bottomrule
+\end{tabular}
+}
+	\vspace{-0.5em}
+\caption{Mean \& variance of hardness w/ various triplet samplers.
+%
+Calculated as the average statistics over $1000$ mini-batches from the CUB dataset
+with an imagenet-initialized RN18 model.
+%
+}
+
+	\label{tab:hsort}
+\end{table}

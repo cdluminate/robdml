@@ -1,0 +1,45 @@
+\begin{table*}
+	\vspace{-1em}
+\resizebox{\linewidth}{!}{
+\setlength{\tabcolsep}{0.48em}
+\renewcommand{\arraystretch}{1.02}%
+
+\begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
+
+	\toprule
+
+\rowcolor{black!12} & &  & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \tabularnewline
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
+\rowcolor{black!12}\multirow{-2}{*}{\textbf{Dataset}} & \multirow{-2}{*}{\textbf{Defense}} & \multirow{-2}{*}{$\eta$} & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \multirow{-2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
+
+	\midrule
+
+& \textcolor{tab:blue}{HM{[}$\mathcal{R},\mathcal{M}${]}} & 8 & 27.0 & 36.0 & 13.2 & 42.5 & 19.4 & 48.0 & 22.2 & 32.0 & 0.535 & 0.867 & 11.6 & 10.4 & 19.3 & 2.9 & 35.1\tabularnewline
+\rowcolor{black!7}\cellcolor{white} \multirow{-2}{*}{CUB} & HM{[}$\mathcal{R},\mathcal{M}${]}\&ICS & 8 & 25.6 & 34.3 & 12.5 & 41.8 & 21.9 & 41.0 & 23.6 & 26.4 & 0.497 & 0.766 & 14.5 & 13.0 & 21.8 & 4.7 & 39.0\tabularnewline
+\hline 
+& \textcolor{tab:red}{HM{[}$\mathcal{S},\mathcal{M}${]}} & 8 & 38.4 & 49.7 & 22.9 & 50.3 & 10.9 & 50.5 & 10.8 & 44.6 & 0.680 & 0.722 & 13.3 & 11.2 & 25.8 & 1.2 & 29.6\tabularnewline
+\rowcolor{black!7}\cellcolor{white}\multirow{-2}{*}{CUB}  & HM{[}$\mathcal{S},\mathcal{M}${]}\&ICS & 8 & 36.9 & 48.9 & 21.6 & 48.8 & 12.4 & 42.9 & 12.5 & 36.6 & 0.850 & 0.446 & 17.0 & 13.9 & 27.2 & 1.9 & 32.3\tabularnewline
+\hline 
+& HM{[}$\mathcal{R},g_{\mathsf{LGA}}${]} & 8 & 24.8 & 33.9 & 12.2 & 41.6 & 21.4 & 45.0 & 21.7 & 31.3 & 0.452 & 0.846 & 13.2 & 12.0 & 20.9 & 4.6 & 37.3\tabularnewline
+\rowcolor{black!7}\cellcolor{white}\multirow{-2}{*}{CUB}  & HM{[}$\mathcal{R},g_{\mathsf{LGA}}${]}\&ICS & 8 & 25.7 & 35.2 & 12.8 & 41.7 & 22.1 & 37.1 & 23.4 & 23.7 & 0.464 & 0.725 & 14.5 & 13.3 & 21.1 & 5.3 & 40.2\tabularnewline
+\hline 
+& \textcolor{tab:pink}{HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}} & 8 & 38.0 & 48.3 & 21.8 & 49.3 & 12.7 & 46.4 & 11.6 & 39.9 & 0.567 & 0.783 & 16.8 & 11.9 & 27.9 & 1.4 & 32.4\tabularnewline
+\rowcolor{black!7}\cellcolor{white} & \textcolor{crimson}{HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS} & 8 & 37.2 & 47.8 & 21.4 & 48.4 & 12.9 & 40.9 & 14.7 & 33.7 & 0.806 & 0.487 & 17.1 & 13.2 & 26.3 & 2.3 & 33.5\tabularnewline
+\multirow{-3}{*}{CUB} & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS($\lambda{=}1.0$) & 8 & 36.0 & 46.7 & 20.7 & 48.0 & 14.2 & 41.0 & 15.1 & 31.7 & 0.907 & 0.329 & 17.0 & 14.2 & 24.5 & 2.1 & 33.7\tabularnewline
+\hline 
+\rowcolor{black!7}\cellcolor{white}& \textcolor{crimson}{HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS} & 2 & 45.2 & 57.2 & 28.5 & 53.7 & 3.0 & 79.9 & 2.4 & 78.9 & 0.936 & 0.609 & 3.6 & 1.2 & 19.9 & 0.0 & 15.2\tabularnewline
+ & \textcolor{crimson}{HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS} & 4 & 41.8 & 53.0 & 25.3 & 52.0 & 8.1 & 57.3 & 7.9 & 54.1 & 0.892 & 0.514 & 9.8 & 6.7 & 22.9 & 0.5 & 24.6\tabularnewline
+\rowcolor{black!7}\cellcolor{white} & \textcolor{crimson}{HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS} & 8 & 37.2 & 47.8 & 21.4 & 48.4 & 12.9 & 40.9 & 14.7 & 33.7 & 0.806 & 0.487 & 17.1 & 13.2 & 26.3 & 2.3 & 33.5\tabularnewline
+ & \textcolor{crimson}{HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS} & 16 & 35.5 & 46.4 & 20.4 & 47.5 & 14.9 & 37.2 & 17.1 & 30.3 & 0.771 & 0.495 & 18.2 & 15.3 & 28.7 & 2.8 & 36.0\tabularnewline
+\rowcolor{black!7}\cellcolor{white}\multirow{-5}{*}{CUB}  & \textcolor{crimson}{HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS} & 32 & 34.9 & 45.0 & 19.8 & 47.1 & 15.5 & 37.7 & 16.6 & 30.9 & 0.753 & 0.506 & 17.9 & 16.7 & 27.3 & 2.9 & 36.0\tabularnewline
+
+	\bottomrule
+
+\end{tabular}
+
+	}
+	\vspace{-0.8em}
+\caption{Intra-class structure loss in conjunction with hardness manipulation for adversarial training of a DML Model.}
+\label{tab:ics}
+\end{table*}
+

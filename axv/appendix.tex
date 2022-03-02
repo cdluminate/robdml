@@ -1,0 +1,601 @@
+\clearpage
+\appendix
+
+\setcounter{figure}{8}
+\setcounter{table}{6}
+
+\section*{Supplementary Material}
+
+In this supplementary material, we provide more technical details and
+additional discussions that are excluded from the manuscript due to space
+limit.
+
+\tableofcontents
+
+\section{Additional Information}
+\label{sec:a}
+
+\subsection{Potential Societal Impact}
+\label{sec:a1}
+
+\noindent\textbf{I. Security.}
+
+Adversarial defenses alleviate the negative societal impact of adversarial
+attacks, and hence have positive societal impact.
+
+\subsection{Limitations of Our Method}
+\label{sec:a2}
+
+\noindent\textbf{I. Assumptions.}
+
+~\newline
+\noindent \ul{(1) Triplet Training Assumption.}
+
+Our method assumes sample triplets are used for training.
+%
+Our method may not be compatible to other non-triplet DML loss functions.
+%
+Adversarial training with other DML loss functions is left for future study.
+
+~\newline
+\noindent \ul{(2) Embedding Space Assumption.}
+
+We follow the common setups~\cite{revisiting,robrank} on the embedding space.
+%
+Namely, (1) the embedding vectors are normalized onto the real unit
+hypersphere;
+%
+(2) the distance function $d(\cdot,\cdot)$ is Euclidean distance.
+%
+Our formulations are developed upon the two assumptions.
+%
+It is unknown whether our method method will be effective when embedding
+vectors are \emph{not} normalized.
+%
+And it is unknown whether our method will be effective when $d(\cdot,\cdot)$ is
+replaced as other distance metrics, \eg, cosine distance.
+
+~\newline
+\noindent \ul{(3) Optimizer Assumption.}
+
+Our method assumes PGD~\cite{madry} is used for optimizing the HM objective
+to create adversarial examples.
+%
+The Eq.~(4)-(5) may not necessarily hold with other possible optimizers.
+
+~\newline
+\noindent\textbf{II. Performance-Sensitive Factors.}
+
+~\newline
+\noindent \ul{(1) Maximum number of PGD iterations $\eta$.}
+
+Our method's sensitivity to $\eta$ has been demonstrated by Tab.~3-6 and
+Fig.~6-8.
+%
+A larger $\eta$ indicates higher training cost, and stronger adversarial
+examples are created for adversarial training.
+%
+As a result, a larger $\eta$ leads to a higher robustness (ERS) and a lower
+R@1 performance.
+%
+Our method consistently achieves a higher ERS under different $\eta$ settings
+compared to previous methods, and hence are the most efficient defense method.
+%
+Experiments with $\eta$ larger than $32$ are not necessary because ERS plateaus
+according to Fig.~6-8.
+
+~\newline
+\noindent \ul{(2) Source hardness $H_\mathsf{S}$ and destination hardness
+$H_\mathsf{D}$.}
+
+The $H_\mathsf{S}$ and $H_\mathsf{D}$ are the only two adjustable items in HM.
+
+The source hardness $H_\mathsf{S}$ depends on triplet sampling strategy.
+%
+We conduct experiments with existing triplet sampling strategies in order to
+focus on defense.
+
+The choices for $H_\mathsf{D}$ are more flexible than those of $H_\mathsf{S}$,
+as discussed in Sec.~3.1.
+%
+In the experiments, we study some possible choices following the discussion and
+design LGA based on the empirical observations.
+
+~\newline
+\noindent\ul{(3) Parameters involved in $g_\mathsf{LGA}$.}
+
+\begin{table*}
+\resizebox{\linewidth}{!}{
+\setlength{\tabcolsep}{0.47em}
+\renewcommand{\arraystretch}{1.1}%
+\begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
+	\toprule
+\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
+ &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
+ \midrule
+\multirow{2}{*}{CUB} & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]} & 8 & 38.0 & 48.3 & 21.8 & 49.3 & 12.7 & 46.4 & 11.6 & 39.9 & 0.567 & 0.783 & 16.8 & 11.9 & 27.9 & 1.4 & 32.4\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]} ($u=2.2$) & 8 & 34.8 & 45.5 & 15.2 & 47.1 & 13.4 & 36.0 & 17.2 & 26.1 & 0.934 & 0.244 & 20.1 & 15.9 & 27.3 & 3.8 & 36.1\tabularnewline
+ \bottomrule
+\end{tabular}}
+	\caption{The efficacy of parameter $u$ for clipping loss value $\ell_{t-1}$.
+	%
+	Stronger adversarial examples will be created for training if the loss value is not
+	clipped (equivalent to setting $u$ to the theoretical upper bound of loss,
+	\ie, 2.2).
+	}
+	\label{tab:u}
+\end{table*}
+
+
+A constant $u$ is used to normalize the loss value of the previous training
+iteration $\ell_{t-1}$ into $\bar{\ell}_{t-1}\in[0,1]$.
+%
+The constant is empirically selected as $u=\gamma$ in our experiment.
+%
+According to our observation, the loss value will quickly decrease below
+$\gamma$, and will remain in the $[0,\gamma]$ range for the whole training
+process.
+%
+If we set $u$ to a larger constant than $\gamma$, the normalized loss
+$\bar{\ell}_{t-1}$ will be smaller, and results in stronger adversarial
+examples through HM[$\mathsf{S},g_\mathsf{LGA}$] and harms the model performance on benign examples,
+as shown in \cref{tab:u}.
+
+Another parameter in $g_\mathsf{LGA}$ is the triplet margin parameter $\gamma$
+in order to align to the hardness range of Semihard triplets, \ie, $-\gamma<g_\mathsf{LGA}<0$.
+%
+We follow the common setup~\cite{revisiting} for this parameter.
+
+~\newline
+\noindent\ul{(4) Constant parameter $\lambda$ for ICS loss term $L_\text{ICS}$.}
+
+The weight constant $\lambda$ is set as $0.5$ by default, and $0.05$ on the SOP dataset.
+%
+As demonstrated in Tab.~5, there is a trade-off between robustness and
+performance on benign examples when tuning the $\lambda$ parameter.
+
+Additional experiments with $\lambda=0.5$ on the SOP dataset can be found in \cref{tab:soplambda}.
+%
+Our method is sensitive to this parameter.
+An excessively large $\lambda$ on the SOP datasets leads to worse performance on benign examples
+and worse robustness.
+
+\begin{table*}
+\resizebox{\linewidth}{!}{
+\setlength{\tabcolsep}{0.42em}
+\renewcommand{\arraystretch}{1.1}%
+\begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
+	\toprule
+\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
+ &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
+ \midrule
+\multirow{2}{*}{SOP} & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS ($\lambda=0.5$) & 8 & 42.4 & 47.1 & 10.2 & 84.2 & 34.9 & 3.8 & 36.7 & 2.3 & 0.879 & 0.093 & 35.3 & 36.5 & 35.2 & 49.1 & 60.1\tabularnewline
+ & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS ($\lambda=0.5$) & 32 & 41.5 & 46.1 & 9.9 & 84.1 & 36.1 & 3.1 & 37.6 & 2.1 & 0.873 & 0.086 & 35.7 & 36.8 & 34.7 & 50.2 & 60.8\tabularnewline
+ \bottomrule
+\end{tabular}}
+	\caption{An excessively large $\lambda$ may lead to worse performance and robustness.}
+	\label{tab:soplambda}
+\end{table*}
+
+~\newline
+\noindent\ul{(5) Backbone deep neural network.}
+
+We adopt ResNet-18 following the state-of-the-art defense~\cite{robrank} for
+fair comparison.
+%
+Since our proposed method is independent to the backbone choice, and hence
+is expected to be effective with different backbone models.
+
+\subsection{Use of Existing Assets}
+
+\noindent\ul{(1) Datasets.}
+
+All the datasets used in our paper are public datasets,
+and their corresponding papers are cited.
+%
+The CUB~\cite{cub200} dataset includes images of birds.
+%
+The CARS~\cite{cars196} dataset includes images of cars.
+%
+The SOP~\cite{sop} dataset includes images of online products.
+
+~\newline
+\noindent\ul{(2) Code and Implementation.}
+
+Our implementation is built upon PyTorch
+and the public code of the state-of-the-art defense method ACT~\cite{robrank}
+(License: Apache-2.0).
+
+\section{Technical Details \& Minor Discussions}
+\label{sec:b}
+
+\subsection{Difference between Existing Defenses \& HM}
+\label{sec:b1}
+
+\noindent\textbf{I. Embedding-Shifted Triplet (EST).}~\cite{advrank}
+
+Embedding-Shifted Triplet (EST)~\cite{advrank} adopts adversarial counterparts
+of $\va,\vp,\vn$ with maximum embedding move distance off their original
+locations, \ie,
+%
+\begin{equation}
+%
+L_\text{EST}=L_\text{T}(\tilde{\va},\tilde{\vp},\tilde{\vn};\gamma)
+%
+\end{equation}
+%
+where
+$\tilde{\va}=\phi(\mA+\vr^*)$, and $\vr^*=\arg\max_{\vr}d_\phi(\mA+\vr, \mA)$.
+%
+The $\tilde{\vp}$ and $\tilde{\vn}$ are obtained similarly.
+
+\ul{(1) Relationship with HM:}
+
+Since EST only aims to maximize the embedding move distance off its original
+location without specifying any direction, it leads to a random hardness value.
+%
+The expectation $E[H(\cdot)]$ of its resulting adversarial triplet is expected
+to be close to $E[H_\mathsf{S}]$.
+%
+Because the perturbed triplet can be either harder or easier than the benign
+triplet.
+%
+Namely, EST merely indirectly increase the hardness of the training triplet,
+and may even decrease its hardness.
+%
+Thus, EST suffers from inefficiency in adversarial training compared to HM.
+
+~\newline
+\noindent\textbf{II. Anti-Collapse Triplet (ACT).}~\cite{robrank}
+
+Anti-Collapse Triplet (ACT)~\cite{robrank} ``collapses'' the embedding vectors
+of positive and negative sample, and enforces the model to separate them apart,
+\ie,
+%
+\begin{align}
+%
+	L_\text{ACT} &=L_\text{T}(\va, \overrightarrow{\vp},
+\overleftarrow{\vn};\gamma),\\
+%
+	[\overrightarrow{\vp},\overleftarrow{\vn}] & =[\phi(\mP+\vr_p^*), \phi(\mN+\vr_n^*)]\\
+%
+	[\vr_p^*,\vr_n^*] &= \argmin_{\vr_p,\vr_n} d_\phi(\mP+\vr_p, \mN+\vr_n).
+%
+\end{align}
+
+\ul{(1) Relationship with HM:}
+
+When ACT successively ``collapses'' the positive and negative embedding
+vectors together, the hardness will be zero, \ie, $E[H(\cdot)]=0$.
+%
+But ACT is not equivalent to $HM[\cdot,0]$ because the two methods have
+different objectives and use different gradients.
+%
+Besides, in order to avoid the ``misleading gradients''~\cite{robrank}, ACT
+fixes the anchor and only perturb the positive and negative samples, which
+makes the objective for creating adversarial examples more difficult to
+optimize in practice.
+%
+In brief, ACT is also indirectly increasing the loss value, suffering from
+inefficient adversarial learning.
+
+\begin{table*}[t]
+\resizebox{\linewidth}{!}{
+\setlength{\tabcolsep}{0.47em}
+\renewcommand{\arraystretch}{1.1}%
+\begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
+	\toprule
+\multirow{2}{*}{\textbf{Dataset}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
+ &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
+ \midrule
+\multirow{3}{*}{CUB} & HM{[}$\mathcal{S},g_{\mathsf{1/2}}${]} & 8 & 38.7 & 48.5 & 22.0 & 49.2 & 12.6 & 48.6 & 12.3 & 41.3 & 0.562 & 0.825 & 13.5 & 12.9 & 26.9 & 1.8 & 31.7\tabularnewline
+& HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]} & 8 & 38.0 & 48.3 & 21.8 & 49.3 & 12.7 & 46.4 & 11.6 & 39.9 & 0.567 & 0.783 & 16.8 & 11.9 & 27.9 & 1.4 & 32.4\tabularnewline
+& HM{[}$\mathcal{S},g_{\mathsf{2}}${]} & 8 & 37.4 & 48.2 & 17.1 & 49.2 & 12.9 & 45.1 & 13.2 & 39.1 & 0.599 & 0.738 & 17.7 & 12.8 & 27.5 & 1.9 & 33.1\tabularnewline
+\bottomrule
+\end{tabular}}
+	\caption{Non-linear Gradual Adversary Examples.}
+	\label{tab:nonlinga}
+\end{table*}
+
+
+~\newline\textbf{III. Min-max Adversarial Training with Triplet Loss.}
+
+The direct formulation of min-max adversarial training~\cite{madry} for
+triplet loss-based DML is:
+%
+\begin{equation}
+%
+	\theta^* = \argmin_\theta [ \argmax_{\vr_a, \vr_p, \vr_n} L_\text{T}(
+	\mA + \vr_a, \mP + \vr_p, \mN + \vr_n)]
+%
+\end{equation}
+%
+Previous works~\cite{advrank,robrank} point out this method will easily lead
+to model collapse.
+%
+Our observation suggests the same.
+
+\ul{(1) Relationship with HM:}
+
+Maximizing $L_\text{T}$ is equivalent to maximizing $\tilde{H}_\mathsf{S}$.
+%
+This can be expressed as HM[$H_\mathsf{S},2$] as discussed in Sec.~3.1.
+
+\subsection{Hardness Manipulation (HM)}
+\label{sec:b2}
+
+\noindent\textbf{I. Adjustable Items}
+
+The only two adjustable items in HM are $H_\mathsf{S}$ and $H_\mathsf{D}$.
+%
+They are discussed in the ``Performance-Sensitive Factors'' part of the
+previous section.
+
+
+~\newline
+\noindent\textbf{II. Extreme Values of Hardness.}
+
+As reflected in Sec.~3.1 and Fig.~2, the range of $H(\cdot)$ is $[-2, 2]$.
+%
+The embedding vectors have been normalized to the real unit hypersphere
+as pointed out in the manuscript.
+%
+And the range of distance between any two points on the hypersphere is
+$[0,2]$.
+%
+Hence the extreme values are:
+%
+\begin{align}
+	& \max H(\mA, \mP, \mN)\\
+	=& \max [d_\phi(\mA, \mP) - d_\phi(\mA, \mN)]\\
+	=& \max [d_\phi(\mA, \mP)] - \min [d_\phi(\mA, \mN)]\\
+	=& 2 - 0,
+\end{align}
+%
+\begin{align}
+	& \min H(\mA, \mP, \mN)\\
+	=& \min [d_\phi(\mA, \mP) - d_\phi(\mA, \mN)]\\
+	=& \min [d_\phi(\mA, \mP)] - \max [d_\phi(\mA, \mN)]\\
+	=& 0 - 2.
+\end{align}
+%
+Namely $H(\cdot)\in[-2,2]$. Meanwhile, since
+%
+\begin{equation}
+%
+L_\text{T}(\mA, \mP, \mN; \gamma) = \max(0, H(\mA, \mP, \mN) + \gamma),
+%
+\end{equation}
+%
+we have $L_\text{T}\in[0, 2+\gamma]$.
+
+\subsection{Gradual Adversary}
+\label{sec:b3}
+
+\noindent\textbf{I. Parameters}
+
+The parameters, namely $u$ and $\gamma$ are discussed in the previous section
+of this supplementary material, see ``Performance-Sensitive Factors''.
+
+The parameter $\xi$ in $g_\mathsf{B}$ is set as $0.1$, but it is not an important parameter.
+%
+The function $g_\mathsf{B}$ is only used for demonstrating that ``slightly
+boosting the destination hardness can further increase ERS'' as discussed
+in Sec.~3.1.
+
+
+~\newline
+\noindent\textbf{II. Non-linear Gradual Adversary}
+
+In Sec.~3.2, more complicated designs are left for future work.
+%
+We provide two Non-linear Gradual Adversary examples, namely
+$g_\mathsf{2}$ and $g_\mathsf{1/2}$, as follows:
+%
+\begin{align}
+	g_\mathsf{2}(\cdot)   &= -\gamma \cdot (\bar{\ell}_{t-1})^{2}  &~ \in [-\gamma,0]\\
+	g_\mathsf{1/2}(\cdot) &= -\gamma \cdot (\bar{\ell}_{t-1})^{1/2} &~ \in [-\gamma, 0]
+\end{align}
+%
+Compared to LGA, $g_\mathsf{2}$ is more ``eager'' to result in strong adversarial
+examples in the early phase of training, while $g_\mathsf{1/2}$ is more ``conservative''
+in creating strong adversarial examples in the early phase of training
+(adversarial examples from HM are stronger if the function value is closer to $0$).
+%
+The corresponding experiments can be found in \cref{tab:nonlinga}.
+
+\begin{table*}
+\resizebox{\linewidth}{!}{
+\setlength{\tabcolsep}{0.47em}
+\renewcommand{\arraystretch}{1.1}%
+\begin{tabular}{c|cc|cccc|ccccc|ccccc|c}
+	\toprule
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Dataset}}} & \multirow{2}{*}{\textbf{Defense}} & \multirow{2}{*}{$\eta$} & \multicolumn{4}{c|}{\textbf{Benign Example}} & \multicolumn{10}{c|}{\textbf{White-Box Attacks for Robustness Evaluation}} & \multirow{2}{*}{\textbf{ERS$\uparrow$}}\tabularnewline
+\cline{4-17} \cline{5-17} \cline{6-17} \cline{7-17} \cline{8-17} \cline{9-17} \cline{10-17} \cline{11-17} \cline{12-17} \cline{13-17} \cline{14-17} \cline{15-17} \cline{16-17} \cline{17-17}
+ &  &  & R@1$\uparrow$ & R@2$\uparrow$ & mAP$\uparrow$ & NMI$\uparrow$ & CA+$\uparrow$ & CA-$\downarrow$ & QA+$\uparrow$ & QA-$\downarrow$ & TMA$\downarrow$ & ES:D$\downarrow$ & ES:R$\uparrow$ & LTM$\uparrow$ & GTM$\uparrow$ & GTT$\uparrow$ & \tabularnewline
+ \midrule
+\multirow{2}{*}{CUB} & HM{[}$\mathcal{S},g_{\mathsf{LGA}}${]}\&ICS & 8 & 37.2 & 47.8 & 21.4 & 48.4 & 12.9 & 40.9 & 14.7 & 33.7 & 0.806 & 0.487 & 17.1 & 13.2 & 26.3 & 2.3 & 33.5\tabularnewline
+& HM[$\mathcal{S},g_\mathsf{LGA}$]\&$L_\text{ICS}(\cdots;\gamma=0.2)$ & 8 & 35.8 & 46.6 & 16.4 & 48.3 & 13.2 & 39.9 & 12.7 & 33.3 & 0.775 & 0.507 & 15.9 & 14.9 & 27.2 & 2.7 & 33.6\tabularnewline
+ \bottomrule
+\end{tabular}}
+	\caption{The margin parameter is set to $0$ in order to avoid negative effect.
+	%
+	R@1 performance drops with marginal robustness gain.}
+	\label{tab:0margin}
+\end{table*}
+
+\subsection{Intra-Class Structure (ICS)}
+
+\noindent\textbf{I. Parameters}
+
+The ICS loss term can be appended to the loss for adversarial training.
+%
+The only parameter for ICS loss term is the weight constant $\lambda$,
+and has been discussed in the ``Performance-Sensitive Factors'' part
+of the previous section.
+
+The margin parameter is set to $0$ in order to avoid negative effect in $L_\text{ICS}$,
+as shown in \cref{tab:0margin}.
+
+~\newline
+\noindent\textbf{II. Gradients in Fig.~5 (a) in Manuscript}
+
+According to \cite{robrank}, when the embedding vectors are normalized onto the
+real unit hypersphere and Euclidean distance is used, the gradients of the
+triplet loss with respect to the anchor, positive, and negative embedding
+vectors are respectively:
+%
+\begin{align}
+%
+	\frac{\partial L_\text{T}}{\partial \va} &= \frac{\va - \vp}{\|\va - \vp\|}
+	- \frac{\va - \vn}{\| \va - \vn \|} \\
+	\frac{\partial L_\text{T}}{\partial \vp} &= \frac{\vp - \va}{\|\va - \vp\|} \\
+	\frac{\partial L_\text{T}}{\partial \vn} &= \frac{\va - \vn}{\|\va - \vn\|},
+%
+\end{align}
+%
+when $L_\text{T}>0$.
+And the above equations have been reflected in Fig.~5 (a) in terms of vector direction.
+
+~\newline
+\noindent\textbf{III. Alternative Design for Exploiting Sextuplet}
+
+Let $\tilde{\va}$, $\tilde{\vp}$, and $\tilde{\vn}$ be $\phi(\mA+\hat{\vr}_a)$,
+$\phi(\mP+\hat{\vr}_p)$ and $\phi(\mN+\hat{\vr}_n)$ respectively.
+%
+In our proposed ICS loss term, only $(\va, \tilde{\va}, \vp)$ are involved.
+%
+Other alternative selections of triplets from the sextuplet are possible,
+but are not as effective as $L_\text{ICS}$ for improving adversarial robustness.
+
+\ul{(1) $L_\text{T}(\va, \tilde{\va}, \tilde{\vp})$}
+
+As shown in Fig.~5 (c) in the manuscript, the position of $\tilde{\vp}$ is
+always further away from both $\va$ and $\tilde{\va}$ than $\vp$ due to
+the gradient direction.
+%
+Thus, the loss value of $L_\text{T}(\va, \tilde{\va}, \tilde{\vp})$ will always
+be smaller than $L_\text{ICS}$, and hence is less effective than $L_\text{ICS}$.
+
+\ul{(2) $L_\text{T}(\va, \vp, \vn)$: Mixing regular training
+and adversarial training.}
+
+According to our observation, mixing regular training and adversarial training
+leads to better R@1 with drastic robustness degradation for both ACT and
+our defense.
+
+\ul{(3) $L_\text{T}(\vp, \tilde{\vp}, \va)$: Symmetric counterpart of $L_\text{ICS}$.}
+
+Every sample in the training dataset will be used as anchor for once per
+epoch.
+%
+Such symmetric loss term is duplicated to $L_\text{ICS}$ and is
+not necessary.
+%
+Experimental results suggest negligible difference compared to $L_\text{ICS}$.
+
+\ul{(4) $L_\text{T}(\va, \tilde{\va}, \tilde{\vn})$: $\tilde{\vn}$ is very close to $\va$ in Fig.~5.}
+
+It enforces \emph{inter}-class structure instead of intra-class structure.
+%
+Besides, experimental results suggest negligible difference.
+%
+We speculate this loss term is duplicated to the adversarial training loss term,
+\ie, $L_\text{T}(\tilde{\va}, \tilde{\vp}, \tilde{\vn})$, which enforces
+inter-class structure as well in a stronger manner.
+
+\ul{(5) $L_\text{T}(\va, \vp, \tilde{\vn})$}
+
+According to our observation, it leads to better R@1 performance on benign
+examples, but drastically reduce the robustness.
+
+\subsection{Experiments and Evaluation}
+
+\noindent\textbf{I Hardware and Software Configuration}
+
+We conduct the experiments with two Nvidia Titan Xp GPUs (12GB of memory each)
+under the Ubuntu 16.04 operating system with PyTorch 1.8.2 in distributed data
+parallel.
+
+~\newline
+\noindent\textbf{II. Training Cost}
+
+In the manuscript, the training cost of adversarial training is caluclated as
+$\eta+1$, which is the number of forward-backward propagation involved in each
+iteration of the training process, in order to reflect the training efficiency
+(gain as high robustness as possible given a fixed number of forward-backward
+calculation for adversarial training) of different defense methods.
+%
+Specifically, PGD creates adversarial examples from the $\eta$ times of
+forward-backward computation.
+%
+With the resulting adversarial examples, the network requires once
+more forward-backward computation to update the model parameters.
+
+~\newline
+\noindent\textbf{III. Complete Results for Tab.~2 in Manuscript}
+
+\input{tab-srcdest.tex}
+
+Complete experimental results for ``Tab.~2: Combinations of Source \&
+Destination Hardness. \ldots'' can be found in \cref{tab:srcdest} of this
+supplementary material.
+
+~\newline
+\noindent\textbf{IV. Additional Notes on the Experimental Results}
+
+\noindent\ul{(1) Slight ERS decrease with a larger $\eta$}
+
+In some cases, \eg, HM[$\mathcal{S},g_\mathsf{LGA}$]\&ICS on the CARS dataset
+reaches a slightly lower ERS with $\eta=32$ compared to that with $\eta=8$.
+%
+We speculate this is because adversarial training suffers from overfitting~\cite{bagoftricks,overfitting}
+on adversarial examples, as mentioned in Sec.~2.
+
+\subsection{Potential Future Work}
+
+\noindent\textbf{I. Faster Adversarial Training with HM}
+
+As discussed in Sec.~3.1, one potential adversarial training acceleration
+method is to incorporate Free Adversarial Training (FAT)~\cite{freeat}
+(originally for classification) into our DML adversarial training with HM.
+%
+Besides, directly incorporating FAT into the min-max adversarial training of
+DML will easily result in model collapse as well, because the FAT algorithm can
+be interpreted as to maintain a universal (agnostic to sample) perturbation
+that can maximize the loss.
+%
+Thus, non-trivial modifications are still required to incorporate FAT FAT into
+adversarial training with HM. This is left for future work.
+
+~\newline\textbf{II. Better Choice for Destination Hardness}
+
+The proposed LGA function incorporates our empirical observation that
+``adversarial triplets should remain Semihard'' based on the results in Tab.~2.
+%
+However, a better choice for $H_\mathsf{D}$ may exist between ``Semihard'' and
+``Softhard'' that can achieve better overall performance.
+%
+In the manuscript, we only use the existing sampling methods and simple
+pseudo-hardness functions in order to avoid distraction from our focus.
+
+~\newline\textbf{III. Other Loss Functions}
+
+Adversarial trainig with DML loss functions other than triplet loss is
+insufficiently explored.
+%
+New metric learning loss functions oriented for adversarial training are also
+left for future study.
+%
+Besides, model collapse is an inevitable problem for adversarial training
+with triplet loss, and it is unknown whether other loss functions could
+mitigate this issue.
+
+~\newline\textbf{IV. DML \& Classification}
+
+It is unknown whether DML defenses will improve the robustness in the
+classification task.
+
