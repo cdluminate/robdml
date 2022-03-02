@@ -33,6 +33,8 @@
 \usepackage{todonotes}
 \usepackage{siunitx}
 
+\definecolor{cyan}{rgb}{0.0, 0.72, 0.92}
+
 %\DeclareMathOperator*{\argmax}{arg\,max}
 %\DeclareMathOperator*{\argmin}{arg\,min}
 
@@ -351,7 +353,7 @@ But many of them are still susceptible to adaptive attacks~\cite{adaptive}.
 %
 Of all defenses, adversarial training~\cite{madry} consistently remains to be one of the
 most effective
-methods~\cite{bilateral,advtrain-triplet,benchmarking,smoothat,trades,robustwrn,weightperturb,featurescatter},
+methods~\cite{bilateral,advtrain-triplet,benchmarking,smoothat,trades,robustwrn,weightperturb,featurescatter,currat,awp},
 but suffers from high training cost~\cite{freeat,fastat,yopo}, performance drop on
 benign examples~\cite{odds,geometry,onmanifold}, and overfitting on adversarial examples~\cite{bagoftricks,overfitting}.
 
