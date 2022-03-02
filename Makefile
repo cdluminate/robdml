@@ -6,7 +6,7 @@ VIEWER:=evince
 
 PDFS:= hmillust.pdf gaillust.pdf icsapn.pdf fighmeff.pdf figgaeff.pdf  introplot.pdf figics.pdf hmflexible.pdf
 
-default: supp
+default: robdml
 
 reb:
 	$(MAKE) -C reb
