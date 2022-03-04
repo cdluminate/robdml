@@ -30,6 +30,27 @@ SOP  | HM[S,g_LGA]&ICS | python3 bin/train.py -C sop:rres18ghmetsmi:ptripletN
 
 4. evaluate these models following the description in [`README.md`](https://github.com/cdluminate/robrank/blob/main/README.md)
 
+## Bibtex
+
+```bib
+@InProceedings{robdml,
+    author    = {Zhou, Mo and Patel, Vishal M.},
+    title     = {Enhancing Adversarial Robustness for Deep Metric Learning},
+    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year      = {2022},
+}
+```
+
+or if you prefer the arxiv version:
+```bib
+@article{robdml-arxiv,
+  author={Zhou, Mo and Patel, Vishal M.},
+  title={Enhancing Adversarial Robustness for Deep Metric Learning},
+  journal={arXiv preprint arXiv:2203.01439},
+  year={2022}
+}
+```
+
 ## License
 
 Apache-2.0
