@@ -75,6 +75,8 @@ Hardest triplet sampling  | H,h | rres18ghmet(h)m
 ---------------------------------------------------------------------------------
 
 You may read robrank/models/autogen/autogen.py for more detail on the combinations.
+Unfortunately such flexibility resulted in 1800 possible model configurations,
+where most of them are not working and not used in by the paper.
 Meh... I understand that the code can be improved to simplify this, because there
 are too many unused leftover code from early exploration of this work.
 ```
