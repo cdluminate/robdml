@@ -8,11 +8,18 @@
 % modified and extended by Stefan Roth (stefan.roth@NOSPAMtu-darmstadt.de)
 
 \documentclass[10pt,twocolumn,letterpaper]{article}
+\newif\ifarxiv
+
+%\arxivtrue % XXX
+\arxivfalse % XXX
 
 %%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
 %\usepackage[review]{cvpr}      % To produce the REVIEW version
-%\usepackage{cvpr}              % To produce the CAMERA-READY version
+\ifarxiv
 \usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+\else
+\usepackage{cvpr}              % To produce the CAMERA-READY version
+\fi
 
 % Include other packages here, before hyperref.
 \usepackage{graphicx}
@@ -1141,8 +1148,11 @@ examples, while LGA can be interpreted as a concrete ``selection''.
 %
 ICS loss further exploits the given sextuplet.
 
+\ifarxiv
 Further analysis, technical details, and limitations, \etc,
 are presented in the supplementary document.
+\else
+\fi
 
 
 \section{Conclusion}
@@ -1160,8 +1170,13 @@ ICS loss term further improves model robustness.
 %
 The state-of-the-art defenses have been surpassed in terms of overall performance.
 
-%\textbf{Acknowledgements.} This research was supported by []. We thank
-%Kangfu Mei for helpful discussions and feedbacks.
+\ifarxiv
+\else
+{\scriptsize
+\textbf{Acknowledgements.} This work was supported by the DARPA GARD Program
+HR001119S0026-GARD-FP-052. We thank Kangfu Mei for helpful feedbacks.
+}
+\fi
 
 %%%%%%%%% REFERENCES
 {\small
@@ -1169,6 +1184,9 @@ The state-of-the-art defenses have been surpassed in terms of overall performanc
 \bibliography{robdml}
 }
 
+\ifarxiv
 \input{appendix.tex}
+\else
+\fi
 
 \end{document}
