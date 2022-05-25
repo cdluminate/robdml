@@ -1,3 +1,5 @@
+(this takes roughly 7 min ~ 10 min)
+
 Hello everyone, my name is Mo. Today I'm going to present my project, enhancing
 adversarial robustness for deep metric learning.
 
