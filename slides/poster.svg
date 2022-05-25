@@ -26,9 +26,9 @@
      showgrid="false"
      units="in"
      width="80in"
-     inkscape:zoom="0.4731002"
-     inkscape:cx="6216.4421"
-     inkscape:cy="3546.8174"
+     inkscape:zoom="0.33453236"
+     inkscape:cx="2035.6775"
+     inkscape:cy="1697.8925"
      inkscape:window-width="1920"
      inkscape:window-height="1025"
      inkscape:window-x="0"
@@ -9351,7 +9351,7 @@
        x="432.68982"
        y="1225.1737" />
     <rect
-       style="fill:#ffffff;stroke:#aaccff;stroke-width:11.3386;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;stroke:#ffaaaa;stroke-width:11.3386;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="rect29124-6"
        width="208.22548"
        height="208.22548"
@@ -9372,7 +9372,7 @@
        x="271.35944"
        y="1399.5176" />
     <rect
-       style="fill:#ffffff;stroke:#aaccff;stroke-width:11.3386;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;stroke:#ffaaaa;stroke-width:11.3386;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="rect29124-0"
        width="208.22548"
        height="208.22548"
@@ -9410,12 +9410,12 @@
          y="1898.6334"
          style="stroke-width:1">Samples</tspan></text>
     <path
-       style="fill:none;stroke:#ffaaaa;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       style="fill:none;stroke:#ffaaaa;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3)"
        d="m 434.35538,1560.1652 c 0,0 260.92807,178.9202 600.34102,58.7797"
        id="path33658"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#ffaaaa;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       style="fill:none;stroke:#ffaaaa;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3)"
        d="m 595.05811,1372.2282 c 0,0 313.0365,17.5799 497.99129,176.6054"
        id="path34178" />
     <text
@@ -9430,7 +9430,7 @@
          y="1882.7538"
          style="stroke-width:1">Embedding Space</tspan></text>
     <path
-       style="fill:none;stroke:#aaccff;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       style="fill:none;stroke:#aaccff;stroke-width:3.77953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-3)"
        d="m 645.46963,1300.3955 c 0,0 290.18161,153.2482 565.19857,34.3832"
        id="path35091" />
     <circle
