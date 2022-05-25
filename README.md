@@ -6,6 +6,8 @@ Robust Deep Metric Learning (RobDML)
 **Conference:** CVPR, 2022  
 **Preprint:** https://arxiv.org/abs/2203.01439  
 **Code:** https://github.com/cdluminate/robrank  
+**Poster:** [[PDF Poster]](slides/poster.pdf) [[SVG Source]](slides/poster.svg)
+**Slides:** [[Presentation]](slides/slides.pdf) [[Single-page]](slides/slides-singlepage.pdf)
 
 ## Brief usage instructions:
 
