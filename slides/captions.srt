@@ -1,0 +1,287 @@
+1
+00:00:00,400 --> 00:00:04,320
+Hello everyone, today I'm 
+going to present my cvpr paper,
+
+2
+00:00:04,320 --> 00:00:07,280
+enhancing adversarial
+robustness for deep metric learning.
+
+3
+00:00:07,840 --> 00:00:12,160
+Given a set of data points, deep 
+metric learning aims to learn a mapping
+
+4
+00:00:12,160 --> 00:00:16,800
+function to project the data onto a 
+embedding space, where similar data
+
+5
+00:00:16,800 --> 00:00:21,360
+points are close to each other, while 
+disimilar data points are far away from
+
+6
+00:00:21,360 --> 00:00:24,800
+each other. It has lots of important applications.
+
+7
+00:00:25,760 --> 00:00:30,400
+However, recent studies reveal that 
+by adding a small and imperceptible
+
+8
+00:00:30,400 --> 00:00:32,800
+adversarial perturbation to the image,
+
+9
+00:00:32,800 --> 00:00:36,160
+the deep metric learning model will
+produce incorrect results.
+
+10
+00:00:37,520 --> 00:00:41,920
+Considering the security implications, 
+it is important to improve the
+
+11
+00:00:41,920 --> 00:00:47,040
+adversarial robustness. However, existing 
+defense methods still suffer from low
+
+12
+00:00:47,040 --> 00:00:51,120
+training efficiency and notable 
+performance drop on benign examples.
+
+13
+00:00:52,160 --> 00:00:57,280
+Now, we rethink about the problem. 
+Assume there are two extreme methods. The
+
+14
+00:00:57,280 --> 00:00:59,600
+weakest one is regular training,
+
+15
+00:00:59,600 --> 00:01:04,720
+while the strongest one is the madry defense.
+Although madry defense is promising for
+
+16
+00:01:04,720 --> 00:01:08,720
+classification, it results in model
+collapse in deep metric learning.
+
+17
+00:01:09,280 --> 00:01:14,720
+Based on this, our insight is to find an
+intermediate point between the two extremes.
+
+18
+00:01:15,840 --> 00:01:21,360
+So, we propose hardness manipulation, 
+to perturb a given image triplet and
+
+19
+00:01:21,360 --> 00:01:26,480
+increase its hardness level to a 
+specified destination hardness level. The
+
+20
+00:01:26,480 --> 00:01:29,520
+resulting adversarial examples 
+are used for training.
+
+21
+00:01:30,320 --> 00:01:34,880
+Hardness Manipulation is efficient, 
+because it has the same gradient as
+
+22
+00:01:34,880 --> 00:01:38,960
+directly maximizing the loss. But differently,
+
+23
+00:01:38,960 --> 00:01:42,000
+it stops at a specified
+desination hardness.
+
+24
+00:01:43,360 --> 00:01:47,760
+That means the flexibility stems 
+from destination hardness HD.
+
+25
+00:01:48,560 --> 00:01:52,240
+When it equals
+the original source hardness HS,
+
+26
+00:01:52,240 --> 00:01:59,360
+it degenerates into regular training. When HD
+equals 2, it degenerates into the madry defense.
+
+27
+00:01:59,360 --> 00:02:03,200
+So, we can specify any value
+between HS and 2.
+
+28
+00:02:04,400 --> 00:02:09,440
+So, what exact hardness value should 
+be specified? We start from using the
+
+29
+00:02:09,440 --> 00:02:14,720
+existing triplet sampling strategies. 
+After searching by brute force, we find
+
+30
+00:02:14,720 --> 00:02:20,080
+two promising combinations, where the 
+best one is to perturb softhard triplets
+
+31
+00:02:20,080 --> 00:02:21,840
+into semihard triplets.
+
+32
+00:02:22,640 --> 00:02:27,600
+We then conduct experiments with the 
+good combinations. We will skip the bulky
+
+33
+00:02:27,600 --> 00:02:33,200
+table and directly see curves. The left 
+plot shows the efficiency in obtaining
+
+34
+00:02:33,200 --> 00:02:38,320
+a high robustness under a low training 
+cost. The right plot indicates the
+
+35
+00:02:38,320 --> 00:02:43,680
+performance drop on benign examples. The 
+red curve is generally performing very
+
+36
+00:02:43,680 --> 00:02:47,760
+well without any tuning, so we will 
+continue from this new baseline.
+
+37
+00:02:48,400 --> 00:02:53,200
+As aforementioned, we find the adversarial 
+examples not strong enough in the
+
+38
+00:02:53,200 --> 00:02:57,760
+late phase of training, and the adversarial 
+examples may be too strong in the
+
+39
+00:02:57,760 --> 00:03:02,640
+early phase of training. To simultaneously 
+address them, we propose linear
+
+40
+00:03:02,640 --> 00:03:07,280
+gragual adversary, which is used 
+as a dynamic destination hardness.
+
+41
+00:03:08,320 --> 00:03:13,520
+After adding this, the red curve becomes 
+the pink curve. The resulting method
+
+42
+00:03:13,520 --> 00:03:18,400
+is as efficient in gaining robustness 
+as the red curve, but it can achieve a
+
+43
+00:03:18,400 --> 00:03:20,480
+better performance on benign examples.
+
+44
+00:03:21,760 --> 00:03:26,400
+Next, we also note that by benign 
+triplet plus adversarial triplet is
+
+45
+00:03:26,400 --> 00:03:32,000
+a sextuplet. In this case, enforcing 
+intra-class structure is possible.
+
+46
+00:03:32,000 --> 00:03:36,080
+Considering there are attacks aiming 
+to change item ranking within the same
+
+47
+00:03:36,080 --> 00:03:40,160
+class, which is neglected 
+by previous defense methods,
+
+48
+00:03:40,160 --> 00:03:42,400
+we design
+a corresponding loss term.
+
+49
+00:03:43,520 --> 00:03:48,880
+Then the pink curve becomes yet another 
+red curve with improved model robustness.
+
+50
+00:03:50,080 --> 00:03:53,680
+In a word, If we combine 
+the improvements altogether,
+
+51
+00:03:53,680 --> 00:03:57,360
+we can see our proposed
+method, namely the red curve,
+
+52
+00:03:58,000 --> 00:04:01,760
+overwhelmingly outperforms the previous state of
+the art method.
+
+53
+00:04:02,400 --> 00:04:07,040
+And we have the same conclusions on the 
+other commonly used deep metric learning
+
+54
+00:04:07,040 --> 00:04:07,760
+datasets.
+
+55
+00:04:08,640 --> 00:04:13,920
+Ok. Adversarial defense is important 
+for deep metric learning. In this paper,
+
+56
+00:04:13,920 --> 00:04:18,480
+we propose Hardness manipulation 
+for flexible adversarial training,
+
+57
+00:04:18,480 --> 00:04:24,080
+which overwhelmingly outperforms the 
+state-of-the-art defense when combined
+
+58
+00:04:24,080 --> 00:04:28,000
+with linear gradual adversary 
+and Intra-class structure loss.
+
+59
+00:04:29,600 --> 00:04:31,680
+That's all, thank you for listening.
+
