@@ -8,6 +8,7 @@ Robust Deep Metric Learning (RobDML)
 **Code:** https://github.com/cdluminate/robrank  
 **Poster:** [[PDF Poster]](slides/poster.pdf) [[SVG Source]](slides/poster.svg) [[PNG export]](slides/poster.png)   
 **Slides:** [[Presentation]](slides/slides.pdf) [[Single-page]](slides/slides-singlepage.pdf)  
+**Video:** [[Bilibili]](https://www.bilibili.com/video/BV1Y34y1j7g4) [[YouTube]](https://www.youtube.com/watch?v=IQLvG0wjB-I)  
 
 ![poster](slides/poster.png)
 
