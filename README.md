@@ -2,7 +2,7 @@ Robust Deep Metric Learning (RobDML)
 ===
 
 **Paper:** Mo Zhou, Vishal M. Patel, *Enhancing Adversarial Robustness for Deep Metric Learning*, CVPR, 2022  
-**Preprint:** https://arxiv.org/abs/2203.01439  
+**PDF:** [[arXiv-preprint]](https://arxiv.org/abs/2203.01439) [[OpenAccess]](https://openaccess.thecvf.com/content/CVPR2022/html/Zhou_Enhancing_Adversarial_Robustness_for_Deep_Metric_Learning_CVPR_2022_paper.html)  
 **Code:** https://github.com/cdluminate/robrank  
 **Poster:** [[PDF Version]](slides/poster.pdf) [[SVG Source]](slides/poster.svg) [[PNG Version]](slides/poster.png)   
 **Slides:** [[Full-length Presentation Version]](slides/slides.pdf) [[Single-page Version]](slides/slides-singlepage.pdf)  
@@ -92,8 +92,11 @@ are too many unused leftover code from early exploration of this work.
 @InProceedings{robdml,
     author    = {Zhou, Mo and Patel, Vishal M.},
     title     = {Enhancing Adversarial Robustness for Deep Metric Learning},
-    booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
     year      = {2022},
+    pages     = {15325-15334}
+
 }
 ```
 
